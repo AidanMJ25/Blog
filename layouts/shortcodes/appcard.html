@@ -6,19 +6,19 @@
 
   <style>
     .app-card {
-      display: flex;
+      display: inline-flex;       /* so multiple cards flow left-to-right */
       flex-direction: column;
-      align-items: center;
+      align-items: center;        /* center icon over text */
       text-align: center;
-      gap: 0.5rem;
-      padding: 0.5rem;
+      margin-right: 1.5rem;       /* spacing between cards if you put several */
+      margin-bottom: 1rem;
     }
     .app-card__icon img {
       border-radius: 18%;
       display: block;
     }
     .app-card__title {
-      margin: 0;
+      margin: 0.25rem 0 0;
       font-size: 1rem;
       font-weight: 600;
     }
