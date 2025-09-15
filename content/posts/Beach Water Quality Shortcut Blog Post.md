@@ -72,12 +72,6 @@ Now, instead of digging through government websites or spreadsheets, I just run 
 and instantly see whether it’s safe to swim. It’s become part of my summer routine, and I love 
 how it turns raw open data into something practical and personal.
 
-
-
-### Apps & Tools Used to Create this Shortcut
-
-- [Inspect Browser](https://apps.apple.com/app/id1203594958)
-- [Jayson](https://apps.apple.com/app/id1447750768)
 ### Apps & Tools I Used to Create this Shortcut
 
 {{< appcard 
