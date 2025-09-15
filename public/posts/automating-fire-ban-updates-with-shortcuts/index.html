@@ -3,7 +3,7 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Automating Toronto’s Beach Water Quality with Shortcuts - Aidan Maurin-Jones</title>
+	<title>Automating Fire Ban Updates with Shortcuts - Aidan Maurin-Jones</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,54 +39,62 @@
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">Automating Toronto’s Beach Water Quality with Shortcuts</h1>
+			<h1 class="post__title">Automating Fire Ban Updates with Shortcuts</h1>
 			
 		</header>
 		<div class="content post__content clearfix">
-			<p>This summer I wanted a faster way to check if it’s safe to swim at Toronto’s beaches. The city
-publishes daily water quality results through their open data portal, but digging through JSON
-feeds on a phone isn’t exactly convenient. So, I built a Shortcut that automates the whole process:
-it checks for the latest update, pulls the results, and displays a clean, color-coded report in Safari.</p>
+			<p>I built a Shortcut that makes it incredibly easy to check whether there’s currently a fire
+ban in Dysart et al. Instead of digging through a municipal website or scrolling a feed, I
+can now get a clean, glanceable update with one tap.</p>
 <p>⸻</p>
-<h3 id="checking-for-fresh-data">Checking for Fresh Data</h3>
-<p>The first thing my Shortcut does is make sure I’m not working with stale results. I format the
-current date, subtract one day (since advisories usually trail by a day), and call the city’s
-last_update API. From there, I grab the lastUpdate field and confirm whether it matches the date I expect.</p>
-<p>If no data is available, the Shortcut stops and shows me an alert: “No recent results
-found.” That way, I’m not wasting time on old advisories.</p>
+<h3 id="how-i-built-it">How I Built It</h3>
+<p>The Shortcut pulls from this endpoint:</p>
+<p><a href="https://www.dysartetal.ca//modules/NewsModule/services/getalertbannerfeeds.ashx">https://www.dysartetal.ca//modules/NewsModule/services/getalertbannerfeeds.ashx</a></p>
+<p>That feed contains JSON data with alert banners, including fire ban notices. Here’s what
+happens step by step:</p>
+<ol>
+<li>
+<p>Fetch the feed – Using “Get Contents of URL,” the Shortcut retrieves the raw JSON.</p>
+</li>
+<li>
+<p>Parse into a dictionary – I convert the response into a Dictionary so each item can be checked.</p>
+</li>
+<li>
+<p>Scan for fire ban notices – A “Match Text” action looks for the string Fire Ban. If
+there are matches, I know there’s an active ban.</p>
+</li>
+<li>
+<p>Extract title and description – I loop through the items, grab the title and
+description fields, and convert the HTML-rich text into plain strings.</p>
+</li>
+<li>
+<p>Build a styled HTML card – If a ban is active, the Shortcut injects the title and
+description into a block of HTML with big, bold text so it’s easy to read.</p>
+</li>
+<li>
+<p>Display the result – The HTML card is shown in a Safari-style web view. If no fire
+ban is in effect, I get a simple alert that says: “No Fire Ban Status currently available.”</p>
+</li>
+</ol>
 <p>⸻</p>
-<h3 id="fetching-the-results">Fetching the Results</h3>
-<p>Once I know the data is current, I build a URL against the beach_results API. I pass both a
-startDate and endDate based on the formatted date, and I also define a list of beach IDs. Right
-now I have two beaches set up—IDs 8 and 9—but I can easily add more later.</p>
-<p>A Repeat loop runs through each beach ID, fetching its data individually and parsing the
-results. This keeps the Shortcut flexible if I want to expand it.</p>
+<h3 id="why-i-use-it">Why I Use It</h3>
+<p>Municipal websites aren’t always designed for quick updates, especially on a phone. With
+this Shortcut, I don’t have to waste time hunting for information—I get a direct answer in seconds.</p>
+<p>It’s also a great example of how I like to use Shortcuts: not for giant, flashy automations,
+but for small, thoughtful utilities that make my day smoother.</p>
 <p>⸻</p>
-<h3 id="formatting-the-data">Formatting the Data</h3>
-<p>This is the part I had the most fun with. The Shortcut parses out the CollectionDate,
-statusFlag, eColi count, and any advisory notes. To make the results clear at a glance,
-I map:
-•	SAFE → green
-•	UNSAFE → red
-•	Anything else → black</p>
-<p>I then build an HTML card for each beach, using large black headers for the beach name,
-medium-sized text for the collection date, and a color-coded status flag for the water
-quality. Everything is wrapped in <!-- raw HTML omitted --> elements with inline font sizes so the final
-report looks neat and easy to read.</p>
+<h3 id="customizing-the-shortcut">Customizing the Shortcut</h3>
+<p>Since the Shortcut outputs HTML, it’s easy to tweak the look:
+•	Change font sizes to make the text more readable.
+•	Add colors—red for “ban in effect,” green for “ban lifted.”
+•	Include extra fields from the feed if needed.</p>
+<p>And because it’s all built with system actions, I can extend it further: send a push notification
+when a ban starts, or log changes to a running Notes document.</p>
 <p>⸻</p>
-<h3 id="displaying-the-report">Displaying the Report</h3>
-<p>After the loop finishes, the Shortcut combines all of the HTML snippets into one page. It
-converts that text into rich content and opens it in a Safari web view. What I end up with
-is a simple dashboard that shows the latest conditions for each beach I care about.</p>
-<p>If the data feed has no values for that day, I just get a quick alert instead of a blank page.</p>
-<p>⸻</p>
-<h3 id="why-i-built-it">Why I Built It</h3>
-<p>For me, this Shortcut strikes the right balance between utility and presentation. It’s not
-just dumping JSON—it’s validating freshness, parsing results for multiple beaches, and
-presenting them in a way that’s useful at a glance.</p>
-<p>Now, instead of digging through government websites or spreadsheets, I just run the Shortcut
-and instantly see whether it’s safe to swim. It’s become part of my summer routine, and I love
-how it turns raw open data into something practical and personal.</p>
+<h3 id="final-thoughts">Final Thoughts</h3>
+<p>This Shortcut takes raw municipal data and turns it into something useful that I can check
+at a glance. It removes friction, saves me time, and gives me peace of mind knowing I can
+always find out the current fire ban status instantly.</p>
 
 		</div>
 		<footer class="post__footer">

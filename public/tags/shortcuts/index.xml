@@ -9,6 +9,13 @@
     <lastBuildDate>Sun, 14 Sep 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/shortcuts/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Automating Fire Ban Updates with Shortcuts</title>
+      <link>http://localhost:1313/posts/automating-fire-ban-updates-with-shortcuts/</link>
+      <pubDate>Sun, 14 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/automating-fire-ban-updates-with-shortcuts/</guid>
+      <description>I built a Shortcut that pulls Dysart et al.’s fire ban feed, checks for “Fire Ban,” and shows the result in a simple HTML card. It’s fast, customizable, and gives me an instant, glanceable update from raw municipal data.</description>
+    </item>
+    <item>
       <title>Automating Toronto’s Beach Water Quality with Shortcuts</title>
       <link>http://localhost:1313/posts/beach-water-quality-shortcut-blog-post/</link>
       <pubDate>Sun, 14 Sep 2025 00:00:00 +0000</pubDate>
