@@ -5,12 +5,11 @@
 <style>
   .app-row {
     display: flex;
-    gap: 1rem;
+    justify-content: center;  /* keeps them centered */
+    gap: 2rem;                 /* controls spacing between cards */
     flex-wrap: wrap;
-    margin: 1rem 0;
   }
   .app-row > * {
-    flex: 1;
-    min-width: 280px;
+    flex: 0 0 auto;            /* prevent stretching apart */
   }
 </style>
