@@ -19,11 +19,13 @@ At the core, my shortcut pulls live data straight from the TTC’s JSON endpoint
 _*https://alerts.ttc.ca/api/alerts/list*_
 
 **Here’s the basic flow I set up:**
-	•	Fetch the feed – I use **_*Get Contents of URL*_** to grab the JSON.
-	•	Parse the response – The raw data is turned into a dictionary, which makes it easy 
-	to work with inside Shortcuts.
-	•	Check for active alerts – If the routes field has values, the shortcut moves forward. 
-	If not, I skip right to a “No Service Alerts at this time” message.
+
+- Fetch the feed – I use **_*Get Contents of URL*_** to grab the JSON.
+- Parse the response – The raw data is turned into a dictionary, which makes it easy 
+to work with inside Shortcuts.
+- Check for active alerts – If the routes field has values, the shortcut moves forward. 
+
+If not, I skip right to a “No Service Alerts at this time” message.
 
 ⸻
 
