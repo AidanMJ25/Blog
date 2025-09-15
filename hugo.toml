@@ -2,3 +2,19 @@ baseURL = 'https://www.aidanmaurinjones.com/'
 languageCode = 'en-us'
 title = 'Aidan Maurin-Jones'
 theme = 'mainroad'
+
+[Params.sidebar]
+home = "right"
+list = "right"
+single = "right"
+widgets = ["search", "taglist", "clearall"]
+
+[Params.widgets]  
+  tags_counter = true 
+
+[Params.widgets.search]
+  url = "https://duckduckgo.com/"
+
+[Params.widgets.search.input]
+  name = "sites"
+  pre = ""

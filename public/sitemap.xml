@@ -17,10 +17,11 @@
     <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-09-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/webscraping/</loc>
+    <loc>http://localhost:1313/posts/ttc-service-alerts-shortcut-blog-post/</loc>
     <lastmod>2025-09-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/ttc-service-alerts-shortcut-blog-post/</loc>
+    <loc>http://localhost:1313/tags/webscraping/</loc>
+    <lastmod>2025-09-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url>

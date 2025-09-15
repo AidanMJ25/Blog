@@ -16,11 +16,11 @@
       <description>A Shortcut that pulls Toronto’s beach water quality data and shows a simple, color-coded report in Safari.</description>
     </item>
     <item>
-      <title></title>
+      <title>TTC Service Alerts Shortcut: Real-Time Transit Notifications Made Simple</title>
       <link>http://localhost:1313/posts/ttc-service-alerts-shortcut-blog-post/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 14 Sep 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/ttc-service-alerts-shortcut-blog-post/</guid>
-      <description>&lt;h1 id=&#34;ttc-service-alerts-shortcut-real-time-transit-notifications-made-simple&#34;&gt;TTC Service Alerts Shortcut: Real-Time Transit Notifications Made Simple&lt;/h1&gt;&#xA;&lt;p&gt;I built this shortcut because I wanted a faster way to check TTC service alerts without digging through the website or scrolling endlessly through apps. With one tap (or a Siri command), I can now see all active alerts in a clean, styled view that’s easy to scan.&lt;/p&gt;&#xA;&lt;p&gt;⸻&lt;/p&gt;&#xA;&lt;h3 id=&#34;how-it-works&#34;&gt;How It Works&lt;/h3&gt;&#xA;&lt;p&gt;At the core, my shortcut pulls live data straight from the TTC’s JSON endpoint:&lt;/p&gt;</description>
+      <description>Shortcut for real-time TTC service alerts in a clean, scannable view.</description>
     </item>
   </channel>
 </rss>
