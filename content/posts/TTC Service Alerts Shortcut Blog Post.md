@@ -58,3 +58,19 @@ interruptions. This shortcut solves that problem: I get structured, up-to-date i
 official TTC feed, formatted in a way that’s quick to read.
 
 It’s a small automation, but one that makes my daily routine less stressful.
+
+### Apps & Tools I Used to Create this Shortcut
+
+{{< approw >}}
+  {{< appcard 
+    name="Inspect Browser"
+    url="https://apps.apple.com/ca/app/inspect-browser/id1203594958?uo=4"
+    icon="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a9/71/c6/a971c683-ee6e-46d3-b3ee-75c8d2be2484/AppIcon-0-0-1x_U007epad-0-10-0-85-220.png/512x512bb.png"
+  >}}
+
+  {{< appcard 
+    name="Jayson"
+    url="https://apps.apple.com/ca/app/jayson/id1447750768?uo=4"
+    icon="https://is1-ssl.mzstatic.com/image/thumb/Purple125/v4/78/3d/2e/783d2e1c-0191-32aa-3a7a-2a578ec6cfdf/AppIcon-0-1x_U007emarketing-0-7-0-sRGB-85-220.png/512x512bb.png"
+  >}}
+{{< /approw >}}
