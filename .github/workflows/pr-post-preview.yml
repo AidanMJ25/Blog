@@ -17,7 +17,7 @@ jobs:
       PREVIEW_ROOT: previews/pr-${{ github.event.number }}
     steps:
       - uses: actions/checkout@v4
-        with: { submodules: true }
+        with: { submodules: true, fetch-depth: 0 }
       - uses: peaceiris/actions-hugo@v3
         with: { hugo-version: 'latest', extended: true }
 
