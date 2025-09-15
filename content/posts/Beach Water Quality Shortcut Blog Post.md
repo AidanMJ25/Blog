@@ -86,6 +86,5 @@ how it turns raw open data into something practical and personal.
   url="https://apps.apple.com/ca/app/inspect-browser/id1203594958?uo=4"
   icon="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a9/71/c6/a971c683-ee6e-46d3-b3ee-75c8d2be2484/AppIcon-0-0-1x_U007epad-0-10-0-85-220.png/512x512bb.png"
 >}}
->>>>>>> 30ee34f (Add Inspect Browser app card)
 
 
