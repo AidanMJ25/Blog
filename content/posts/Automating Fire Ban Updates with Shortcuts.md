@@ -55,9 +55,10 @@ but for small, thoughtful utilities that make my day smoother.
 ### Customizing the Shortcut
 
 Since the Shortcut outputs HTML, it’s easy to tweak the look:
-	•	Change font sizes to make the text more readable.
-	•	Add colors—red for “ban in effect,” green for “ban lifted.”
-	•	Include extra fields from the feed if needed.
+
+- Change font sizes to make the text more readable.
+- Add colors—red for “ban in effect,” green for “ban lifted.”
+- Include extra fields from the feed if needed.
 
 And because it’s all built with system actions, I can extend it further: send a push notification 
 when a ban starts, or log changes to a running Notes document.
