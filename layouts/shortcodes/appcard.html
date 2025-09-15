@@ -2,15 +2,17 @@
   <a class="app-card__icon" href="{{ .Get "url" }}" target="_blank" rel="noopener">
     <img src="{{ .Get "icon" }}" alt="{{ .Get "name" }} app icon" width="35" height="35">
   </a>
-  <h5 class="app-card__title">{{ .Get "name" }}</h5>
+  <a class="app-card__title" href="{{ .Get "url" }}" target="_blank" rel="noopener">
+    {{ .Get "name" }}
+  </a>
 
   <style>
     .app-card {
-      display: inline-flex;       /* so multiple cards flow left-to-right */
+      display: inline-flex;       /* so multiple cards sit left-to-right */
       flex-direction: column;
-      align-items: center;        /* center icon over text */
+      align-items: center;        /* center icon above text */
       text-align: center;
-      margin-right: 1.5rem;       /* spacing between cards if you put several */
+      margin-right: 1.5rem;       /* spacing between cards */
       margin-bottom: 1rem;
     }
     .app-card__icon img {
@@ -21,6 +23,11 @@
       margin: 0.25rem 0 0;
       font-size: 1rem;
       font-weight: 600;
+      text-decoration: none;      /* remove underline */
+      color: inherit;             /* use theme text color */
+    }
+    .app-card__title:hover {
+      text-decoration: underline; /* subtle hover effect */
     }
   </style>
 </article>
