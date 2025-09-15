@@ -1,0 +1,16 @@
+<div class="app-row">
+  {{ .Inner }}
+</div>
+
+<style>
+  .app-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+  }
+  .app-row > * {
+    flex: 1;
+    min-width: 280px;
+  }
+</style>
