@@ -1,4 +1,4 @@
-name: PR Post Preview (Hugo, single post)
+name: PR Post Preview (Hugo - simple, always build)
 
 on:
   pull_request:
@@ -22,13 +22,11 @@ jobs:
       CUSTOM_DOMAIN: https://aidanmaurinjones.com
 
     steps:
-      - name: Checkout PR branch (full history)
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           submodules: true
           fetch-depth: 0
-          fetch-tags: true
-          ref: ${{ github.head_ref }}
 
       - name: Install Hugo
         uses: peaceiris/actions-hugo@v3
@@ -36,86 +34,34 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      # ---- Derive slug from branch: posts/<slug> ----
-      - name: Determine post dir from branch
-        id: post
-        run: |
-          set -euo pipefail
-          BRANCH="${{ github.head_ref }}"
-          # Expect branches like posts/<slug>
-          if [[ "$BRANCH" != posts/* ]]; then
-            echo "Branch '$BRANCH' doesn't match posts/<slug>. Nothing to preview."
-            echo "found=false" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-          SLUG="${BRANCH#posts/}"
-          POST_DIR="content/posts/${SLUG}/"
-          if [[ ! -d "$POST_DIR" ]]; then
-            echo "Post dir '$POST_DIR' not found in this PR. Nothing to preview."
-            echo "found=false" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-          echo "found=true"   >> "$GITHUB_OUTPUT"
-          echo "slug=$SLUG"   >> "$GITHUB_OUTPUT"
-          echo "postdir=$POST_DIR" >> "$GITHUB_OUTPUT"
-          echo "Using post dir: $POST_DIR"
-
-      - name: Stop if no post dir
-        if: steps.post.outputs.found != 'true'
-        run: echo "Nothing to preview."
-
-      - name: Prepare minimal content (single post)
-        if: steps.post.outputs.found == 'true'
-        run: |
-          set -euo pipefail
-          mkdir -p _preview_content
-          rsync -a "${{ steps.post.outputs.postdir }}" "_preview_content/${{ steps.post.outputs.postdir }}"
-
-      - name: Write preview config override
-        if: steps.post.outputs.found == 'true'
-        run: |
-          cat > preview.hugo.toml <<'EOF'
-          disableKinds = ["home","section","taxonomy","term","RSS","sitemap","robotsTXT","404"]
-          [markup.goldmark.renderer]
-            unsafe = true
-          EOF
-
-      - name: Build Hugo (custom domain base)
-        if: steps.post.outputs.found == 'true'
+      - name: Build entire site for this PR
         run: |
           set -euo pipefail
           DEST="public/${{ env.PREVIEW_ROOT }}"
           mkdir -p "$DEST"
           hugo --minify \
-               --config preview.hugo.toml \
                --baseURL "${{ env.CUSTOM_DOMAIN }}/${{ env.PREVIEW_ROOT }}/" \
-               --contentDir _preview_content/content \
                --destination "$DEST" \
                --buildDrafts --buildFuture
-          echo "Built preview at $DEST"
+          echo "Built preview to $DEST"
 
       - name: Configure Pages
-        if: steps.post.outputs.found == 'true'
         uses: actions/configure-pages@v4
 
       - name: Upload artifact for Pages
-        if: steps.post.outputs.found == 'true'
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
 
       - name: Deploy to GitHub Pages
-        if: steps.post.outputs.found == 'true'
         uses: actions/deploy-pages@v4
 
       - name: Comment preview link
-        if: steps.post.outputs.found == 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          SLUG="${{ steps.post.outputs.slug }}"
-          URL="${{ env.CUSTOM_DOMAIN }}/${{ env.PREVIEW_ROOT }}/posts/${SLUG}/"
+          URL="${{ env.CUSTOM_DOMAIN }}/${{ env.PREVIEW_ROOT }}/"
           jq -n --arg body "🔍 **Post Preview:** $URL" '{body:$body}' \
           | curl -s -H "Authorization: Bearer $GITHUB_TOKEN" \
                  -H "Accept: application/vnd.github+json" \
