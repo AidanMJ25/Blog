@@ -26,7 +26,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: true
-          fetch-depth: 0        # bring full history so diffs work
+          fetch-depth: 0
           fetch-tags: true
           ref: ${{ github.head_ref }}
 
@@ -36,31 +36,34 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      # ------- detect which post changed in this PR -------
-      - name: Detect changed post bundle
+      # ---- Derive slug from branch: posts/<slug> ----
+      - name: Determine post dir from branch
         id: post
         run: |
           set -euo pipefail
-          BASE_SHA="${{ github.event.pull_request.base.sha }}"
-          HEAD_SHA="${{ github.event.pull_request.head.sha }}"
-          echo "Comparing $BASE_SHA … $HEAD_SHA"
-          CHANGED="$(git diff --name-only "$BASE_SHA" "$HEAD_SHA" || true)"
-          echo "$CHANGED" | sed 's/^/changed: /'
-          POST_DIR="$(echo "$CHANGED" | grep -E '^content/posts/[^/]+/' | awk -F/ '{print $1"/"$2"/"$3"/"}' | head -n1 || true)"
-          if [ -z "$POST_DIR" ]; then
+          BRANCH="${{ github.head_ref }}"
+          # Expect branches like posts/<slug>
+          if [[ "$BRANCH" != posts/* ]]; then
+            echo "Branch '$BRANCH' doesn't match posts/<slug>. Nothing to preview."
             echo "found=false" >> "$GITHUB_OUTPUT"
-            echo "No changed post bundle under content/posts/*/. Exiting."
             exit 0
           fi
-          echo "found=true" >> "$GITHUB_OUTPUT"
+          SLUG="${BRANCH#posts/}"
+          POST_DIR="content/posts/${SLUG}/"
+          if [[ ! -d "$POST_DIR" ]]; then
+            echo "Post dir '$POST_DIR' not found in this PR. Nothing to preview."
+            echo "found=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "found=true"   >> "$GITHUB_OUTPUT"
+          echo "slug=$SLUG"   >> "$GITHUB_OUTPUT"
           echo "postdir=$POST_DIR" >> "$GITHUB_OUTPUT"
-          echo "Detected post dir: $POST_DIR"
+          echo "Using post dir: $POST_DIR"
 
       - name: Stop if no post dir
         if: steps.post.outputs.found != 'true'
         run: echo "Nothing to preview."
 
-      # ------- build only that post -------
       - name: Prepare minimal content (single post)
         if: steps.post.outputs.found == 'true'
         run: |
@@ -91,7 +94,6 @@ jobs:
                --buildDrafts --buildFuture
           echo "Built preview at $DEST"
 
-      # ------- required Pages deploy steps -------
       - name: Configure Pages
         if: steps.post.outputs.found == 'true'
         uses: actions/configure-pages@v4
@@ -106,14 +108,13 @@ jobs:
         if: steps.post.outputs.found == 'true'
         uses: actions/deploy-pages@v4
 
-      # ------- comment the preview URL on the PR -------
       - name: Comment preview link
         if: steps.post.outputs.found == 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          SLUG="$(basename '${{ steps.post.outputs.postdir }}')"
+          SLUG="${{ steps.post.outputs.slug }}"
           URL="${{ env.CUSTOM_DOMAIN }}/${{ env.PREVIEW_ROOT }}/posts/${SLUG}/"
           jq -n --arg body "🔍 **Post Preview:** $URL" '{body:$body}' \
           | curl -s -H "Authorization: Bearer $GITHUB_TOKEN" \
