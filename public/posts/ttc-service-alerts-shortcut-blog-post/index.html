@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>TTC Service Alerts Shortcut: Real-Time Transit Notifications Made Simple - Aidan Maurin-Jones</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="Aidan Maurin-Jones" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Aidan Maurin-Jones</div>
+					
+				</div>
+		</a>
+	</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">TTC Service Alerts Shortcut: Real-Time Transit Notifications Made Simple</h1>
+			
+		</header>
+		<div class="content post__content clearfix">
+			<p>I built this shortcut because I wanted a faster way to check TTC service alerts without digging
+through the website or scrolling endlessly through apps. With one tap (or a Siri command),
+I can now see all active alerts in a clean, styled view that’s easy to scan.</p>
+<p>⸻</p>
+<h3 id="how-it-works">How It Works</h3>
+<p>At the core, my shortcut pulls live data straight from the TTC’s JSON endpoint:</p>
+<p><em><em><a href="https://alerts.ttc.ca/api/alerts/list">https://alerts.ttc.ca/api/alerts/list</a></em></em></p>
+<p><strong>Here’s the basic flow I set up:</strong>
+•	Fetch the feed – I use <strong><em><em>Get Contents of URL</em></em></strong> to grab the JSON.
+•	Parse the response – The raw data is turned into a dictionary, which makes it easy
+to work with inside Shortcuts.
+•	Check for active alerts – If the routes field has values, the shortcut moves forward.
+If not, I skip right to a “No Service Alerts at this time” message.</p>
+<p>⸻</p>
+<h3 id="iterating-through-alerts">Iterating Through Alerts</h3>
+<p>When there are active alerts, the shortcut loops through them one by one. For each alert,
+it pulls out the key pieces of info:</p>
+<ul>
+<li><strong><em><em>headerText</em></em></strong> for the main message</li>
+<li><strong><em><em>lastUpdated</em></em></strong> for the timestamp</li>
+</ul>
+<p>I then format the date into something readable and wrap everything in a bit of HTML. By
+setting font sizes, bolding headers, and adding dividers, the output looks more like a proper
+dashboard than just plain text.</p>
+<p>⸻</p>
+<h3 id="the-final-output">The Final Output</h3>
+<p>Once all the alerts are collected, I combine them into a single block of text, convert it
+into rich text, and name it “TTC Service Alerts.” From there, I preview it in Quick Look.</p>
+<p>If there aren’t any alerts, the shortcut just shows me a simple popup that says: “No Service
+Alerts at this time.”</p>
+<p>⸻</p>
+<h3 id="why-i-made-it">Why I Made It</h3>
+<p>As someone who relies on public transit, I was tired of wasting time checking for service
+interruptions. This shortcut solves that problem: I get structured, up-to-date info from the
+official TTC feed, formatted in a way that’s quick to read.</p>
+<p>It’s a small automation, but one that makes my daily routine less stressful.</p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M4 0h8s2 0 4 2l15 15s2 2 0 4L21 31s-2 2-4 0L2 16s-2-2-2-4V3s0-3 4-3m3 10a3 3 0 0 0 0-6 3 3 0 0 0 0 6"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/shortcuts/" rel="tag">shortcuts</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/webscraping/" rel="tag">webscraping</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2025 Aidan Maurin-Jones.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>

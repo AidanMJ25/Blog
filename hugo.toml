@@ -1,0 +1,4 @@
+baseURL = 'https://www.aidanmaurinjones.com/'
+languageCode = 'en-us'
+title = 'Aidan Maurin-Jones'
+theme = 'mainroad'
