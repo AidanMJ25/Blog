@@ -22,11 +22,13 @@ jobs:
       CUSTOM_DOMAIN: https://aidanmaurinjones.com
 
     steps:
-      - name: Checkout
+      - name: Checkout PR branch (full history)
         uses: actions/checkout@v4
         with:
           submodules: true
-          fetch-depth: 0       # <- ensure full history for accurate diffs
+          fetch-depth: 0        # bring full history so diffs work
+          fetch-tags: true
+          ref: ${{ github.head_ref }}
 
       - name: Install Hugo
         uses: peaceiris/actions-hugo@v3
@@ -34,15 +36,16 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      # Find which content/posts/<slug>/ changed in this PR
+      # ------- detect which post changed in this PR -------
       - name: Detect changed post bundle
         id: post
         run: |
           set -euo pipefail
           BASE_SHA="${{ github.event.pull_request.base.sha }}"
           HEAD_SHA="${{ github.event.pull_request.head.sha }}"
+          echo "Comparing $BASE_SHA … $HEAD_SHA"
           CHANGED="$(git diff --name-only "$BASE_SHA" "$HEAD_SHA" || true)"
-          echo "Changed files:"; echo "$CHANGED"
+          echo "$CHANGED" | sed 's/^/changed: /'
           POST_DIR="$(echo "$CHANGED" | grep -E '^content/posts/[^/]+/' | awk -F/ '{print $1"/"$2"/"$3"/"}' | head -n1 || true)"
           if [ -z "$POST_DIR" ]; then
             echo "found=false" >> "$GITHUB_OUTPUT"
@@ -51,13 +54,13 @@ jobs:
           fi
           echo "found=true" >> "$GITHUB_OUTPUT"
           echo "postdir=$POST_DIR" >> "$GITHUB_OUTPUT"
-          echo "Detected post: $POST_DIR"
+          echo "Detected post dir: $POST_DIR"
 
       - name: Stop if no post dir
         if: steps.post.outputs.found != 'true'
         run: echo "Nothing to preview."
 
-      # Copy only that post into a tiny temp content dir
+      # ------- build only that post -------
       - name: Prepare minimal content (single post)
         if: steps.post.outputs.found == 'true'
         run: |
@@ -65,7 +68,6 @@ jobs:
           mkdir -p _preview_content
           rsync -a "${{ steps.post.outputs.postdir }}" "_preview_content/${{ steps.post.outputs.postdir }}"
 
-      # Minimal Hugo config for preview
       - name: Write preview config override
         if: steps.post.outputs.found == 'true'
         run: |
@@ -75,7 +77,6 @@ jobs:
             unsafe = true
           EOF
 
-      # Build just that post into /public/<PREVIEW_ROOT>/...
       - name: Build Hugo (custom domain base)
         if: steps.post.outputs.found == 'true'
         run: |
@@ -90,6 +91,11 @@ jobs:
                --buildDrafts --buildFuture
           echo "Built preview at $DEST"
 
+      # ------- required Pages deploy steps -------
+      - name: Configure Pages
+        if: steps.post.outputs.found == 'true'
+        uses: actions/configure-pages@v4
+
       - name: Upload artifact for Pages
         if: steps.post.outputs.found == 'true'
         uses: actions/upload-pages-artifact@v3
@@ -100,7 +106,7 @@ jobs:
         if: steps.post.outputs.found == 'true'
         uses: actions/deploy-pages@v4
 
-      # Comment the custom-domain preview URL on the PR
+      # ------- comment the preview URL on the PR -------
       - name: Comment preview link
         if: steps.post.outputs.found == 'true'
         env:
