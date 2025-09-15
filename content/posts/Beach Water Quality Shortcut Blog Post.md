@@ -41,9 +41,10 @@ results. This keeps the Shortcut flexible if I want to expand it.
 This is the part I had the most fun with. The Shortcut parses out the CollectionDate, 
 statusFlag, eColi count, and any advisory notes. To make the results clear at a glance, 
 I map:
-	•	SAFE → green
-	•	UNSAFE → red
-	•	Anything else → black
+	
+- SAFE → green
+- UNSAFE → red
+- Anything else → black
 
 I then build an HTML card for each beach, using large black headers for the beach name, 
 medium-sized text for the collection date, and a color-coded status flag for the water 
