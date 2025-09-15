@@ -21,13 +21,20 @@ jobs:
       - uses: peaceiris/actions-hugo@v3
         with: { hugo-version: 'latest', extended: true }
 
-      - name: Detect post dir
+      - name: Detect changed post bundle
         id: post
         run: |
-          CHANGED="$(git diff --name-only origin/${{ github.base_ref }}...HEAD)"
-          POST_DIR="$(echo "$CHANGED" | grep -E '^content/posts/[^/]+/' | awk -F/ '{print $1"/"$2"/"$3"/"}' | head -n1)"
-          echo "postdir=$POST_DIR" >> $GITHUB_OUTPUT
-
+    set -euo pipefail
+    BASE_SHA="${{ github.event.pull_request.base.sha }}"
+    HEAD_SHA="${{ github.event.pull_request.head.sha }}"
+    CHANGED="$(git diff --name-only "$BASE_SHA" "$HEAD_SHA" || true)"
+    POST_DIR="$(echo "$CHANGED" | grep -E '^content/posts/[^/]+/' | awk -F/ '{print $1"/"$2"/"$3"/"}' | head -n1 || true)"
+    if [ -z "$POST_DIR" ]; then
+      echo "found=false" >> $GITHUB_OUTPUT
+      exit 0
+    fi
+    echo "found=true" >> $GITHUB_OUTPUT
+    echo "postdir=$POST_DIR" >> $GITHUB_OUTPUT
       - name: Prep content
         run: |
           mkdir -p _preview_content
