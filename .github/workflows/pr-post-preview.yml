@@ -1,75 +1,116 @@
-name: PR Post Preview (Hugo)
+name: PR Post Preview (Hugo, single post)
+
 on:
   pull_request:
     types: [opened, synchronize, reopened]
+
 permissions:
   contents: read
   pages: write
   id-token: write
   pull-requests: write
+
 concurrency:
   group: "hugo-post-preview-${{ github.event.number }}"
   cancel-in-progress: true
+
 jobs:
   preview:
     runs-on: ubuntu-latest
     env:
       PREVIEW_ROOT: previews/pr-${{ github.event.number }}
-    steps:
-      - uses: actions/checkout@v4
-        with: { submodules: true, fetch-depth: 0 }
-      - uses: peaceiris/actions-hugo@v3
-        with: { hugo-version: 'latest', extended: true }
+      CUSTOM_DOMAIN: https://aidanmaurinjones.com
 
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+          fetch-depth: 0       # <- ensure full history for accurate diffs
+
+      - name: Install Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      # Find which content/posts/<slug>/ changed in this PR
       - name: Detect changed post bundle
         id: post
         run: |
-    set -euo pipefail
-    BASE_SHA="${{ github.event.pull_request.base.sha }}"
-    HEAD_SHA="${{ github.event.pull_request.head.sha }}"
-    CHANGED="$(git diff --name-only "$BASE_SHA" "$HEAD_SHA" || true)"
-    POST_DIR="$(echo "$CHANGED" | grep -E '^content/posts/[^/]+/' | awk -F/ '{print $1"/"$2"/"$3"/"}' | head -n1 || true)"
-    if [ -z "$POST_DIR" ]; then
-      echo "found=false" >> $GITHUB_OUTPUT
-      exit 0
-    fi
-    echo "found=true" >> $GITHUB_OUTPUT
-    echo "postdir=$POST_DIR" >> $GITHUB_OUTPUT
-      - name: Prep content
+          set -euo pipefail
+          BASE_SHA="${{ github.event.pull_request.base.sha }}"
+          HEAD_SHA="${{ github.event.pull_request.head.sha }}"
+          CHANGED="$(git diff --name-only "$BASE_SHA" "$HEAD_SHA" || true)"
+          echo "Changed files:"; echo "$CHANGED"
+          POST_DIR="$(echo "$CHANGED" | grep -E '^content/posts/[^/]+/' | awk -F/ '{print $1"/"$2"/"$3"/"}' | head -n1 || true)"
+          if [ -z "$POST_DIR" ]; then
+            echo "found=false" >> "$GITHUB_OUTPUT"
+            echo "No changed post bundle under content/posts/*/. Exiting."
+            exit 0
+          fi
+          echo "found=true" >> "$GITHUB_OUTPUT"
+          echo "postdir=$POST_DIR" >> "$GITHUB_OUTPUT"
+          echo "Detected post: $POST_DIR"
+
+      - name: Stop if no post dir
+        if: steps.post.outputs.found != 'true'
+        run: echo "Nothing to preview."
+
+      # Copy only that post into a tiny temp content dir
+      - name: Prepare minimal content (single post)
+        if: steps.post.outputs.found == 'true'
         run: |
+          set -euo pipefail
           mkdir -p _preview_content
           rsync -a "${{ steps.post.outputs.postdir }}" "_preview_content/${{ steps.post.outputs.postdir }}"
+
+      # Minimal Hugo config for preview
+      - name: Write preview config override
+        if: steps.post.outputs.found == 'true'
+        run: |
           cat > preview.hugo.toml <<'EOF'
           disableKinds = ["home","section","taxonomy","term","RSS","sitemap","robotsTXT","404"]
           [markup.goldmark.renderer]
             unsafe = true
           EOF
 
-      - name: Build Hugo
+      # Build just that post into /public/<PREVIEW_ROOT>/...
+      - name: Build Hugo (custom domain base)
+        if: steps.post.outputs.found == 'true'
         run: |
+          set -euo pipefail
           DEST="public/${{ env.PREVIEW_ROOT }}"
+          mkdir -p "$DEST"
           hugo --minify \
                --config preview.hugo.toml \
-               --baseURL="/${{ env.PREVIEW_ROOT }}/" \
+               --baseURL "${{ env.CUSTOM_DOMAIN }}/${{ env.PREVIEW_ROOT }}/" \
                --contentDir _preview_content/content \
                --destination "$DEST" \
                --buildDrafts --buildFuture
+          echo "Built preview at $DEST"
 
-      - uses: actions/upload-pages-artifact@v3
-        with: { path: ./public }
-      - uses: actions/deploy-pages@v4
+      - name: Upload artifact for Pages
+        if: steps.post.outputs.found == 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
 
-      - name: Comment link
-        env: { GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} }
+      - name: Deploy to GitHub Pages
+        if: steps.post.outputs.found == 'true'
+        uses: actions/deploy-pages@v4
+
+      # Comment the custom-domain preview URL on the PR
+      - name: Comment preview link
+        if: steps.post.outputs.found == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          OWNER="${{ github.repository_owner }}"
-          REPO="${{ github.event.repository.name }}"
+          set -euo pipefail
           SLUG="$(basename '${{ steps.post.outputs.postdir }}')"
-          # project site URL (exact repo casing):
-          BASE="https://www.aidanmaurinjones.com"
-          URL="$BASE/${{ env.PREVIEW_ROOT }}/posts/$SLUG/"
+          URL="${{ env.CUSTOM_DOMAIN }}/${{ env.PREVIEW_ROOT }}/posts/${SLUG}/"
           jq -n --arg body "🔍 **Post Preview:** $URL" '{body:$body}' \
           | curl -s -H "Authorization: Bearer $GITHUB_TOKEN" \
                  -H "Accept: application/vnd.github+json" \
-                 "https://api.github.com/repos/${OWNER}/${REPO}/issues/${{ github.event.number }}/comments" \
+                 "https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.number }}/comments" \
                  -d @-
