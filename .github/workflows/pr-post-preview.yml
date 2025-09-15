@@ -1,106 +1,68 @@
-name: PR Post Preview (Hugo, single post)
-
+name: PR Post Preview (Hugo)
 on:
   pull_request:
     types: [opened, synchronize, reopened]
-
 permissions:
   contents: read
   pages: write
   id-token: write
   pull-requests: write
-
 concurrency:
   group: "hugo-post-preview-${{ github.event.number }}"
   cancel-in-progress: true
-
 jobs:
   preview:
     runs-on: ubuntu-latest
     env:
       PREVIEW_ROOT: previews/pr-${{ github.event.number }}
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          submodules: true
+      - uses: actions/checkout@v4
+        with: { submodules: true }
+      - uses: peaceiris/actions-hugo@v3
+        with: { hugo-version: 'latest', extended: true }
 
-      - name: Find changed post bundle
-        id: findpost
+      - name: Detect post dir
+        id: post
         run: |
-          # List changed files (merge-base to include previous commits in PR)
           CHANGED="$(git diff --name-only origin/${{ github.base_ref }}...HEAD)"
-          # Pick the first content/posts/<slug>/index.md (or any file in that folder)
           POST_DIR="$(echo "$CHANGED" | grep -E '^content/posts/[^/]+/' | awk -F/ '{print $1"/"$2"/"$3"/"}' | head -n1)"
-          if [ -z "$POST_DIR" ]; then
-            echo "No changed post bundle found under content/posts/*/" >&2
-            exit 1
-          fi
-          echo "postdir=$POST_DIR" >> "$GITHUB_OUTPUT"
+          echo "postdir=$POST_DIR" >> $GITHUB_OUTPUT
 
-      - name: Install Hugo
-        uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: 'latest'
-          extended: true
-
-      - name: Prepare minimal content dir (single post only)
+      - name: Prep content
         run: |
           mkdir -p _preview_content
-          # Copy ONLY the changed post bundle into a matching path
-          rsync -a "${{ steps.findpost.outputs.postdir }}" "_preview_content/${{ steps.findpost.outputs.postdir }}"
-          # If your post uses images/resources in that bundle, they come along.
-
-      - name: Write preview-only config override
-        run: |
+          rsync -a "${{ steps.post.outputs.postdir }}" "_preview_content/${{ steps.post.outputs.postdir }}"
           cat > preview.hugo.toml <<'EOF'
-          # Disable everything except pages, to build lean
           disableKinds = ["home","section","taxonomy","term","RSS","sitemap","robotsTXT","404"]
-          # Keep unsafe HTML if you need it
           [markup.goldmark.renderer]
             unsafe = true
           EOF
 
-      - name: Build Hugo (only the single post)
+      - name: Build Hugo
         run: |
           DEST="public/${{ env.PREVIEW_ROOT }}"
-          mkdir -p "$DEST"
-          # Base URL points at the PR subfolder root so theme assets resolve
           hugo --minify \
                --config preview.hugo.toml \
                --baseURL="/${{ env.PREVIEW_ROOT }}/" \
                --contentDir _preview_content/content \
                --destination "$DEST" \
                --buildDrafts --buildFuture
-          # At this point you’ll have /${PREVIEW_ROOT}/posts/<slug>/index.html
-          # plus only the static/assets your theme needs.
 
-      - name: Upload preview artifact to Pages
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./public
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: ./public }
+      - uses: actions/deploy-pages@v4
 
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
-
-      - name: Comment preview link on the PR
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Comment link
+        env: { GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} }
         run: |
-          REPO_NAME_LOWER="$(echo '${{ github.event.repository.name }}' | tr '[:upper:]' '[:lower:]')"
-          # Detect if this is a user site or a project site:
-          if [ "${{ github.repository_owner }}.github.io" = "$REPO_NAME_LOWER" ]; then
-            BASE="https://${{ github.repository_owner }}.github.io"
-          else
-            BASE="https://${{ github.repository_owner }}.github.io/${REPO_NAME_LOWER}"
-          fi
-
-          # Compute the post URL (we know Hugo puts it under /posts/<slug>/)
-          SLUG="$(basename '${{ steps.findpost.outputs.postdir }}')"
-          PREVIEW_URL="$BASE/${{ env.PREVIEW_ROOT }}/posts/$SLUG/"
-
-          jq -n --arg body "🔍 **Post Preview:** $PREVIEW_URL" '{body:$body}' \
+          OWNER="${{ github.repository_owner }}"
+          REPO="${{ github.event.repository.name }}"
+          SLUG="$(basename '${{ steps.post.outputs.postdir }}')"
+          # project site URL (exact repo casing):
+          BASE="https://www.aidanmaurinjones.com"
+          URL="$BASE/${{ env.PREVIEW_ROOT }}/posts/$SLUG/"
+          jq -n --arg body "🔍 **Post Preview:** $URL" '{body:$body}' \
           | curl -s -H "Authorization: Bearer $GITHUB_TOKEN" \
                  -H "Accept: application/vnd.github+json" \
-                 https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.number }}/comments \
+                 "https://api.github.com/repos/${OWNER}/${REPO}/issues/${{ github.event.number }}/comments" \
                  -d @-
