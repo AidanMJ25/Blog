@@ -4,27 +4,26 @@ title = 'Aidan Maurin-Jones'
 theme = 'mainroad'
 
 [params]
-  # Pick your style
-  dateFormat = "January 2, 2006"
+  dateFormat = "January 2, 2006"   # keep (harmless)
+  dateformat = "January 2, 2006"   # <- Mainroad usually reads this one
 
-[Params.sidebar]
-home = "right"
-list = "right"
-single = "right"
-widgets = ["search", "taglist", "clearall"]
+  # (optional) keep your sidebar + widgets here under [params], not [Params]
+  [params.sidebar]
+    home = "right"
+    list = "right"
+    single = "right"
+    widgets = ["search", "taglist", "clearall"]
 
-[Params.widgets]  
-  tags_counter = true 
+  [params.widgets]
+    tags_counter = true
 
-[Params.widgets.search]
-  url = "https://duckduckgo.com/"
+  [params.widgets.search]
+    url = "https://duckduckgo.com/"
 
-[Params.widgets.search.input]
-  name = "sites"
-  pre = ""
-
-# Show only posts on the homepage when we paginate there
+  [params.widgets.search.input]
+    name = "sites"
+    pre = ""
+    
+# These belong at top-level (you already have them right)
 mainSections = ["posts"]
-
-# Control how many per page (used by paginator)
 paginate = 10
