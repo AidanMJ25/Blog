@@ -1,22 +1,25 @@
-{{ $url := .Get "url" }}
+{{/* 
+Usage:
+{{< shortcutcard
+     url="https://www.icloud.com/shortcuts/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"
+     name="Scan QR Code on Screen"
+     icon="https://is*-ssl.mzstatic.com/image/thumb/.../AppIcon.png"
+>}}
+*/}}
+
+{{ $url  := .Get "url" }}
 {{ $name := .Get "name" }}
+{{ $icon := .Get "icon" }}
 
-{{ $resp := resources.GetRemote $url }}
-{{ $html := "" }}
-{{ with $resp }}{{ $html = .Content | string }}{{ end }}
-
-{{ $icon := "" }}
-{{ with (findRE `<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']` $html) }}
-  {{ $icon = replaceRE `^.*content=["']([^"']+)["'].*$` "$1" (index . 0) }}
+{{ if or (not $url) (not $name) }}
+  <em>shortcutcard: missing required param(s): url and/or name</em>
+{{ else }}
+  <article class="app-card">
+    <a href="{{ $url }}" target="_blank" rel="noopener">
+      {{ if $icon }}
+        <img src="{{ $icon | safeURL }}" alt="{{ $name }} icon" width="35" height="35" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+      {{ end }}
+    </a>
+    <a href="{{ $url }}" target="_blank" rel="noopener">{{ $name }}</a>
+  </article>
 {{ end }}
-
-<article class="app-card">
-  <a href="{{ $url }}" target="_blank" rel="noopener">
-    {{ if $icon }}
-      <img src="{{ $icon }}" alt="{{ $name }} icon" width="35" height="35" loading="lazy" decoding="async">
-    {{ end }}
-  </a>
-  <a href="{{ $url }}" target="_blank" rel="noopener">
-    {{ $name }}
-  </a>
-</article>
