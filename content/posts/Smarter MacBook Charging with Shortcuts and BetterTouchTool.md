@@ -84,7 +84,7 @@ using the MacBook or not.
 ### Why It Matters
 
 Apple’s built-in battery management is good, but not always predictable—and it doesn’t give 
-me direct control. With this Shortcut + BetterTouchTool setup, I can enforce my own rules: 
+me direct control. With this Shortcuts + BetterTouchTool setup, I can enforce my own rules: 
 charge only when needed, stop at full, and always keep an eye on the charger’s actual state.
 
 It’s a small project, but one that makes a noticeable difference in daily use. My MacBook 
