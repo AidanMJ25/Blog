@@ -91,6 +91,19 @@ It’s a small project, but one that makes a noticeable difference in daily use.
 now charges only when it should, with BetterTouchTool quietly handling the details in the 
 background.
 
+{{< approw >}}
+{{< shortcutcard
+     url="https://www.icloud.com/shortcuts/1040032179f2495e8a2f3d43d7c56d1f"
+     name="Charge MacBook"
+     icon="https://cvws.icloud-content.com/B/Aal1dIsgUMk1A71azs2KkuXBlVDB/${f}?o=AorJmB6BGtEI9JDdDgf9LejRODzOh2sLj_ZysaEN3AK8VI03JKjeTjvYfJq5JjVnHA&v=1&x=3&a=CAogK_BsZcqikEo3S4izxzZ_U1efGBVGdqQLc3LyFw59eFkSexCUo52hlTMYlID5opUzIgEAUgTBlVDBajDOH4kLD5LL3EEGcYsYT8vXQRiobbHyFnLg9gmcQvf76kwz9XPN149TWskLfQktScdyMNTAmM8q2lHZGcwQWG-AQVdOx0Vhtk3pg-tqPmhCbfKKioxD8qTppKDYF2MR2yoSow&e=1758057086&fl=&r=445c3ead-4215-4dd0-a7e1-de79029a2de2-1&k=_&ckc=com.apple.shortcuts&ckz=_defaultZone&p=33&s=89XrnSfw8Blqh9IlQGRs_Nu-OgA"
+>}}
+{{< shortcutcard
+     url="https://www.icloud.com/shortcuts/f6e3ba0b586f4bafa316554835d00dd3"
+     name="Check MacBook Charger on Login"
+     icon="https://cvws.icloud-content.com/B/AaHDpPfmmVWQ1W5KHf5llccKbxBq/${f}?o=AkXPmZVHIALvv6-p5cL1BAa5vZXS3vSyKnt4qV2wsaE-3iJr9PsOs2BOa2a6ovLWNA&v=1&x=3&a=CAogTvCDSxh0HpcOez7iw-d2ip7mhzF6i5m3Uzy3_dcH6JISexCc1pihlTMYnLP0opUzIgEAUgQKbxBqajDbRA47MKw0j_t5Vp_EK63vfvm5_J7uCA30j5rRN9h-3Kg3fgJvP4toUS8PkbUjKCNyML1E6O60fIfRHoANYH-fkc98XkLH2yCb_Erhx5UJm1_Gz07xeywE9WAovXfU-JcR4Q&e=1758057011&fl=&r=2b0acfd3-c3e0-42e3-a4f8-9ecf14a310a4-1&k=_&ckc=com.apple.shortcuts&ckz=_defaultZone&p=33&s=7syTmllE_H3DNBMylv5X8lsrglg"
+>}}
+{{< /approw >}}
+
 ### Apps and Tools Used for this Project
 
 - [Home Assistant](https://www.home-assistant.io/)
