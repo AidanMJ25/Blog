@@ -66,10 +66,10 @@ flow.
 It’s a small thing, but it’s one of those utilities I use often enough that I can’t imagine 
 not having it anymore.
 
-{{< appcard
-     url="https://www.icloud.com/shortcuts/97d10d8e9287407eae49da629048ba10"
-     name="Scan QR Code On Screen"
-     icon="https://cvws.icloud-content.com/B/ARqYgus6_I4mh4wwLcjkSpfTxwFL/${f}?o=Ahkt17c0w958_uGjrRXYnf06GMvgGVzpzaYlaLv2wGQAZOucOkfScD60pZVDCPUb4w&v=1&x=3&a=CAogPML-zSIggdukYM0PQiKwK7U5iEeUvr2Z-jZCtsdnWHYSexDuoKyflTMY7v2HoZUzIgEAUgTTxwFLajClILJ8udvoL3SZZtlqtSVk5TuHT3I5vHmy3oW6DnRiyj8Ltre1U-HU-jqSFUTPh8pyMKlGhoTyTW-JjcfjQ9ez7mKNI3uLeQnzkmRER7QFTP6P_QHnQ5Jup0leqKNkavh3Wg&e=1758053138&fl=&r=6e4b77fd-42fa-4f8b-b471-e726a02dc444-1&k=_&ckc=com.apple.shortcuts&ckz=_defaultZone&p=33&s=2MfYqyBc5AkHRVLpFYBM8UxZK2w"
+{{< appcard 
+  name="Scan QR Code On Screen"
+  url="https://www.icloud.com/shortcuts/9976ebc2a17741fdbe32fce4718b5fe3"
+  icon="https://cvws.icloud-content.com/B/AS-7B8P93JCGj2uPB4BmZ9RIgLXT/${f}?o=Ao79H1PmIDB8-ModuOMRQSIx1NqbCT3A_-LeYipe1mjZ8rTjovvmNonCBHWJ6BtBpg&v=1&x=3&a=CAogi6LM0Dk_J8czyBhWNd-iBtvGI0HSDKziN9Egt9STX20SexD8x9SilTMY_KSwpJUzIgEAUgRIgLXTajAV7jMYQs-xKAdfCC78rYgQT-ti7ufKFLCv017tT6R8E2pq8_WdCwX3fNrN6kmuE3NyMDTsoBSn3hrmdA-arKDRV4n1tg0MayFeVOz8qRUtb9h3zYyX9kH_VICi19M1oEX_cg&e=1758060089&fl=&r=fc4958a5-344e-41f7-bca7-9a866800313d-1&k=_&ckc=com.apple.shortcuts&ckz=_defaultZone&p=33&s=KRERmA-q-plgFuC2FnKqhP2L68o"
 >}}
 
 ### Apps & Tools I Used to Create this Shortcut
