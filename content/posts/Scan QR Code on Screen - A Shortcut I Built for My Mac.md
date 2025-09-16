@@ -66,6 +66,11 @@ flow.
 It’s a small thing, but it’s one of those utilities I use often enough that I can’t imagine 
 not having it anymore.
 
+{{< shortcutcard
+  url=“https://www.icloud.com/shortcuts/97d10d8e9287407eae49da629048ba10”
+  name=“Scan QR Code on Screen”
+>}}
+
 ### Apps & Tools I Used to Create this Shortcut
 
 {{< approw >}}
