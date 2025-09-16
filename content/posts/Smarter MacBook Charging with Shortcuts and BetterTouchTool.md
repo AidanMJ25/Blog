@@ -96,6 +96,7 @@ background.
      name="Charge MacBook"
      icon="https://cvws.icloud-content.com/B/Aal1dIsgUMk1A71azs2KkuXBlVDB/${f}?o=AorJmB6BGtEI9JDdDgf9LejRODzOh2sLj_ZysaEN3AK8VI03JKjeTjvYfJq5JjVnHA&v=1&x=3&a=CAogK_BsZcqikEo3S4izxzZ_U1efGBVGdqQLc3LyFw59eFkSexCUo52hlTMYlID5opUzIgEAUgTBlVDBajDOH4kLD5LL3EEGcYsYT8vXQRiobbHyFnLg9gmcQvf76kwz9XPN149TWskLfQktScdyMNTAmM8q2lHZGcwQWG-AQVdOx0Vhtk3pg-tqPmhCbfKKioxD8qTppKDYF2MR2yoSow&e=1758057086&fl=&r=445c3ead-4215-4dd0-a7e1-de79029a2de2-1&k=_&ckc=com.apple.shortcuts&ckz=_defaultZone&p=33&s=89XrnSfw8Blqh9IlQGRs_Nu-OgA"
 >}}
+
 {{< shortcutcard
      url="https://www.icloud.com/shortcuts/f6e3ba0b586f4bafa316554835d00dd3"
      name="Check MacBook Charger on Login"
