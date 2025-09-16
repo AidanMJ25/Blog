@@ -1,33 +1,22 @@
-{{/* 
-  Usage:
-  {{< shortcutcard url="https://www.icloud.com/shortcuts/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX" name="Scan QR Code on Screen" >}}
-*/}}
-
 {{ $url := .Get "url" }}
 {{ $name := .Get "name" }}
 
-{{ if not $url }}
-  <em>shortcutcard: missing <code>url</code></em>
-{{ else if not $name }}
-  <em>shortcutcard: missing <code>name</code></em>
-{{ else }}
-  {{ $resp := resources.GetRemote $url }}
-  {{ $html := "" }}
-  {{ with $resp }}{{ $html = .Content | string }}{{ end }}
+{{ $resp := resources.GetRemote $url }}
+{{ $html := "" }}
+{{ with $resp }}{{ $html = .Content | string }}{{ end }}
 
-  {{ $icon := "" }}
-  {{ with (findRE `<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']` $html) }}
-    {{ $icon = replaceRE `^.*content=["']([^"']+)["'].*$` "$1" (index . 0) }}
-  {{ end }}
-
-  <article class="app-card">
-    <a href="{{ $url }}" target="_blank" rel="noopener">
-      {{ if $icon }}
-        <img src="{{ $icon }}" alt="" width="35" height="35" loading="lazy" decoding="async">
-      {{ end }}
-    </a>
-    <a href="{{ $url }}" target="_blank" rel="noopener">
-      {{ $name }}
-    </a>
-  </article>
+{{ $icon := "" }}
+{{ with (findRE `<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']` $html) }}
+  {{ $icon = replaceRE `^.*content=["']([^"']+)["'].*$` "$1" (index . 0) }}
 {{ end }}
+
+<article class="app-card">
+  <a href="{{ $url }}" target="_blank" rel="noopener">
+    {{ if $icon }}
+      <img src="{{ $icon }}" alt="{{ $name }} icon" width="35" height="35" loading="lazy" decoding="async">
+    {{ end }}
+  </a>
+  <a href="{{ $url }}" target="_blank" rel="noopener">
+    {{ $name }}
+  </a>
+</article>
