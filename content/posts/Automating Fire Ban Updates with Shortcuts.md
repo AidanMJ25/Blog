@@ -71,7 +71,7 @@ This Shortcut takes raw municipal data and turns it into something useful that I
 at a glance. It removes friction, saves me time, and gives me peace of mind knowing I can 
 always find out the current fire ban status instantly.
 
-{{< shortcutcard
+{{< appcard
      url="https://www.icloud.com/shortcuts/8f8b2d38dfc24a4ab8e9315a6750deff"
      name="Fire Ban Status"
      icon="https://cvws.icloud-content.com/B/ARmDT7R4UUpdDrObyg5Rj-KR3W62/${f}?o=AnnJh8L_ETGqNnaYSDHd2U67dL5bHho0iXTZLL_k581XnSojSBG2yoSXBiGfHm-DQg&v=1&x=3&a=CAogQrWFrYlv9WeuNExNWQ0NPFgE7-RxsxmQ1klQM-IdZdUSexCd0oGhlTMYna_dopUzIgEAUgSR3W62ajB1ow-dCzVSU95v1MobsrziWs10soldAKKJ3EPdS_m-d20BGN0Xbdm9d3q4Ho8XUI9yMA9y8_tyhY6cmdK_ulZ4wiKNmV7SMunJ9Fxy4uAx5R1Sj1KH5R2dZze5iv_cd_qSQQ&e=1758056634&fl=&r=65b61ddd-4e03-407b-bb12-52d3bd5fec9a-1&k=_&ckc=com.apple.shortcuts&ckz=_defaultZone&p=33&s=ohAN-88qacl7dlTyd7nr2t2Fvqw"
