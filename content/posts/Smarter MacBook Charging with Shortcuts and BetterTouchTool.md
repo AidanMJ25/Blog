@@ -90,6 +90,7 @@ charge only when needed, stop at full, and always keep an eye on the charger’s
 It’s a small project, but one that makes a noticeable difference in daily use. My MacBook 
 now charges only when it should, with BetterTouchTool quietly handling the details in the 
 background.
+
 {{< approw >}}
 {{< appcard 
   name="Charge MacBook"
@@ -102,6 +103,7 @@ background.
   icon="https://cvws.icloud-content.com/B/AaHDpPfmmVWQ1W5KHf5llccKbxBq/${f}?o=Av0Dgf9PZ5k9KQWVI-FvfLUYEGSiRYnjcieCsyX8amFW837zXWMUkRasOHM0oK7siQ&v=1&x=3&a=CAog_FtGCkvWViy3kElG2mi3W9_4m0fCxbPl5N-q73VjyMASexC399yilTMYt9S4pJUzIgEAUgQKbxBqajCdXg_etTkcyzfmb3wAqir6z2UFE_DLQj7WQoAkA2_uOB6FDY1WtPSsGKPMKitue2tyMEA1pLjKnY_8ATuOnsekgto-HZprD98aoUuo4iex1B6vH3VdJAxbPSBZcFpYA9Z4Ow&e=1758060227&fl=&r=fa0c47de-8e7f-4938-96d9-069d51176f25-1&k=_&ckc=com.apple.shortcuts&ckz=_defaultZone&p=33&s=P0gIFRqqXKQ8UQ7IhQLCfIVfJGM"
 >}}
 {{< /approw >}}
+
 ### Apps and Tools Used for this Project
 
 - [Home Assistant](https://www.home-assistant.io/)
