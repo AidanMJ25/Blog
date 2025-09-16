@@ -1,6 +1,6 @@
 ---
 title: "A Raspberry Pi Stream Deck Server controlled by ESPHome"
-date: 2025.09.15
+date: 2025-09-15
 draft: false
 tags: ["Home Assistant", "ESPHome", "Stream Deck", "Raspberry Pi"]
 summary: "I built a Raspberry Pi Stream Deck server with ESPHome power control, letting me 
