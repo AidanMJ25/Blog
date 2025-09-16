@@ -3,6 +3,10 @@ languageCode = 'en-us'
 title = 'Aidan Maurin-Jones'
 theme = 'mainroad'
 
+[params]
+  # Pick your style
+  dateFormat = "January 2, 2006"
+
 [Params.sidebar]
 home = "right"
 list = "right"
@@ -18,3 +22,9 @@ widgets = ["search", "taglist", "clearall"]
 [Params.widgets.search.input]
   name = "sites"
   pre = ""
+
+# Show only posts on the homepage when we paginate there
+mainSections = ["posts"]
+
+# Control how many per page (used by paginator)
+paginate = 10
