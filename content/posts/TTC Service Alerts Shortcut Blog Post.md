@@ -61,10 +61,10 @@ official TTC feed, formatted in a way that’s quick to read.
 
 It’s a small automation, but one that makes my daily routine less stressful.
 
-{{< shortcutcard
-     url="https://www.icloud.com/shortcuts/60253b62ee354ae98492c08738c11bfd"
-     name="TTC Service Alerts"
-     icon="https://cvws.icloud-content.com/B/ARGWzVM2FobHCTtyJ20zL--N6vb3/${f}?o=Agdnr9fO8GLDkJ5AXWxwNBAvRMwBgxzD2midrT54j3AxJVEu2nxggPVwsAT_ipnqMw&v=1&x=3&a=CAogwCgiFMzhGIZC6l5DyQGC3daRrHuL9fgupQ21zLjEl40SexDI-tSflTMYyNewoZUzIgEAUgSN6vb3ajBQKEeHNWOb7MpwkfprQX8yT0AKbYykqwrnCi2-WFt_8ZzYQTQ-YaL4eVpxxgtEDXVyMDZnCTI33aZMok6gB4Q5WZ1dM_WeHmbcVRMubE7YUF-1aHrVhL-3ahpj0gbwWqvLsQ&e=1758053805&fl=&r=05af1008-70b2-41c4-b57b-405e85ceecad-1&k=_&ckc=com.apple.shortcuts&ckz=_defaultZone&p=33&s=qdWIYhCOrIuNDzTe3w2J83YHSlU"
+{{< appcard 
+  name="TTC Service Alerts"
+  url="https://www.icloud.com/shortcuts/55642d82fd8b4108b6c2f9bd8a196a17"
+  icon="https://cvws.icloud-content.com/B/AWp297docgbPQs1P16kZqh-LiEdp/${f}?o=Avepp8W75htF30yrHz5LUUFDwNkPr_NWxxuLtbgpav_e2y7rpAsYRXpcH0nuX-batg&v=1&x=3&a=CAogSm0bvEA6OflxKq_0oerkJMF2yCDno1Lh9xQDW7XU6jcSexDDs8yilTMYw5CopJUzIgEAUgSLiEdpajDmzXv5SGlTQNXHkiitz2L90hKcb5L2VLkZpLvMyzwbZe6grDMV61Y9NmrHRAs5BaByMLRueXEsz60cbKk0_oZmU_EHzmUY2ImMpYUbrhDVU7WlnYjjrpE1QhyXTrEeFBQYtQ&e=1758059956&fl=&r=76b98de1-bb54-48b0-9bf9-7182a30c14e8-1&k=_&ckc=com.apple.shortcuts&ckz=_defaultZone&p=33&s=W8Eh2f6kgAP5zcN4u10XHmawS7Q"
 >}}
 
 ### Apps & Tools I Used to Create this Shortcut
