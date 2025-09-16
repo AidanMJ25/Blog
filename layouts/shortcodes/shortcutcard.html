@@ -7,8 +7,8 @@
 {{ if or (not $url) (not $name) }}
   <em>shortcutcard: missing required param(s): url and/or name</em>
 {{ else }}
-  <!-- card aligned left in page flow, contents centered -->
-  <article class="app-card" style="display:block; margin:0 0 1.5rem 0; text-align:center; max-width:150px;">
+  <!-- block-level card aligned left with content -->
+  <article class="app-card" style="display:block; margin:0 0 1.5rem 0;">
     <a href="{{ $url }}" target="_blank" rel="noopener" style="display:block;">
       {{ if $icon }}
         <img src="{{ $icon | safeURL }}"
@@ -16,7 +16,7 @@
              width="35" height="35"
              loading="lazy" decoding="async"
              referrerpolicy="no-referrer"
-             style="display:block; margin:0 auto;">
+             style="display:block;">
       {{ end }}
     </a>
     <a href="{{ $url }}" target="_blank" rel="noopener" style="display:block; margin-top:0.25rem;">
