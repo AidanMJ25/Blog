@@ -84,9 +84,14 @@ using the MacBook or not.
 ### Why It Matters
 
 Apple’s built-in battery management is good, but not always predictable—and it doesn’t give 
-me direct control. With this Shortcut + Home Assistant setup, I can enforce my own rules: 
+me direct control. With this Shortcut + BetterTouchTool setup, I can enforce my own rules: 
 charge only when needed, stop at full, and always keep an eye on the charger’s actual state.
 
 It’s a small project, but one that makes a noticeable difference in daily use. My MacBook 
-now charges only when it should, with Home Assistant quietly handling the details in the 
+now charges only when it should, with BetterTouchTool quietly handling the details in the 
 background.
+
+### Apps and Tools Used for this Project
+
+- [Home Assistant](https://www.home-assistant.io/)
+- [BetterTouchTool](https://folivora.ai/)
