@@ -145,7 +145,7 @@ Assistant setup.
 It’s one of those projects where the wiring is simple, the software is lightweight, but the 
 result makes my whole setup feel more “finished.”
 
-### Apps and Tools Used for the projects
+### Apps and Tools Used for this Project
 
 - [Stream Deck HACS Integration](https://github.com/Patrick762/hassio-streamdeck)
 - [Home Assistant](https://www.home-assistant.io/)
