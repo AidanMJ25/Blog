@@ -14,12 +14,19 @@ Usage:
 {{ if or (not $url) (not $name) }}
   <em>shortcutcard: missing required param(s): url and/or name</em>
 {{ else }}
-  <article class="app-card" style="text-align:center;">
+  <article class="app-card" style="display:inline-block; text-align:center; margin-right:1rem; margin-bottom:1rem;">
     <a href="{{ $url }}" target="_blank" rel="noopener" style="display:block;">
       {{ if $icon }}
-        <img src="{{ $icon | safeURL }}" alt="{{ $name }} icon" width="35" height="35" loading="lazy" decoding="async" referrerpolicy="no-referrer" style="display:block;margin:0 auto;">
+        <img src="{{ $icon | safeURL }}" 
+             alt="{{ $name }} icon" 
+             width="35" height="35" 
+             loading="lazy" decoding="async" 
+             referrerpolicy="no-referrer"
+             style="display:block; margin:0 auto;">
       {{ end }}
     </a>
-    <a href="{{ $url }}" target="_blank" rel="noopener" style="inline-flex":block;margin-top:0.25rem;">{{ $name }}</a>
+    <a href="{{ $url }}" target="_blank" rel="noopener" style="display:block; margin-top:0.25rem;">
+      {{ $name }}
+    </a>
   </article>
 {{ end }}
