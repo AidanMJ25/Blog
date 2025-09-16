@@ -75,7 +75,7 @@ how it turns raw open data into something practical and personal.
 
 {{< shortcutcard
      url="https://www.icloud.com/shortcuts/f646350961ee461a8db0ef5190cb1a76"
-     name="Toronto Beaches Water Quality (Public)"
+     name="Toronto Beaches Water Quality"
      icon="https://cvws.icloud-content.com/B/AZoyR5NACBXbWkM7PwYbHvgO13rj/${f}?o=AhqFATuONoZs8D5vPGDWSCNTh3sfroWF-OiOjizCTGRc8px5RsOgi4uu97GtT6jD6A&v=1&x=3&a=CAogVUZxqGXJikIAtRTBFMV_6UGtPMcI2v9JS7hfl8zdlBASexDHjcWflTMYx-qgoZUzIgEAUgQO13rjajCLSGnbR1D38AcG0rf_HlC7CijI4m5N_FnbCu7NUTjvbRW3iHVVoWAM5gWtBuRYbQRyMJlvIsoCJhv58lmYPjH6TUKSKMgldOoGVFMBkZmHgwdvXfL3m9g-QpTvy1mDSCSO2A&e=1758053545&fl=&r=5f4b8c10-01ce-4e3f-bb9a-73c414c72fa4-1&k=_&ckc=com.apple.shortcuts&ckz=_defaultZone&p=33&s=JCNfIU2ftOy8o-u9v3vI05l6RvY"
 >}}
 
