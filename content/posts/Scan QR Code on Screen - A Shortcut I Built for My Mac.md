@@ -66,7 +66,7 @@ flow.
 It’s a small thing, but it’s one of those utilities I use often enough that I can’t imagine 
 not having it anymore.
 
-{{< shortcutcard
+{{< appcard
      url="https://www.icloud.com/shortcuts/97d10d8e9287407eae49da629048ba10"
      name="Scan QR Code On Screen"
      icon="https://cvws.icloud-content.com/B/ARqYgus6_I4mh4wwLcjkSpfTxwFL/${f}?o=Ahkt17c0w958_uGjrRXYnf06GMvgGVzpzaYlaLv2wGQAZOucOkfScD60pZVDCPUb4w&v=1&x=3&a=CAogPML-zSIggdukYM0PQiKwK7U5iEeUvr2Z-jZCtsdnWHYSexDuoKyflTMY7v2HoZUzIgEAUgTTxwFLajClILJ8udvoL3SZZtlqtSVk5TuHT3I5vHmy3oW6DnRiyj8Ltre1U-HU-jqSFUTPh8pyMKlGhoTyTW-JjcfjQ9ez7mKNI3uLeQnzkmRER7QFTP6P_QHnQ5Jup0leqKNkavh3Wg&e=1758053138&fl=&r=6e4b77fd-42fa-4f8b-b471-e726a02dc444-1&k=_&ckc=com.apple.shortcuts&ckz=_defaultZone&p=33&s=2MfYqyBc5AkHRVLpFYBM8UxZK2w"
