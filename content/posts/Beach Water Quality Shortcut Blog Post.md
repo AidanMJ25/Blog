@@ -74,9 +74,9 @@ and instantly see whether it’s safe to swim. It’s become part of my summer r
 how it turns raw open data into something practical and personal.
 
 {{< appcard 
-  name="Toronto Beaches Water Quality"
-  url="https://www.icloud.com/shortcuts/aacb5cbbb0334959af515c0fd10c8993"
-  icon="https://cvws.icloud-content.com/B/AV32r-o41XFRY2SqtvhDFcS5bsah/${f}?o=Aiv6OoOJ_1X1GfiSSPgJAPInQ_QZVAfpu-oRu-EE1py-epRCGt6h11J-uuv2zbqj-Q&v=1&x=3&a=CAogs9F70lbHHBKS_ok9yFZRcfgvCtKUa7D1D14cnuaCRQgSexDw_8WilTMY8NyhpJUzIgEAUgS5bsahajDFDi-CngGqriyafo7e3Od135fIGjKghg0mZUsEG3JKeDZB2IWj89Me_FIZtNiLBiZyMAP7Xkm05J9S51-N368nxz-hCWR7HNFqkn5yJWLZAydsWAsF-lnAG9pV9k9M6bjTVw&e=1758059851&fl=&r=fb82844d-a531-47bd-a50f-699b17862961-1&k=_&ckc=com.apple.shortcuts&ckz=_defaultZone&p=33&s=_v9A--SxsqMHSmk4-eqLaSIEgic"
+    url="https://www.icloud.com/shortcuts/236f3c704b1748f393eeca0244ff039b" 
+    name="Toronto Beaches Water Quality" 
+    icon="Toronto Beaches Water Quality (Public) Icon.jpg" 
 >}}
 
 ### Apps & Tools I Used to Create this Shortcut
