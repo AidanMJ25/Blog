@@ -67,9 +67,9 @@ It’s a small thing, but it’s one of those utilities I use often enough that 
 not having it anymore.
 
 {{< appcard 
-  name="Scan QR Code On Screen"
-  url="https://www.icloud.com/shortcuts/9976ebc2a17741fdbe32fce4718b5fe3"
-  icon="https://cvws.icloud-content.com/B/AS-7B8P93JCGj2uPB4BmZ9RIgLXT/${f}?o=Ao79H1PmIDB8-ModuOMRQSIx1NqbCT3A_-LeYipe1mjZ8rTjovvmNonCBHWJ6BtBpg&v=1&x=3&a=CAogi6LM0Dk_J8czyBhWNd-iBtvGI0HSDKziN9Egt9STX20SexD8x9SilTMY_KSwpJUzIgEAUgRIgLXTajAV7jMYQs-xKAdfCC78rYgQT-ti7ufKFLCv017tT6R8E2pq8_WdCwX3fNrN6kmuE3NyMDTsoBSn3hrmdA-arKDRV4n1tg0MayFeVOz8qRUtb9h3zYyX9kH_VICi19M1oEX_cg&e=1758060089&fl=&r=fc4958a5-344e-41f7-bca7-9a866800313d-1&k=_&ckc=com.apple.shortcuts&ckz=_defaultZone&p=33&s=KRERmA-q-plgFuC2FnKqhP2L68o"
+    url="https://www.icloud.com/shortcuts/d04d8a82cfcd42fcaa1447a90f1d5e52" 
+    name="Scan QR Code On Screen" 
+    icon="Scan QR Code On Screen Icon.jpg" 
 >}}
 
 ### Apps & Tools I Used to Create this Shortcut
