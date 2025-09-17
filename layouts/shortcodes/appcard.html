@@ -1,7 +1,7 @@
 <article class="app-card">
-  <a class="app-card__icon" href="{{ .Get "url" }}" target="_blank" rel="noopener">
-    <img src="{{ .Get "icon" }}" alt="{{ .Get "name" }} app icon" width="35" height="35">
-  </a>
+<a class="app-card__icon" href="{{ .Get "url" }}" target="_blank" rel="noopener">
+  <img src="/images/{{ .Get "icon" }}" alt="{{ .Get "name" }} app icon" width="35" height="35">
+</a>
   <a class="app-card__title" href="{{ .Get "url" }}" target="_blank" rel="noopener">
     {{ .Get "name" }}
   </a>
