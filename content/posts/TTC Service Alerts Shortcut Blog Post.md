@@ -62,9 +62,9 @@ official TTC feed, formatted in a way that’s quick to read.
 It’s a small automation, but one that makes my daily routine less stressful.
 
 {{< appcard 
-  name="TTC Service Alerts"
-  url="https://www.icloud.com/shortcuts/55642d82fd8b4108b6c2f9bd8a196a17"
-  icon="https://cvws.icloud-content.com/B/AWp297docgbPQs1P16kZqh-LiEdp/${f}?o=Avepp8W75htF30yrHz5LUUFDwNkPr_NWxxuLtbgpav_e2y7rpAsYRXpcH0nuX-batg&v=1&x=3&a=CAogSm0bvEA6OflxKq_0oerkJMF2yCDno1Lh9xQDW7XU6jcSexDDs8yilTMYw5CopJUzIgEAUgSLiEdpajDmzXv5SGlTQNXHkiitz2L90hKcb5L2VLkZpLvMyzwbZe6grDMV61Y9NmrHRAs5BaByMLRueXEsz60cbKk0_oZmU_EHzmUY2ImMpYUbrhDVU7WlnYjjrpE1QhyXTrEeFBQYtQ&e=1758059956&fl=&r=76b98de1-bb54-48b0-9bf9-7182a30c14e8-1&k=_&ckc=com.apple.shortcuts&ckz=_defaultZone&p=33&s=W8Eh2f6kgAP5zcN4u10XHmawS7Q"
+    url="https://www.icloud.com/shortcuts/eb224000b2e04f2cbaf85f83c99ba22e" 
+    name="TTC Service Alerts" 
+    icon="TTC Service Alerts Icon.jpg" 
 >}}
 
 ### Apps & Tools I Used to Create this Shortcut
