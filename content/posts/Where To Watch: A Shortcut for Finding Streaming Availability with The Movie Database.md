@@ -76,7 +76,7 @@ something--or if I need to wait until it arrives in Canada.
 {{< appcard 
     url="https://www.icloud.com/shortcuts/cd65d16803074adb9957d512164b8f40" 
     name="Where To Watch" 
-    icon="Where To Watch (Public) Icon.jpg" 
+    icon="/Shortcuts Icons/Where To Watch (Public) Icon.jpg" 
 >}}
 
 ### Apps & Tools Used to Create this Shortcut

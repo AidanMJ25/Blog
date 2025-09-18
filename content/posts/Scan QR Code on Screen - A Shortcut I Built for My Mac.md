@@ -69,7 +69,7 @@ not having it anymore.
 {{< appcard 
     url="https://www.icloud.com/shortcuts/d04d8a82cfcd42fcaa1447a90f1d5e52" 
     name="Scan QR Code On Screen" 
-    icon="Scan QR Code On Screen Icon.jpg" 
+    icon="/Shortcuts Icons/Scan QR Code On Screen Icon.jpg" 
 >}}
 
 ### Apps & Tools I Used to Create this Shortcut

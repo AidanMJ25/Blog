@@ -76,7 +76,7 @@ how it turns raw open data into something practical and personal.
 {{< appcard 
     url="https://www.icloud.com/shortcuts/236f3c704b1748f393eeca0244ff039b" 
     name="Toronto Beaches Water Quality" 
-    icon="Toronto Beaches Water Quality (Public) Icon.jpg" 
+    icon="/Shortcuts Icons/Toronto Beaches Water Quality (Public) Icon.jpg" 
 >}}
 
 ### Apps & Tools I Used to Create this Shortcut

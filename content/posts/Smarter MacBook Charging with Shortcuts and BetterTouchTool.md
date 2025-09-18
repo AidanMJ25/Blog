@@ -95,12 +95,12 @@ background.
 {{< appcard 
     url="https://www.icloud.com/shortcuts/e22b09004acf43fa882a415f3eed7cd8" 
     name="Charge MacBook" 
-    icon="Charge MacBook Icon.jpg" 
+    icon="/Shortcuts Icons/Charge MacBook Icon.jpg" 
 >}}
 {{< appcard 
     url="https://www.icloud.com/shortcuts/62a2a4c8473342cdb2ca72df8d5e9c1b" 
     name="Check MacBook Charger on Login" 
-    icon="Check MacBook Charger on Login Icon.jpg" 
+    icon="/Shortcuts Icons/Check MacBook Charger on Login Icon.jpg" 
 >}}
 {{< /approw >}}
 

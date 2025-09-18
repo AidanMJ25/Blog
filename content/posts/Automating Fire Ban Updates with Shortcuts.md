@@ -74,7 +74,7 @@ always find out the current fire ban status instantly.
 {{< appcard 
     url="https://www.icloud.com/shortcuts/32c07658e4f34b15b8d3bde1997d8e0f" 
     name="Fire Ban Status" 
-    icon="Fire Ban Status Icon.jpg" 
+    icon="/Shortcuts Icons/Fire Ban Status Icon.jpg" 
 >}}
 
 
