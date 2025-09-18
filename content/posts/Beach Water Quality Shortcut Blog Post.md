@@ -81,14 +81,6 @@ how it turns raw open data into something practical and personal.
 
 ### Apps & Tools I Used to Create this Shortcut
 
-{{< appcard 
-    url="https://www.icloud.com/shortcuts/eb224000b2e04f2cbaf85f83c99ba22e" 
-    name="TTC Service Alerts" 
-    icon="TTC Service Alerts Icon.jpg" 
->}}
-
-### Apps & Tools I Used to Create this Shortcut
-
 {{< approw >}}
   {{< appcard 
     url="https://apps.apple.com/ca/app/inspect-browser/id1203594958?uo=4" 
