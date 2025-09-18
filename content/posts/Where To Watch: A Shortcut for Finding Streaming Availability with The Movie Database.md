@@ -8,13 +8,13 @@ summary: "Where To Watch is a Shortcut that searches TMDb for movies or shows an
 
 One of my favorite things about Shortcuts is how they can bridge the gap between scattered web services and a smooth, native-like workflow. I built a new shortcut called Where To Watch, which taps into The Movie Database (TMDb) API to answer a simple but constant question: "Where is this movie or TV show streaming?"
 
-----
+⸻
 
 ### The Idea
 
 The premise is straightforward: I want to type in the name of a movie or TV show, and instantly see whether it's available to stream in my region. No need to scroll through JustWatch, no extra apps, no hunting through five different services. Just one quick Shortcut that opens Safari with the results.
 
-----
+⸻
 
 ### How It Works
 
@@ -25,7 +25,7 @@ The Shortcut starts by letting me choose between Movie or TV Show. Behind the sc
 
 Once I make a choice, the Shortcut asks me to type in the name. That query string gets URL-encoded and sent off to TMDb's search API.
 
-----
+⸻
 
 ### Handling Results
 
@@ -37,7 +37,7 @@ TMDb often returns multiple matches (think about searching for "Batman"). To han
 
 If no results are found, the Shortcut gracefully shows a "No results found :(" message and stops.
 
-----
+⸻
 
 ### Streaming Providers
 
@@ -47,7 +47,7 @@ The Shortcut checks for my country code (CA in this case), and if providers exis
 
 > "Unfortunately this title is not available in your region :("
 
-----
+⸻
 
 ### Why I Love This
 
