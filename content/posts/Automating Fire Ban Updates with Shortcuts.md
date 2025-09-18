@@ -84,13 +84,13 @@ always find out the current fire ban status instantly.
   {{< appcard 
     url="https://apps.apple.com/ca/app/inspect-browser/id1203594958?uo=4" 
     name="Inspect Browser" 
-    icon="Inspect Browser Icon.jpg" 
+    icon="/App Store App Icons/Inspect Browser Icon.jpg" 
 >}}
 
   {{< appcard 
     url="https://apps.apple.com/ca/app/jayson/id1447750768?uo=4" 
     name="Jayson" 
-    icon="Jayson Icon.jpg" 
+    icon="/App Store App Icons/Jayson Icon.jpg" 
 >}}
 {{< /approw >}}
 
