@@ -6,3 +6,10 @@
 public/
 resources/_gen/
 .hugo_build.lock
+layouts/.DS_Store
+layouts/.DS_Store
+public/.DS_Store
+themes/.DS_Store
+layouts/.DS_Store
+public/.DS_Store
+themes/.DS_Store
