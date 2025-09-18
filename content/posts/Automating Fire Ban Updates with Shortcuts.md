@@ -79,18 +79,26 @@ always find out the current fire ban status instantly.
 
 ### Apps & Tools I Used to Create this Shortcut
 
+{{< appcard 
+    url="https://www.icloud.com/shortcuts/eb224000b2e04f2cbaf85f83c99ba22e" 
+    name="TTC Service Alerts" 
+    icon="TTC Service Alerts Icon.jpg" 
+>}}
+
+### Apps & Tools I Used to Create this Shortcut
+
 {{< approw >}}
   {{< appcard 
-    name="Inspect Browser"
-    url="https://apps.apple.com/ca/app/inspect-browser/id1203594958?uo=4"
-    icon="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a9/71/c6/a971c683-ee6e-46d3-b3ee-75c8d2be2484/AppIcon-0-0-1x_U007epad-0-10-0-85-220.png/512x512bb.png"
-  >}}
+    url="https://apps.apple.com/ca/app/inspect-browser/id1203594958?uo=4" 
+    name="Inspect Browser" 
+    icon="Inspect Browser Icon.jpg" 
+>}}
 
   {{< appcard 
-    name="Jayson"
-    url="https://apps.apple.com/ca/app/jayson/id1447750768?uo=4"
-    icon="https://is1-ssl.mzstatic.com/image/thumb/Purple125/v4/78/3d/2e/783d2e1c-0191-32aa-3a7a-2a578ec6cfdf/AppIcon-0-1x_U007emarketing-0-7-0-sRGB-85-220.png/512x512bb.png"
-  >}}
+    url="https://apps.apple.com/ca/app/jayson/id1447750768?uo=4" 
+    name="Jayson" 
+    icon="Jayson Icon.jpg" 
+>}}
 {{< /approw >}}
 
 
