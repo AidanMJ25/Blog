@@ -70,6 +70,6 @@ I wanted a way to make Wordle more approachable on the days when the word feels 
 {{< appcard 
     url="https://apps.apple.com/ca/app/jayson/id1447750768?uo=4" 
     name="Jayson" 
-    icon="Jayson Icon.jpg" 
+    icon="/App Store App Icons/Jayson Icon.jpg" 
 >}}
 {{< /approw >}}
