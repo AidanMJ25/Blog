@@ -74,11 +74,8 @@ not having it anymore.
 
 ### Apps & Tools I Used to Create this Shortcut
 
-{{< approw >}}
-  {{< appcard 
-    name="Jayson"
-    url="https://apps.apple.com/ca/app/jayson/id1447750768?uo=4"
-    icon="https://is1-ssl.mzstatic.com/image/thumb/Purple125/v4/78/3d/2e/783d2e1c-0191-32aa-3a7a-2a578ec6cfdf/AppIcon-0-1x_U007emarketing-0-7-0-sRGB-85-220.png/512x512bb.png"
-  >}}
-{{< /approw >}}
-
+{{< appcard 
+    url="https://apps.apple.com/ca/app/jayson/id1447750768?uo=4" 
+    name="Jayson" 
+    icon="Jayson Icon.jpg" 
+>}}
