@@ -84,5 +84,5 @@ something--or if I need to wait until it arrives in Canada.
 {{< appcard 
     url="https://apps.apple.com/ca/app/jayson/id1447750768?uo=4" 
     name="Jayson" 
-    icon="Jayson Icon.jpg" 
+    icon="/App Store App Icons/Jayson Icon.jpg" 
 >}}
