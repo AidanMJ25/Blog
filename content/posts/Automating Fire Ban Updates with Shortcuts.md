@@ -77,13 +77,6 @@ always find out the current fire ban status instantly.
     icon="Fire Ban Status Icon.jpg" 
 >}}
 
-### Apps & Tools I Used to Create this Shortcut
-
-{{< appcard 
-    url="https://www.icloud.com/shortcuts/eb224000b2e04f2cbaf85f83c99ba22e" 
-    name="TTC Service Alerts" 
-    icon="TTC Service Alerts Icon.jpg" 
->}}
 
 ### Apps & Tools I Used to Create this Shortcut
 
