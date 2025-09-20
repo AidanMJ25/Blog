@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+# Sitemap: https://aidanmaurinjones.com/sitemap.xml
