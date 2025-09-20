@@ -2,7 +2,7 @@
 title: "Wikipedia Article Downloader: A Shortcut for Offline Reading"
 date: 2025-09-19
 draft: false
-tags: ["Shortcuts", "Web Scraping"]
+tags: ["Shortcuts", "WebScraping"]
 summary: "I built a Shortcut that lets me quickly turn any Wikipedia link into a clean PDF, making it easy to save articles for offline reading, research, or archiving."
 ---
 
