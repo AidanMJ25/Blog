@@ -22,7 +22,7 @@ From there, I do a quick conversion dance:
 - Make Rich Text from Show Notes HTML
 - Make Markdown from Rich Text
 
-The reason? Markdown gives me a predictable link structure--[title](URL)--that's easy to parse with a regex.
+The reason? Markdown gives me a predictable link structure that's easy to parse with a regex.
 
 ---
 
