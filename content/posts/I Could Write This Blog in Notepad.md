@@ -69,8 +69,8 @@ about: the backend and the posting workflow. I never wanted to spend hours tweak
 or dragging blocks around to make a site look just right. With Hugo, I pick a theme once, 
 and that’s it. The design takes care of itself.
 
-What matters to me is how I write, publish, and maintain my blog. And in that respect, Hugo 
-+ GitHub Pages is ideal. My workflow is streamlined: write in Markdown, commit to Git, push, 
+What matters to me is how I write, publish, and maintain my blog. And in that respect, Hugo + 
+GitHub Pages is ideal. My workflow is streamlined: write in Markdown, commit to Git, push, 
 and I’m done. I get all the reliability, portability, and automation I want on the backend 
 without having to think about the front-end at all.
 
