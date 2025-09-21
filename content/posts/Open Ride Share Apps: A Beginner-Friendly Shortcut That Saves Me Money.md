@@ -48,6 +48,8 @@ If you've been curious about building your first Shortcut but felt intimidated, 
     icon="/Shortcuts Icons/Open Ride Share Apps Icon.jpg" 
 >}}
 
+### Apps Used In This Shortcut
+
 {{< approw >}}
 {{< appcard 
     url="https://apps.apple.com/ca/app/hopp-get-a-ride/id6475395031?uo=4" 
