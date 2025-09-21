@@ -24,7 +24,7 @@ This is about as beginner-friendly as Shortcuts get. The flow is just:
 - Open Lyft
 - Open Hopp
 
-When I run the Shortcut, I'm presented with a simple list of ride-share apps. I tap the one I want, and it launches instantly. No menus to build, no variables to configure, no fancy scripting required. If you're new to Shortcuts, this is the kind of automation you can recreate in under five minutes.
+That’s it. No menus to build, no variables to configure, no scripting required. When I run the Shortcut, it simply opens all three apps in sequence. By the time I’m done glancing at Uber, Lyft, and Hopp, I know which one has the best deal.
 
 ----
 
