@@ -3,7 +3,8 @@ title: "I Could Write This Blog in Notepad"
 date: 2025-09-21
 draft: false
 tags: ["Hugo", "GitHub Pages", "Blogging"]
-summary: "My blog runs on Hugo and GitHub Pages, but the magic is that underneath it’s just a folder of Markdown files — so simple I could write it all in Notepad."
+summary: "My blog runs on Hugo and GitHub Pages, but the magic is that underneath it’s just 
+a folder of Markdown files — so simple I could write it all in Notepad."
 ---
 
 I’ve started a lot of projects over the years, but few have clicked as quickly and completely 
