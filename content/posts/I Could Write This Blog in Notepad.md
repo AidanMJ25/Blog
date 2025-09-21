@@ -20,8 +20,7 @@ from plain Markdown files and served directly from GitHub with almost no overhea
 
 ### Fast, Free, and Reliable
 
-Hugo compiles my site in seconds, spitting out plain HTML that GitHub Pages serves instantly.  
-That’s the beauty of a **static site**: it’s nothing more than pre-built pages sitting on a 
+Hugo compiles my site in seconds, spitting out plain HTML that GitHub Pages serves instantly.  That’s the beauty of a **static site**: it’s nothing more than pre-built pages sitting on a 
 server, ready to be delivered the moment someone visits. There’s no database query, no 
 server-side code, no waiting for templates to render. The site is already fully assembled 
 before it ever reaches the browser, which is why it loads so quickly.
