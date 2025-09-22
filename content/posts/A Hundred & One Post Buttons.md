@@ -123,7 +123,14 @@ blog will always be built on.
     name="Service Station" 
     icon="/App Store App Icons/Service Station Icon.jpg" 
 >}}
+{{< appcard 
+    url="http://www.barebones.com/products/bbedit/index.html" 
+    name="BBEdit" 
+    icon="/App Icons/BBEdit Icon.jpg" 
+>}}
+{{< appcard 
+    url="https://www.alfredapp.com/" 
+    name="Alfred 5" 
+    icon="/App Icons/Alfred 5 Icon.jpg" 
+>}}
 {{< /approw >}}
-
-- [BBEdit](http://www.barebones.com/products/bbedit/index.html)
-- [Alfred](https://www.alfredapp.com/)
