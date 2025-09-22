@@ -106,5 +106,15 @@ background.
 
 ### Apps and Tools Used for this Project
 
-- [Home Assistant](https://www.home-assistant.io/)
-- [BetterTouchTool](https://folivora.ai/)
+{{< approw >}}
+{{< appcard 
+    url="https://www.home-assistant.io/" 
+    name="Home Assistant" 
+    icon="/App Icons/Home Assistant Icon.jpg" 
+>}}
+{{< appcard 
+    url="https://folivora.ai/" 
+    name="BetterTouchTool" 
+    icon="/App Icons/BetterTouchTool Icon.jpg" 
+>}}
+{{< /approw >}}
