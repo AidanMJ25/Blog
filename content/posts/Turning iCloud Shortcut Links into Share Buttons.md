@@ -3,10 +3,9 @@ title: “Turning iCloud Shortcut Links into Share Buttons”
 date: 2025-09-23
 draft: false
 tags: [“Shortcuts”, “Blog”, "Hugo"]
-summary: “A Shortcut that takes an iCloud Shortcut link, grabs its metadata and icon, and 
-turns it into a ready-to-paste Hugo app card.”
-
+summary: “A Shortcut that takes an iCloud Shortcut link, grabs its metadata and icon, and turns it into a ready-to-paste Hugo app card.”
 ---
+
 
 One of the best things about Shortcuts is that it can bridge services that were never designed 
 to talk to each other. The Shortcut I’ve been using lately—Share Shortcut HTML Button—is a 
