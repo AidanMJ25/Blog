@@ -8,7 +8,7 @@ you a playful hint instead of a spoiler."
 ---
 
 I've been having fun experimenting with Shortcuts, APIs, and local AI models, and recently 
-I built something is kinda fun: a Shortcut that gives you a hint for the daily Wordle without 
+I built something that is kinda fun: a Shortcut that gives you a hint for the daily Wordle without 
 spoiling the answer.
 
 ____
