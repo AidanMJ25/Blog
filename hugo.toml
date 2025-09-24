@@ -18,8 +18,11 @@ theme = 'mainroad'
   [params.widgets]
     tags_counter = true
 
-  [params.widgets.search]
-    url = "https://duckduckgo.com/"
+  [Params.widgets.search]
+    url = "https://google.com/search"
+    [Params.widgets.search.input]
+      name = "sitesearch"
+      pre = ""
 
   [params.widgets.search.input]
     name = "sites"
