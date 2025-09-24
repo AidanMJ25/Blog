@@ -1,9 +1,10 @@
 ---
-title: “Turning iCloud Shortcut Links into Share Buttons”
+title: "Turning iCloud Shortcut Links into Share Buttons"
 date: 2025-09-23
 draft: false
 tags: [“Shortcuts”, “Blog”, "Hugo"]
-summary: “A Shortcut that takes an iCloud Shortcut link, grabs its metadata and icon, and turns it into a ready-to-paste Hugo app card.”
+summary: "A Shortcut that takes an iCloud Shortcut link, grabs its metadata and icon, and 
+turns it into a ready-to-paste Hugo app card."
 ---
 
 
