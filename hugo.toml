@@ -23,10 +23,6 @@ theme = 'mainroad'
     [Params.widgets.search.input]
       name = "sitesearch"
       pre = ""
-
-  [params.widgets.search.input]
-    name = "sites"
-    pre = ""
     
 # These belong at top-level (you already have them right)
 mainSections = ["posts"]
