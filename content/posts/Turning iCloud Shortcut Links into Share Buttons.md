@@ -63,17 +63,7 @@ of my site.
 
 **Generating the Blog Card**
 
-The last step is pure convenience:
-
-```
-{{< appcard
-  url="https://www.icloud.com/shortcuts/..."
-  name="My Shortcut"
-  icon="/Shortcuts Icons/My Shortcut.jpg"
->}}
-```
-
-The Shortcut assembles this block automatically, copies it to my clipboard, and I can paste 
+The Shortcut assembles the code automatically, copies it to my clipboard, and I can paste 
 it directly into my Markdown post. No typing, no file juggling, no guesswork.
 
 ⸻
