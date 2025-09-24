@@ -20,11 +20,11 @@ theme = 'mainroad'
 
 
 # Use Google as the target (Mainroad’s default)
-[Params.widgets.search]
+[params.widgets.search]
   url = "https://google.com/search"
 
   # Mainroad builds the full query for you. Leave these as docs recommend:
-  [Params.widgets.search.input]
+  [params.widgets.search.input]
     name = "sitesearch"
     pre  = ""
     
