@@ -2,7 +2,7 @@
 title: "Turning iCloud Shortcut Links into Share Buttons"
 date: 2025-09-23
 draft: false
-tags: [“Shortcuts”, “Blog”, "Hugo"]
+tags: ["Shortcuts", "Blog", "Hugo"]
 summary: "A Shortcut that takes an iCloud Shortcut link, grabs its metadata and icon, and 
 turns it into a ready-to-paste Hugo app card."
 ---
@@ -65,11 +65,13 @@ of my site.
 
 The last step is pure convenience:
 
+```
 {{< appcard
   url="https://www.icloud.com/shortcuts/..."
   name="My Shortcut"
   icon="/Shortcuts Icons/My Shortcut.jpg"
 >}}
+```
 
 The Shortcut assembles this block automatically, copies it to my clipboard, and I can paste 
 it directly into my Markdown post. No typing, no file juggling, no guesswork.
