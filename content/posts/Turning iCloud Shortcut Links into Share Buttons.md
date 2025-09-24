@@ -5,6 +5,7 @@ draft: false
 tags: [“Shortcuts”, “Blog”, "Hugo"]
 summary: “A Shortcut that takes an iCloud Shortcut link, grabs its metadata and icon, and 
 turns it into a ready-to-paste Hugo app card.”
+
 ---
 
 One of the best things about Shortcuts is that it can bridge services that were never designed 
