@@ -86,7 +86,7 @@ automations that pays dividends every single day.
 
 {{< appcard 
     url="https://www.icloud.com/shortcuts/7e33edc6ca804b259747d50c768bcf7d" 
-    name="Share App Store App HTML Button (Public)" 
+    name="Share App Store App HTML Button" 
     icon="/Shortcuts Icons/Share App Store App HTML Button (Public) Icon.jpg" 
 >}}
 
