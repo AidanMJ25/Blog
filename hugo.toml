@@ -18,11 +18,15 @@ theme = 'mainroad'
   [params.widgets]
     tags_counter = true
 
-  [Params.widgets.search]
-    url = "https://google.com/search"
-    [Params.widgets.search.input]
-      name = "sitesearch"
-      pre = ""
+
+# Use Google as the target (Mainroad’s default)
+[Params.widgets.search]
+  url = "https://google.com/search"
+
+  # Mainroad builds the full query for you. Leave these as docs recommend:
+  [Params.widgets.search.input]
+    name = "sitesearch"
+    pre  = ""
     
 # These belong at top-level (you already have them right)
 mainSections = ["posts"]
