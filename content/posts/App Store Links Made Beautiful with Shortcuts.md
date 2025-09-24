@@ -2,7 +2,7 @@
 title: "App Store Links Made Beautiful with Shortcuts"
 date: 2025-09-23
 draft: false
-tags: ["Shortcuts", "Blog", "Hugo"]
+tags: ["Shortcuts", "Blogging", "Hugo"]
 summary: "This Shortcut takes an App Store link and automatically generates a Hugo-ready app 
 card with the app’s name, icon, and URL—saving it straight to your clipboard."
 ---
