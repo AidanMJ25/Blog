@@ -65,3 +65,16 @@ For someone like me, who's already knee-deep in Shortcuts for other parts of my 
 Shortcuts may not be the most glamorous way to control smart home gear, but you can do it. By working directly with the SwitchBot API, these automations skip the app entirely and give me the confidence that when I tap a button, my devices respond.
 
 It's yet another example of how Shortcuts can serve as the glue between platforms, devices, and services. And for SwitchBot users, it's a reminder that sometimes the simplest approach is also the most powerful.
+
+{{< approw >}}
+{{< appcard 
+    url="https://www.icloud.com/shortcuts/430120281f3c4b75a59c1bb2dbc90453" 
+    name="Get SwitchBot Devices Template" 
+    icon="/Shortcuts Icons/Get SwitchBot Devices Template (Public) Icon.jpg" 
+>}}
+{{< appcard 
+    url="https://www.icloud.com/shortcuts/7042d2acf1864db9b7b604e8ea4971ed" 
+    name="Send Command to SwitchBot Template (Public)" 
+    icon="/Shortcuts Icons/Send Command to SwitchBot Template (Public) Icon.jpg" 
+>}}
+{{< /approw >}}
