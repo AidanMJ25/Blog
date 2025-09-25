@@ -74,7 +74,7 @@ It's yet another example of how Shortcuts can serve as the glue between platform
 >}}
 {{< appcard 
     url="https://www.icloud.com/shortcuts/7042d2acf1864db9b7b604e8ea4971ed" 
-    name="Send Command to SwitchBot Template (Public)" 
+    name="Send Command to SwitchBot Template" 
     icon="/Shortcuts Icons/Send Command to SwitchBot Template (Public) Icon.jpg" 
 >}}
 {{< /approw >}}
