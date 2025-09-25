@@ -102,7 +102,7 @@ But even as-is, this trio of Shortcuts transforms Kasa devices from "app-only" g
 >}}
 {{< appcard 
     url="https://www.icloud.com/shortcuts/0f8d26fecc294230bac0f1a0611bee1e" 
-    name="Turn ON/OFF Kasa Device" 
+    name="Turn ON & OFF Kasa Device" 
     icon="/Shortcuts Icons/Turn ON/OFF Kasa Device (Public) Icon.jpg" 
 >}}
 {{< /approw >}}
