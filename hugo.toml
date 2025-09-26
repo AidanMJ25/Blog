@@ -29,6 +29,10 @@ theme = 'mainroad'
   [params.widgets]
     tags_counter = true
 
+ [params.logo]
+  image = "/favicon.png" # Logo image. Path relative to "static"
+  title = " Aidan Maurin-Jones"
+
 
 # Use Google as the target (Mainroad’s default)
 [params.widgets.search]
