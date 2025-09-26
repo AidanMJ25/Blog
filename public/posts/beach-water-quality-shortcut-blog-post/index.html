@@ -30,7 +30,29 @@
 				</div>
 		</a>
 	</div>
-		<div class="divider"></div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/about/">
+				
+				<span class="menu__text">About</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/contact/">
+				
+				<span class="menu__text">Contact</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
 	</div>
 </header>
 		<div class="wrapper flex">
@@ -40,7 +62,9 @@
 	<article class="post">
 		<header class="post__header">
 			<h1 class="post__title">Automating Toronto’s Beach Water Quality with Shortcuts</h1>
-			
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-09-14T00:00:00Z">September 14, 2025</time></div></div>
 		</header>
 		<div class="content post__content clearfix">
 			<p>This summer I wanted a faster way to check if it’s safe to swim at Toronto’s beaches. The city
@@ -65,10 +89,12 @@ results. This keeps the Shortcut flexible if I want to expand it.</p>
 <h3 id="formatting-the-data">Formatting the Data</h3>
 <p>This is the part I had the most fun with. The Shortcut parses out the CollectionDate,
 statusFlag, eColi count, and any advisory notes. To make the results clear at a glance,
-I map:
-•	SAFE → green
-•	UNSAFE → red
-•	Anything else → black</p>
+I map:</p>
+<ul>
+<li>SAFE → green</li>
+<li>UNSAFE → red</li>
+<li>Anything else → black</li>
+</ul>
 <p>I then build an HTML card for each beach, using large black headers for the beach name,
 medium-sized text for the collection date, and a color-coded status flag for the water
 quality. Everything is wrapped in <!-- raw HTML omitted --> elements with inline font sizes so the final
@@ -87,6 +113,202 @@ presenting them in a way that’s useful at a glance.</p>
 <p>Now, instead of digging through government websites or spreadsheets, I just run the Shortcut
 and instantly see whether it’s safe to swim. It’s become part of my summer routine, and I love
 how it turns raw open data into something practical and personal.</p>
+<article class="app-card">
+<a class="app-card__icon" href="https://www.icloud.com/shortcuts/236f3c704b1748f393eeca0244ff039b" target="_blank" rel="noopener">
+  <img src="/images//Shortcuts%20Icons/Toronto%20Beaches%20Water%20Quality%20%28Public%29%20Icon.jpg" alt="Toronto Beaches Water Quality app icon" width="35" height="35">
+</a>
+  <a class="app-card__title" href="https://www.icloud.com/shortcuts/236f3c704b1748f393eeca0244ff039b" target="_blank" rel="noopener">
+    Toronto Beaches Water Quality
+  </a>
+
+  <style>
+    .app-card {
+      display: inline-flex;        
+      flex-direction: column;
+      align-items: center;         
+      text-align: center;
+      margin-right: 1.5rem;        
+      margin-bottom: 1rem;
+    }
+    .app-card__icon img {
+      border-radius: 18%;
+      display: block;
+    }
+    .app-card__title {
+      margin: 0.25rem 0 0;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;       
+      color: inherit;              
+    }
+    .app-card__title:hover {
+      text-decoration: underline;  
+    }
+  </style>
+</article>
+
+<h3 id="apps--tools-i-used-to-create-this-shortcut">Apps &amp; Tools I Used to Create this Shortcut</h3>
+<div class="app-row">
+  
+  <article class="app-card">
+  <a class="app-card__icon" href="https://apps.apple.com/ca/app/inspect-browser/id1203594958?uo=4" target="_blank" rel="noopener">
+    <img src="/images//App%20Store%20App%20Icons/Inspect%20Browser%20Icon.jpg" alt="Inspect Browser app icon" width="35" height="35">
+  </a>
+    <a class="app-card__title" href="https://apps.apple.com/ca/app/inspect-browser/id1203594958?uo=4" target="_blank" rel="noopener">
+      Inspect Browser
+    </a>
+  
+    <style>
+      .app-card {
+        display: inline-flex;        
+        flex-direction: column;
+        align-items: center;         
+        text-align: center;
+        margin-right: 1.5rem;        
+        margin-bottom: 1rem;
+      }
+      .app-card__icon img {
+        border-radius: 18%;
+        display: block;
+      }
+      .app-card__title {
+        margin: 0.25rem 0 0;
+        font-size: 1rem;
+        font-weight: 600;
+        text-decoration: none;       
+        color: inherit;              
+      }
+      .app-card__title:hover {
+        text-decoration: underline;  
+      }
+    </style>
+  </article>
+
+
+  <article class="app-card">
+  <a class="app-card__icon" href="https://apps.apple.com/ca/app/jayson/id1447750768?uo=4" target="_blank" rel="noopener">
+    <img src="/images//App%20Store%20App%20Icons/Jayson%20Icon.jpg" alt="Jayson app icon" width="35" height="35">
+  </a>
+    <a class="app-card__title" href="https://apps.apple.com/ca/app/jayson/id1447750768?uo=4" target="_blank" rel="noopener">
+      Jayson
+    </a>
+  
+    <style>
+      .app-card {
+        display: inline-flex;        
+        flex-direction: column;
+        align-items: center;         
+        text-align: center;
+        margin-right: 1.5rem;        
+        margin-bottom: 1rem;
+      }
+      .app-card__icon img {
+        border-radius: 18%;
+        display: block;
+      }
+      .app-card__title {
+        margin: 0.25rem 0 0;
+        font-size: 1rem;
+        font-weight: 600;
+        text-decoration: none;       
+        color: inherit;              
+      }
+      .app-card__title:hover {
+        text-decoration: underline;  
+      }
+    </style>
+  </article>
+
+
+</div>
+
+<style>
+  .app-row {
+    display: flex;
+    justify-content: left;   
+    gap: 0.5rem;                  
+    flex-wrap: wrap;
+  }
+  .app-row > * {
+    flex: 0 0 auto;             
+  }
+</style>
+
+<p><p>
+<a href="https://www.buymeacoffee.com/AidanMJ25" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/arial-yellow.png" alt="Buy Me A Coffee" style="height: 35px !important;width: 127px !important;" ></a>
+</p>
+<p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { font-family: sans-serif; padding: 2rem; }
+.rss-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;                
+  padding: 0.5em 1em;        
+  background-color: #f26522;
+  color: white !important;
+  border-radius: 0.3em;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: .75rem;           
+  transition: background-color 0.2s ease;
+}
+.rss-button svg {
+  fill: white !important;
+  width: 1.2em;              
+  height: 1.2em;
+}
+.rss-button:hover {
+  background-color: #d35400;
+}
+  </style>
+</head>
+<body>
+  <a class="rss-button" href="http://aidanmaurinjones.com/index.xml" rel="noopener" aria-label="Subscribe via RSS">
+    <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/>
+    </svg>
+    <span>Subscribe via RSS</span>
+  </a>
+</body>
+</html>
+</p></p>
+<p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { font-family: sans-serif; padding: 2rem; }
+.newsletter-subscribe {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;                
+  padding: 0.5em 1em;        
+  background-color: #2F8CFF;
+  color: white !important;
+  border-radius: 0.3em;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: .75rem;           
+  transition: background-color 0.2s ease;
+}
+.newsletter-subscribe:hover {
+  background-color: #357ABD;
+}
+  </style>
+</head>
+<body>
+   <a class="newsletter-subscribe" href="https://buttondown.com/AidanMJ25" target="_blank" rel="noopener">
+    Subscribe to Newsletter
+  </a>
+</body>
+</html>
+</p>
 
 		</div>
 		<footer class="post__footer">
@@ -111,17 +333,31 @@ how it turns raw open data into something practical and personal.</p>
 
 			</div>
 			<aside class="sidebar"><div class="widget-search widget">
-	<form class="widget-search__form" role="search" method="get" action="https://duckduckgo.com/">
+	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
 		<input class="widget-search__field" type="search" placeholder="Search…" value="" name="q" aria-label="Search…">
 		<input class="widget-search__submit" type="submit" value="Search">
-		<input type="hidden" name="sites" value="http://localhost:1313/">
+		<input type="hidden" name="sitesearch" value="http://localhost:1313/">
 	</form>
 </div>
 <div class="widget-taglist widget">
 	<h4 class="widget__title">Tags</h4>
 	<div class="widget__content">
-		<a class="widget-taglist__link widget__link btn" href="/tags/shortcuts/" title="Shortcuts">Shortcuts (3)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/webscraping/" title="Webscraping">Webscraping (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/ai/" title="AI">AI (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/alfred/" title="Alfred">Alfred (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/applescript/" title="AppleScript">AppleScript (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/bettertouchtool/" title="BetterTouchTool">BetterTouchTool (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/blogging/" title="Blogging">Blogging (5)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/esphome/" title="ESPHome">ESPHome (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/github-pages/" title="GitHub Pages">GitHub Pages (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/home-assistant/" title="Home Assistant">Home Assistant (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/hugo/" title="Hugo">Hugo (5)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/podcasts/" title="Podcasts">Podcasts (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/raspberry-pi/" title="Raspberry Pi">Raspberry Pi (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/shortcuts/" title="Shortcuts">Shortcuts (20)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/simple-automation/" title="Simple Automation">Simple Automation (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/smart-home/" title="Smart Home">Smart Home (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/stream-deck/" title="Stream Deck">Stream Deck (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/webscraping/" title="WebScraping">WebScraping (5)</a>
 	</div>
 </div><section class="widget clear-tags">
   <a class="all-posts-link" href="/">Clear All Selected Tags</a>

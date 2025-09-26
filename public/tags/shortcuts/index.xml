@@ -6,8 +6,127 @@
     <description>Recent content in Shortcuts on Aidan Maurin-Jones</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 14 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 26 Sep 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/shortcuts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fighting Spam with Automation: A Shortcut for Writing Hilarious Replies</title>
+      <link>http://localhost:1313/posts/fighting-spam-with-automation--a-shortcut-for-writing-hilarious-replies/</link>
+      <pubDate>Fri, 26 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/fighting-spam-with-automation--a-shortcut-for-writing-hilarious-replies/</guid>
+      <description>A playful Shortcut that uses AppleScript, Shortcuts, and LM Studio to automatically draft hilariously rude replies to spam emails.</description>
+    </item>
+    <item>
+      <title>Automating TP-Link Kasa Devices with Shortcuts</title>
+      <link>http://localhost:1313/posts/automating-tp-link-kasa-devices-with-shortcuts/</link>
+      <pubDate>Thu, 25 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/automating-tp-link-kasa-devices-with-shortcuts/</guid>
+      <description>Using three clever Shortcuts and the Kasa cloud API, you can log in, list devices, and control TP-Link Kasa smart plugs and switches directly from Shortcuts—no Homebridge required.</description>
+    </item>
+    <item>
+      <title>Convert Current Date to Unix Time with Shortcuts</title>
+      <link>http://localhost:1313/posts/convert-current-date-to-unix-time-with-shortcuts/</link>
+      <pubDate>Thu, 25 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/convert-current-date-to-unix-time-with-shortcuts/</guid>
+      <description>A simple Shortcut that converts any date—or the current one—into Unix time, perfect for APIs, logging, and automation workflows.</description>
+    </item>
+    <item>
+      <title>Get This Week’s Events: A Smarter Calendar Shortcut</title>
+      <link>http://localhost:1313/posts/get-this-weeks-events-a-smarter-calendar-shortcut/</link>
+      <pubDate>Thu, 25 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/get-this-weeks-events-a-smarter-calendar-shortcut/</guid>
+      <description>A flexible Shortcut that dynamically calculates the start and end of the current week and fetches only your calendar events within that range.</description>
+    </item>
+    <item>
+      <title>Controlling SwitchBot Devices with Shortcuts and the Web API</title>
+      <link>http://localhost:1313/posts/controlling-switchbot-devices-with-shortcuts-and-the-web-api/</link>
+      <pubDate>Wed, 24 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/controlling-switchbot-devices-with-shortcuts-and-the-web-api/</guid>
+      <description>With a couple of Shortcuts and the SwitchBot Web API, I can fetch my devices and send commands directly—no app required.</description>
+    </item>
+    <item>
+      <title>App Store Links Made Beautiful with Shortcuts</title>
+      <link>http://localhost:1313/posts/app-store-links-made-beautiful-with-shortcuts/</link>
+      <pubDate>Tue, 23 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/app-store-links-made-beautiful-with-shortcuts/</guid>
+      <description>This Shortcut takes an App Store link and automatically generates a Hugo-ready app card with the app’s name, icon, and URL—saving it straight to your clipboard.</description>
+    </item>
+    <item>
+      <title>Share Mac App HTML Button: Automating App Cards from Alfred</title>
+      <link>http://localhost:1313/posts/share-mac-app-html-button--automating-app-cards-from-alfred/</link>
+      <pubDate>Tue, 23 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/share-mac-app-html-button--automating-app-cards-from-alfred/</guid>
+      <description>A Shortcut that turns any Mac app—App Store or direct download—into a polished Hugo app card with its icon, name, and link, all triggered as an Alfred File Action.</description>
+    </item>
+    <item>
+      <title>Turning iCloud Shortcut Links into Share Buttons</title>
+      <link>http://localhost:1313/posts/turning-icloud-shortcut-links-into-share-buttons/</link>
+      <pubDate>Tue, 23 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/turning-icloud-shortcut-links-into-share-buttons/</guid>
+      <description>A Shortcut that takes an iCloud Shortcut link, grabs its metadata and icon, and turns it into a ready-to-paste Hugo app card.</description>
+    </item>
+    <item>
+      <title>A Hundred &amp; One Post Buttons</title>
+      <link>http://localhost:1313/posts/a-hundred--one-post-buttons/</link>
+      <pubDate>Sun, 21 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/a-hundred--one-post-buttons/</guid>
+      <description>This post breaks down how I use a simple Shortcut to publish Markdown files straight to my Hugo blog on GitHub Pages, no browser or CMS required.</description>
+    </item>
+    <item>
+      <title>Open Ride Share Apps: A Beginner-Friendly Shortcut That Saves Me Money</title>
+      <link>http://localhost:1313/posts/open-ride-share-apps-a-beginner-friendly-shortcut-that-saves-me-money/</link>
+      <pubDate>Sat, 20 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/open-ride-share-apps-a-beginner-friendly-shortcut-that-saves-me-money/</guid>
+      <description>This post is about a simple Shortcut that launches Uber, Lyft, and Hopp, making it easy to compare prices and save money on rides.</description>
+    </item>
+    <item>
+      <title>Save URLs from Show Notes with Overcast and Drafts</title>
+      <link>http://localhost:1313/posts/save-urls-from-show-notes-with-overcast-and-drafts/</link>
+      <pubDate>Sat, 20 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/save-urls-from-show-notes-with-overcast-and-drafts/</guid>
+      <description>This post explains how a custom Shortcut pulls links from Overcast show notes and saves them into Drafts, creating a seamless way to collect and organize podcast references.</description>
+    </item>
+    <item>
+      <title>Wikipedia Article Downloader: A Shortcut for Offline Reading</title>
+      <link>http://localhost:1313/posts/wikipedia-article-downloader--a-shortcut-for-offline-reading/</link>
+      <pubDate>Fri, 19 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/wikipedia-article-downloader--a-shortcut-for-offline-reading/</guid>
+      <description>I built a Shortcut that lets me quickly turn any Wikipedia link into a clean PDF, making it easy to save articles for offline reading, research, or archiving.</description>
+    </item>
+    <item>
+      <title>Automating My City&#39;s Garbage Schedule with Shortcuts</title>
+      <link>http://localhost:1313/posts/automating-my-citys-garbage-schedule-with-shortcuts/</link>
+      <pubDate>Thu, 18 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/automating-my-citys-garbage-schedule-with-shortcuts/</guid>
+      <description>How I built a Shortcut that fetches my city&amp;rsquo;s garbage schedule from a CSV, translates it into plain English, and tells me exactly which bins to put out each collection day.</description>
+    </item>
+    <item>
+      <title>Wordle, But With a Twist: A Shortcut I Built That Gives You Hints</title>
+      <link>http://localhost:1313/posts/wordle-but-with-a-twist-a-shortcut-i-built-that-gives-you-hints/</link>
+      <pubDate>Thu, 18 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/wordle-but-with-a-twist-a-shortcut-i-built-that-gives-you-hints/</guid>
+      <description>A Shortcut that grabs today&amp;rsquo;s Wordle answer, runs it through a local AI, and gives you a playful hint instead of a spoiler.</description>
+    </item>
+    <item>
+      <title>Where To Watch: A Shortcut for Finding Streaming Availability with The Movie Database</title>
+      <link>http://localhost:1313/posts/where-to-watch-a-shortcut-for-finding-streaming-availability-with-the-movie-database/</link>
+      <pubDate>Wed, 17 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/where-to-watch-a-shortcut-for-finding-streaming-availability-with-the-movie-database/</guid>
+      <description>Where To Watch is a Shortcut that searches TMDb for movies or shows and instantly tells you where they&amp;rsquo;re streaming in your region, opening the JustWatch page in Safari or showing if it&amp;rsquo;s unavailable.</description>
+    </item>
+    <item>
+      <title>Scan QR Code on Screen: A Shortcut I Built for My Mac</title>
+      <link>http://localhost:1313/posts/scan-qr-code-on-screen---a-shortcut-i-built-for-my-mac/</link>
+      <pubDate>Tue, 16 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/scan-qr-code-on-screen---a-shortcut-i-built-for-my-mac/</guid>
+      <description>I built a macOS Shortcut that lets me scan QR codes right from my screen. It grabs a screenshot, sends it to the QRServer API to decode, and opens the link in Safari—handling errors smoothly so I don’t need my iPhone or extra apps.</description>
+    </item>
+    <item>
+      <title>Smarter MacBook Charging with Shortcuts and BetterTouchTool</title>
+      <link>http://localhost:1313/posts/smarter-macbook-charging-with-shortcuts-and-bettertouchtool/</link>
+      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/smarter-macbook-charging-with-shortcuts-and-bettertouchtool/</guid>
+      <description>I automated MacBook charging with Shortcuts, Home Assistant, and BetterTouchTool. Two Shortcuts manage charging based on battery level and verify charger state, while BetterTouchTool triggers them at key moments. The setup ensures smarter charging and alerts me if something goes wrong.</description>
+    </item>
     <item>
       <title>Automating Fire Ban Updates with Shortcuts</title>
       <link>http://localhost:1313/posts/automating-fire-ban-updates-with-shortcuts/</link>
