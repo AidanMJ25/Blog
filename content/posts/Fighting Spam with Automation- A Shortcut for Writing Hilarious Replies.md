@@ -120,7 +120,7 @@ experiment with ideas that wouldn’t make sense on a cloud-based service.
 
 ⸻
 
-#### The Result
+### The Result
 
 The first time I ran the Shortcut, the reply draft began with a sarcastic takedown of the 
 email’s fake “investment opportunity,” segued into a rant about how the spammer’s grammar 
