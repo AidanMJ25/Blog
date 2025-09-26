@@ -95,5 +95,3 @@ it'll be sitting there in Drafts, right where it belongs.
     icon="/App Store App Icons/Drafts Icon.jpg" 
 >}}
 {{< /approw >}}
-
-{{< buymeacoffee >}}

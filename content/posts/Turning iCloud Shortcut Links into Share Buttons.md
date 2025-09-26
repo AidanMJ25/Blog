@@ -94,5 +94,3 @@ blog-ready package.
     name="Jayson" 
     icon="/App Store App Icons/Jayson Icon.jpg" 
 >}}
-
-{{< buymeacoffee >}}

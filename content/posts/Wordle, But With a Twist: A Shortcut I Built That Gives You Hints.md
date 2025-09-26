@@ -86,5 +86,3 @@ simple automation, but it feels fresh and playful every time I use it.
     icon="/App Store App Icons/Jayson Icon.jpg" 
 >}}
 {{< /approw >}}
-
-{{< buymeacoffee >}}

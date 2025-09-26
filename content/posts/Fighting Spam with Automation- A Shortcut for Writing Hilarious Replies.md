@@ -157,5 +157,3 @@ roast they’ll never actually read.
     icon="/App Icons/Script Debugger Icon.jpg" 
 >}}
 {{< /approw >}}
-
-{{< buymeacoffee >}}

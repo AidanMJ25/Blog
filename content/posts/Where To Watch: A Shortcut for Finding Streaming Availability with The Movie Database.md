@@ -86,6 +86,3 @@ something--or if I need to wait until it arrives in Canada.
     name="Jayson" 
     icon="/App Store App Icons/Jayson Icon.jpg" 
 >}}
-
-
-{{< buymeacoffee >}}

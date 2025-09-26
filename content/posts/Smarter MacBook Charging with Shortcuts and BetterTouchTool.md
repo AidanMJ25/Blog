@@ -118,5 +118,3 @@ background.
     icon="/App Icons/BetterTouchTool Icon.jpg" 
 >}}
 {{< /approw >}}
-
-{{< buymeacoffee >}}

@@ -134,6 +134,3 @@ blog will always be built on.
     icon="/App Icons/Alfred 5 Icon.jpg" 
 >}}
 {{< /approw >}}
-
-
-{{< buymeacoffee >}}

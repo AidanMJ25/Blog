@@ -121,5 +121,3 @@ But even as-is, this trio of Shortcuts transforms Kasa devices from "app-only" g
     icon="/App Store App Icons/Jayson Icon.jpg" 
 >}}
 {{< /approw >}}
-
-{{< buymeacoffee >}}

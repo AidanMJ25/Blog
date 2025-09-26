@@ -97,5 +97,3 @@ automations that pays dividends every single day.
     name="Jayson" 
     icon="/App Store App Icons/Jayson Icon.jpg" 
 >}}
-
-{{< buymeacoffee >}}

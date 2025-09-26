@@ -95,6 +95,3 @@ always find out the current fire ban status instantly.
 {{< /approw >}}
 
 
-
-
-{{< buymeacoffee >}}
