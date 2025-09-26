@@ -127,3 +127,5 @@ just works.
 Sometimes the best platform is the one that gets out of the way. For me, that’s Hugo, GitHub 
 Pages, and a folder full of Markdown files. It’s a setup that respects my time, my content, 
 and my workflow. And I’ve never enjoyed blogging more.
+
+{{< buymeacoffee >}}

@@ -150,3 +150,6 @@ result makes my whole setup feel more “finished.”
 - [Stream Deck HACS Integration](https://github.com/Patrick762/hassio-streamdeck)
 - [Home Assistant](https://www.home-assistant.io/)
 - [ESPHome - Smart Home Made Simple](https://esphome.io/)
+
+
+{{< buymeacoffee >}}

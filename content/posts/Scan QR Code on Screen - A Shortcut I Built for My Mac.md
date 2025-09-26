@@ -79,3 +79,6 @@ not having it anymore.
     name="Jayson" 
     icon="/App Store App Icons/Jayson Icon.jpg" 
 >}}
+
+
+{{< buymeacoffee >}}

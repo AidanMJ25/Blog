@@ -81,3 +81,5 @@ as I do, this little Shortcut makes it effortless to keep what you find.
     name="Jayson" 
     icon="/App Store App Icons/Jayson Icon.jpg" 
 >}}
+
+{{< buymeacoffee >}}

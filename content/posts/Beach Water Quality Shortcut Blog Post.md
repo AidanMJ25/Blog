@@ -95,3 +95,6 @@ how it turns raw open data into something practical and personal.
 >}}
 {{< /approw >}}
 
+
+
+{{< buymeacoffee >}}

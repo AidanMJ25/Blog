@@ -48,3 +48,5 @@ You can run this Shortcut as-is for an instant timestamp or pass in dates from e
     name="Convert Current Date to Unix Time" 
     icon="/Shortcuts Icons/Convert Current Date to Unix Time Icon.jpg" 
 >}}
+
+{{< buymeacoffee >}}

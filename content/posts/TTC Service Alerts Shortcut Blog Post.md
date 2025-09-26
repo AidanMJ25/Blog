@@ -82,3 +82,6 @@ It’s a small automation, but one that makes my daily routine less stressful.
     icon="/App Store App Icons/Jayson Icon.jpg" 
 >}}
 {{< /approw >}}
+
+
+{{< buymeacoffee >}}

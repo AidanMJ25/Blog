@@ -108,3 +108,6 @@ of those little automations that quietly makes life better--one trash day at a t
     icon="/App Store App Icons/Jayson Icon.jpg" 
 >}}
 {{< /approw >}}
+
+
+{{< buymeacoffee >}}

@@ -118,3 +118,5 @@ icons anymore.
     icon="/App Icons/Script Debugger Icon.jpg" 
 >}}
 {{< /approw >}}
+
+{{< buymeacoffee >}}
