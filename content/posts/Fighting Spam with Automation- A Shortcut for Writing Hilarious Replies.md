@@ -139,8 +139,8 @@ roast they’ll never actually read.
 
 {{< appcard 
     url="https://www.icloud.com/shortcuts/a53cf7be25fe438d9425e73ff461f063" 
-    name="Write Reply to Spam/Junk Email" 
-    icon="/Shortcuts Icons/Write Reply to Spam/Junk Email Icon.jpg" 
+    name="Write Reply to Spam & Junk Email" 
+    icon="/Shortcuts Icons/Write Reply to Spam & Junk Email Icon.jpg" 
 >}}
 
 ### Apps Used to Create This Shortcut
