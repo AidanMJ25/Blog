@@ -1,6 +1,5 @@
 ---
 title: "Contact"
-date: 2025-09-26
 type: "page"
 draft: false
 
