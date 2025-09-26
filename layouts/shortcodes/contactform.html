@@ -1,12 +1,48 @@
-<form
-  action="https://formspree.io/f/mrbybwzk"
-  method="POST"
->
-  <label for="email">Your email:</label>
-  <input type="email" id="email" name="email" required>
+<style>
+  /* Scope styles to just this page */
+  .contact-form {
+    max-width: 640px;
+    margin: 1.5rem 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .75rem;
+  }
+  .contact-form label {
+    display: block;        /* keep label on its own line */
+    font-weight: 600;
+    margin-top: .25rem;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: .6rem .7rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font: inherit;
+  }
+  .contact-form textarea {
+    min-height: 220px;     /* nice tall box on mobile */
+    resize: vertical;
+  }
+  .contact-form button {
+    width: auto;
+    align-self: start;
+    padding: .55rem 1rem;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+</style>
 
-  <label for="message">Your message:</label>
-  <textarea id="message" name="message" rows="15" required></textarea>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
+<form class="contact-form" action="https://formspree.io/f/mrbybwzk" method="POST">
+  <label for="email">Your email</label>
+  <input id="email" name="email" type="email" autocomplete="email" required>
+
+  <label for="message">Your message</label>
+  <textarea id="message" name="message" required></textarea>
+
+  <input type="hidden" name="_subject" value="New message from your blog contact form">
+  <input type="text" name="_gotcha" style="display:none"> <!-- honeypot -->
+  <button type="submit" class="button">Send</button>
 </form>
