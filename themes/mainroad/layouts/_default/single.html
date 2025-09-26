@@ -15,8 +15,8 @@
 		<div class="content post__content clearfix">
 			{{ .Content }}
 			{{ if and .IsPage (eq .Section "posts") }}
-  			  {{ partial "main/buymeacoffee.html" . }}
-			{{ end }}
+  {{ partial "main/buymeacoffee.html" . }}
+{{ end }}
 		</div>
 		{{- if .Params.tags }}
 		<footer class="post__footer">
