@@ -14,9 +14,11 @@
 		{{- partial "post_toc.html" . -}}
 		<div class="content post__content clearfix">
 			{{ .Content }}
-			{{ if and .IsPage (eq .Section "posts") }}
-  {{ partial "main/buymeacoffee.html" . }}
-{{ end }}
+			{{/* After .Content in layouts/_default/single.html */}}
+			{{ $main := .Site.Params.mainSections | default (slice "post" "posts") }}
+			{{ if and (eq .Kind "page") (in $main .Section) }}
+  			  {{ partial "main/buymeacoffee.html" . }}
+			{{ end }}
 		</div>
 		{{- if .Params.tags }}
 		<footer class="post__footer">
