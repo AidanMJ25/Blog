@@ -120,7 +120,6 @@ background.
 {{< /approw >}}
 
 {{< buymeacoffee >}}
-
 {{< rss-button >}}
 
 {{< buttondown >}}

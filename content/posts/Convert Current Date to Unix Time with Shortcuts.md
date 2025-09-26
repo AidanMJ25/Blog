@@ -50,7 +50,6 @@ You can run this Shortcut as-is for an instant timestamp or pass in dates from e
 >}}
 
 {{< buymeacoffee >}}
-
 {{< rss-button >}}
 
 {{< buttondown >}}

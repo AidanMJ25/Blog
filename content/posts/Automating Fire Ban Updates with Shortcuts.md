@@ -98,7 +98,6 @@ always find out the current fire ban status instantly.
 
 
 {{< buymeacoffee >}}
-
 {{< rss-button >}}
 
 {{< buttondown >}}

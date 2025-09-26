@@ -83,7 +83,6 @@ as I do, this little Shortcut makes it effortless to keep what you find.
 >}}
 
 {{< buymeacoffee >}}
-
 {{< rss-button >}}
 
 {{< buttondown >}}
