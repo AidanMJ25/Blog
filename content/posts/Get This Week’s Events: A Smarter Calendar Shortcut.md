@@ -60,6 +60,3 @@ I've tried plenty of ways to get a weekly overview--widgets, third-party apps, e
 >}}
 
 {{< buymeacoffee >}}
-{{< rss-button >}}
-
-{{< buttondown >}}

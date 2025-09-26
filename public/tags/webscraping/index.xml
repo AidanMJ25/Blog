@@ -1,27 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>WebScraping on Aidan Maurin-Jones</title>
+    <title>Webscraping on Aidan Maurin-Jones</title>
     <link>http://localhost:1313/tags/webscraping/</link>
-    <description>Recent content in WebScraping on Aidan Maurin-Jones</description>
+    <description>Recent content in Webscraping on Aidan Maurin-Jones</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 19 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 14 Sep 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/webscraping/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Wikipedia Article Downloader: A Shortcut for Offline Reading</title>
-      <link>http://localhost:1313/posts/wikipedia-article-downloader--a-shortcut-for-offline-reading/</link>
-      <pubDate>Fri, 19 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/wikipedia-article-downloader--a-shortcut-for-offline-reading/</guid>
-      <description>I built a Shortcut that lets me quickly turn any Wikipedia link into a clean PDF, making it easy to save articles for offline reading, research, or archiving.</description>
-    </item>
-    <item>
-      <title>Automating My City&#39;s Garbage Schedule with Shortcuts</title>
-      <link>http://localhost:1313/posts/automating-my-citys-garbage-schedule-with-shortcuts/</link>
-      <pubDate>Thu, 18 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/automating-my-citys-garbage-schedule-with-shortcuts/</guid>
-      <description>How I built a Shortcut that fetches my city&amp;rsquo;s garbage schedule from a CSV, translates it into plain English, and tells me exactly which bins to put out each collection day.</description>
-    </item>
     <item>
       <title>Automating Fire Ban Updates with Shortcuts</title>
       <link>http://localhost:1313/posts/automating-fire-ban-updates-with-shortcuts/</link>

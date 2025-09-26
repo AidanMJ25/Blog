@@ -6,118 +6,20 @@
     <description>Recent content in Tags on Aidan Maurin-Jones</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 26 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 14 Sep 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>AI</title>
-      <link>http://localhost:1313/tags/ai/</link>
-      <pubDate>Fri, 26 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/ai/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>AppleScript</title>
-      <link>http://localhost:1313/tags/applescript/</link>
-      <pubDate>Fri, 26 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/applescript/</guid>
-      <description></description>
-    </item>
     <item>
       <title>Shortcuts</title>
       <link>http://localhost:1313/tags/shortcuts/</link>
-      <pubDate>Fri, 26 Sep 2025 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 14 Sep 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/shortcuts/</guid>
       <description></description>
     </item>
     <item>
-      <title>Smart Home</title>
-      <link>http://localhost:1313/tags/smart-home/</link>
-      <pubDate>Thu, 25 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/smart-home/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Alfred</title>
-      <link>http://localhost:1313/tags/alfred/</link>
-      <pubDate>Tue, 23 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/alfred/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Blogging</title>
-      <link>http://localhost:1313/tags/blogging/</link>
-      <pubDate>Tue, 23 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/blogging/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Hugo</title>
-      <link>http://localhost:1313/tags/hugo/</link>
-      <pubDate>Tue, 23 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/hugo/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>GitHub Pages</title>
-      <link>http://localhost:1313/tags/github-pages/</link>
-      <pubDate>Sun, 21 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/github-pages/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Podcasts</title>
-      <link>http://localhost:1313/tags/podcasts/</link>
-      <pubDate>Sat, 20 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/podcasts/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Simple Automation</title>
-      <link>http://localhost:1313/tags/simple-automation/</link>
-      <pubDate>Sat, 20 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/simple-automation/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>WebScraping</title>
+      <title>Webscraping</title>
       <link>http://localhost:1313/tags/webscraping/</link>
-      <pubDate>Fri, 19 Sep 2025 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 14 Sep 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/webscraping/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>BetterTouchTool</title>
-      <link>http://localhost:1313/tags/bettertouchtool/</link>
-      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/bettertouchtool/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>ESPHome</title>
-      <link>http://localhost:1313/tags/esphome/</link>
-      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/esphome/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Home Assistant</title>
-      <link>http://localhost:1313/tags/home-assistant/</link>
-      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/home-assistant/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Raspberry Pi</title>
-      <link>http://localhost:1313/tags/raspberry-pi/</link>
-      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/raspberry-pi/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Stream Deck</title>
-      <link>http://localhost:1313/tags/stream-deck/</link>
-      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/stream-deck/</guid>
       <description></description>
     </item>
   </channel>

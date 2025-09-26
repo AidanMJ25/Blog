@@ -97,6 +97,3 @@ it'll be sitting there in Drafts, right where it belongs.
 {{< /approw >}}
 
 {{< buymeacoffee >}}
-{{< rss-button >}}
-
-{{< buttondown >}}

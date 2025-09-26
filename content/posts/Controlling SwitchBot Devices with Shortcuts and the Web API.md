@@ -80,6 +80,3 @@ It's yet another example of how Shortcuts can serve as the glue between platform
 {{< /approw >}}
 
 {{< buymeacoffee >}}
-{{< rss-button >}}
-
-{{< buttondown >}}

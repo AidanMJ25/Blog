@@ -85,6 +85,3 @@ It’s a small automation, but one that makes my daily routine less stressful.
 
 
 {{< buymeacoffee >}}
-{{< rss-button >}}
-
-{{< buttondown >}}
