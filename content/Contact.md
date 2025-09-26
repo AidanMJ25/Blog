@@ -2,7 +2,7 @@
 title: "Contact"
 type: "page"
 draft: false
-
+---
 
 <form
   action="https://formspree.io/f/mrbybwzk"
