@@ -78,3 +78,5 @@ It's yet another example of how Shortcuts can serve as the glue between platform
     icon="/Shortcuts Icons/Send Command to SwitchBot Template (Public) Icon.jpg" 
 >}}
 {{< /approw >}}
+
+{{< buymeacoffee >}}

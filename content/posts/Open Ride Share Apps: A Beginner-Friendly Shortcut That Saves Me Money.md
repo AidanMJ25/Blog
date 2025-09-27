@@ -84,3 +84,5 @@ month of rides.
     icon="/App Store App Icons/Lyft Icon.jpg" 
 >}}
 {{< /approw >}}
+
+{{< buymeacoffee >}}

@@ -58,3 +58,5 @@ I've tried plenty of ways to get a weekly overview--widgets, third-party apps, e
     name="Get This Week’s Events" 
     icon="/Shortcuts Icons/Get This Week’s Events Icon.jpg" 
 >}}
+
+{{< buymeacoffee >}}
