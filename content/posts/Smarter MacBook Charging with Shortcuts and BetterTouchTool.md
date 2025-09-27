@@ -120,3 +120,5 @@ background.
 {{< /approw >}}
 
 {{< buymeacoffee >}}
+
+{{< rss-button >}}

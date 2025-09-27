@@ -159,3 +159,5 @@ roast they’ll never actually read.
 {{< /approw >}}
 
 {{< buymeacoffee >}}
+
+{{< rss-button >}}

@@ -99,3 +99,5 @@ automations that pays dividends every single day.
 >}}
 
 {{< buymeacoffee >}}
+
+{{< rss-button >}}
