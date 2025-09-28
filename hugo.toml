@@ -42,3 +42,8 @@ theme = 'mainroad'
 # These belong at top-level (you already have them right)
 mainSections = ["posts"]
 paginate = 10
+
+[outputs]
+home    = ["HTML", "RSS"]   # keep global feed
+section = ["HTML"]          # disable section feeds
+taxonomy = ["HTML"]         # disable taxonomy feeds
