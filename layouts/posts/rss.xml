@@ -4,14 +4,13 @@
     <title>{{ .Site.Title }} - Posts</title>
     <link>{{ .Site.BaseURL }}</link>
     <description>{{ .Site.Params.description }}</description>
-    {{ range .Pages }}
+    {{ range where .Pages "Section" "posts" }}
     <item>
       <title>{{ .Title }}</title>
       <link>{{ .Permalink }}</link>
-      <description><![CDATA[{{ .Content | safeHTML }}]]></description>
+      <description><![CDATA[{{ .Content }}]]></description>
       <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 GMT" }}</pubDate>
     </item>
     {{ end }}
   </channel>
 </rss>
-
