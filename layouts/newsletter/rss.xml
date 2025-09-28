@@ -4,7 +4,7 @@
     <title>{{ .Site.Title }} - Newsletter</title>
     <link>{{ .Site.BaseURL }}</link>
     <description>{{ .Site.Params.description }}</description>
-    {{ range .Pages }}
+    {{ range where .Pages "Section" "newsletter" }}
     <item>
       <title>{{ .Title }}</title>
       <link>{{ .Permalink }}</link>
