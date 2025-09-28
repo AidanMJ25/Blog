@@ -1,5 +1,5 @@
 {{- $feed := . }}
-<rss version="2.0">
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>{{ .Site.Title }} - Posts</title>
     <link>{{ .Site.BaseURL }}</link>
