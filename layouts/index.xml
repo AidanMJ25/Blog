@@ -9,7 +9,7 @@
     <generator>Hugo {{ hugo.Version }}</generator>
     <lastBuildDate>{{ now.UTC.Format "Mon, 02 Jan 2006 15:04:05 MST" }}</lastBuildDate>
 
-    {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections -}}
+	{{ range where .Pages "Section" "posts" }}
     {{- range $pages.ByDate.Reverse -}}
     <item>
       <title>{{ .Title }}</title>
