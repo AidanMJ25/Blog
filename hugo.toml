@@ -42,8 +42,3 @@ theme = 'mainroad'
 # These belong at top-level (you already have them right)
 mainSections = ["posts"]
 paginate = 10
-
-
-[outputs]
-  home    = ["HTML", "RSS"]
-  section = ["HTML", "RSS"]
