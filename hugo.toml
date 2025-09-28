@@ -47,3 +47,5 @@ paginate = 10
 home    = ["HTML", "RSS"]   # keep global feed
 section = ["HTML"]          # disable section feeds
 taxonomy = ["HTML"]         # disable taxonomy feeds
+
+rssURI = "index.xml"
