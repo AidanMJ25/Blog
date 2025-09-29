@@ -2,6 +2,7 @@
 title: "About"
 type: "page"
 draft: false
+rss_exclude: true
 ---
 
 

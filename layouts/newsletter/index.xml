@@ -1,19 +1,19 @@
-{{- $p := . -}}
 {{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML -}}
 <rss version="2.0">
   <channel>
-    <title>{{ with .Site.Title }}{{ . }}{{ end }}</title>
+    <title>{{ .Site.Title }} - Newsletter</title>
     <link>{{ .Site.BaseURL }}</link>
-    <description>{{ .Site.Params.description }}</description>
+    <description>Newsletter-only feed</description>
     <language>{{ .Site.Language.Lang }}</language>
-	{{- $pages := where .Site.RegularPages ".Params.rss_exclude" "ne" true -}}
+
+    {{- $pages := where .Site.RegularPages "Section" "newsletter" -}}
     {{- range $pages.ByDate.Reverse -}}
       <item>
         <title>{{ .Title }}</title>
         <link>{{ .Permalink }}</link>
         <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
         <guid>{{ .Permalink }}</guid>
-        <description>{{ .Summary | plainify }}</description>
+        <description><![CDATA[{{ .Content }}]]></description>
       </item>
     {{- end -}}
   </channel>

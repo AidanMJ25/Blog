@@ -2,6 +2,7 @@
 title: "Contact"
 type: "page"
 draft: false
+rss_exclude: true
 ---
 
 ### Got something to say?
