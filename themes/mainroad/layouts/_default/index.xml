@@ -6,7 +6,7 @@
     <link>{{ .Site.BaseURL }}</link>
     <description>{{ .Site.Params.description }}</description>
     <language>{{ .Site.Language.Lang }}</language>
-	{{- $pages := where .Site.RegularPages ".Params.rss_exclude" "ne" true -}}
+	{{- $pages := where .Site.RegularPages "Section" "posts" -}}
     {{- range $pages.ByDate.Reverse -}}
       <item>
         <title>{{ .Title }}</title>
