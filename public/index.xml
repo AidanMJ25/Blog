@@ -135,22 +135,5 @@
         <pubDate>Sun, 14 Sep 2025 00:00:00 &#43;0000</pubDate>
         <guid>https://www.aidanmaurinjones.com/posts/automating-fire-ban-updates-with-shortcuts/</guid>
         <description>I built a Shortcut that pulls Dysart et al.’s fire ban feed, checks for “Fire Ban,” and shows the result in a simple HTML card. It’s fast, customizable, and gives me an instant, glanceable update from raw municipal data.</description>
-      </item><item>
-        <title>Contact</title>
-        <link>https://www.aidanmaurinjones.com/contact/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
-        <guid>https://www.aidanmaurinjones.com/contact/</guid>
-        <description>Got something to say? Whether it’s feedback on a post, a question about my setup, or just a “hey, your blog is neat,” this is the place to drop me a line. No spam, no nonsense—just you, me, and this little red “Send” button. I actually do read these (shocking, I know), so don’t be shy.
-Your Name Your Email Your Message Send </description>
-      </item><item>
-        <title>About</title>
-        <link>https://www.aidanmaurinjones.com/about/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
-        <guid>https://www.aidanmaurinjones.com/about/</guid>
-        <description>Hi, I&rsquo;m Aidan.
-This site started as an experiment in automation and Markdown, but it&rsquo;s slowly turned into a catalog of some of my nerdy adventures.
-I&rsquo;m much more proud of how the sausage is made than the sausage itself. The posts here are just the by-product of a system I actually enjoy using.
-For fun, I picked up my Apple Certified Technician and CompTIA A+ certifications. They have nothing to do with my day job, but I like learning how things work from the inside out.
-</description>
       </item></channel>
 </rss>
