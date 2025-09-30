@@ -122,10 +122,4 @@ But even as-is, this trio of Shortcuts transforms Kasa devices from "app-only" g
 >}}
 {{< /approw >}}
 
-{{< buymeacoffee >}}
-
-{{< rss-button >}}
-
-{{< buttondown >}}
-
-{{< newsletter-rss-button >}}
+{{< buttons-list >}}
