@@ -152,8 +152,4 @@ result makes my whole setup feel more “finished.”
 - [ESPHome - Smart Home Made Simple](https://esphome.io/)
 
 
-{{< buymeacoffee >}}
-
-{{< rss-button >}}
-
-{{< buttondown >}}
+{{< buttons-list >}}

@@ -136,8 +136,4 @@ blog will always be built on.
 {{< /approw >}}
 
 
-{{< buymeacoffee >}}
-
-{{< rss-button >}}
-
-{{< buttondown >}}
+{{< buttons-list >}}

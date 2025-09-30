@@ -119,8 +119,4 @@ icons anymore.
 >}}
 {{< /approw >}}
 
-{{< buymeacoffee >}}
-
-{{< rss-button >}}
-
-{{< buttondown >}}
+{{< buttons-list >}}

@@ -84,8 +84,4 @@ It’s a small automation, but one that makes my daily routine less stressful.
 {{< /approw >}}
 
 
-{{< buymeacoffee >}}
-
-{{< rss-button >}}
-
-{{< buttondown >}}
+{{< buttons-list >}}

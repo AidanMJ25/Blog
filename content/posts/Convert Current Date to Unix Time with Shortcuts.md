@@ -49,8 +49,4 @@ You can run this Shortcut as-is for an instant timestamp or pass in dates from e
     icon="/Shortcuts Icons/Convert Current Date to Unix Time Icon.jpg" 
 >}}
 
-{{< buymeacoffee >}}
-
-{{< rss-button >}}
-
-{{< buttondown >}}
+{{< buttons-list >}}

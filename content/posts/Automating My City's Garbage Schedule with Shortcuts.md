@@ -110,8 +110,4 @@ of those little automations that quietly makes life better--one trash day at a t
 {{< /approw >}}
 
 
-{{< buymeacoffee >}}
-
-{{< rss-button >}}
-
-{{< buttondown >}}
+{{< buttons-list >}}

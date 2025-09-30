@@ -82,8 +82,4 @@ as I do, this little Shortcut makes it effortless to keep what you find.
     icon="/App Store App Icons/Jayson Icon.jpg" 
 >}}
 
-{{< buymeacoffee >}}
-
-{{< rss-button >}}
-
-{{< buttondown >}}
+{{< buttons-list >}}
