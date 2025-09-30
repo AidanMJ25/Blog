@@ -2,10 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.aidanmaurinjones.com/tags/ai/</loc>
-    <lastmod>2025-09-26T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://www.aidanmaurinjones.com/</loc>
+    <lastmod>2025-09-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.aidanmaurinjones.com/tags/blogging/</loc>
+    <lastmod>2025-09-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.aidanmaurinjones.com/tags/github-pages/</loc>
+    <lastmod>2025-09-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.aidanmaurinjones.com/tags/hugo/</loc>
+    <lastmod>2025-09-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.aidanmaurinjones.com/newsletter/</loc>
+    <lastmod>2025-09-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.aidanmaurinjones.com/tags/shortcuts/</loc>
+    <lastmod>2025-09-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.aidanmaurinjones.com/tags/</loc>
+    <lastmod>2025-09-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.aidanmaurinjones.com/newsletter/test-123/</loc>
+    <lastmod>2025-09-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.aidanmaurinjones.com/tags/ai/</loc>
     <lastmod>2025-09-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.aidanmaurinjones.com/tags/applescript/</loc>
@@ -15,12 +36,6 @@
     <lastmod>2025-09-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.aidanmaurinjones.com/posts/fighting-spam-with-automation--a-shortcut-for-writing-hilarious-replies/</loc>
-    <lastmod>2025-09-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.aidanmaurinjones.com/tags/shortcuts/</loc>
-    <lastmod>2025-09-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.aidanmaurinjones.com/tags/</loc>
     <lastmod>2025-09-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.aidanmaurinjones.com/posts/automating-tp-link-kasa-devices-with-shortcuts/</loc>
@@ -44,12 +59,6 @@
     <loc>https://www.aidanmaurinjones.com/posts/app-store-links-made-beautiful-with-shortcuts/</loc>
     <lastmod>2025-09-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.aidanmaurinjones.com/tags/blogging/</loc>
-    <lastmod>2025-09-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.aidanmaurinjones.com/tags/hugo/</loc>
-    <lastmod>2025-09-23T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://www.aidanmaurinjones.com/posts/share-mac-app-html-button--automating-app-cards-from-alfred/</loc>
     <lastmod>2025-09-23T00:00:00+00:00</lastmod>
   </url><url>
@@ -59,13 +68,7 @@
     <loc>https://www.aidanmaurinjones.com/posts/a-hundred--one-post-buttons/</loc>
     <lastmod>2025-09-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.aidanmaurinjones.com/tags/github-pages/</loc>
-    <lastmod>2025-09-21T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://www.aidanmaurinjones.com/posts/i-could-write-this-blog-in-notepad/</loc>
-    <lastmod>2025-09-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.aidanmaurinjones.com/newsletter/</loc>
     <lastmod>2025-09-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.aidanmaurinjones.com/posts/open-ride-share-apps-a-beginner-friendly-shortcut-that-saves-me-money/</loc>

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Turning iCloud Shortcut Links into Share Buttons - Aidan Maurin-Jones</title>
+	<title>test-123 - Aidan Maurin-Jones</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,75 +62,91 @@
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">Turning iCloud Shortcut Links into Share Buttons</h1>
+			<h1 class="post__title">test-123</h1>
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-09-23T00:00:00Z">September 23, 2025</time></div></div>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-09-29T00:00:00Z">September 29, 2025</time></div></div>
 		</header>
 		<div class="content post__content clearfix">
-			<p>One of the best things about Shortcuts is that it can bridge services that were never designed
-to talk to each other. The Shortcut I’ve been using lately—Share Shortcut HTML Button—is a
-perfect example of that. With it, I can take any iCloud Shortcut link and instantly generate
-a fully-formed Hugo shortcode that embeds the Shortcut on my blog with its name and icon, no
-copy-pasting or manual uploading required.</p>
-<p>⸻</p>
-<h3 id="the-problem">The Problem</h3>
-<p>When you share a Shortcut publicly, Apple gives you an iCloud link that looks something
-like this:</p>
-<p><a href="https://www.icloud.com/shortcuts/123abc">https://www.icloud.com/shortcuts/123abc</a>&hellip;</p>
-<p>It works fine for sharing with friends, but when I want to add that Shortcut to my blog, I
-need more than just the link. I need:</p>
+			<p>One of the reasons I love this setup so much is that publishing isn&rsquo;t just simple &ndash; it&rsquo;s
+fully automated with nothing more than stock Shortcuts actions on iOS and macOS. No scripts,
+no extra tools. Just Shortcuts and GitHub&rsquo;s API.</p>
+<p>Here&rsquo;s how it works, step by step:</p>
+<hr>
+<h3 id="1-take-a-markdown-file-as-input">1. Take a Markdown file as input</h3>
+<p>The Shortcut starts by receiving a file &ndash; either from the Share Sheet or by prompting me
+to pick one. This file is the blog post I&rsquo;ve written in plain text.</p>
 <ul>
-<li>The Shortcut’s proper name</li>
-<li>Its icon image</li>
-<li>A clean HTML/Hugo shortcode block I can drop into a Markdown file</li>
+<li>Action: Receive Files from Share Sheet</li>
+<li>Why: Keeps things flexible &ndash; I can run the Shortcut from Finder on my Mac, Drafts on my
+iPhone, or anywhere else that can share a Markdown file.</li>
 </ul>
-<p>Doing all of this by hand was tedious. So I automated it.</p>
-<p>⸻</p>
-<h3 id="how-the-shortcut-works">How the Shortcut Works</h3>
-<p>The Shortcut breaks down into three key stages: fetching metadata, processing the icon, and
-generating the blog card.</p>
-<p><strong>Fetching Metadata</strong></p>
-<p>The Shortcut starts by receiving a Shortcut iCloud link (or grabbing it from the clipboard
-if none is passed in). From there:</p>
+<hr>
+<h3 id="2-prepare-the-file-name">2. Prepare the file name</h3>
+<p>Next, the Shortcut grabs the file&rsquo;s name, URL-encodes it (so it&rsquo;s safe for GitHub&rsquo;s API),
+and saves it as Pretty File Name.</p>
 <ul>
-<li>It rewrites the link into Apple’s hidden API endpoint at <a href="https://www.icloud.com/shortcuts/api/records/">https://www.icloud.com/shortcuts/api/records/</a>.</li>
-<li>Using Get Contents of URL, it downloads the Shortcut’s metadata as JSON.</li>
-<li>With Get Dictionary from Contents of URL, I can then pull out fields like fields.name.value
-(the Shortcut’s title) and fields.icon.value.downloadURL (the actual icon).</li>
+<li>Action: Get Name from Blog Post → URL Encode → Set Variable</li>
 </ul>
-<p><strong>Processing the Icon</strong></p>
-<p>Here’s the clever part: I don’t just hotlink the icon from iCloud. Instead:</p>
+<p>This ensures my post shows up as my-post.md inside the Hugo content/posts/ folder.</p>
+<hr>
+<h3 id="3-encode-the-post-content">3. Encode the post content</h3>
+<p>The raw text of the file is pulled out and converted to Base64. GitHub&rsquo;s API requires files
+to be sent this way.</p>
 <ul>
-<li>I construct a GitHub API URL pointing to my site’s static/images/Shortcuts Icons folder.</li>
-<li>The Shortcut checks whether a file with the same name already exists (by calling GitHub’s
-API and looking for a SHA).</li>
-<li>If the icon isn’t there, it downloads the image, renames it with the Shortcut’s title, and
-encodes it in Base64.</li>
-<li>Finally, it uploads the icon to GitHub via the API, neatly slotting it into my Hugo site’s
-image folder.</li>
+<li>Action: Get Text from Blog Post → Encode Text with Base64</li>
 </ul>
-<p>Now every Shortcut I publish has its own local icon, version-controlled alongside the rest
-of my site.</p>
-<p><strong>Generating the Blog Card</strong></p>
-<p>The Shortcut assembles the code automatically, copies it to my clipboard, and I can paste
-it directly into my Markdown post. No typing, no file juggling, no guesswork.</p>
-<p>⸻</p>
-<h3 id="why-it-matters">Why It Matters</h3>
-<p>This Shortcut may sound niche, but it’s been a huge time saver for me. I publish a lot of
-posts about Shortcuts, and before this, each one meant multiple minutes of repetitive work:
-saving icons, renaming them, uploading them, writing out HTML. Now it’s one tap.</p>
-<p>The broader lesson here is that Shortcuts isn’t limited to “personal productivity” hacks.
-It’s powerful enough to serve as part of a publishing pipeline, gluing together iCloud’s
-hidden APIs, GitHub’s developer endpoints, and Hugo’s templating system.</p>
-<p>And that’s why I love this Shortcut: it turns Apple’s barebones sharing into a complete,
-blog-ready package.</p>
+<p>Now I&rsquo;ve got my post ready in a format GitHub understands.</p>
+<hr>
+<h3 id="4-build-the-api-request">4. Build the API request</h3>
+<p>The Shortcut constructs a URL to the right location in my repo:</p>
+<pre><code>https://api.github.com/repos/&lt;username&gt;/&lt;repo&gt;/contents/content/posts/&lt;Pretty File Name&gt;.md
+</code></pre>
+<p>This points GitHub&rsquo;s API directly to where the Markdown file should live.</p>
+<hr>
+<h3 id="5-check-if-the-post-exists">5. Check if the post exists</h3>
+<p>The Shortcut sends a GET request to that URL:</p>
+<ul>
+<li>If a file exists, GitHub&rsquo;s response includes a sha value (basically the file&rsquo;s unique ID).</li>
+<li>If it doesn&rsquo;t exist, there&rsquo;s no sha.</li>
+</ul>
+<p>This lets the Shortcut decide whether to update an existing post or create a brand new one.</p>
+<hr>
+<h3 id="6-update-or-create-the-post">6. Update or create the post</h3>
+<p>Depending on the result, the Shortcut runs one of two PUT requests:</p>
+<ul>
+<li>Update Blog Post → PUT with the sha included</li>
+<li>Post New Blog Post → PUT without the sha</li>
+</ul>
+<p>Both requests send JSON with:</p>
+<pre><code>{
+  &quot;message&quot;: &quot;Posted via Shortcuts - &lt;Name of BlogPost&gt;&quot;,
+  &quot;content&quot;: &quot;&lt;Base64 Encoded Markdown&gt;&quot;,
+  &quot;branch&quot;: &quot;main&quot;,
+  &quot;sha&quot;: &quot;&lt;if updating&gt;&quot;
+}
+</code></pre>
+<p>GitHub commits the file to my repo, and Hugo + GitHub Pages do the rest.</p>
+<hr>
+<h3 id="7-done">7. Done!</h3>
+<p>That&rsquo;s it. Within seconds, the post appears on my live site &ndash; no browser, no dashboard, no
+manual uploads.</p>
+<hr>
+<h3 id="why-this-is-so-good">Why This Is So Good</h3>
+<ul>
+<li>Cross-platform: I use it on my Mac via Finder + Service Station, as an Alfred file action,
+in BBEdit via AppleScript, and on my iPhone via Drafts. If I had an iPad, it would work there too.</li>
+<li>Minimal setup: The Shortcut is just a chain of built-in actions. No scripts, no third-party
+apps.</li>
+<li>Future-proof: The only input it needs is a Markdown file &ndash; and that&rsquo;s the one thing my
+blog will always be built on.</li>
+</ul>
 <article class="app-card">
-<a class="app-card__icon" href="https://www.icloud.com/shortcuts/feeec271478543b299710fb20e6bffab" target="_blank" rel="noopener">
-  <img src="/images//Shortcuts%20Icons/Share%20Shortcut%20HTML%20Button%20%28Public%29%20Icon.jpg" alt="Share Shortcut HTML Button app icon" width="35" height="35">
+<a class="app-card__icon" href="https://www.icloud.com/shortcuts/d96fe2195053424793b4a4a9a3bfab33" target="_blank" rel="noopener">
+  <img src="/images//Shortcuts%20Icons/Post%20to%20Blog%20%28Public%29%20Icon.jpg" alt="Post to Blog app icon" width="35" height="35">
 </a>
-  <a class="app-card__title" href="https://www.icloud.com/shortcuts/feeec271478543b299710fb20e6bffab" target="_blank" rel="noopener">
-    Share Shortcut HTML Button
+  <a class="app-card__title" href="https://www.icloud.com/shortcuts/d96fe2195053424793b4a4a9a3bfab33" target="_blank" rel="noopener">
+    Post to Blog
   </a>
 
   <style>
@@ -159,13 +175,15 @@ blog-ready package.</p>
   </style>
 </article>
 
-<h3 id="apps-used-to-create-this-shortcut">Apps Used to Create this Shortcut</h3>
+<h3 id="apps-mentioned-in-this-post">Apps Mentioned in this Post</h3>
+<div class="app-row">
+  
 <article class="app-card">
-<a class="app-card__icon" href="https://apps.apple.com/ca/app/jayson/id1468691718?mt=12&amp;uo=4" target="_blank" rel="noopener">
-  <img src="/images//App%20Store%20App%20Icons/Jayson%20Icon.jpg" alt="Jayson app icon" width="35" height="35">
+<a class="app-card__icon" href="https://apps.apple.com/ca/app/drafts/id1435957248?mt=12&amp;uo=4" target="_blank" rel="noopener">
+  <img src="/images//App%20Store%20App%20Icons/Drafts%20Icon.jpg" alt="Drafts app icon" width="35" height="35">
 </a>
-  <a class="app-card__title" href="https://apps.apple.com/ca/app/jayson/id1468691718?mt=12&amp;uo=4" target="_blank" rel="noopener">
-    Jayson
+  <a class="app-card__title" href="https://apps.apple.com/ca/app/drafts/id1435957248?mt=12&amp;uo=4" target="_blank" rel="noopener">
+    Drafts
   </a>
 
   <style>
@@ -193,6 +211,123 @@ blog-ready package.</p>
     }
   </style>
 </article>
+
+<article class="app-card">
+<a class="app-card__icon" href="https://apps.apple.com/ca/app/service-station/id1503136033?mt=12&amp;uo=4" target="_blank" rel="noopener">
+  <img src="/images//App%20Store%20App%20Icons/Service%20Station%20Icon.jpg" alt="Service Station app icon" width="35" height="35">
+</a>
+  <a class="app-card__title" href="https://apps.apple.com/ca/app/service-station/id1503136033?mt=12&amp;uo=4" target="_blank" rel="noopener">
+    Service Station
+  </a>
+
+  <style>
+    .app-card {
+      display: inline-flex;        
+      flex-direction: column;
+      align-items: center;         
+      text-align: center;
+      margin-right: 1.5rem;        
+      margin-bottom: 1rem;
+    }
+    .app-card__icon img {
+      border-radius: 18%;
+      display: block;
+    }
+    .app-card__title {
+      margin: 0.25rem 0 0;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;       
+      color: inherit;              
+    }
+    .app-card__title:hover {
+      text-decoration: underline;  
+    }
+  </style>
+</article>
+
+<article class="app-card">
+<a class="app-card__icon" href="http://www.barebones.com/products/bbedit/index.html" target="_blank" rel="noopener">
+  <img src="/images//App%20Icons/BBEdit%20Icon.jpg" alt="BBEdit app icon" width="35" height="35">
+</a>
+  <a class="app-card__title" href="http://www.barebones.com/products/bbedit/index.html" target="_blank" rel="noopener">
+    BBEdit
+  </a>
+
+  <style>
+    .app-card {
+      display: inline-flex;        
+      flex-direction: column;
+      align-items: center;         
+      text-align: center;
+      margin-right: 1.5rem;        
+      margin-bottom: 1rem;
+    }
+    .app-card__icon img {
+      border-radius: 18%;
+      display: block;
+    }
+    .app-card__title {
+      margin: 0.25rem 0 0;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;       
+      color: inherit;              
+    }
+    .app-card__title:hover {
+      text-decoration: underline;  
+    }
+  </style>
+</article>
+
+<article class="app-card">
+<a class="app-card__icon" href="https://www.alfredapp.com/" target="_blank" rel="noopener">
+  <img src="/images//App%20Icons/Alfred%205%20Icon.jpg" alt="Alfred 5 app icon" width="35" height="35">
+</a>
+  <a class="app-card__title" href="https://www.alfredapp.com/" target="_blank" rel="noopener">
+    Alfred 5
+  </a>
+
+  <style>
+    .app-card {
+      display: inline-flex;        
+      flex-direction: column;
+      align-items: center;         
+      text-align: center;
+      margin-right: 1.5rem;        
+      margin-bottom: 1rem;
+    }
+    .app-card__icon img {
+      border-radius: 18%;
+      display: block;
+    }
+    .app-card__title {
+      margin: 0.25rem 0 0;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;       
+      color: inherit;              
+    }
+    .app-card__title:hover {
+      text-decoration: underline;  
+    }
+  </style>
+</article>
+
+
+</div>
+
+<style>
+  .app-row {
+    display: flex;
+    justify-content: left;   
+    gap: 0.5rem;                  
+    flex-wrap: wrap;
+  }
+  .app-row > * {
+    flex: 0 0 auto;             
+  }
+</style>
 
 <div class="bmc-wrap">
 <a class="bmc-btn"
@@ -304,6 +439,9 @@ blog-ready package.</p>
 		</li>
 		<li class="tags__item">
 			<a class="tags__link btn" href="/tags/blogging/" rel="tag">Blogging</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/github-pages/" rel="tag">GitHub Pages</a>
 		</li>
 		<li class="tags__item">
 			<a class="tags__link btn" href="/tags/hugo/" rel="tag">Hugo</a>
