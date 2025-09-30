@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Newsletter on Aidan Maurin-Jones</title>
+    <link>https://www.aidanmaurinjones.com/newsletter/</link>
+    <description>Recent content in Newsletter on Aidan Maurin-Jones</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 21 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.aidanmaurinjones.com/newsletter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>test-123</title>
+      <link>https://www.aidanmaurinjones.com/newsletter/test-123/</link>
+      <pubDate>Sun, 21 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.aidanmaurinjones.com/newsletter/test-123/</guid>
+      <description>This post breaks down how I use a simple Shortcut to publish Markdown files straight to my Hugo blog on GitHub Pages, no browser or CMS required.</description>
+    </item>
+  </channel>
+</rss>
