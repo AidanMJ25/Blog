@@ -1,7 +1,7 @@
 ---
-title: "A Hundred & One Post Buttons"
+title: "test-123"
 date: 2025-09-21
-draft: true
+draft: false
 tags: ["Shortcuts", "Blogging", "GitHub Pages", "Hugo"]
 summary: "This post breaks down how I use a simple Shortcut to publish Markdown files straight 
 to my Hugo blog on GitHub Pages, no browser or CMS required."
