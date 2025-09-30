@@ -53,7 +53,7 @@ rssURI = "index.xml"
 
 [outputs]
 home    = ["HTML"]   # keep only the global feed
-section = ["HTML"]          # no section feeds
+section = ["HTML", "RSS"]          # no section feeds
 taxonomy = ["HTML"]         # no tag/category feeds
 term     = ["HTML"]
 
