@@ -1,7 +1,7 @@
 {{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML -}}
 <rss version="2.0">
   <channel>
-    <title>{{ .Site.Title }} - Newsletter</title>
+    <title>{{ .Site.Title }} - Blog Posts</title>
     <link>{{ .Site.BaseURL }}</link>
     <description>Newsletter-only feed</description>
     <language>{{ .Site.Language.Lang }}</language>
