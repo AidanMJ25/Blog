@@ -17,7 +17,7 @@ theme = 'mainroad'
   [[menu.main]]
     name = "Newsletter Archive"
     url = "/newsletter/"
-    weight = 600
+    weight = 60
 
 
 [params]
