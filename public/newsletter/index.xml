@@ -9,11 +9,11 @@
     <lastBuildDate>Mon, 29 Sep 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.aidanmaurinjones.com/newsletter/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>test-123</title>
-      <link>https://www.aidanmaurinjones.com/newsletter/test-123/</link>
+      <title>What&#39;s New at the Blog - Shortcuts, Automation &amp; a Dash of Humor</title>
+      <link>https://www.aidanmaurinjones.com/newsletter/whats-new-at-the-blog---shortcuts-automation--a-dash-of-humor/</link>
       <pubDate>Mon, 29 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://www.aidanmaurinjones.com/newsletter/test-123/</guid>
-      <description>This post breaks down how I use a simple Shortcut to publish Markdown files straight to my Hugo blog on GitHub Pages, no browser or CMS required.</description>
+      <guid>https://www.aidanmaurinjones.com/newsletter/whats-new-at-the-blog---shortcuts-automation--a-dash-of-humor/</guid>
+      <description>This week’s newsletter brings you fresh blog posts on smart automations, playful experiments, and practical shortcuts to make your tech life easier.</description>
     </item>
   </channel>
 </rss>

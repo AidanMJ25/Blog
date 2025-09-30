@@ -14,6 +14,12 @@ theme = 'mainroad'
     url = "/contact/"
     weight = 50
 
+  [[menu.main]]
+    name = "Newsletter Archive"
+    url = "/newsletter/"
+    weight = 600
+
+
 [params]
   dateFormat = "January 2, 2006"   # keep (harmless)
   dateformat = "January 2, 2006"   # <- Mainroad usually reads this one
