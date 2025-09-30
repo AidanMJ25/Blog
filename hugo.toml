@@ -46,7 +46,7 @@ paginate = 10
 rssURI = "index.xml"
 
 [outputs]
-home    = ["HTML", "RSS"]   # keep only the global feed
+home    = ["HTML"]   # keep only the global feed
 section = ["HTML"]          # no section feeds
 taxonomy = ["HTML"]         # no tag/category feeds
 term     = ["HTML"]
