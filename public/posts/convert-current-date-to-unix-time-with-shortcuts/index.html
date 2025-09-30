@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Convert Current Date to Unix Time with Shortcuts - Aidan Maurin-Jones</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="Aidan Maurin-Jones" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Aidan Maurin-Jones</div>
+					
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/about/">
+				
+				<span class="menu__text">About</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/contact/">
+				
+				<span class="menu__text">Contact</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Convert Current Date to Unix Time with Shortcuts</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-09-25T00:00:00Z">September 25, 2025</time></div></div>
+		</header>
+		<div class="content post__content clearfix">
+			<p>Some automations are so simple that they almost feel like magic tricks. A great example of this is my Shortcut for converting any date&ndash;or just the current one&ndash;into Unix time.</p>
+<p>For those unfamiliar, Unix time is a standard way of representing dates as the number of seconds since January 1, 1970, at midnight UTC. It&rsquo;s widely used in APIs, databases, and automation tools because it turns messy human dates into a single number that&rsquo;s easy for computers to understand.</p>
+<hr>
+<h3 id="how-the-shortcut-works">How the Shortcut Works</h3>
+<p>The Shortcut begins with a conditional check:</p>
+<ul>
+<li>If Shortcut Input has a value → use that as the date.</li>
+<li>Otherwise → fall back to the current date.</li>
+</ul>
+<p>This flexibility means you can pass in a date from another Shortcut, an app, or a file&ndash;and it&rsquo;ll just work. If you don&rsquo;t supply anything, it defaults to &ldquo;now,&rdquo; which is handy for most uses.</p>
+<p>Next, the Shortcut defines a fixed reference point:</p>
+<p>1970-01-01T00:00:00Z</p>
+<p>This is the start of Unix time (known as the epoch). The Shortcut parses that text into a date object.</p>
+<p>Finally, it calculates the difference in seconds between the chosen date (from input or current) and the epoch date. The result is a clean integer: Unix time.</p>
+<hr>
+<h3 id="why-this-is-useful">Why This Is Useful</h3>
+<p>I reach for this Shortcut whenever I&rsquo;m working with APIs that require timestamps or when I need a quick way to normalize dates into a standard format. It&rsquo;s especially useful in web automations, logging workflows, and even in Home Assistant setups where Unix time values can simplify comparisons.</p>
+<p>What I love about this Shortcut is how it elegantly combines a few building blocks&ndash;conditional input, a static reference date, and a date difference&ndash;into a tool I use far more often than I expected. It turns a concept buried deep in programming textbooks into a tap-friendly utility.</p>
+<hr>
+<h3 id="try-it-yourself">Try It Yourself</h3>
+<p>You can run this Shortcut as-is for an instant timestamp or pass in dates from elsewhere to convert them. Either way, you&rsquo;ll always get a precise Unix time value at the end.</p>
+<article class="app-card">
+<a class="app-card__icon" href="https://www.icloud.com/shortcuts/0c224e59ffa14ae7a1f285199f3b1b15" target="_blank" rel="noopener">
+  <img src="/images//Shortcuts%20Icons/Convert%20Current%20Date%20to%20Unix%20Time%20Icon.jpg" alt="Convert Current Date to Unix Time app icon" width="35" height="35">
+</a>
+  <a class="app-card__title" href="https://www.icloud.com/shortcuts/0c224e59ffa14ae7a1f285199f3b1b15" target="_blank" rel="noopener">
+    Convert Current Date to Unix Time
+  </a>
+
+  <style>
+    .app-card {
+      display: inline-flex;        
+      flex-direction: column;
+      align-items: center;         
+      text-align: center;
+      margin-right: 1.5rem;        
+      margin-bottom: 1rem;
+    }
+    .app-card__icon img {
+      border-radius: 18%;
+      display: block;
+    }
+    .app-card__title {
+      margin: 0.25rem 0 0;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;       
+      color: inherit;              
+    }
+    .app-card__title:hover {
+      text-decoration: underline;  
+    }
+  </style>
+</article>
+
+<div class="bmc-wrap">
+<a class="bmc-btn"
+   href="https://www.buymeacoffee.com/AidanMJ25"
+   target="_blank" rel="noopener">
+  <img src="https://cdn.buymeacoffee.com/buttons/v2/arial-yellow.png"
+       alt="Buy Me A Coffee"
+       width="127" height="35"
+       loading="lazy" decoding="async">
+</a>
+</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+     
+    .rss-button-wrap .rss-button {
+      display: inline-flex;        
+      align-items: center;
+      gap: 0.5em;
+      padding: 0.5em 1em;
+      background-color: #f26522;
+      color: white !important;
+      border-radius: 0.3em;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: .75rem;           
+      transition: background-color 0.2s ease;
+      margin: 1rem 0;
+      margin-top: 0.5rem;
+      margin-bottom: .25rem;            
+    }
+
+    .rss-button-wrap .rss-button svg {
+      fill: white !important;
+      width: 1.2em;
+      height: 1.2em;
+    }
+
+    .rss-button-wrap .rss-button:hover {
+      background-color: #d35400;
+    }
+  </style>
+</head>
+<body>
+  <div class="rss-button-wrap">
+    <a class="rss-button"
+       href="http://aidanmaurinjones.com/index.xml"
+       target="_blank"
+       rel="noopener"
+       aria-label="Subscribe via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/>
+      </svg>
+      <span>Subscribe via RSS</span>
+    </a>
+  </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+     
+    .newsletter-wrap .newsletter-subscribe {
+      display: inline-flex;         
+      align-items: center;
+      gap: 0.5em;
+      padding: 0.5em 1em;
+      background-color: #2F8CFF;
+      color: white !important;
+      border-radius: 0.3em;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: .75rem;            
+      transition: background-color 0.2s ease;
+      margin: 1rem 0;               
+      margin-top: 0.25rem;    
+      margin-bottom: 0.5rem;
+    }
+
+    .newsletter-wrap .newsletter-subscribe:hover {
+      background-color: #357ABD;
+    }
+  </style>
+</head>
+<body>
+  <div class="newsletter-wrap">
+    <a class="newsletter-subscribe"
+       href="https://buttondown.com/AidanMJ25"
+       target="_blank"
+       rel="noopener">
+      Subscribe to Newsletter
+    </a>
+  </div>
+</body>
+</html>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M4 0h8s2 0 4 2l15 15s2 2 0 4L21 31s-2 2-4 0L2 16s-2-2-2-4V3s0-3 4-3m3 10a3 3 0 0 0 0-6 3 3 0 0 0 0 6"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/shortcuts/" rel="tag">Shortcuts</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+
+
+			</div>
+			<aside class="sidebar"><div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
+		<input class="widget-search__field" type="search" placeholder="Search…" value="" name="q" aria-label="Search…">
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="https://www.aidanmaurinjones.com/">
+	</form>
+</div>
+<div class="widget-taglist widget">
+	<h4 class="widget__title">Tags</h4>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/ai/" title="AI">AI (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/alfred/" title="Alfred">Alfred (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/applescript/" title="AppleScript">AppleScript (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/bettertouchtool/" title="BetterTouchTool">BetterTouchTool (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/blogging/" title="Blogging">Blogging (6)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/esphome/" title="ESPHome">ESPHome (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/github-pages/" title="GitHub Pages">GitHub Pages (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/home-assistant/" title="Home Assistant">Home Assistant (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/hugo/" title="Hugo">Hugo (6)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/podcasts/" title="Podcasts">Podcasts (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/raspberry-pi/" title="Raspberry Pi">Raspberry Pi (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/shortcuts/" title="Shortcuts">Shortcuts (21)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/simple-automation/" title="Simple Automation">Simple Automation (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/smart-home/" title="Smart Home">Smart Home (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/stream-deck/" title="Stream Deck">Stream Deck (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/webscraping/" title="WebScraping">WebScraping (5)</a>
+	</div>
+</div><section class="widget clear-tags">
+  <a class="all-posts-link" href="/">Clear All Selected Tags</a>
+</section>
+</aside>
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2025 Aidan Maurin-Jones.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>

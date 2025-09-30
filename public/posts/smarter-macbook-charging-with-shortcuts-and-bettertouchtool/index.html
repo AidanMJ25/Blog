@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Smarter MacBook Charging with Shortcuts and BetterTouchTool - Aidan Maurin-Jones</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="Aidan Maurin-Jones" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Aidan Maurin-Jones</div>
+					
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/about/">
+				
+				<span class="menu__text">About</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/contact/">
+				
+				<span class="menu__text">Contact</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Smarter MacBook Charging with Shortcuts and BetterTouchTool</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-09-15T00:00:00Z">September 15, 2025</time></div></div>
+		</header>
+		<div class="content post__content clearfix">
+			<p>I’ve been working on a smarter way to manage my MacBook’s charging routine. Instead of
+keeping it constantly plugged in—or worse, draining too far—I built a pair of Shortcuts that
+tie into Home Assistant and give me precise control over when my MacBook starts and stops
+charging.</p>
+<p>BetterTouchTool handles the automation side, triggering these Shortcuts when certain
+conditions are met, so I don’t have to think about it. The result is a more balanced charging
+cycle and less battery stress—all fully automated.</p>
+<p>⸻</p>
+<h3 id="the-building-blocks">The Building Blocks</h3>
+<p>The setup consists of two Shortcuts:</p>
+<ul>
+<li>Charge MacBook: Handles turning the charger on or off depending on the battery percentage.</li>
+<li>Check MacBook Charger on Login: Verifies the charger’s state when I log in or at periodic
+intervals.</li>
+</ul>
+<p>Both Shortcuts talk to Home Assistant through its API. I store my API key and endpoint in
+reusable helper Shortcuts, which makes the main flows cleaner and easier to maintain.</p>
+<p>⸻</p>
+<h3 id="charge-macbook">Charge MacBook</h3>
+<p>This Shortcut first checks the current battery level. If it’s above 21%, it assumes charging
+isn’t critical. From there, if the level hits 100%, it sends a request to Home Assistant to
+switch off the charger using the /api/services/switch/turn_off endpoint.</p>
+<p>If the battery is below 21%, the Shortcut flips the logic: it calls /api/services/switch/turn_on,
+waits a few seconds, and then double-checks whether the MacBook actually registered as charging. If
+it didn’t, I get an alert that says “Charge MacBook!!” so I can fix it manually.</p>
+<p>It’s a nice mix of automation and failsafe. Most of the time, I don’t need to do anything—but
+if something misfires, I get a clear prompt.</p>
+<p>⸻</p>
+<h3 id="check-macbook-charger-on-login">Check MacBook Charger on Login</h3>
+<p>The second Shortcut adds some resilience. On login (and also every hour), BetterTouchTool
+triggers it to confirm the charger’s state.</p>
+<p>Here’s how it works:</p>
+<ol>
+<li>It checks the MacBook’s current battery percentage.</li>
+<li>It queries Home Assistant for the state of the switch.macbook_charger entity.</li>
+<li>If the battery is full and the switch is still on, it powers it down.</li>
+<li>If the battery is at or below 21% and the charger is off, it powers it on.</li>
+<li>Finally, it waits a few seconds and checks whether the MacBook is actually
+charging. If not, it throws the same “Charge MacBook!!” alert.</li>
+</ol>
+<p>This creates a feedback loop where the system not only sends commands but also confirms
+whether those commands actually worked.</p>
+<p>⸻</p>
+<h3 id="bettertouchtool-triggers">BetterTouchTool Triggers</h3>
+<p>The final piece of the puzzle is automation via BetterTouchTool. I’ve set up triggers for:</p>
+<ul>
+<li>Battery drops below 21% → Run Charge MacBook.</li>
+<li>Battery rises above 99% → Run Charge MacBook.</li>
+<li>On screen unlock → Run Check MacBook Charger on Login.</li>
+<li>Every hour → Run Check MacBook Charger on Login.</li>
+</ul>
+<p>This combination ensures that charging is always managed proactively, whether I’m actively
+using the MacBook or not.</p>
+<p>⸻</p>
+<h3 id="why-it-matters">Why It Matters</h3>
+<p>Apple’s built-in battery management is good, but not always predictable—and it doesn’t give
+me direct control. With this Shortcuts + BetterTouchTool setup, I can enforce my own rules:
+charge only when needed, stop at full, and always keep an eye on the charger’s actual state.</p>
+<p>It’s a small project, but one that makes a noticeable difference in daily use. My MacBook
+now charges only when it should, with BetterTouchTool quietly handling the details in the
+background.</p>
+<div class="app-row">
+  
+<article class="app-card">
+<a class="app-card__icon" href="https://www.icloud.com/shortcuts/e22b09004acf43fa882a415f3eed7cd8" target="_blank" rel="noopener">
+  <img src="/images//Shortcuts%20Icons/Charge%20MacBook%20Icon.jpg" alt="Charge MacBook app icon" width="35" height="35">
+</a>
+  <a class="app-card__title" href="https://www.icloud.com/shortcuts/e22b09004acf43fa882a415f3eed7cd8" target="_blank" rel="noopener">
+    Charge MacBook
+  </a>
+
+  <style>
+    .app-card {
+      display: inline-flex;        
+      flex-direction: column;
+      align-items: center;         
+      text-align: center;
+      margin-right: 1.5rem;        
+      margin-bottom: 1rem;
+    }
+    .app-card__icon img {
+      border-radius: 18%;
+      display: block;
+    }
+    .app-card__title {
+      margin: 0.25rem 0 0;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;       
+      color: inherit;              
+    }
+    .app-card__title:hover {
+      text-decoration: underline;  
+    }
+  </style>
+</article>
+
+<article class="app-card">
+<a class="app-card__icon" href="https://www.icloud.com/shortcuts/62a2a4c8473342cdb2ca72df8d5e9c1b" target="_blank" rel="noopener">
+  <img src="/images//Shortcuts%20Icons/Check%20MacBook%20Charger%20on%20Login%20Icon.jpg" alt="Check MacBook Charger on Login app icon" width="35" height="35">
+</a>
+  <a class="app-card__title" href="https://www.icloud.com/shortcuts/62a2a4c8473342cdb2ca72df8d5e9c1b" target="_blank" rel="noopener">
+    Check MacBook Charger on Login
+  </a>
+
+  <style>
+    .app-card {
+      display: inline-flex;        
+      flex-direction: column;
+      align-items: center;         
+      text-align: center;
+      margin-right: 1.5rem;        
+      margin-bottom: 1rem;
+    }
+    .app-card__icon img {
+      border-radius: 18%;
+      display: block;
+    }
+    .app-card__title {
+      margin: 0.25rem 0 0;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;       
+      color: inherit;              
+    }
+    .app-card__title:hover {
+      text-decoration: underline;  
+    }
+  </style>
+</article>
+
+
+</div>
+
+<style>
+  .app-row {
+    display: flex;
+    justify-content: left;   
+    gap: 0.5rem;                  
+    flex-wrap: wrap;
+  }
+  .app-row > * {
+    flex: 0 0 auto;             
+  }
+</style>
+
+<h3 id="apps-and-tools-used-for-this-project">Apps and Tools Used for this Project</h3>
+<div class="app-row">
+  
+<article class="app-card">
+<a class="app-card__icon" href="https://www.home-assistant.io/" target="_blank" rel="noopener">
+  <img src="/images//App%20Icons/Home%20Assistant%20Icon.jpg" alt="Home Assistant app icon" width="35" height="35">
+</a>
+  <a class="app-card__title" href="https://www.home-assistant.io/" target="_blank" rel="noopener">
+    Home Assistant
+  </a>
+
+  <style>
+    .app-card {
+      display: inline-flex;        
+      flex-direction: column;
+      align-items: center;         
+      text-align: center;
+      margin-right: 1.5rem;        
+      margin-bottom: 1rem;
+    }
+    .app-card__icon img {
+      border-radius: 18%;
+      display: block;
+    }
+    .app-card__title {
+      margin: 0.25rem 0 0;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;       
+      color: inherit;              
+    }
+    .app-card__title:hover {
+      text-decoration: underline;  
+    }
+  </style>
+</article>
+
+<article class="app-card">
+<a class="app-card__icon" href="https://folivora.ai/" target="_blank" rel="noopener">
+  <img src="/images//App%20Icons/BetterTouchTool%20Icon.jpg" alt="BetterTouchTool app icon" width="35" height="35">
+</a>
+  <a class="app-card__title" href="https://folivora.ai/" target="_blank" rel="noopener">
+    BetterTouchTool
+  </a>
+
+  <style>
+    .app-card {
+      display: inline-flex;        
+      flex-direction: column;
+      align-items: center;         
+      text-align: center;
+      margin-right: 1.5rem;        
+      margin-bottom: 1rem;
+    }
+    .app-card__icon img {
+      border-radius: 18%;
+      display: block;
+    }
+    .app-card__title {
+      margin: 0.25rem 0 0;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;       
+      color: inherit;              
+    }
+    .app-card__title:hover {
+      text-decoration: underline;  
+    }
+  </style>
+</article>
+
+
+</div>
+
+<style>
+  .app-row {
+    display: flex;
+    justify-content: left;   
+    gap: 0.5rem;                  
+    flex-wrap: wrap;
+  }
+  .app-row > * {
+    flex: 0 0 auto;             
+  }
+</style>
+
+<div class="bmc-wrap">
+<a class="bmc-btn"
+   href="https://www.buymeacoffee.com/AidanMJ25"
+   target="_blank" rel="noopener">
+  <img src="https://cdn.buymeacoffee.com/buttons/v2/arial-yellow.png"
+       alt="Buy Me A Coffee"
+       width="127" height="35"
+       loading="lazy" decoding="async">
+</a>
+</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+     
+    .rss-button-wrap .rss-button {
+      display: inline-flex;        
+      align-items: center;
+      gap: 0.5em;
+      padding: 0.5em 1em;
+      background-color: #f26522;
+      color: white !important;
+      border-radius: 0.3em;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: .75rem;           
+      transition: background-color 0.2s ease;
+      margin: 1rem 0;
+      margin-top: 0.5rem;
+      margin-bottom: .25rem;            
+    }
+
+    .rss-button-wrap .rss-button svg {
+      fill: white !important;
+      width: 1.2em;
+      height: 1.2em;
+    }
+
+    .rss-button-wrap .rss-button:hover {
+      background-color: #d35400;
+    }
+  </style>
+</head>
+<body>
+  <div class="rss-button-wrap">
+    <a class="rss-button"
+       href="http://aidanmaurinjones.com/index.xml"
+       target="_blank"
+       rel="noopener"
+       aria-label="Subscribe via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/>
+      </svg>
+      <span>Subscribe via RSS</span>
+    </a>
+  </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+     
+    .newsletter-wrap .newsletter-subscribe {
+      display: inline-flex;         
+      align-items: center;
+      gap: 0.5em;
+      padding: 0.5em 1em;
+      background-color: #2F8CFF;
+      color: white !important;
+      border-radius: 0.3em;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: .75rem;            
+      transition: background-color 0.2s ease;
+      margin: 1rem 0;               
+      margin-top: 0.25rem;    
+      margin-bottom: 0.5rem;
+    }
+
+    .newsletter-wrap .newsletter-subscribe:hover {
+      background-color: #357ABD;
+    }
+  </style>
+</head>
+<body>
+  <div class="newsletter-wrap">
+    <a class="newsletter-subscribe"
+       href="https://buttondown.com/AidanMJ25"
+       target="_blank"
+       rel="noopener">
+      Subscribe to Newsletter
+    </a>
+  </div>
+</body>
+</html>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M4 0h8s2 0 4 2l15 15s2 2 0 4L21 31s-2 2-4 0L2 16s-2-2-2-4V3s0-3 4-3m3 10a3 3 0 0 0 0-6 3 3 0 0 0 0 6"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/shortcuts/" rel="tag">Shortcuts</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/bettertouchtool/" rel="tag">BetterTouchTool</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/home-assistant/" rel="tag">Home Assistant</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+
+
+			</div>
+			<aside class="sidebar"><div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
+		<input class="widget-search__field" type="search" placeholder="Search…" value="" name="q" aria-label="Search…">
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="https://www.aidanmaurinjones.com/">
+	</form>
+</div>
+<div class="widget-taglist widget">
+	<h4 class="widget__title">Tags</h4>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/ai/" title="AI">AI (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/alfred/" title="Alfred">Alfred (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/applescript/" title="AppleScript">AppleScript (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/bettertouchtool/" title="BetterTouchTool">BetterTouchTool (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/blogging/" title="Blogging">Blogging (6)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/esphome/" title="ESPHome">ESPHome (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/github-pages/" title="GitHub Pages">GitHub Pages (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/home-assistant/" title="Home Assistant">Home Assistant (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/hugo/" title="Hugo">Hugo (6)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/podcasts/" title="Podcasts">Podcasts (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/raspberry-pi/" title="Raspberry Pi">Raspberry Pi (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/shortcuts/" title="Shortcuts">Shortcuts (21)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/simple-automation/" title="Simple Automation">Simple Automation (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/smart-home/" title="Smart Home">Smart Home (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/stream-deck/" title="Stream Deck">Stream Deck (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/webscraping/" title="WebScraping">WebScraping (5)</a>
+	</div>
+</div><section class="widget clear-tags">
+  <a class="all-posts-link" href="/">Clear All Selected Tags</a>
+</section>
+</aside>
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2025 Aidan Maurin-Jones.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>
