@@ -1,0 +1,3 @@
+# Exclude Hugo build output from Linguist stats
+public/** linguist-generated
+resources/_gen/** linguist-generated

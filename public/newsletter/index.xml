@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Newsletter Archive on Aidan Maurin-Jones</title>
+    <link>http://localhost:1313/newsletter/</link>
+    <description>Recent content in Newsletter Archive on Aidan Maurin-Jones</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 29 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/newsletter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What&#39;s New at the Blog - Shortcuts, Automation &amp; a Dash of Humor</title>
+      <link>http://localhost:1313/newsletter/whats-new-at-the-blog---shortcuts-automation--a-dash-of-humor/</link>
+      <pubDate>Mon, 29 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/newsletter/whats-new-at-the-blog---shortcuts-automation--a-dash-of-humor/</guid>
+      <description>This week’s newsletter brings you fresh blog posts on smart automations, playful experiments, and practical shortcuts to make your tech life easier.</description>
+    </item>
+  </channel>
+</rss>

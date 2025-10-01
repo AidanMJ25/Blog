@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Share Mac App HTML Button: Automating App Cards from Alfred - Aidan Maurin-Jones</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="Aidan Maurin-Jones" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Aidan Maurin-Jones</div>
+					
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/about/">
+				
+				<span class="menu__text">About</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/contact/">
+				
+				<span class="menu__text">Contact</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/newsletter/">
+				
+				<span class="menu__text">Newsletter Archive</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Share Mac App HTML Button: Automating App Cards from Alfred</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-09-23T00:00:00Z">September 23, 2025</time></div></div>
+		</header>
+		<div class="content post__content clearfix">
+			<p>One of the realities of being a Mac user today is that many of the best apps you’ll discover
+aren’t on the Mac App Store. Developers often prefer to sell directly, avoiding Apple’s restrictions
+and revenue cut. That’s great for them (and often for us too, since it means more powerful software),
+but it leaves one problem: how do you share those apps elegantly in a blog post?</p>
+<p>The Mac App Store gives you a tidy preview link and icon, but direct-purchase apps don’t. That
+means if I want to share an app like BBEdit or Audio Hijack, I’d normally have to dig into
+the app bundle, extract the icon, save it out, rename it, upload it, then write the HTML
+myself. Way too much friction.</p>
+<p>So I built a Shortcut that does all of it for me. And because I run it as an Alfred File
+Action, all I have to do is select the app and hit the hotkey. The Shortcut takes care of
+the rest, turning any Mac app—App Store or not—into a polished HTML app card ready to paste
+into my Hugo blog.</p>
+<p>⸻</p>
+<h3 id="how-it-works">How It Works</h3>
+<p>The Shortcut is split into two halves: finding the app’s details and icon, then uploading
+and generating the HTML snippet.</p>
+<p><strong>Extracting the app’s icon and name</strong></p>
+<p>It begins with an AppleScript that points at the selected .app bundle and looks inside its
+Info.plist for the CFBundleIconFile. If that value’s missing, the script gracefully falls
+back to the default AppIcon.</p>
+<p>From there, it resolves the .icns file inside /Contents/Resources/, hands it back to Shortcuts,
+and Shortcuts grabs the actual image. At the same time, it extracts the app’s display name so
+I don’t have to type it myself later.</p>
+<p><strong>Handling the upload</strong></p>
+<p>With the icon in hand, the Shortcut preps the upload for GitHub. It checks if the icon is
+already in my site’s /static/images/App Icons/ folder using the GitHub API. If it doesn’t
+exist, the Shortcut converts the image to base64 and uploads it automatically.</p>
+<p>This is especially handy for apps outside the Mac App Store, since I can’t rely on Apple’s
+CDN to serve up a clean app icon for me. Once uploaded, the image is there permanently, ready
+for reuse across future posts.</p>
+<p><strong>Assembling the HTML card</strong></p>
+<p>Finally, the Shortcut generates the Hugo shortcode I use for app cards. This snippet is copied
+straight to my clipboard, so I can paste it into BBEdit alongside the rest of the post. To help
+me fill in the missing link (since there’s no App Store URL), the Shortcut even runs a DuckDuckGo
+search for the app’s name + “mac app.” Nine times out of ten, that surfaces the official
+website instantly.</p>
+<p>⸻</p>
+<h3 id="why-this-shortcut-matters">Why This Shortcut Matters</h3>
+<p>This automation is all about eliminating barriers. Whether the app is on the Mac App Store or
+sold directly through a developer’s site, I get the same consistent app card on my blog. No
+manual exporting, no renaming files, no repetitive uploads.</p>
+<p>It also means I can highlight great indie apps without worrying about the extra effort. For
+someone who posts often, these saved minutes add up, but more importantly, they keep me in
+flow. When the tools fade into the background, the writing comes forward.</p>
+<p>⸻</p>
+<h3 id="alfred--shortcuts--a-perfect-match">Alfred + Shortcuts = A Perfect Match</h3>
+<p>Running this Shortcut through Alfred is what makes it truly seamless. Instead of digging
+through Finder or hunting down app paths manually, I just select the app in Alfred, trigger
+the File Action, and let Shortcuts do the heavy lifting.</p>
+<p>This combination works beautifully: Alfred is my quick-launch interface, and Shortcuts is the
+automation engine in the background. Together, they make sharing Mac apps—App Store or not—as
+easy as a keyboard command.</p>
+<p>⸻</p>
+<h3 id="the-bigger-picture">The Bigger Picture</h3>
+<p>This Shortcut fits into a larger workflow where I’ve automated nearly every part of blogging,
+from uploading screenshots to posting entire drafts to GitHub. Each piece removes just enough
+friction to make publishing easier and more enjoyable.</p>
+<p>The end result is that I can write more, share more, and showcase apps without worrying about
+where they’re sold. The Mac App Store doesn’t have to be the gatekeeper for clean links and
+icons anymore.</p>
+<article class="app-card">
+<a class="app-card__icon" href="https://www.icloud.com/shortcuts/ad57e1ca98d6430ca512e8649ffc96b8" target="_blank" rel="noopener">
+  <img src="/images//Shortcuts%20Icons/Share%20Mac%20App%20HTML%20Button%20%28Public%29%20Icon.jpg" alt="Share Mac App HTML Button app icon" width="35" height="35">
+</a>
+  <a class="app-card__title" href="https://www.icloud.com/shortcuts/ad57e1ca98d6430ca512e8649ffc96b8" target="_blank" rel="noopener">
+    Share Mac App HTML Button
+  </a>
+
+  <style>
+    .app-card {
+      display: inline-flex;        
+      flex-direction: column;
+      align-items: center;         
+      text-align: center;
+      margin-right: 1.5rem;        
+      margin-bottom: 1rem;
+    }
+    .app-card__icon img {
+      border-radius: 18%;
+      display: block;
+    }
+    .app-card__title {
+      margin: 0.25rem 0 0;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;       
+      color: inherit;              
+    }
+    .app-card__title:hover {
+      text-decoration: underline;  
+    }
+  </style>
+</article>
+
+<h3 id="apps-used-to-create-this-automation">Apps Used to Create this Automation</h3>
+<div class="app-row">
+  
+<article class="app-card">
+<a class="app-card__icon" href="https://apps.apple.com/ca/app/jayson/id1468691718?mt=12&amp;uo=4" target="_blank" rel="noopener">
+  <img src="/images//App%20Store%20App%20Icons/Jayson%20Icon.jpg" alt="Jayson app icon" width="35" height="35">
+</a>
+  <a class="app-card__title" href="https://apps.apple.com/ca/app/jayson/id1468691718?mt=12&amp;uo=4" target="_blank" rel="noopener">
+    Jayson
+  </a>
+
+  <style>
+    .app-card {
+      display: inline-flex;        
+      flex-direction: column;
+      align-items: center;         
+      text-align: center;
+      margin-right: 1.5rem;        
+      margin-bottom: 1rem;
+    }
+    .app-card__icon img {
+      border-radius: 18%;
+      display: block;
+    }
+    .app-card__title {
+      margin: 0.25rem 0 0;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;       
+      color: inherit;              
+    }
+    .app-card__title:hover {
+      text-decoration: underline;  
+    }
+  </style>
+</article>
+
+<article class="app-card">
+<a class="app-card__icon" href="https://www.alfredapp.com/" target="_blank" rel="noopener">
+  <img src="/images//App%20Icons/Alfred%205%20Icon.jpg" alt="Alfred 5 app icon" width="35" height="35">
+</a>
+  <a class="app-card__title" href="https://www.alfredapp.com/" target="_blank" rel="noopener">
+    Alfred 5
+  </a>
+
+  <style>
+    .app-card {
+      display: inline-flex;        
+      flex-direction: column;
+      align-items: center;         
+      text-align: center;
+      margin-right: 1.5rem;        
+      margin-bottom: 1rem;
+    }
+    .app-card__icon img {
+      border-radius: 18%;
+      display: block;
+    }
+    .app-card__title {
+      margin: 0.25rem 0 0;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;       
+      color: inherit;              
+    }
+    .app-card__title:hover {
+      text-decoration: underline;  
+    }
+  </style>
+</article>
+
+<article class="app-card">
+<a class="app-card__icon" href="https://latenightsw.com/" target="_blank" rel="noopener">
+  <img src="/images//App%20Icons/Script%20Debugger%20Icon.jpg" alt="Script Debugger app icon" width="35" height="35">
+</a>
+  <a class="app-card__title" href="https://latenightsw.com/" target="_blank" rel="noopener">
+    Script Debugger
+  </a>
+
+  <style>
+    .app-card {
+      display: inline-flex;        
+      flex-direction: column;
+      align-items: center;         
+      text-align: center;
+      margin-right: 1.5rem;        
+      margin-bottom: 1rem;
+    }
+    .app-card__icon img {
+      border-radius: 18%;
+      display: block;
+    }
+    .app-card__title {
+      margin: 0.25rem 0 0;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;       
+      color: inherit;              
+    }
+    .app-card__title:hover {
+      text-decoration: underline;  
+    }
+  </style>
+</article>
+
+
+</div>
+
+<style>
+  .app-row {
+    display: flex;
+    justify-content: left;   
+    gap: 0.5rem;                  
+    flex-wrap: wrap;
+  }
+  .app-row > * {
+    flex: 0 0 auto;             
+  }
+</style>
+
+<div class="bmc-wrap">
+<a class="bmc-btn"
+   href="https://www.buymeacoffee.com/AidanMJ25"
+   target="_blank" rel="noopener">
+  <img src="https://cdn.buymeacoffee.com/buttons/v2/arial-yellow.png"
+       alt="Buy Me A Coffee"
+       width="127" height="35"
+       loading="lazy" decoding="async">
+</a>
+</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+     
+    .rss-button-wrap .rss-button {
+      display: inline-flex;        
+      align-items: center;
+      gap: 0.5em;
+      padding: 0.5em 1em;
+      background-color: #f26522;
+      color: white !important;
+      border-radius: 0.3em;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: .75rem;           
+      transition: background-color 0.2s ease;
+      margin: 1rem 0;
+      margin-top: 1rem;
+      margin-bottom: .25rem;            
+    }
+
+    .rss-button-wrap .rss-button svg {
+      fill: white !important;
+      width: 1.2em;
+      height: 1.2em;
+    }
+
+    .rss-button-wrap .rss-button:hover {
+      background-color: #d35400;
+    }
+  </style>
+</head>
+<body>
+  <div class="rss-button-wrap">
+    <a class="rss-button"
+       href="https://aidanmaurinjones.com/posts/index.xml"
+       target="_blank"
+       rel="noopener"
+       aria-label="Subscribe via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/>
+      </svg>
+      <span>Subscribe via RSS</span>
+    </a>
+  </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+     
+    .newsletter-wrap .newsletter-subscribe {
+      display: inline-flex;         
+      align-items: center;
+      gap: 0.5em;
+      padding: 0.5em 1em;
+      background-color: #2F8CFF;
+      color: white !important;
+      border-radius: 0.3em;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: .75rem;            
+      transition: background-color 0.2s ease;
+      margin: 1rem 0;               
+      margin-top: 0.25rem;    
+      margin-bottom: 0.25rem;
+    }
+
+    .newsletter-wrap .newsletter-subscribe:hover {
+      background-color: #357ABD;
+    }
+  </style>
+</head>
+<body>
+  <div class="newsletter-wrap">
+    <a class="newsletter-subscribe"
+       href="https://buttondown.com/AidanMJ25"
+       target="_blank"
+       rel="noopener">
+      Newsletter via Email
+    </a>
+  </div>
+</body>
+</html>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M4 0h8s2 0 4 2l15 15s2 2 0 4L21 31s-2 2-4 0L2 16s-2-2-2-4V3s0-3 4-3m3 10a3 3 0 0 0 0-6 3 3 0 0 0 0 6"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/shortcuts/" rel="tag">Shortcuts</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/alfred/" rel="tag">Alfred</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/blogging/" rel="tag">Blogging</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/hugo/" rel="tag">Hugo</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+
+
+			</div>
+			<aside class="sidebar"><div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
+		<input class="widget-search__field" type="search" placeholder="Search…" value="" name="q" aria-label="Search…">
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="http://localhost:1313/">
+	</form>
+</div>
+<div class="widget-taglist widget">
+	<h4 class="widget__title">Tags</h4>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/ai/" title="AI">AI (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/alfred/" title="Alfred">Alfred (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/applescript/" title="AppleScript">AppleScript (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/bettertouchtool/" title="BetterTouchTool">BetterTouchTool (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/blogging/" title="Blogging">Blogging (5)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/esphome/" title="ESPHome">ESPHome (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/github-pages/" title="GitHub Pages">GitHub Pages (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/home-assistant/" title="Home Assistant">Home Assistant (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/hugo/" title="Hugo">Hugo (5)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/podcasts/" title="Podcasts">Podcasts (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/raspberry-pi/" title="Raspberry Pi">Raspberry Pi (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/shortcuts/" title="Shortcuts">Shortcuts (20)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/simple-automation/" title="Simple Automation">Simple Automation (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/smart-home/" title="Smart Home">Smart Home (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/stream-deck/" title="Stream Deck">Stream Deck (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/webscraping/" title="WebScraping">WebScraping (5)</a>
+	</div>
+</div><section class="widget clear-tags">
+  <a class="all-posts-link" href="/">Clear All Selected Tags</a>
+</section>
+</aside>
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2025 Aidan Maurin-Jones.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>
