@@ -1,6 +1,7 @@
 # macOS
 .DS_Store
 **/.DS_Store
+public/
 
 # Hugo build artifacts
 resources/_gen/
