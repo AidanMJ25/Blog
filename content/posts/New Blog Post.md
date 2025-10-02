@@ -1,7 +1,7 @@
 ---
 title: "Automating My Newsletter Workflow: One Markdown File for Hugo and Buttondown"
 date: 2025-10-01
-draft: false
+draft: true
 tags: ["Shortcuts", "Buttondown", "Hugo", "Automation", "Markdown"]
 summary: "I built a Shortcut that takes the same Markdown file I use for my Hugo site’s Newsletter Archive and publishes it directly to Buttondown. One file, two destinations, no extra work."
 ---
