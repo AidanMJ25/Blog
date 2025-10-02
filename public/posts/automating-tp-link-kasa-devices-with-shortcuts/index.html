@@ -74,8 +74,12 @@
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-09-25T00:00:00Z">September 25, 2025</time></div></div>
 		</header>
 		<div class="content post__content clearfix">
-			<p>One of the things I love about Shortcuts is how it can act as a bridge between apps and services that don&rsquo;t officially support Apple&rsquo;s automation ecosystem. A perfect example of this is TP-Link&rsquo;s Kasa line of smart plugs, switches, and bulbs. Kasa devices don&rsquo;t natively integrate with Shortcuts&ndash;but with a little API trickery, you can bring them right into your automations.</p>
-<p>Over the past week, I&rsquo;ve been experimenting with three public Shortcuts that unlock the Kasa cloud API:</p>
+			<p>One of the things I love about Shortcuts is how it can act as a bridge between apps and services
+that don&rsquo;t officially support Apple&rsquo;s automation ecosystem. A perfect example of this is TP-Link&rsquo;s
+Kasa line of smart plugs, switches, and bulbs. Kasa devices don&rsquo;t natively integrate with
+Shortcuts&ndash;but with a little API trickery, you can bring them right into your automations.</p>
+<p>Over the past week, I&rsquo;ve been experimenting with three public Shortcuts that unlock the Kasa
+cloud API:</p>
 <ol>
 <li>
 <p>Get Kasa API Token</p>
@@ -87,25 +91,38 @@
 <p>Turn On/Off Kasa Device</p>
 </li>
 </ol>
-<p>Together, they form a powerful workflow that lets you log in to your account, retrieve all of your devices, and control them&ndash;all without ever opening the Kasa app.</p>
+<p>Together, they form a powerful workflow that lets you log in to your account, retrieve all
+of your devices, and control them&ndash;all without ever opening the Kasa app.</p>
 <hr>
 <h3 id="step-1-authenticating-with-the-kasa-cloud">Step 1: Authenticating with the Kasa Cloud</h3>
-<p>Everything starts with the Get Kasa API Token Shortcut. This Shortcut asks for the email and password tied to your Kasa account, along with a UUID (a unique identifier that mimics the Kasa app itself). With these values, the Shortcut sends a login request to the Kasa cloud endpoint:</p>
+<p>Everything starts with the Get Kasa API Token Shortcut. This Shortcut asks for the email and
+password tied to your Kasa account, along with a UUID (a unique identifier that mimics the
+Kasa app itself). With these values, the Shortcut sends a login request to the Kasa cloud
+endpoint:</p>
 <pre><code>https://wap.tplinkcloud.com/
 </code></pre>
-<p>The response includes a temporary API token&ndash;your golden ticket for making further requests. Without it, nothing else works. Tokens do expire occasionally (usually after an app update), but re-running the Shortcut instantly refreshes your access.</p>
+<p>The response includes a temporary API token&ndash;your golden ticket for making further requests. Without
+it, nothing else works. Tokens do expire occasionally (usually after an app update), but
+re-running the Shortcut instantly refreshes your access.</p>
 <hr>
 <h3 id="step-2-retrieving-your-devices">Step 2: Retrieving Your Devices</h3>
-<p>Once you have a token, the next step is to get a list of devices tied to your account. That&rsquo;s where Get Kasa Device Details comes in.</p>
-<p>This Shortcut takes your token and sends a getDeviceList request. The response is a JSON dictionary containing all of your Kasa devices&ndash;each with a friendly name (alias), a deviceId, and an appServerUrl (the regional server that manages the device).</p>
-<p>The Shortcut loops through this dictionary, extracts the essentials, and combines them into a clean, human-readable list. Instead of parsing raw JSON, you get something like:</p>
+<p>Once you have a token, the next step is to get a list of devices tied to your account. That&rsquo;s
+where Get Kasa Device Details comes in.</p>
+<p>This Shortcut takes your token and sends a getDeviceList request. The response is a JSON
+dictionary containing all of your Kasa devices&ndash;each with a friendly name (alias), a deviceId,
+and an appServerUrl (the regional server that manages the device).</p>
+<p>The Shortcut loops through this dictionary, extracts the essentials, and combines them into
+a clean, human-readable list. Instead of parsing raw JSON, you get something like:</p>
 <pre><code>&quot;Living Room Plug&quot;: {&quot;Device ID&quot;: &quot;8006XXXXXX&quot;, &quot;App Server URL&quot;: &quot;https://use1-wap.tplinkcloud.com&quot;}
 </code></pre>
 <p>This is the crucial information you&rsquo;ll need to actually control the device.</p>
 <hr>
 <h3 id="step-3-turning-devices-on-and-off">Step 3: Turning Devices On and Off</h3>
-<p>With the token, device ID, and server URL in hand, the final piece of the puzzle is Turn On/Off Kasa Device.</p>
-<p>This Shortcut first prompts you for the values you retrieved in step two, then asks you to choose an action: On or Off. Internally, those options map to 1 and 0, which the API uses to change the relay state.</p>
+<p>With the token, device ID, and server URL in hand, the final piece of the puzzle is Turn
+On/Off Kasa Device.</p>
+<p>This Shortcut first prompts you for the values you retrieved in step two, then asks you to
+choose an action: On or Off. Internally, those options map to 1 and 0, which the API uses
+to change the relay state.</p>
 <p>The Shortcut builds a JSON request that looks like this:</p>
 <pre><code>{
   &quot;method&quot;: &quot;passthrough&quot;,
@@ -118,8 +135,11 @@
 <p>Send that request to the Kasa cloud, and&ndash;like magic&ndash;your smart plug or bulb responds instantly.</p>
 <hr>
 <h3 id="why-this-matters">Why This Matters</h3>
-<p>Kasa devices are popular because they&rsquo;re inexpensive, reliable, and don&rsquo;t require a separate hub. But until now, integrating them with Shortcuts has meant relying on Homebridge, third-party apps, or clunky workarounds.</p>
-<p>These three Shortcuts cut out the middleman. They give you direct control over your Kasa devices from within Shortcuts, meaning you can tie them into existing automations:</p>
+<p>Kasa devices are popular because they&rsquo;re inexpensive, reliable, and don&rsquo;t require a separate
+hub. But until now, integrating them with Shortcuts has meant relying on Homebridge, third-party apps,
+or clunky workarounds.</p>
+<p>These three Shortcuts cut out the middleman. They give you direct control over your Kasa
+devices from within Shortcuts, meaning you can tie them into existing automations:</p>
 <ul>
 <li>Turn on a desk lamp when you start a Focus mode.</li>
 <li>Power cycle your router with a tap on the Home Screen.</li>
@@ -127,11 +147,19 @@
 </ul>
 <hr>
 <h3 id="credit-where-its-due">Credit Where It&rsquo;s Due</h3>
-<p>All of this is made possible thanks to the excellent research and documentation by Joshua Tz, who published the Kasa API details. His guide <a href="https://docs.joshuatz.com/random/tp-link-kasa/">is available here</a> and is an invaluable resource for anyone who wants to go deeper into the API beyond what Shortcuts can do.</p>
+<p>All of this is made possible thanks to the excellent research and documentation by Joshua
+Tz, who published the Kasa API details. His guide <a href="https://docs.joshuatz.com/random/tp-link-kasa/">is available here</a>
+and is an invaluable resource for anyone who wants to go deeper into the API beyond what
+Shortcuts can do.</p>
 <hr>
 <h3 id="future-improvements">Future Improvements</h3>
-<p>Right now, the workflow involves some copy-paste steps&ndash;retrieving the token in one Shortcut, then pasting it into another. With a bit of refinement, the whole process could be chained into a single Shortcut: log in, fetch devices, pick one, and toggle it&ndash;all in one go. That&rsquo;s the kind of polish that makes Shortcuts shine.</p>
-<p>But even as-is, this trio of Shortcuts transforms Kasa devices from &ldquo;app-only&rdquo; gadgets into fully programmable components of your Apple ecosystem. And that&rsquo;s the magic of Shortcuts: giving you the tools to bend devices and services to your will&ndash;even when their makers don&rsquo;t.</p>
+<p>Right now, the workflow involves some copy-paste steps&ndash;retrieving the token in one Shortcut,
+then pasting it into another. With a bit of refinement, the whole process could be chained
+into a single Shortcut: log in, fetch devices, pick one, and toggle it&ndash;all in one go. That&rsquo;s
+the kind of polish that makes Shortcuts shine.</p>
+<p>But even as-is, this trio of Shortcuts transforms Kasa devices from &ldquo;app-only&rdquo; gadgets into
+fully programmable components of your Apple ecosystem. And that&rsquo;s the magic of Shortcuts:
+giving you the tools to bend devices and services to your will&ndash;even when their makers don&rsquo;t.</p>
 <div class="app-row">
   
 <article class="app-card">
@@ -422,7 +450,6 @@
 		<a class="widget-taglist__link widget__link btn" href="/tags/ai/" title="AI">AI (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/alfred/" title="Alfred">Alfred (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/applescript/" title="AppleScript">AppleScript (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/automation/" title="Automation">Automation (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/bettertouchtool/" title="BetterTouchTool">BetterTouchTool (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/blogging/" title="Blogging">Blogging (5)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/buttondown/" title="Buttondown">Buttondown (1)</a>
@@ -430,7 +457,6 @@
 		<a class="widget-taglist__link widget__link btn" href="/tags/github-pages/" title="GitHub Pages">GitHub Pages (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/home-assistant/" title="Home Assistant">Home Assistant (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/hugo/" title="Hugo">Hugo (6)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/markdown/" title="Markdown">Markdown (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/podcasts/" title="Podcasts">Podcasts (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/raspberry-pi/" title="Raspberry Pi">Raspberry Pi (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/shortcuts/" title="Shortcuts">Shortcuts (21)</a>
