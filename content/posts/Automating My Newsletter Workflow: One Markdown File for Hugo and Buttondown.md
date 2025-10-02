@@ -62,4 +62,10 @@ Like many of my favorite automations, this Shortcut doesn’t feel flashy — it
 
 Shortcuts, Buttondown, and Hugo all line up perfectly here. It’s one file, two destinations, and zero overhead. And that’s exactly the kind of automation that keeps me writing and publishing more often.
 
+{{< appcard 
+    url="https://www.icloud.com/shortcuts/b08625600f25483fa55e19207d004eec" 
+    name="Publish Newsletter to Buttondown (Public)" 
+    icon="/Shortcuts Icons/Publish Newsletter to Buttondown (Public) Icon.jpg" 
+>}}
+
 {{< buttons-list >}}
