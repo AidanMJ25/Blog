@@ -3,7 +3,7 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Wordle, But With a Twist: A Shortcut I Built That Gives You Hints - Aidan Maurin-Jones</title>
+	<title>Automating My Newsletter Workflow: One Markdown File for Hugo and Buttondown - Aidan Maurin-Jones</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -68,65 +68,74 @@
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">Wordle, But With a Twist: A Shortcut I Built That Gives You Hints</h1>
+			<h1 class="post__title">Automating My Newsletter Workflow: One Markdown File for Hugo and Buttondown</h1>
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-09-18T00:00:00Z">September 18, 2025</time></div></div>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-10-01T00:00:00Z">October 1, 2025</time></div></div>
 		</header>
 		<div class="content post__content clearfix">
-			<p>I&rsquo;ve been having fun experimenting with Shortcuts, APIs, and local AI models, and recently
-I built something that is kinda fun: a Shortcut that gives you a hint for the daily Wordle without
-spoiling the answer.</p>
-<hr>
-<h3 id="how-it-works">How It Works</h3>
-<p>Here&rsquo;s the flow I put together:</p>
-<ol>
-<li>Grab Today&rsquo;s Wordle</li>
-</ol>
-<p>The Shortcut starts by formatting the current date and plugging it into the New York Times&rsquo;
-Wordle API (<a href="https://www.nytimes.com/svc/wordle/v2/%5Bdate%5D.json)">https://www.nytimes.com/svc/wordle/v2/[date].json)</a>. That gives me the official
-solution for the day in JSON format.</p>
-<ol start="2">
-<li>Parse the API Response</li>
-</ol>
-<p>I use Shortcuts&rsquo; &ldquo;Get Dictionary from&rdquo; action to pull out the solution field &ndash; the actual
-word for today&rsquo;s puzzle. Normally that would be game over, but that&rsquo;s where the next step
-comes in.</p>
-<ol start="3">
-<li>Ask AI for a Hint</li>
-</ol>
-<p>Instead of showing the word, the Shortcut creates a prompt:</p>
-<blockquote>
-<p>&ldquo;Without telling me the word, provide a hint to what the given word is below.&rdquo;</p></blockquote>
-<p>I pass that along with the solution to Gemma 2B v2, a small local model I&rsquo;m running. The
-model generates a creative hint while keeping the answer hidden.</p>
-<ol start="4">
-<li>Show the Hint</li>
-</ol>
-<p>Finally, the Shortcut displays the hint in an alert, giving me just enough of a push without
-ruining the puzzle.</p>
-<hr>
-<h3 id="why-i-like-it">Why I Like It</h3>
-<p>What I enjoy about this Shortcut is how it combines three different things I love tinkering
-with:</p>
+			<p>I’ve been working toward a goal for years: a single place to write, and as many automated
+outputs as possible. I don’t want to copy and paste, re-format, or duplicate my writing. The
+same Markdown file that powers a blog post should also power a newsletter, an archive, or
+whatever else I decide to publish.</p>
+<p>That philosophy led me to a new Shortcut I built for my Buttondown newsletter. With it, I
+can take the exact same Markdown file I use for my Hugo-based site’s Newsletter Archive page,
+and publish it straight to Buttondown in one step. No duplication, no reformatting, and no
+breaking my Markdown-first workflow.</p>
+<p>⸻</p>
+<h3 id="a-dual-purpose-draft">A Dual-Purpose Draft</h3>
+<p>Every newsletter draft I write starts as a Markdown file in my Hugo project. It includes
+the standard YAML front matter — title, date, tags — so it can live side-by-side with my
+blog posts and generate an archive page on my site.</p>
+<p>At the bottom, I’ve also standardized on a Hugo shortcode that handles things like subscribe
+links and callouts.</p>
+<p>The front matter makes it valid Hugo content, but Buttondown doesn’t need that metadata. Likewise,
+the shortcode at the bottom is great for my archive page but doesn’t belong in an email. The
+Shortcut’s job is to strip out those bits and isolate the actual content.</p>
+<p>⸻</p>
+<h3 id="regex-to-the-rescue">Regex to the Rescue</h3>
+<p>To solve that, I leaned on regular expressions. The Shortcut matches everything after the
+closing &mdash; of the YAML front matter and before the buttons-list shortcode.</p>
+<p>The pattern looks like this:</p>
+<pre><code>\A---[\n\s\S]*?---\s*([\n\s\S]*?)\s*\{\{\s*buttons-list\s*\}\}
+</code></pre>
+<p>The captured group becomes the newsletter body. Meanwhile, the Shortcut takes the filename
+of the Markdown draft and uses it as the subject line. That way, one file works for both Hugo
+(which uses the front matter) and Buttondown (which only needs subject + body but I hope one
+day it supports front matter).</p>
+<p>⸻</p>
+<h3 id="publishing-via-buttondowns-api">Publishing via Buttondown’s API</h3>
+<p>The final step is an API call. The Shortcut uses the Get Contents of URL action, configured with:</p>
 <ul>
-<li>Web data: pulling JSON directly from the NYT Wordle API.</li>
-<li>Automation: using Shortcuts to parse and structure everything.</li>
-<li>Local AI: letting an on-device model do the fun part of writing the hint.</li>
+<li>Endpoint: <a href="https://api.buttondown.com/v1/emails">https://api.buttondown.com/v1/emails</a></li>
+<li>Headers: Authorization token (pulled from a secure Shortcut)</li>
+<li>Body: JSON with subject, body, and status</li>
 </ul>
-<p>The result is quick, private, and surprisingly fun &ndash; every time I run it, I get a slightly
-different hint for the same word.</p>
-<hr>
-<h3 id="final-thoughts">Final Thoughts</h3>
-<p>I wanted a way to make Wordle more approachable on the days when the word feels impossible,
-without crossing into outright cheating. This Shortcut hits that sweet spot for me. It&rsquo;s a
-simple automation, but it feels fresh and playful every time I use it.</p>
+<p>I set status to about_to_send, which creates the email in Buttondown ready for review. If
+I’m confident, I can flip this to sent and fire it off instantly.</p>
+<p>⸻</p>
+<h3 id="why-this-matters">Why This Matters</h3>
+<p>The beauty of this setup is that I never have to write the same thing twice. My Hugo site
+automatically builds out a Newsletter Archive page from the Markdown file, while this
+Shortcut takes that same file and pushes it to Buttondown.</p>
+<p>Plain text is the source of truth, Hugo and Buttondown are just outputs.</p>
+<p>This also gives me flexibility: if I ever change services, or if I want to generate a PDF
+archive, I don’t need to rewrite anything. I’ve already got everything in a neutral,
+Markdown-first format that can be re-used anywhere.</p>
+<p>⸻</p>
+<h3 id="why-this-works-so-well">Why This Works So Well</h3>
+<p>Like many of my favorite automations, this Shortcut doesn’t feel flashy — it feels inevitable. Once
+you decide everything should start as Markdown, the next step is making sure the publishing
+side bends around your workflow, not the other way around.</p>
+<p>Shortcuts, Buttondown, and Hugo all line up perfectly here. It’s one file, two destinations,
+and zero overhead. And that’s exactly the kind of automation that keeps me writing and publishing
+more often.</p>
 <article class="app-card">
-<a class="app-card__icon" href="https://www.icloud.com/shortcuts/dc2aab47577a49ab9095c2f6920e60f7" target="_blank" rel="noopener">
-  <img src="/images//Shortcuts%20Icons/Wordle%20Hint%20Icon.jpg" alt="Wordle Hint app icon" width="35" height="35">
+<a class="app-card__icon" href="https://www.icloud.com/shortcuts/b08625600f25483fa55e19207d004eec" target="_blank" rel="noopener">
+  <img src="/images//Shortcuts%20Icons/Publish%20Newsletter%20to%20Buttondown%20%28Public%29%20Icon.jpg" alt="Publish Newsletter to Buttondown app icon" width="35" height="35">
 </a>
-  <a class="app-card__title" href="https://www.icloud.com/shortcuts/dc2aab47577a49ab9095c2f6920e60f7" target="_blank" rel="noopener">
-    Wordle Hint
+  <a class="app-card__title" href="https://www.icloud.com/shortcuts/b08625600f25483fa55e19207d004eec" target="_blank" rel="noopener">
+    Publish Newsletter to Buttondown
   </a>
 
   <style>
@@ -154,92 +163,6 @@ simple automation, but it feels fresh and playful every time I use it.</p>
     }
   </style>
 </article>
-
-<h3 id="apps-used-to-create-this-shortcut">Apps Used to Create this Shortcut</h3>
-<div class="app-row">
-  
-<article class="app-card">
-<a class="app-card__icon" href="https://apps.apple.com/ca/app/offlinellm-private-ai-chat/id6474508768?uo=4" target="_blank" rel="noopener">
-  <img src="/images//App%20Store%20App%20Icons/OfflineLLM:%20Private%20AI%20Chat%20Icon.jpg" alt="OfflineLLM: Private AI Chat app icon" width="35" height="35">
-</a>
-  <a class="app-card__title" href="https://apps.apple.com/ca/app/offlinellm-private-ai-chat/id6474508768?uo=4" target="_blank" rel="noopener">
-    OfflineLLM: Private AI Chat
-  </a>
-
-  <style>
-    .app-card {
-      display: inline-flex;        
-      flex-direction: column;
-      align-items: center;         
-      text-align: center;
-      margin-right: 1.5rem;        
-      margin-bottom: 1rem;
-    }
-    .app-card__icon img {
-      border-radius: 18%;
-      display: block;
-    }
-    .app-card__title {
-      margin: 0.25rem 0 0;
-      font-size: 1rem;
-      font-weight: 600;
-      text-decoration: none;       
-      color: inherit;              
-    }
-    .app-card__title:hover {
-      text-decoration: underline;  
-    }
-  </style>
-</article>
-
-<article class="app-card">
-<a class="app-card__icon" href="https://apps.apple.com/ca/app/jayson/id1447750768?uo=4" target="_blank" rel="noopener">
-  <img src="/images//App%20Store%20App%20Icons/Jayson%20Icon.jpg" alt="Jayson app icon" width="35" height="35">
-</a>
-  <a class="app-card__title" href="https://apps.apple.com/ca/app/jayson/id1447750768?uo=4" target="_blank" rel="noopener">
-    Jayson
-  </a>
-
-  <style>
-    .app-card {
-      display: inline-flex;        
-      flex-direction: column;
-      align-items: center;         
-      text-align: center;
-      margin-right: 1.5rem;        
-      margin-bottom: 1rem;
-    }
-    .app-card__icon img {
-      border-radius: 18%;
-      display: block;
-    }
-    .app-card__title {
-      margin: 0.25rem 0 0;
-      font-size: 1rem;
-      font-weight: 600;
-      text-decoration: none;       
-      color: inherit;              
-    }
-    .app-card__title:hover {
-      text-decoration: underline;  
-    }
-  </style>
-</article>
-
-
-</div>
-
-<style>
-  .app-row {
-    display: flex;
-    justify-content: left;   
-    gap: 0.5rem;                  
-    flex-wrap: wrap;
-  }
-  .app-row > * {
-    flex: 0 0 auto;             
-  }
-</style>
 
 <style>
   .amj-cta { display:flex; flex-direction:column; align-items:flex-start; gap:.5rem; }
@@ -301,7 +224,10 @@ simple automation, but it feels fresh and playful every time I use it.</p>
 			<a class="tags__link btn" href="/tags/shortcuts/" rel="tag">Shortcuts</a>
 		</li>
 		<li class="tags__item">
-			<a class="tags__link btn" href="/tags/ai/" rel="tag">AI</a>
+			<a class="tags__link btn" href="/tags/buttondown/" rel="tag">Buttondown</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/hugo/" rel="tag">Hugo</a>
 		</li>
 	</ul>
 </div>
@@ -326,7 +252,6 @@ simple automation, but it feels fresh and playful every time I use it.</p>
 		<a class="widget-taglist__link widget__link btn" href="/tags/ai/" title="AI">AI (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/alfred/" title="Alfred">Alfred (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/applescript/" title="AppleScript">AppleScript (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/automation/" title="Automation">Automation (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/bettertouchtool/" title="BetterTouchTool">BetterTouchTool (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/blogging/" title="Blogging">Blogging (5)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/buttondown/" title="Buttondown">Buttondown (1)</a>
@@ -334,7 +259,6 @@ simple automation, but it feels fresh and playful every time I use it.</p>
 		<a class="widget-taglist__link widget__link btn" href="/tags/github-pages/" title="GitHub Pages">GitHub Pages (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/home-assistant/" title="Home Assistant">Home Assistant (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/hugo/" title="Hugo">Hugo (6)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/markdown/" title="Markdown">Markdown (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/podcasts/" title="Podcasts">Podcasts (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/raspberry-pi/" title="Raspberry Pi">Raspberry Pi (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/shortcuts/" title="Shortcuts">Shortcuts (21)</a>

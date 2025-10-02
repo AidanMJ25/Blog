@@ -6,8 +6,15 @@
     <description>Recent content in Blog Posts on Aidan Maurin-Jones</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 26 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 Oct 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Automating My Newsletter Workflow: One Markdown File for Hugo and Buttondown</title>
+      <link>http://localhost:1313/posts/automating-my-newsletter-workflow-one-markdown-file-for-hugo-and-buttondown/</link>
+      <pubDate>Wed, 01 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/automating-my-newsletter-workflow-one-markdown-file-for-hugo-and-buttondown/</guid>
+      <description>I built a Shortcut that takes the same Markdown file I use for my Hugo site’s Newsletter Archive and publishes it directly to Buttondown. One file, two destinations, no extra work.</description>
+    </item>
     <item>
       <title>Fighting Spam with Automation: A Shortcut for Writing Hilarious Replies</title>
       <link>http://localhost:1313/posts/fighting-spam-with-automation--a-shortcut-for-writing-hilarious-replies/</link>
