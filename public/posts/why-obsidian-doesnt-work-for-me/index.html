@@ -3,7 +3,7 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Controlling SwitchBot Devices with Shortcuts and the Web API - Aidan Maurin-Jones</title>
+	<title>Why Obsidian Doesn’t Work for Me - Aidan Maurin-Jones</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -68,60 +68,67 @@
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">Controlling SwitchBot Devices with Shortcuts and the Web API</h1>
+			<h1 class="post__title">Why Obsidian Doesn’t Work for Me</h1>
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-09-24T00:00:00Z">September 24, 2025</time></div></div>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-10-03T00:00:00Z">October 3, 2025</time></div></div>
 		</header>
 		<div class="content post__content clearfix">
-			<p>One of my favorite things about Apple&rsquo;s Shortcuts app is how it can bridge the gap between hardware and cloud APIs without requiring a single line of &ldquo;real&rdquo; code. A perfect example of this is SwitchBot: a line of Bluetooth and Wi-Fi-enabled devices that can be controlled through their official app&ndash;or, with a bit of setup, entirely through Shortcuts.</p>
-<p>In this post, I&rsquo;ll walk you through two Shortcuts I built: one to fetch a list of all my SwitchBot devices, and another to send commands to them. Together, they let me control my smart home directly from Siri, widgets, or automations.</p>
-<hr>
-<h3 id="getting-device-details">Getting Device Details</h3>
-<p>The first Shortcut is a template for retrieving all registered SwitchBot devices from the company&rsquo;s cloud API.</p>
-<p>It starts with a simple Text action where I paste in my API authorization key. That&rsquo;s followed by another Text action containing the endpoint URL:</p>
-<pre><code>https://api.switch-bot.com/v1.0/devices/
-</code></pre>
-<p>The real magic happens in the Get Contents of URL action. Set to GET, this step includes a header named Authorization, pulling in the key from the earlier Text block. When the Shortcut runs, the response contains a full list of my devices and their details&ndash;device IDs, types, names, and more.</p>
-<p>For me, this shortcut is especially useful when I need to look up a device ID to use in the second Shortcut.</p>
-<hr>
-<h3 id="sending-commands">Sending Commands</h3>
-<p>The second Shortcut is where things get really interesting: sending a command to a specific device. It uses the same authorization key, but adds a few more building blocks:</p>
+			<p>Every so often, I give Obsidian another try. On paper, it sounds like the perfect tool: a
+local-first, Markdown-based note-taking app that’s cross-platform, extensible, and endlessly
+customizable. For many people, it really is a game changer.</p>
+<p>But every time I sit down with it, I leave thinking the same thing: “huh…”</p>
+<p>⸻</p>
+<h3 id="the-promise-of-obsidian">The Promise of Obsidian</h3>
+<p>Obsidian is marketed as a plain text knowledge base. It provides backlinks, a graph view,
+and a huge plugin ecosystem that can turn Markdown into just about anything — daily journals,
+task managers, or even kanban boards. For someone who wants an all-in-one workspace, it’s
+fantastic.</p>
+<p>⸻</p>
+<h3 id="my-workflow-is-different">My Workflow Is Different</h3>
+<p>The reason it doesn’t click for me is simple: my workflow is built on a different philosophy.</p>
 <ul>
-<li>Device ID (so the API knows which device to target)</li>
-<li>Command Type (usually &ldquo;command&rdquo;)</li>
-<li>Command (for example, &ldquo;turnOn&rdquo;, &ldquo;turnOff&rdquo;, or &ldquo;toggle&rdquo;)</li>
-<li>Parameter (some commands require additional values, like brightness levels or modes)</li>
+<li>Markdown is the source of truth. I write everything in plain .md files. No special syntax,
+no hidden metadata. If I want to preview formatting, I open it in Marked 2.</li>
+<li>PDF is the permanent format. When I need something shareable or archival, I export
+to PDF. That’s my version of locking it down in stone.</li>
+<li>Finder organizes, Alfred retrieves. Finder handles long-term storage, Alfred lets me get
+to anything instantly, and Hazel keeps everything tidy in the background.</li>
+<li>Automation glues it all together. Keyboard Maestro, Shortcuts, and BetterTouchTool let me
+spin up templates, transform files, or publish to Hugo and Buttondown in minutes.</li>
 </ul>
-<p>The API endpoint looks like this:</p>
-<pre><code>https://api.switch-bot.com/v1.0/devices/{deviceId}/commands
-</code></pre>
-<p>And instead of GET, this time the Shortcut uses a POST request with a JSON body. The Get Contents of URL action sends fields for commandType, command, and parameter, all filled from earlier Text actions in the Shortcut.</p>
-<p>With this structure, I can turn lights on and off, start a fan, or even trigger my SwitchBot Curtain with a single tap. All without ever opening the SwitchBot app.</p>
-<hr>
-<h3 id="why-this-matters">Why This Matters</h3>
-<p>There are countless ways to integrate SwitchBot devices with other smart home platforms, but building these Shortcuts has two big advantages:</p>
-<ol>
-<li>
-<p>Speed &ndash; I can tie them directly into Siri, widgets, or automations. Saying &ldquo;Hey Siri, turn on the fan&rdquo; actually triggers my Shortcut, which hits the SwitchBot API in less than a second.</p>
-</li>
-<li>
-<p>Flexibility &ndash; Since the commands are just text values, I can duplicate the Shortcut and customize it for any device and action I want, without writing code or digging through menus.</p>
-</li>
-</ol>
-<p>For someone like me, who&rsquo;s already knee-deep in Shortcuts for other parts of my life, this setup feels natural. I can slot these actions into bigger workflows&ndash;turning on my SwitchBot devices when I leave work, or including them in a &ldquo;Good Morning&rdquo; routine alongside music and calendar events.</p>
-<hr>
-<h3 id="final-thoughts">Final Thoughts</h3>
-<p>Shortcuts may not be the most glamorous way to control smart home gear, but you can do it. By working directly with the SwitchBot API, these automations skip the app entirely and give me the confidence that when I tap a button, my devices respond.</p>
-<p>It&rsquo;s yet another example of how Shortcuts can serve as the glue between platforms, devices, and services. And for SwitchBot users, it&rsquo;s a reminder that sometimes the simplest approach is also the most powerful.</p>
+<p>Within this setup, I can create a new document template in 10 minutes. I am not proud of it,
+but in Obsidian, I spent two hours fiddling with plugins just to get a string quoted or a
+JSON array formatted consistently without any success.</p>
+<p>⸻</p>
+<h3 id="the-real-difference">The Real Difference</h3>
+<p>What I’ve realized is that Obsidian and my stack solve different problems:</p>
+<ul>
+<li>Obsidian is for people who want a unified workspace where notes, tasks, and links all live
+together.</li>
+<li>My stack is for people who want modular tools that each do one job well and can be
+connected through automation.</li>
+</ul>
+<p>That’s why Obsidian feels to me like the love child of MS Word and VSCode. It’s polished,
+powerful, and versatile — but also too “workspace-y” for the way I prefer to work.</p>
+<p>⸻</p>
+<h3 id="why-thats-okay">Why That’s Okay</h3>
+<p>None of this is a knock on Obsidian. It’s a great app, and I can see why it’s so widely
+loved. If I needed cross-platform syncing or a personal knowledge graph, it would be near
+the top of my list.</p>
+<p>But for me, life revolves around Markdown as the living format and PDF as the permanent
+format. BBEdit, Marked 2, Hugo, Buttondown, Alfred, Hazel, Keyboard Maestro, and Shortcuts
+give me everything I need. Obsidian just doesn’t solve a problem I actually have.</p>
+<p>And that’s the real takeaway: the best tool isn’t the one with the most features. It’s the
+one that disappears into your workflow and feels natural every day.</p>
 <div class="app-row">
   
 <article class="app-card">
-<a class="app-card__icon" href="https://www.icloud.com/shortcuts/430120281f3c4b75a59c1bb2dbc90453" target="_blank" rel="noopener">
-  <img src="/images//Shortcuts%20Icons/Get%20SwitchBot%20Devices%20Template%20%28Public%29%20Icon.jpg" alt="Get SwitchBot Devices Template app icon" width="35" height="35">
+<a class="app-card__icon" href="http://www.barebones.com/products/bbedit/index.html" target="_blank" rel="noopener">
+  <img src="/images//App%20Icons/BBEdit%20Icon.jpg" alt="BBEdit app icon" width="35" height="35">
 </a>
-  <a class="app-card__title" href="https://www.icloud.com/shortcuts/430120281f3c4b75a59c1bb2dbc90453" target="_blank" rel="noopener">
-    Get SwitchBot Devices Template
+  <a class="app-card__title" href="http://www.barebones.com/products/bbedit/index.html" target="_blank" rel="noopener">
+    BBEdit
   </a>
 
   <style>
@@ -151,11 +158,45 @@
 </article>
 
 <article class="app-card">
-<a class="app-card__icon" href="https://www.icloud.com/shortcuts/7042d2acf1864db9b7b604e8ea4971ed" target="_blank" rel="noopener">
-  <img src="/images//Shortcuts%20Icons/Send%20Command%20to%20SwitchBot%20Template%20%28Public%29%20Icon.jpg" alt="Send Command to SwitchBot Template app icon" width="35" height="35">
+<a class="app-card__icon" href="https://marked2app.com/" target="_blank" rel="noopener">
+  <img src="/images//App%20Icons/Marked%202%20Icon.jpg" alt="Marked 2 app icon" width="35" height="35">
 </a>
-  <a class="app-card__title" href="https://www.icloud.com/shortcuts/7042d2acf1864db9b7b604e8ea4971ed" target="_blank" rel="noopener">
-    Send Command to SwitchBot Template
+  <a class="app-card__title" href="https://marked2app.com/" target="_blank" rel="noopener">
+    Marked 2
+  </a>
+
+  <style>
+    .app-card {
+      display: inline-flex;        
+      flex-direction: column;
+      align-items: center;         
+      text-align: center;
+      margin-right: 1.5rem;        
+      margin-bottom: 1rem;
+    }
+    .app-card__icon img {
+      border-radius: 18%;
+      display: block;
+    }
+    .app-card__title {
+      margin: 0.25rem 0 0;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;       
+      color: inherit;              
+    }
+    .app-card__title:hover {
+      text-decoration: underline;  
+    }
+  </style>
+</article>
+
+<article class="app-card">
+<a class="app-card__icon" href="https://obsidian.md/" target="_blank" rel="noopener">
+  <img src="/images//App%20Icons/Obsidian%20Icon.jpg" alt="Obsidian app icon" width="35" height="35">
+</a>
+  <a class="app-card__title" href="https://obsidian.md/" target="_blank" rel="noopener">
+    Obsidian
   </a>
 
   <style>
@@ -256,10 +297,13 @@
 	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M4 0h8s2 0 4 2l15 15s2 2 0 4L21 31s-2 2-4 0L2 16s-2-2-2-4V3s0-3 4-3m3 10a3 3 0 0 0 0-6 3 3 0 0 0 0 6"/></svg>
 	<ul class="tags__list">
 		<li class="tags__item">
-			<a class="tags__link btn" href="/tags/shortcuts/" rel="tag">Shortcuts</a>
+			<a class="tags__link btn" href="/tags/obsidian/" rel="tag">Obsidian</a>
 		</li>
 		<li class="tags__item">
-			<a class="tags__link btn" href="/tags/smart-home/" rel="tag">Smart Home</a>
+			<a class="tags__link btn" href="/tags/workflow/" rel="tag">Workflow</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/automation/" rel="tag">Automation</a>
 		</li>
 	</ul>
 </div>
