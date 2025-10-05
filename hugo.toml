@@ -24,6 +24,7 @@ theme = 'mainroad'
   dateFormat = "January 2, 2006"   # keep (harmless)
   dateformat = "January 2, 2006"   # <- Mainroad usually reads this one
   post_meta = ["date"]
+  description = "Aidan Maurin-Jones shares tools, automations, and thoughts on whatever’s interesting this week."
 
   # (optional) keep your sidebar + widgets here under [params], not [Params]
   [params.sidebar]

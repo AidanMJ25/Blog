@@ -6,8 +6,15 @@
     <description>Recent content in Blog Posts on Aidan Maurin-Jones</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Oct 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why Obsidian Doesn’t Work for Me</title>
+      <link>http://localhost:1313/posts/why-obsidian-doesnt-work-for-me/</link>
+      <pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/why-obsidian-doesnt-work-for-me/</guid>
+      <description>Obsidian is an excellent app, but oddly it doesn’t fit my workflow. Here’s why I keep coming back to BBEdit, Marked 2, and my existing stack instead.</description>
+    </item>
     <item>
       <title>Automating My Newsletter Workflow: One Markdown File for Hugo and Buttondown</title>
       <link>http://localhost:1313/posts/automating-my-newsletter-workflow-one-markdown-file-for-hugo-and-buttondown/</link>
