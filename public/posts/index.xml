@@ -6,8 +6,15 @@
     <description>Recent content in Blog Posts on Aidan Maurin-Jones</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 19 Oct 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A New Landing Page &amp; the Blog&#39;s New Home</title>
+      <link>http://localhost:1313/posts/a-new-landing-page--the-blogs-new-home/</link>
+      <pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/a-new-landing-page--the-blogs-new-home/</guid>
+      <description>The story behind my new landing page at aidanmaurinjones.com and how I built it with Hugo and Hermit-V2.</description>
+    </item>
     <item>
       <title>Why Obsidian Doesn’t Work for Me</title>
       <link>http://localhost:1313/posts/why-obsidian-doesnt-work-for-me/</link>

@@ -1,10 +1,11 @@
 ---
 title: "A New Landing Page & the Blog's New Home"
 date: 2025-10-19
-draft: true
+draft: false
 summary: "The story behind my new landing page at aidanmaurinjones.com and how I built it 
 with Hugo and Hermit-V2."
-tags: ["blog", "hugo", "web dev"]
+tags: ["blogging", "hugo", "github pages"]
+]
 ---
 
 I finally have a proper home on the web — a simple, fast, no-nonsense landing page that ties 
@@ -23,7 +24,7 @@ I wanted something that:
 - loads instantly
 - works entirely from static files
 - stays easy to maintain
-- feels like *me* — straightforward, clean, and a little nerdy around the edges
+- feels like me — straightforward, clean, and a little nerdy around the edges
 
 No flashy animations, no bloat, no signup forms. Just a name, a short blurb, and a link to 
 the blog.
@@ -32,7 +33,7 @@ the blog.
 
 ## The Build
 
-The site runs on **Hugo** with the [Hermit-V2](https://github.com/1bl4z3r/hermit-V2) theme — lightweight, elegant, and fast.  
+The site runs on [Hugo](https://gohugo.io/) with the [Hermit-V2](https://github.com/1bl4z3r/hermit-V2) theme — lightweight, elegant, and fast.  
 I kept the layout minimal: title, subtitle, one link to the blog, and a simple contact section.
 
 Everything is built locally with Hugo Extended, then deployed automatically using GitHub Pages.  
