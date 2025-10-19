@@ -1,5 +1,5 @@
 ---
-title: "A New Landing Page & the Blog's New Home"
+title: "A New Landing Page & Moving the Blog"
 date: 2025-10-19
 draft: false
 summary: "The story behind my new landing page at aidanmaurinjones.com and how I built it 
