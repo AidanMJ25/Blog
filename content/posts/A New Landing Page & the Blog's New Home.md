@@ -1,11 +1,10 @@
 ---
-title: "A New Landing Page & Moving the Blog"
+title: "A New Landing Page & the Blog's New Home"
 date: 2025-10-19
 draft: false
 summary: "The story behind my new landing page at aidanmaurinjones.com and how I built it 
 with Hugo and Hermit-V2."
 tags: ["blogging", "hugo", "github pages"]
-]
 ---
 
 I finally have a proper home on the web — a simple, fast, no-nonsense landing page that ties 
