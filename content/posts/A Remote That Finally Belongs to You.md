@@ -215,8 +215,4 @@ It doesn't need to be.
 It just works--and more importantly, it works on your terms.
 
 
-{{< buymeacoffee >}}
-
-{{< rss-button >}}
-
-{{< buttondown >}}
+{{< buttons-list >}}
