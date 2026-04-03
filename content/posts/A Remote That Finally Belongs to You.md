@@ -38,9 +38,10 @@ And because it's ESPHome, you're not stuck with whatever some manufacturer thoug
 
 Buried in this config is something that feels like a glimpse into the future:
     
-    
+```yaml 
     infrared:
       - platform: ir_rf_proxy
+```
 
 Right now, it's rough. Definitely not plug-and-play. But conceptually? It's huge.
 
@@ -105,9 +106,10 @@ Not controlling (well, not primarily)--just observing.
 
 With:
     
-    
+```yaml  
     promiscuous_mode: true
     decode_messages: true
+```
 
 …it's basically Wireshark for your HDMI cable.
 
@@ -136,10 +138,12 @@ Lights, sound, notifications--everything can react to what's actually happening,
 ### Minimal Control, Maximum Precision
 
 There's also a small but important addition:
-    
+
+```yaml  
     hdmi_cec.send:
       destination: 0x0
       data: [0x36]
+```
 
 A clean, direct "turn off everything" broadcast.
 
