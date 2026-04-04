@@ -32,7 +32,7 @@ theme = 'mainroad'
     home = "right"
     list = "right"
     single = "right"
-    widgets = ["search", "taglist", "clearall"]
+    widgets = ["taglist", "clearall"]
 
   [params.widgets]
     tags_counter = true
