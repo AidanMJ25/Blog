@@ -890,4 +890,35 @@ td {
   .pagination .button {
     width: 100%;
   }
+
+  .article-page,
+  .article-flow,
+  .entry,
+  .entry__content {
+    min-width: 0;
+  }
+
+  .entry {
+    padding: 1.1rem 1rem;
+  }
+
+  .entry__content {
+    width: 100%;
+    max-width: none;
+    overflow-wrap: anywhere;
+  }
+
+  .entry__content pre,
+  .entry__content .highlight pre {
+    max-width: 100%;
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  .entry__content table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+  }
 }
