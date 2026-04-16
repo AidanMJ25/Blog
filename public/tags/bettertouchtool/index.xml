@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Aidan Maurin-Jones | BetterTouchTool</title>
+    <link>https://www.blog.aidanmaurinjones.com/tags/bettertouchtool/</link>
+    <description>BetterTouchTool</description>
+    <language>en</language>
+    
+      <atom:link href="https://www.blog.aidanmaurinjones.com/tags/bettertouchtool/index.xml" rel="self" type="application/rss+xml"></atom:link>
+    
+    
+      <item>
+        <title>Smarter MacBook Charging with Shortcuts and BetterTouchTool</title>
+        <link>https://www.blog.aidanmaurinjones.com/posts/smarter-macbook-charging-with-shortcuts-and-bettertouchtool/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/smarter-macbook-charging-with-shortcuts-and-bettertouchtool/</guid>
+        
+          <pubDate>Mon, 15 Sep 2025 00:00:00 &#43;0000</pubDate>
+        
+        
+          <description><![CDATA[<p>I’ve been working on a smarter way to manage my MacBook’s charging routine. Instead of
+keeping it constantly plugged in—or worse, draining too far—I built a pair of Shortcuts that
+tie into Home Assistant and give me precise control over when my MacBook starts and stops
+charging.</p>
+<p>BetterTouchTool handles the automation side, triggering these Shortcuts when certain
+conditions are met, so I don’t have to think about it. The result is a more balanced charging
+cycle and less battery stress—all fully automated.</p>
+<p>⸻</p>
+<h3 id="the-building-blocks">The Building Blocks</h3>
+<p>The setup consists of two Shortcuts:</p>
+<ul>
+<li>Charge MacBook: Handles turning the charger on or off depending on the battery percentage.</li>
+<li>Check MacBook Charger on Login: Verifies the charger’s state when I log in or at periodic
+intervals.</li>
+</ul>
+<p>Both Shortcuts talk to Home Assistant through its API. I store my API key and endpoint in
+reusable helper Shortcuts, which makes the main flows cleaner and easier to maintain.</p>
+<p>⸻</p>
+<h3 id="charge-macbook">Charge MacBook</h3>
+<p>This Shortcut first checks the current battery level. If it’s above 21%, it assumes charging
+isn’t critical. From there, if the level hits 100%, it sends a request to Home Assistant to
+switch off the charger using the /api/services/switch/turn_off endpoint.</p>
+<p>If the battery is below 21%, the Shortcut flips the logic: it calls /api/services/switch/turn_on,
+waits a few seconds, and then double-checks whether the MacBook actually registered as charging. If
+it didn’t, I get an alert that says “Charge MacBook!!” so I can fix it manually.</p>
+<p>It’s a nice mix of automation and failsafe. Most of the time, I don’t need to do anything—but
+if something misfires, I get a clear prompt.</p>
+<p>⸻</p>
+<h3 id="check-macbook-charger-on-login">Check MacBook Charger on Login</h3>
+<p>The second Shortcut adds some resilience. On login (and also every hour), BetterTouchTool
+triggers it to confirm the charger’s state.</p>
+<p>Here’s how it works:</p>
+<ol>
+<li>It checks the MacBook’s current battery percentage.</li>
+<li>It queries Home Assistant for the state of the switch.macbook_charger entity.</li>
+<li>If the battery is full and the switch is still on, it powers it down.</li>
+<li>If the battery is at or below 21% and the charger is off, it powers it on.</li>
+<li>Finally, it waits a few seconds and checks whether the MacBook is actually
+charging. If not, it throws the same “Charge MacBook!!” alert.</li>
+</ol>
+<p>This creates a feedback loop where the system not only sends commands but also confirms
+whether those commands actually worked.</p>
+<p>⸻</p>
+<h3 id="bettertouchtool-triggers">BetterTouchTool Triggers</h3>
+<p>The final piece of the puzzle is automation via BetterTouchTool. I’ve set up triggers for:</p>
+<ul>
+<li>Battery drops below 21% → Run Charge MacBook.</li>
+<li>Battery rises above 99% → Run Charge MacBook.</li>
+<li>On screen unlock → Run Check MacBook Charger on Login.</li>
+<li>Every hour → Run Check MacBook Charger on Login.</li>
+</ul>
+<p>This combination ensures that charging is always managed proactively, whether I’m actively
+using the MacBook or not.</p>
+<p>⸻</p>
+<h3 id="why-it-matters">Why It Matters</h3>
+<p>Apple’s built-in battery management is good, but not always predictable—and it doesn’t give
+me direct control. With this Shortcuts + BetterTouchTool setup, I can enforce my own rules:
+charge only when needed, stop at full, and always keep an eye on the charger’s actual state.</p>
+<p>It’s a small project, but one that makes a noticeable difference in daily use. My MacBook
+now charges only when it should, with BetterTouchTool quietly handling the details in the
+background.</p>
+<div class="app-row">
+  
+<article class="app-card">
+  <a class="app-card__icon" href="https://www.icloud.com/shortcuts/e22b09004acf43fa882a415f3eed7cd8" target="_blank" rel="noopener">
+    <img src="/images/Shortcuts%20Icons/Charge%20MacBook%20Icon.jpg" alt="Charge MacBook app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://www.icloud.com/shortcuts/e22b09004acf43fa882a415f3eed7cd8" target="_blank" rel="noopener">
+    Charge MacBook
+  </a>
+</article>
+
+<article class="app-card">
+  <a class="app-card__icon" href="https://www.icloud.com/shortcuts/62a2a4c8473342cdb2ca72df8d5e9c1b" target="_blank" rel="noopener">
+    <img src="/images/Shortcuts%20Icons/Check%20MacBook%20Charger%20on%20Login%20Icon.jpg" alt="Check MacBook Charger on Login app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://www.icloud.com/shortcuts/62a2a4c8473342cdb2ca72df8d5e9c1b" target="_blank" rel="noopener">
+    Check MacBook Charger on Login
+  </a>
+</article>
+
+
+</div>
+
+<h3 id="apps-and-tools-used-for-this-project">Apps and Tools Used for this Project</h3>
+<div class="app-row">
+  
+<article class="app-card">
+  <a class="app-card__icon" href="https://www.home-assistant.io/" target="_blank" rel="noopener">
+    <img src="/images/App%20Icons/Home%20Assistant%20Icon.jpg" alt="Home Assistant app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://www.home-assistant.io/" target="_blank" rel="noopener">
+    Home Assistant
+  </a>
+</article>
+
+<article class="app-card">
+  <a class="app-card__icon" href="https://folivora.ai/" target="_blank" rel="noopener">
+    <img src="/images/App%20Icons/BetterTouchTool%20Icon.jpg" alt="BetterTouchTool app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://folivora.ai/" target="_blank" rel="noopener">
+    BetterTouchTool
+  </a>
+</article>
+
+
+</div>
+
+<div class="amj-cta" aria-label="Support and subscription links">
+  <div class="amj-cta__item amj-cta__item--coffee">
+    <a class="amj-cta__button amj-cta__button--coffee" href="https://www.buymeacoffee.com/AidanMJ25" target="_blank" rel="noopener">
+      <span>Buy Me a Coffee</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/posts/index.xml" target="_blank" rel="noopener" aria-label="Subscribe via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Subscribe via RSS</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--newsletter" href="https://buttondown.com/AidanMJ25" target="_blank" rel="noopener">Newsletter via Email</a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/newsletter/index.xml" target="_blank" rel="noopener" aria-label="Newsletter via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Newsletter via RSS</span>
+    </a>
+  </div>
+</div>
+
+]]></description>
+          <content:encoded><![CDATA[<p>I’ve been working on a smarter way to manage my MacBook’s charging routine. Instead of
+keeping it constantly plugged in—or worse, draining too far—I built a pair of Shortcuts that
+tie into Home Assistant and give me precise control over when my MacBook starts and stops
+charging.</p>
+<p>BetterTouchTool handles the automation side, triggering these Shortcuts when certain
+conditions are met, so I don’t have to think about it. The result is a more balanced charging
+cycle and less battery stress—all fully automated.</p>
+<p>⸻</p>
+<h3 id="the-building-blocks">The Building Blocks</h3>
+<p>The setup consists of two Shortcuts:</p>
+<ul>
+<li>Charge MacBook: Handles turning the charger on or off depending on the battery percentage.</li>
+<li>Check MacBook Charger on Login: Verifies the charger’s state when I log in or at periodic
+intervals.</li>
+</ul>
+<p>Both Shortcuts talk to Home Assistant through its API. I store my API key and endpoint in
+reusable helper Shortcuts, which makes the main flows cleaner and easier to maintain.</p>
+<p>⸻</p>
+<h3 id="charge-macbook">Charge MacBook</h3>
+<p>This Shortcut first checks the current battery level. If it’s above 21%, it assumes charging
+isn’t critical. From there, if the level hits 100%, it sends a request to Home Assistant to
+switch off the charger using the /api/services/switch/turn_off endpoint.</p>
+<p>If the battery is below 21%, the Shortcut flips the logic: it calls /api/services/switch/turn_on,
+waits a few seconds, and then double-checks whether the MacBook actually registered as charging. If
+it didn’t, I get an alert that says “Charge MacBook!!” so I can fix it manually.</p>
+<p>It’s a nice mix of automation and failsafe. Most of the time, I don’t need to do anything—but
+if something misfires, I get a clear prompt.</p>
+<p>⸻</p>
+<h3 id="check-macbook-charger-on-login">Check MacBook Charger on Login</h3>
+<p>The second Shortcut adds some resilience. On login (and also every hour), BetterTouchTool
+triggers it to confirm the charger’s state.</p>
+<p>Here’s how it works:</p>
+<ol>
+<li>It checks the MacBook’s current battery percentage.</li>
+<li>It queries Home Assistant for the state of the switch.macbook_charger entity.</li>
+<li>If the battery is full and the switch is still on, it powers it down.</li>
+<li>If the battery is at or below 21% and the charger is off, it powers it on.</li>
+<li>Finally, it waits a few seconds and checks whether the MacBook is actually
+charging. If not, it throws the same “Charge MacBook!!” alert.</li>
+</ol>
+<p>This creates a feedback loop where the system not only sends commands but also confirms
+whether those commands actually worked.</p>
+<p>⸻</p>
+<h3 id="bettertouchtool-triggers">BetterTouchTool Triggers</h3>
+<p>The final piece of the puzzle is automation via BetterTouchTool. I’ve set up triggers for:</p>
+<ul>
+<li>Battery drops below 21% → Run Charge MacBook.</li>
+<li>Battery rises above 99% → Run Charge MacBook.</li>
+<li>On screen unlock → Run Check MacBook Charger on Login.</li>
+<li>Every hour → Run Check MacBook Charger on Login.</li>
+</ul>
+<p>This combination ensures that charging is always managed proactively, whether I’m actively
+using the MacBook or not.</p>
+<p>⸻</p>
+<h3 id="why-it-matters">Why It Matters</h3>
+<p>Apple’s built-in battery management is good, but not always predictable—and it doesn’t give
+me direct control. With this Shortcuts + BetterTouchTool setup, I can enforce my own rules:
+charge only when needed, stop at full, and always keep an eye on the charger’s actual state.</p>
+<p>It’s a small project, but one that makes a noticeable difference in daily use. My MacBook
+now charges only when it should, with BetterTouchTool quietly handling the details in the
+background.</p>
+<div class="app-row">
+  
+<article class="app-card">
+  <a class="app-card__icon" href="https://www.icloud.com/shortcuts/e22b09004acf43fa882a415f3eed7cd8" target="_blank" rel="noopener">
+    <img src="/images/Shortcuts%20Icons/Charge%20MacBook%20Icon.jpg" alt="Charge MacBook app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://www.icloud.com/shortcuts/e22b09004acf43fa882a415f3eed7cd8" target="_blank" rel="noopener">
+    Charge MacBook
+  </a>
+</article>
+
+<article class="app-card">
+  <a class="app-card__icon" href="https://www.icloud.com/shortcuts/62a2a4c8473342cdb2ca72df8d5e9c1b" target="_blank" rel="noopener">
+    <img src="/images/Shortcuts%20Icons/Check%20MacBook%20Charger%20on%20Login%20Icon.jpg" alt="Check MacBook Charger on Login app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://www.icloud.com/shortcuts/62a2a4c8473342cdb2ca72df8d5e9c1b" target="_blank" rel="noopener">
+    Check MacBook Charger on Login
+  </a>
+</article>
+
+
+</div>
+
+<h3 id="apps-and-tools-used-for-this-project">Apps and Tools Used for this Project</h3>
+<div class="app-row">
+  
+<article class="app-card">
+  <a class="app-card__icon" href="https://www.home-assistant.io/" target="_blank" rel="noopener">
+    <img src="/images/App%20Icons/Home%20Assistant%20Icon.jpg" alt="Home Assistant app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://www.home-assistant.io/" target="_blank" rel="noopener">
+    Home Assistant
+  </a>
+</article>
+
+<article class="app-card">
+  <a class="app-card__icon" href="https://folivora.ai/" target="_blank" rel="noopener">
+    <img src="/images/App%20Icons/BetterTouchTool%20Icon.jpg" alt="BetterTouchTool app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://folivora.ai/" target="_blank" rel="noopener">
+    BetterTouchTool
+  </a>
+</article>
+
+
+</div>
+
+<div class="amj-cta" aria-label="Support and subscription links">
+  <div class="amj-cta__item amj-cta__item--coffee">
+    <a class="amj-cta__button amj-cta__button--coffee" href="https://www.buymeacoffee.com/AidanMJ25" target="_blank" rel="noopener">
+      <span>Buy Me a Coffee</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/posts/index.xml" target="_blank" rel="noopener" aria-label="Subscribe via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Subscribe via RSS</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--newsletter" href="https://buttondown.com/AidanMJ25" target="_blank" rel="noopener">Newsletter via Email</a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/newsletter/index.xml" target="_blank" rel="noopener" aria-label="Newsletter via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Newsletter via RSS</span>
+    </a>
+  </div>
+</div>
+
+]]></content:encoded>
+        
+      </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Aidan Maurin-Jones | ESPHome</title>
+    <link>https://www.blog.aidanmaurinjones.com/tags/esphome/</link>
+    <description>ESPHome</description>
+    <language>en</language>
+    
+      <atom:link href="https://www.blog.aidanmaurinjones.com/tags/esphome/index.xml" rel="self" type="application/rss+xml"></atom:link>
+    
+    
+      <item>
+        <title>Building a Smarter Home, One Screen at a Time</title>
+        <link>https://www.blog.aidanmaurinjones.com/posts/building-a-smarter-home-one-screen-at-a-time/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/building-a-smarter-home-one-screen-at-a-time/</guid>
+        
+          <pubDate>Fri, 03 Apr 2026 00:00:00 &#43;0000</pubDate>
+        
+        
+          <description><![CDATA[<p>There&rsquo;s a certain point in any Home Assistant setup where dashboards stop feeling like control panels and start feeling like compromises.</p>
+<p>Too many taps. Too many menus. Too much &ldquo;smart&rdquo; layered on top of what should be instant.</p>
+<p>So instead of fighting the UI, I built my own.</p>
+<h3 id="the-touch-panel-that-replaced-everything">The Touch Panel That Replaced Everything</h3>
+<p>At the centre of this setup is a Waveshare ESP32-S3 touchscreen running ESPHome with LVGL. No Android tablet. No iPad. No cloud dependencies. Just a purpose-built interface that does exactly what it needs to&ndash;and nothing more.</p>
+<p>The entire UI is a 5×5 grid of buttons.</p>
+<p>That&rsquo;s it.</p>
+<p>And that&rsquo;s the point.</p>
+<p>Each button maps directly to something real in the room: TVs, lights, curtains, chargers. Tap it, and it happens instantly. No animations, no loading states, no second-guessing whether the command actually went through.</p>
+<p>What makes it work isn&rsquo;t just the layout&ndash;it&rsquo;s the feedback loop. Every button reflects the <em>actual</em> state from Home Assistant in real time. If a device is unavailable, the button disables itself. If something turns on elsewhere, the panel updates immediately. It&rsquo;s not a remote. It&rsquo;s a live mirror of the system.</p>
+<p>There&rsquo;s no abstraction layer to fight against.</p>
+<h2 id="designing-for-real-life-not-demos">Designing for Real Life, Not Demos</h2>
+<p>A lot of smart home interfaces are designed like they&rsquo;re being shown off, not used.</p>
+<p>This one is designed around how things actually happen:</p>
+<ul>
+<li>Walking into a room → tap one button</li>
+<li>Going to bed → hit the alarm page</li>
+<li>Leaving → glance, confirm, done</li>
+</ul>
+<p>The grid layout isn&rsquo;t flashy, but it&rsquo;s predictable. Muscle memory kicks in fast. After a few days, you&rsquo;re not <em>looking</em> for buttons anymore&ndash;you&rsquo;re just pressing them.</p>
+<p>Even small decisions matter:</p>
+<ul>
+<li><strong>Large tap targets</strong> so you never miss</li>
+<li><strong>Consistent placement</strong> so nothing moves around</li>
+<li><strong>No scrolling, ever</strong></li>
+</ul>
+<p>It behaves more like a physical control panel than an app.</p>
+<h3 id="the-screen-that-knows-when-to-get-out-of-the-way">The Screen That Knows When to Get Out of the Way</h3>
+<p>One of the most underrated parts of this setup is what happens when you <em>don&rsquo;t</em> use it.</p>
+<p>After 30 seconds of inactivity, the display shuts off. Completely. Backlight off, LVGL paused, even a subtle &ldquo;snow&rdquo; effect to prevent burn-in.</p>
+<p>Touch the screen again, and it wakes instantly&ndash;right back to where you left it.</p>
+<p>It&rsquo;s a small detail, but it changes how the panel feels. It&rsquo;s not constantly glowing in the background. It&rsquo;s not demanding attention. It&rsquo;s just there when you need it.</p>
+<p>And gone when you don&rsquo;t.</p>
+<h3 id="a-dedicated-alarm-interface-that-feels-right">A Dedicated Alarm Interface That Feels Right</h3>
+<p>The second half of the project is something I&rsquo;m disproportionately proud of: a dedicated alarm page.</p>
+<p>Instead of cramming alarm controls into the main UI, it gets its own space&ndash;with a layout inspired by old-school physical keypads.</p>
+<p>Mode buttons on the left. Keypad on the right. Code entry front and centre.</p>
+<p>It behaves exactly how you expect:</p>
+<ul>
+<li>Enter a code → it masks with asterisks</li>
+<li>Arm/disarm → sends directly to Home Assistant</li>
+<li>Alarm triggers → screen turns on automatically and switches pages</li>
+</ul>
+<p>There&rsquo;s even a small touch that makes a big difference: when the system is arming, the display changes to &ldquo;Arming…&rdquo; instead of sitting there blankly.</p>
+<p>It feels responsive. Intentional. Alive.</p>
+<h3 id="why-this-works-better-than-a-tablet">Why This Works Better Than a Tablet</h3>
+<p>A tablet can do more. That&rsquo;s exactly why it&rsquo;s worse for this job.</p>
+<p>This panel is:</p>
+<ul>
+<li><strong>Instant</strong> &ndash; no OS, no background apps, no lag</li>
+<li><strong>Local-first</strong> &ndash; nothing breaks if the internet drops</li>
+<li><strong>Single-purpose</strong> &ndash; no distractions, no drift</li>
+<li><strong>Ridiculously efficient</strong> &ndash; barely sips power</li>
+</ul>
+<p>Most importantly, it removes friction.</p>
+<p>You don&rsquo;t <em>think</em> about using it. You just do.</p>
+<h3 id="the-real-upgrade-wasnt-hardware">The Real Upgrade Wasn&rsquo;t Hardware</h3>
+<p>The hardware is nice. The ESP32-S3 is more than capable. LVGL is flexible enough to build anything you want.</p>
+<p>But the real upgrade is philosophical.</p>
+<p>Instead of adapting to someone else&rsquo;s idea of a smart home interface, this setup flips the equation:</p>
+<p>The interface adapts to you.</p>
+<p>No unnecessary features. No forced workflows. No compromises.</p>
+<p>Just a grid of buttons that does exactly what you expect&ndash;every single time.</p>
+<p>If anything, this project proves something simple:</p>
+<p>The best smart home UI isn&rsquo;t the one with the most features.</p>
+<p>It&rsquo;s the one you stop noticing entirely.</p>
+<div class="amj-cta" aria-label="Support and subscription links">
+  <div class="amj-cta__item amj-cta__item--coffee">
+    <a class="amj-cta__button amj-cta__button--coffee" href="https://www.buymeacoffee.com/AidanMJ25" target="_blank" rel="noopener">
+      <span>Buy Me a Coffee</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/posts/index.xml" target="_blank" rel="noopener" aria-label="Subscribe via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Subscribe via RSS</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--newsletter" href="https://buttondown.com/AidanMJ25" target="_blank" rel="noopener">Newsletter via Email</a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/newsletter/index.xml" target="_blank" rel="noopener" aria-label="Newsletter via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Newsletter via RSS</span>
+    </a>
+  </div>
+</div>
+
+]]></description>
+          <content:encoded><![CDATA[<p>There&rsquo;s a certain point in any Home Assistant setup where dashboards stop feeling like control panels and start feeling like compromises.</p>
+<p>Too many taps. Too many menus. Too much &ldquo;smart&rdquo; layered on top of what should be instant.</p>
+<p>So instead of fighting the UI, I built my own.</p>
+<h3 id="the-touch-panel-that-replaced-everything">The Touch Panel That Replaced Everything</h3>
+<p>At the centre of this setup is a Waveshare ESP32-S3 touchscreen running ESPHome with LVGL. No Android tablet. No iPad. No cloud dependencies. Just a purpose-built interface that does exactly what it needs to&ndash;and nothing more.</p>
+<p>The entire UI is a 5×5 grid of buttons.</p>
+<p>That&rsquo;s it.</p>
+<p>And that&rsquo;s the point.</p>
+<p>Each button maps directly to something real in the room: TVs, lights, curtains, chargers. Tap it, and it happens instantly. No animations, no loading states, no second-guessing whether the command actually went through.</p>
+<p>What makes it work isn&rsquo;t just the layout&ndash;it&rsquo;s the feedback loop. Every button reflects the <em>actual</em> state from Home Assistant in real time. If a device is unavailable, the button disables itself. If something turns on elsewhere, the panel updates immediately. It&rsquo;s not a remote. It&rsquo;s a live mirror of the system.</p>
+<p>There&rsquo;s no abstraction layer to fight against.</p>
+<h2 id="designing-for-real-life-not-demos">Designing for Real Life, Not Demos</h2>
+<p>A lot of smart home interfaces are designed like they&rsquo;re being shown off, not used.</p>
+<p>This one is designed around how things actually happen:</p>
+<ul>
+<li>Walking into a room → tap one button</li>
+<li>Going to bed → hit the alarm page</li>
+<li>Leaving → glance, confirm, done</li>
+</ul>
+<p>The grid layout isn&rsquo;t flashy, but it&rsquo;s predictable. Muscle memory kicks in fast. After a few days, you&rsquo;re not <em>looking</em> for buttons anymore&ndash;you&rsquo;re just pressing them.</p>
+<p>Even small decisions matter:</p>
+<ul>
+<li><strong>Large tap targets</strong> so you never miss</li>
+<li><strong>Consistent placement</strong> so nothing moves around</li>
+<li><strong>No scrolling, ever</strong></li>
+</ul>
+<p>It behaves more like a physical control panel than an app.</p>
+<h3 id="the-screen-that-knows-when-to-get-out-of-the-way">The Screen That Knows When to Get Out of the Way</h3>
+<p>One of the most underrated parts of this setup is what happens when you <em>don&rsquo;t</em> use it.</p>
+<p>After 30 seconds of inactivity, the display shuts off. Completely. Backlight off, LVGL paused, even a subtle &ldquo;snow&rdquo; effect to prevent burn-in.</p>
+<p>Touch the screen again, and it wakes instantly&ndash;right back to where you left it.</p>
+<p>It&rsquo;s a small detail, but it changes how the panel feels. It&rsquo;s not constantly glowing in the background. It&rsquo;s not demanding attention. It&rsquo;s just there when you need it.</p>
+<p>And gone when you don&rsquo;t.</p>
+<h3 id="a-dedicated-alarm-interface-that-feels-right">A Dedicated Alarm Interface That Feels Right</h3>
+<p>The second half of the project is something I&rsquo;m disproportionately proud of: a dedicated alarm page.</p>
+<p>Instead of cramming alarm controls into the main UI, it gets its own space&ndash;with a layout inspired by old-school physical keypads.</p>
+<p>Mode buttons on the left. Keypad on the right. Code entry front and centre.</p>
+<p>It behaves exactly how you expect:</p>
+<ul>
+<li>Enter a code → it masks with asterisks</li>
+<li>Arm/disarm → sends directly to Home Assistant</li>
+<li>Alarm triggers → screen turns on automatically and switches pages</li>
+</ul>
+<p>There&rsquo;s even a small touch that makes a big difference: when the system is arming, the display changes to &ldquo;Arming…&rdquo; instead of sitting there blankly.</p>
+<p>It feels responsive. Intentional. Alive.</p>
+<h3 id="why-this-works-better-than-a-tablet">Why This Works Better Than a Tablet</h3>
+<p>A tablet can do more. That&rsquo;s exactly why it&rsquo;s worse for this job.</p>
+<p>This panel is:</p>
+<ul>
+<li><strong>Instant</strong> &ndash; no OS, no background apps, no lag</li>
+<li><strong>Local-first</strong> &ndash; nothing breaks if the internet drops</li>
+<li><strong>Single-purpose</strong> &ndash; no distractions, no drift</li>
+<li><strong>Ridiculously efficient</strong> &ndash; barely sips power</li>
+</ul>
+<p>Most importantly, it removes friction.</p>
+<p>You don&rsquo;t <em>think</em> about using it. You just do.</p>
+<h3 id="the-real-upgrade-wasnt-hardware">The Real Upgrade Wasn&rsquo;t Hardware</h3>
+<p>The hardware is nice. The ESP32-S3 is more than capable. LVGL is flexible enough to build anything you want.</p>
+<p>But the real upgrade is philosophical.</p>
+<p>Instead of adapting to someone else&rsquo;s idea of a smart home interface, this setup flips the equation:</p>
+<p>The interface adapts to you.</p>
+<p>No unnecessary features. No forced workflows. No compromises.</p>
+<p>Just a grid of buttons that does exactly what you expect&ndash;every single time.</p>
+<p>If anything, this project proves something simple:</p>
+<p>The best smart home UI isn&rsquo;t the one with the most features.</p>
+<p>It&rsquo;s the one you stop noticing entirely.</p>
+<div class="amj-cta" aria-label="Support and subscription links">
+  <div class="amj-cta__item amj-cta__item--coffee">
+    <a class="amj-cta__button amj-cta__button--coffee" href="https://www.buymeacoffee.com/AidanMJ25" target="_blank" rel="noopener">
+      <span>Buy Me a Coffee</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/posts/index.xml" target="_blank" rel="noopener" aria-label="Subscribe via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Subscribe via RSS</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--newsletter" href="https://buttondown.com/AidanMJ25" target="_blank" rel="noopener">Newsletter via Email</a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/newsletter/index.xml" target="_blank" rel="noopener" aria-label="Newsletter via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Newsletter via RSS</span>
+    </a>
+  </div>
+</div>
+
+]]></content:encoded>
+        
+      </item>
+    
+      <item>
+        <title>A Remote That Finally Belongs to You</title>
+        <link>https://www.blog.aidanmaurinjones.com/posts/a-remote-that-finally-belongs-to-you/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/a-remote-that-finally-belongs-to-you/</guid>
+        
+          <pubDate>Thu, 02 Apr 2026 00:00:00 &#43;0000</pubDate>
+        
+        
+          <description><![CDATA[<p>Most people think of IR remotes as relics. Dumb plastic wands that exist purely to be lost in couch cushions and die at the worst possible moment.</p>
+<p>But strip away the UX sins and what you&rsquo;re left with is something surprisingly powerful: instant, local, zero-latency control.</p>
+<p>This ESPHome-based IR node leans into that idea hard.</p>
+<p>At its core, it&rsquo;s an ESP8266 (ESP8285 board) running both a receiver and transmitter. That alone isn&rsquo;t special. What makes it interesting is how it&rsquo;s wired into Home Assistant&ndash;not as a workaround, but as a first-class control layer.</p>
+<h3 id="ir-as-input-not-just-output">IR as Input, Not Just Output</h3>
+<p>Most setups treat IR as a one-way street: send commands, hope for the best.</p>
+<p>Here, the remote becomes a trigger device.</p>
+<p>Specific NEC codes&ndash;like the colored buttons on an LG remote&ndash;are mapped directly to Home Assistant actions:</p>
+<ul>
+<li>Pink button → toggle TV lights</li>
+<li>Green button → toggle bedroom light</li>
+<li>Yellow button → toggle soundbar power</li>
+<li>Blue button → toggle TV power</li>
+</ul>
+<p>No cloud. No polling. No delay. Press button → thing happens.</p>
+<p>That&rsquo;s the entire philosophy.</p>
+<p>And because it&rsquo;s ESPHome, you&rsquo;re not stuck with whatever some manufacturer thought was useful. You decide what every button means.</p>
+<h3 id="the-quiet-killer-feature-ir-proxy">The Quiet Killer Feature: IR Proxy</h3>
+<p>Buried in this config is something that feels like a glimpse into the future:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>    <span style="color:#f92672">infrared</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">platform</span>: <span style="color:#ae81ff">ir_rf_proxy</span>
+</span></span></code></pre></div><p>Right now, it&rsquo;s rough. Definitely not plug-and-play. But conceptually? It&rsquo;s huge.</p>
+<p>This is the beginning of IR becoming network-native inside Home Assistant.</p>
+<p>Instead of:</p>
+<ul>
+<li>Capturing codes manually</li>
+<li>Writing YAML</li>
+<li>Flashing firmware</li>
+</ul>
+<p>You eventually get:</p>
+<ul>
+<li>Discoverable IR devices</li>
+<li>Reusable command sets</li>
+<li>Shared control layers</li>
+</ul>
+<p>In other words, IR stops being a hack and starts acting like a real integration.</p>
+<p>We&rsquo;re not fully there yet&ndash;but this is the direction.</p>
+<h3 id="output-still-matters">Output Still Matters</h3>
+<p>On the flip side, the transmitter side is just as important.</p>
+<p>Every key TV function is exposed as a Home Assistant button:</p>
+<ul>
+<li>Power</li>
+<li>Volume up/down</li>
+<li>Mute</li>
+<li>Navigation</li>
+<li>Playback</li>
+</ul>
+<p>Which means your &ldquo;dumb&rdquo; TV is now:</p>
+<ul>
+<li>Scriptable</li>
+<li>Automatable</li>
+<li>UI-controllable</li>
+<li>Fully local</li>
+</ul>
+<p>No app. No API. No nonsense.</p>
+<p>Just raw IR, weaponized properly.</p>
+<h3 id="hdmi-cec-listening-instead-of-guessing">HDMI-CEC: Listening Instead of Guessing</h3>
+<p>If the IR node is about control, the HDMI-CEC node is about awareness.</p>
+<p>And honestly, this is the more interesting one.</p>
+<p>Because most smart home setups fake device state. They assume the TV is on because you told it to turn on.</p>
+<p>This one doesn&rsquo;t assume anything.</p>
+<p>It listens.</p>
+<h3 id="sniffing-the-hdmi-bus">Sniffing the HDMI Bus</h3>
+<p>Using an ESP32 and this <a href="https://github.com/Palakis/esphome-native-hdmi-cec">esphome-hdmi-cec component</a>, this device taps directly into the HDMI-CEC line and watches traffic in real time.</p>
+<p>Not controlling (well, not primarily)&ndash;just observing.</p>
+<p>With:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>    <span style="color:#f92672">promiscuous_mode</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">decode_messages</span>: <span style="color:#66d9ef">true</span>
+</span></span></code></pre></div><p>…it&rsquo;s basically Wireshark for your HDMI cable.</p>
+<p>And from that stream, it extracts something incredibly useful:</p>
+<h3 id="a-real-power-state-sensor">A Real Power State Sensor</h3>
+<p>Two messages matter here:</p>
+<ul>
+<li>0x36 → Standby (OFF)</li>
+<li>[0x90, 0x00] → Power ON</li>
+</ul>
+<p>That&rsquo;s it.</p>
+<p>No guessing. No delays. No &ldquo;wait 10 seconds and hope.&rdquo;</p>
+<p>Just:</p>
+<ul>
+<li>TV says it&rsquo;s off → sensor updates</li>
+<li>TV says it&rsquo;s on → sensor updates</li>
+</ul>
+<p>Which means your automations suddenly get way smarter.</p>
+<p>Lights, sound, notifications&ndash;everything can react to what&rsquo;s actually happening, not what you think is happening.</p>
+<h3 id="minimal-control-maximum-precision">Minimal Control, Maximum Precision</h3>
+<p>There&rsquo;s also a small but important addition:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>    <span style="color:#f92672">hdmi_cec.send</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">destination</span>: <span style="color:#ae81ff">0x0</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">data</span>: [<span style="color:#ae81ff">0x36</span>]
+</span></span></code></pre></div><p>A clean, direct &ldquo;turn off everything&rdquo; broadcast.</p>
+<p>No IR blasting. No aiming. No interference.</p>
+<p>Just a message on the HDMI bus that every device understands.</p>
+<h3 id="why-this-setup-works-so-well">Why This Setup Works So Well</h3>
+<p>Individually, these projects are solid.</p>
+<p>Together, they&rsquo;re kind of ridiculous&ndash;in a good way.</p>
+<p>You end up with:</p>
+<h3 id="ir--control-layer">IR → Control Layer</h3>
+<ul>
+<li>Instant input from physical remotes</li>
+<li>Reliable output to &ldquo;dumb&rdquo; devices</li>
+<li>Fully local, zero latency</li>
+</ul>
+<h3 id="hdmi-cec--state-layer">HDMI-CEC → State Layer</h3>
+<ul>
+<li>Real device awareness</li>
+<li>No guesswork</li>
+<li>Clean integration into automations</li>
+</ul>
+<p>And the combination solves a problem most people don&rsquo;t even realize they have:</p>
+<blockquote>
+<p>Smart homes are great at sending commands.</p>
+</blockquote>
+<blockquote>
+<p>They&rsquo;re terrible at knowing what actually happened.</p>
+</blockquote>
+<p>This setup fixes that.</p>
+<h3 id="the-bigger-picture">The Bigger Picture</h3>
+<p>What&rsquo;s happening here isn&rsquo;t just &ldquo;cool ESPHome stuff.&rdquo;</p>
+<p>It&rsquo;s a shift in how you think about devices.</p>
+<p>Instead of asking:</p>
+<blockquote>
+<p>&ldquo;Does this support Home Assistant?&rdquo;</p>
+</blockquote>
+<p>You start asking:</p>
+<blockquote>
+<p>&ldquo;Can I make this support Home Assistant?&rdquo;</p>
+</blockquote>
+<p>IR? Yes.</p>
+<p>CEC? Yes.</p>
+<p>RF (soon)? Probably.</p>
+<p>And suddenly, entire categories of &ldquo;dumb&rdquo; hardware become viable again&ndash;without any of the baggage of cloud apps, firmware updates, or abandoned ecosystems.</p>
+<h3 id="final-thought">Final Thought</h3>
+<p>There&rsquo;s something deeply satisfying about turning off your TV with a 20-year-old protocol…</p>
+<p>…while a microcontroller quietly logs the event and updates your house in real time.</p>
+<p>It&rsquo;s not flashy.</p>
+<p>It doesn&rsquo;t need to be.</p>
+<p>It just works&ndash;and more importantly, it works on your terms.</p>
+<div class="amj-cta" aria-label="Support and subscription links">
+  <div class="amj-cta__item amj-cta__item--coffee">
+    <a class="amj-cta__button amj-cta__button--coffee" href="https://www.buymeacoffee.com/AidanMJ25" target="_blank" rel="noopener">
+      <span>Buy Me a Coffee</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/posts/index.xml" target="_blank" rel="noopener" aria-label="Subscribe via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Subscribe via RSS</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--newsletter" href="https://buttondown.com/AidanMJ25" target="_blank" rel="noopener">Newsletter via Email</a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/newsletter/index.xml" target="_blank" rel="noopener" aria-label="Newsletter via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Newsletter via RSS</span>
+    </a>
+  </div>
+</div>
+
+]]></description>
+          <content:encoded><![CDATA[<p>Most people think of IR remotes as relics. Dumb plastic wands that exist purely to be lost in couch cushions and die at the worst possible moment.</p>
+<p>But strip away the UX sins and what you&rsquo;re left with is something surprisingly powerful: instant, local, zero-latency control.</p>
+<p>This ESPHome-based IR node leans into that idea hard.</p>
+<p>At its core, it&rsquo;s an ESP8266 (ESP8285 board) running both a receiver and transmitter. That alone isn&rsquo;t special. What makes it interesting is how it&rsquo;s wired into Home Assistant&ndash;not as a workaround, but as a first-class control layer.</p>
+<h3 id="ir-as-input-not-just-output">IR as Input, Not Just Output</h3>
+<p>Most setups treat IR as a one-way street: send commands, hope for the best.</p>
+<p>Here, the remote becomes a trigger device.</p>
+<p>Specific NEC codes&ndash;like the colored buttons on an LG remote&ndash;are mapped directly to Home Assistant actions:</p>
+<ul>
+<li>Pink button → toggle TV lights</li>
+<li>Green button → toggle bedroom light</li>
+<li>Yellow button → toggle soundbar power</li>
+<li>Blue button → toggle TV power</li>
+</ul>
+<p>No cloud. No polling. No delay. Press button → thing happens.</p>
+<p>That&rsquo;s the entire philosophy.</p>
+<p>And because it&rsquo;s ESPHome, you&rsquo;re not stuck with whatever some manufacturer thought was useful. You decide what every button means.</p>
+<h3 id="the-quiet-killer-feature-ir-proxy">The Quiet Killer Feature: IR Proxy</h3>
+<p>Buried in this config is something that feels like a glimpse into the future:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>    <span style="color:#f92672">infrared</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">platform</span>: <span style="color:#ae81ff">ir_rf_proxy</span>
+</span></span></code></pre></div><p>Right now, it&rsquo;s rough. Definitely not plug-and-play. But conceptually? It&rsquo;s huge.</p>
+<p>This is the beginning of IR becoming network-native inside Home Assistant.</p>
+<p>Instead of:</p>
+<ul>
+<li>Capturing codes manually</li>
+<li>Writing YAML</li>
+<li>Flashing firmware</li>
+</ul>
+<p>You eventually get:</p>
+<ul>
+<li>Discoverable IR devices</li>
+<li>Reusable command sets</li>
+<li>Shared control layers</li>
+</ul>
+<p>In other words, IR stops being a hack and starts acting like a real integration.</p>
+<p>We&rsquo;re not fully there yet&ndash;but this is the direction.</p>
+<h3 id="output-still-matters">Output Still Matters</h3>
+<p>On the flip side, the transmitter side is just as important.</p>
+<p>Every key TV function is exposed as a Home Assistant button:</p>
+<ul>
+<li>Power</li>
+<li>Volume up/down</li>
+<li>Mute</li>
+<li>Navigation</li>
+<li>Playback</li>
+</ul>
+<p>Which means your &ldquo;dumb&rdquo; TV is now:</p>
+<ul>
+<li>Scriptable</li>
+<li>Automatable</li>
+<li>UI-controllable</li>
+<li>Fully local</li>
+</ul>
+<p>No app. No API. No nonsense.</p>
+<p>Just raw IR, weaponized properly.</p>
+<h3 id="hdmi-cec-listening-instead-of-guessing">HDMI-CEC: Listening Instead of Guessing</h3>
+<p>If the IR node is about control, the HDMI-CEC node is about awareness.</p>
+<p>And honestly, this is the more interesting one.</p>
+<p>Because most smart home setups fake device state. They assume the TV is on because you told it to turn on.</p>
+<p>This one doesn&rsquo;t assume anything.</p>
+<p>It listens.</p>
+<h3 id="sniffing-the-hdmi-bus">Sniffing the HDMI Bus</h3>
+<p>Using an ESP32 and this <a href="https://github.com/Palakis/esphome-native-hdmi-cec">esphome-hdmi-cec component</a>, this device taps directly into the HDMI-CEC line and watches traffic in real time.</p>
+<p>Not controlling (well, not primarily)&ndash;just observing.</p>
+<p>With:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>    <span style="color:#f92672">promiscuous_mode</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">decode_messages</span>: <span style="color:#66d9ef">true</span>
+</span></span></code></pre></div><p>…it&rsquo;s basically Wireshark for your HDMI cable.</p>
+<p>And from that stream, it extracts something incredibly useful:</p>
+<h3 id="a-real-power-state-sensor">A Real Power State Sensor</h3>
+<p>Two messages matter here:</p>
+<ul>
+<li>0x36 → Standby (OFF)</li>
+<li>[0x90, 0x00] → Power ON</li>
+</ul>
+<p>That&rsquo;s it.</p>
+<p>No guessing. No delays. No &ldquo;wait 10 seconds and hope.&rdquo;</p>
+<p>Just:</p>
+<ul>
+<li>TV says it&rsquo;s off → sensor updates</li>
+<li>TV says it&rsquo;s on → sensor updates</li>
+</ul>
+<p>Which means your automations suddenly get way smarter.</p>
+<p>Lights, sound, notifications&ndash;everything can react to what&rsquo;s actually happening, not what you think is happening.</p>
+<h3 id="minimal-control-maximum-precision">Minimal Control, Maximum Precision</h3>
+<p>There&rsquo;s also a small but important addition:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>    <span style="color:#f92672">hdmi_cec.send</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">destination</span>: <span style="color:#ae81ff">0x0</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">data</span>: [<span style="color:#ae81ff">0x36</span>]
+</span></span></code></pre></div><p>A clean, direct &ldquo;turn off everything&rdquo; broadcast.</p>
+<p>No IR blasting. No aiming. No interference.</p>
+<p>Just a message on the HDMI bus that every device understands.</p>
+<h3 id="why-this-setup-works-so-well">Why This Setup Works So Well</h3>
+<p>Individually, these projects are solid.</p>
+<p>Together, they&rsquo;re kind of ridiculous&ndash;in a good way.</p>
+<p>You end up with:</p>
+<h3 id="ir--control-layer">IR → Control Layer</h3>
+<ul>
+<li>Instant input from physical remotes</li>
+<li>Reliable output to &ldquo;dumb&rdquo; devices</li>
+<li>Fully local, zero latency</li>
+</ul>
+<h3 id="hdmi-cec--state-layer">HDMI-CEC → State Layer</h3>
+<ul>
+<li>Real device awareness</li>
+<li>No guesswork</li>
+<li>Clean integration into automations</li>
+</ul>
+<p>And the combination solves a problem most people don&rsquo;t even realize they have:</p>
+<blockquote>
+<p>Smart homes are great at sending commands.</p>
+</blockquote>
+<blockquote>
+<p>They&rsquo;re terrible at knowing what actually happened.</p>
+</blockquote>
+<p>This setup fixes that.</p>
+<h3 id="the-bigger-picture">The Bigger Picture</h3>
+<p>What&rsquo;s happening here isn&rsquo;t just &ldquo;cool ESPHome stuff.&rdquo;</p>
+<p>It&rsquo;s a shift in how you think about devices.</p>
+<p>Instead of asking:</p>
+<blockquote>
+<p>&ldquo;Does this support Home Assistant?&rdquo;</p>
+</blockquote>
+<p>You start asking:</p>
+<blockquote>
+<p>&ldquo;Can I make this support Home Assistant?&rdquo;</p>
+</blockquote>
+<p>IR? Yes.</p>
+<p>CEC? Yes.</p>
+<p>RF (soon)? Probably.</p>
+<p>And suddenly, entire categories of &ldquo;dumb&rdquo; hardware become viable again&ndash;without any of the baggage of cloud apps, firmware updates, or abandoned ecosystems.</p>
+<h3 id="final-thought">Final Thought</h3>
+<p>There&rsquo;s something deeply satisfying about turning off your TV with a 20-year-old protocol…</p>
+<p>…while a microcontroller quietly logs the event and updates your house in real time.</p>
+<p>It&rsquo;s not flashy.</p>
+<p>It doesn&rsquo;t need to be.</p>
+<p>It just works&ndash;and more importantly, it works on your terms.</p>
+<div class="amj-cta" aria-label="Support and subscription links">
+  <div class="amj-cta__item amj-cta__item--coffee">
+    <a class="amj-cta__button amj-cta__button--coffee" href="https://www.buymeacoffee.com/AidanMJ25" target="_blank" rel="noopener">
+      <span>Buy Me a Coffee</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/posts/index.xml" target="_blank" rel="noopener" aria-label="Subscribe via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Subscribe via RSS</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--newsletter" href="https://buttondown.com/AidanMJ25" target="_blank" rel="noopener">Newsletter via Email</a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/newsletter/index.xml" target="_blank" rel="noopener" aria-label="Newsletter via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Newsletter via RSS</span>
+    </a>
+  </div>
+</div>
+
+]]></content:encoded>
+        
+      </item>
+    
+      <item>
+        <title>A Raspberry Pi Stream Deck Server controlled by ESPHome</title>
+        <link>https://www.blog.aidanmaurinjones.com/posts/a-raspberry-pi-stream-deck-server-controlled-by-esphome/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/a-raspberry-pi-stream-deck-server-controlled-by-esphome/</guid>
+        
+          <pubDate>Mon, 15 Sep 2025 00:00:00 &#43;0000</pubDate>
+        
+        
+          <description><![CDATA[<p>I’ve turned one of my Raspberry Pi 4s into a dedicated Stream Deck hub. It’s hooked up to
+a 32-button Stream Deck that controls devices and automations in Home Assistant, which runs
+on a separate machine. The Pi’s only job is to sit there, listen, and push out commands —
+but if it ever hangs or I need to reboot it, I wanted a way to manage it properly without
+pulling cables.</p>
+<p>That’s where the ESP32 comes in. I flashed it with ESPHome and wired it straight into the
+Pi’s GPIO pins so I can treat the whole setup like a real smart-home appliance: I can power
+it on, shut it down safely, reboot it, and always know its current state inside Home Assistant.</p>
+<p>⸻</p>
+<h3 id="how-i-wired-it">How I Wired It</h3>
+<p>The wiring is pretty simple. Raspberry Pi GPIO14 goes into ESP32 GPIO27, which gives me
+feedback about whether the Pi is on or off. The Pi’s RUN pins are connected to ESP32 GPIO13,
+so I can pulse them to power it on. For shutdown and reboot, I used GPIO26 and GPIO13 on the
+Pi, wired to ESP32 pins that trigger those actions.</p>
+<p>This way, the ESP32 can send commands to the Pi, and the Pi can talk back about its state.</p>
+<p>⸻</p>
+<h3 id="my-esphome-config">My ESPHome Config</h3>
+<p>On the ESP32, I wrote an ESPHome config with a few pieces:</p>
+<ul>
+<li>A template switch that acts as the main power control. It checks the binary sensor to
+see if the Pi is already on before trying to pulse the RUN pins.</li>
+<li>A shutdown switch that pulls Pi GPIO26 high, which my shutdown script listens for.</li>
+<li>A reboot button that does the same thing with GPIO13 for rebooting.</li>
+<li>A binary sensor tied to GPIO14 that tells me if the Pi is running or not.</li>
+</ul>
+<p>Here’s the core YAML I’m running:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-YAML" data-lang="YAML"><span style="display:flex;"><span><span style="color:#f92672">switch</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">platform</span>: <span style="color:#ae81ff">template</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;Raspberry Pi Switch&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#ae81ff">raspberry_pi_switch</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">lambda</span>: |-<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      return id(raspberry_pi_power_state).state;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">turn_on_action</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">if</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">condition</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">lambda</span>: <span style="color:#e6db74">&#39;return !id(raspberry_pi_power_state).state;&#39;</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">then</span>:
+</span></span><span style="display:flex;"><span>            - <span style="color:#f92672">switch.turn_on</span>: <span style="color:#ae81ff">turn_on_pi</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">turn_off_action</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">switch.turn_on</span>: <span style="color:#ae81ff">turn_off_pi</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">platform</span>: <span style="color:#ae81ff">gpio</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;Turn On Raspberry Pi&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">pin</span>: <span style="color:#ae81ff">GPIO13</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">inverted</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#ae81ff">turn_on_pi</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">internal</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">on_turn_on</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">delay</span>: <span style="color:#ae81ff">500ms</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">switch.turn_off</span>: <span style="color:#ae81ff">turn_on_pi</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">platform</span>: <span style="color:#ae81ff">gpio</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;Shutdown Raspberry Pi&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">pin</span>: <span style="color:#ae81ff">GPIO12</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#ae81ff">turn_off_pi</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">internal</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">on_turn_on</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">delay</span>: <span style="color:#ae81ff">500ms</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">switch.turn_off</span>: <span style="color:#ae81ff">turn_off_pi</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">platform</span>: <span style="color:#ae81ff">gpio</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;Reboot Raspberry Pi&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">pin</span>: <span style="color:#ae81ff">GPIO14</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#ae81ff">reboot_pi</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">internal</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">on_turn_on</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">delay</span>: <span style="color:#ae81ff">500ms</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">switch.turn_off</span>: <span style="color:#ae81ff">reboot_pi</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">binary_sensor</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">platform</span>: <span style="color:#ae81ff">gpio</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">pin</span>: <span style="color:#ae81ff">GPIO27</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;Raspberry Pi Power State&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#ae81ff">raspberry_pi_power_state</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">device_class</span>: <span style="color:#ae81ff">power</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">filters</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">delayed_on_off</span>: <span style="color:#ae81ff">800ms</span>
+</span></span></code></pre></div><p>⸻</p>
+<h3 id="the-pi-side">The Pi Side</h3>
+<p>On the Raspberry Pi, I wrote two tiny Python scripts. One listens on GPIO26 and calls shutdown
+now, the other listens on GPIO13 and calls reboot. They just loop forever in the background,
+waiting for a HIGH signal from the ESP32:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span><span style="color:#75715e"># shutdown_monitor.py</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> RPi.GPIO <span style="color:#66d9ef">as</span> GPIO<span style="color:#f92672">,</span> time<span style="color:#f92672">,</span> os
+</span></span><span style="display:flex;"><span>GPIO<span style="color:#f92672">.</span>setmode(GPIO<span style="color:#f92672">.</span>BCM)
+</span></span><span style="display:flex;"><span>GPIO<span style="color:#f92672">.</span>setup(<span style="color:#ae81ff">26</span>, GPIO<span style="color:#f92672">.</span>IN, pull_up_down<span style="color:#f92672">=</span>GPIO<span style="color:#f92672">.</span>PUD_DOWN)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> GPIO<span style="color:#f92672">.</span>input(<span style="color:#ae81ff">26</span>) <span style="color:#f92672">==</span> GPIO<span style="color:#f92672">.</span>HIGH:
+</span></span><span style="display:flex;"><span>        os<span style="color:#f92672">.</span>system(<span style="color:#e6db74">&#34;sudo shutdown now&#34;</span>)
+</span></span><span style="display:flex;"><span>    time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">0.5</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># reboot_pi.py</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> RPi.GPIO <span style="color:#66d9ef">as</span> GPIO<span style="color:#f92672">,</span> time<span style="color:#f92672">,</span> os
+</span></span><span style="display:flex;"><span>GPIO<span style="color:#f92672">.</span>setmode(GPIO<span style="color:#f92672">.</span>BCM)
+</span></span><span style="display:flex;"><span>GPIO<span style="color:#f92672">.</span>setup(<span style="color:#ae81ff">13</span>, GPIO<span style="color:#f92672">.</span>IN, pull_up_down<span style="color:#f92672">=</span>GPIO<span style="color:#f92672">.</span>PUD_DOWN)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> GPIO<span style="color:#f92672">.</span>input(<span style="color:#ae81ff">13</span>) <span style="color:#f92672">==</span> GPIO<span style="color:#f92672">.</span>HIGH:
+</span></span><span style="display:flex;"><span>        os<span style="color:#f92672">.</span>system(<span style="color:#e6db74">&#34;sudo reboot&#34;</span>)
+</span></span><span style="display:flex;"><span>    time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">0.5</span>)
+</span></span></code></pre></div><p>I wrapped both of these in simple systemd services so they start automatically on boot and
+restart if they crash. That way, the Pi is always listening for signals from the ESP32.</p>
+<p>⸻</p>
+<h3 id="what-it-feels-like-in-practice">What It Feels Like in Practice</h3>
+<p>Now, inside Home Assistant, the Pi just shows up like any other smart switch. If it’s off,
+flipping the switch pulses the RUN pins and boots it up. If it’s on, flipping the switch
+triggers the shutdown script and powers it down cleanly. There’s also a reboot button when I
+need it. And the binary sensor tied to GPIO14 means I always know its current state.</p>
+<p>The best part is how natural it feels. The Pi and Stream Deck live on my desk like a little
+smart-home console, but behind the scenes it’s running with the same polish you’d expect from
+a dedicated appliance. Everything is local, reliable, and integrated with the rest of my Home
+Assistant setup.</p>
+<p>It’s one of those projects where the wiring is simple, the software is lightweight, but the
+result makes my whole setup feel more “finished.”</p>
+<h3 id="apps-and-tools-used-for-this-project">Apps and Tools Used for this Project</h3>
+<ul>
+<li><a href="https://github.com/Patrick762/hassio-streamdeck">Stream Deck HACS Integration</a></li>
+<li><a href="https://www.home-assistant.io/">Home Assistant</a></li>
+<li><a href="https://esphome.io/">ESPHome - Smart Home Made Simple</a></li>
+</ul>
+<div class="amj-cta" aria-label="Support and subscription links">
+  <div class="amj-cta__item amj-cta__item--coffee">
+    <a class="amj-cta__button amj-cta__button--coffee" href="https://www.buymeacoffee.com/AidanMJ25" target="_blank" rel="noopener">
+      <span>Buy Me a Coffee</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/posts/index.xml" target="_blank" rel="noopener" aria-label="Subscribe via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Subscribe via RSS</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--newsletter" href="https://buttondown.com/AidanMJ25" target="_blank" rel="noopener">Newsletter via Email</a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/newsletter/index.xml" target="_blank" rel="noopener" aria-label="Newsletter via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Newsletter via RSS</span>
+    </a>
+  </div>
+</div>
+
+]]></description>
+          <content:encoded><![CDATA[<p>I’ve turned one of my Raspberry Pi 4s into a dedicated Stream Deck hub. It’s hooked up to
+a 32-button Stream Deck that controls devices and automations in Home Assistant, which runs
+on a separate machine. The Pi’s only job is to sit there, listen, and push out commands —
+but if it ever hangs or I need to reboot it, I wanted a way to manage it properly without
+pulling cables.</p>
+<p>That’s where the ESP32 comes in. I flashed it with ESPHome and wired it straight into the
+Pi’s GPIO pins so I can treat the whole setup like a real smart-home appliance: I can power
+it on, shut it down safely, reboot it, and always know its current state inside Home Assistant.</p>
+<p>⸻</p>
+<h3 id="how-i-wired-it">How I Wired It</h3>
+<p>The wiring is pretty simple. Raspberry Pi GPIO14 goes into ESP32 GPIO27, which gives me
+feedback about whether the Pi is on or off. The Pi’s RUN pins are connected to ESP32 GPIO13,
+so I can pulse them to power it on. For shutdown and reboot, I used GPIO26 and GPIO13 on the
+Pi, wired to ESP32 pins that trigger those actions.</p>
+<p>This way, the ESP32 can send commands to the Pi, and the Pi can talk back about its state.</p>
+<p>⸻</p>
+<h3 id="my-esphome-config">My ESPHome Config</h3>
+<p>On the ESP32, I wrote an ESPHome config with a few pieces:</p>
+<ul>
+<li>A template switch that acts as the main power control. It checks the binary sensor to
+see if the Pi is already on before trying to pulse the RUN pins.</li>
+<li>A shutdown switch that pulls Pi GPIO26 high, which my shutdown script listens for.</li>
+<li>A reboot button that does the same thing with GPIO13 for rebooting.</li>
+<li>A binary sensor tied to GPIO14 that tells me if the Pi is running or not.</li>
+</ul>
+<p>Here’s the core YAML I’m running:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-YAML" data-lang="YAML"><span style="display:flex;"><span><span style="color:#f92672">switch</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">platform</span>: <span style="color:#ae81ff">template</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;Raspberry Pi Switch&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#ae81ff">raspberry_pi_switch</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">lambda</span>: |-<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      return id(raspberry_pi_power_state).state;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">turn_on_action</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">if</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">condition</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">lambda</span>: <span style="color:#e6db74">&#39;return !id(raspberry_pi_power_state).state;&#39;</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">then</span>:
+</span></span><span style="display:flex;"><span>            - <span style="color:#f92672">switch.turn_on</span>: <span style="color:#ae81ff">turn_on_pi</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">turn_off_action</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">switch.turn_on</span>: <span style="color:#ae81ff">turn_off_pi</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">platform</span>: <span style="color:#ae81ff">gpio</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;Turn On Raspberry Pi&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">pin</span>: <span style="color:#ae81ff">GPIO13</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">inverted</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#ae81ff">turn_on_pi</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">internal</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">on_turn_on</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">delay</span>: <span style="color:#ae81ff">500ms</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">switch.turn_off</span>: <span style="color:#ae81ff">turn_on_pi</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">platform</span>: <span style="color:#ae81ff">gpio</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;Shutdown Raspberry Pi&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">pin</span>: <span style="color:#ae81ff">GPIO12</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#ae81ff">turn_off_pi</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">internal</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">on_turn_on</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">delay</span>: <span style="color:#ae81ff">500ms</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">switch.turn_off</span>: <span style="color:#ae81ff">turn_off_pi</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">platform</span>: <span style="color:#ae81ff">gpio</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;Reboot Raspberry Pi&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">pin</span>: <span style="color:#ae81ff">GPIO14</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#ae81ff">reboot_pi</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">internal</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">on_turn_on</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">delay</span>: <span style="color:#ae81ff">500ms</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">switch.turn_off</span>: <span style="color:#ae81ff">reboot_pi</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">binary_sensor</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">platform</span>: <span style="color:#ae81ff">gpio</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">pin</span>: <span style="color:#ae81ff">GPIO27</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;Raspberry Pi Power State&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#ae81ff">raspberry_pi_power_state</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">device_class</span>: <span style="color:#ae81ff">power</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">filters</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">delayed_on_off</span>: <span style="color:#ae81ff">800ms</span>
+</span></span></code></pre></div><p>⸻</p>
+<h3 id="the-pi-side">The Pi Side</h3>
+<p>On the Raspberry Pi, I wrote two tiny Python scripts. One listens on GPIO26 and calls shutdown
+now, the other listens on GPIO13 and calls reboot. They just loop forever in the background,
+waiting for a HIGH signal from the ESP32:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span><span style="color:#75715e"># shutdown_monitor.py</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> RPi.GPIO <span style="color:#66d9ef">as</span> GPIO<span style="color:#f92672">,</span> time<span style="color:#f92672">,</span> os
+</span></span><span style="display:flex;"><span>GPIO<span style="color:#f92672">.</span>setmode(GPIO<span style="color:#f92672">.</span>BCM)
+</span></span><span style="display:flex;"><span>GPIO<span style="color:#f92672">.</span>setup(<span style="color:#ae81ff">26</span>, GPIO<span style="color:#f92672">.</span>IN, pull_up_down<span style="color:#f92672">=</span>GPIO<span style="color:#f92672">.</span>PUD_DOWN)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> GPIO<span style="color:#f92672">.</span>input(<span style="color:#ae81ff">26</span>) <span style="color:#f92672">==</span> GPIO<span style="color:#f92672">.</span>HIGH:
+</span></span><span style="display:flex;"><span>        os<span style="color:#f92672">.</span>system(<span style="color:#e6db74">&#34;sudo shutdown now&#34;</span>)
+</span></span><span style="display:flex;"><span>    time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">0.5</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># reboot_pi.py</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> RPi.GPIO <span style="color:#66d9ef">as</span> GPIO<span style="color:#f92672">,</span> time<span style="color:#f92672">,</span> os
+</span></span><span style="display:flex;"><span>GPIO<span style="color:#f92672">.</span>setmode(GPIO<span style="color:#f92672">.</span>BCM)
+</span></span><span style="display:flex;"><span>GPIO<span style="color:#f92672">.</span>setup(<span style="color:#ae81ff">13</span>, GPIO<span style="color:#f92672">.</span>IN, pull_up_down<span style="color:#f92672">=</span>GPIO<span style="color:#f92672">.</span>PUD_DOWN)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> GPIO<span style="color:#f92672">.</span>input(<span style="color:#ae81ff">13</span>) <span style="color:#f92672">==</span> GPIO<span style="color:#f92672">.</span>HIGH:
+</span></span><span style="display:flex;"><span>        os<span style="color:#f92672">.</span>system(<span style="color:#e6db74">&#34;sudo reboot&#34;</span>)
+</span></span><span style="display:flex;"><span>    time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">0.5</span>)
+</span></span></code></pre></div><p>I wrapped both of these in simple systemd services so they start automatically on boot and
+restart if they crash. That way, the Pi is always listening for signals from the ESP32.</p>
+<p>⸻</p>
+<h3 id="what-it-feels-like-in-practice">What It Feels Like in Practice</h3>
+<p>Now, inside Home Assistant, the Pi just shows up like any other smart switch. If it’s off,
+flipping the switch pulses the RUN pins and boots it up. If it’s on, flipping the switch
+triggers the shutdown script and powers it down cleanly. There’s also a reboot button when I
+need it. And the binary sensor tied to GPIO14 means I always know its current state.</p>
+<p>The best part is how natural it feels. The Pi and Stream Deck live on my desk like a little
+smart-home console, but behind the scenes it’s running with the same polish you’d expect from
+a dedicated appliance. Everything is local, reliable, and integrated with the rest of my Home
+Assistant setup.</p>
+<p>It’s one of those projects where the wiring is simple, the software is lightweight, but the
+result makes my whole setup feel more “finished.”</p>
+<h3 id="apps-and-tools-used-for-this-project">Apps and Tools Used for this Project</h3>
+<ul>
+<li><a href="https://github.com/Patrick762/hassio-streamdeck">Stream Deck HACS Integration</a></li>
+<li><a href="https://www.home-assistant.io/">Home Assistant</a></li>
+<li><a href="https://esphome.io/">ESPHome - Smart Home Made Simple</a></li>
+</ul>
+<div class="amj-cta" aria-label="Support and subscription links">
+  <div class="amj-cta__item amj-cta__item--coffee">
+    <a class="amj-cta__button amj-cta__button--coffee" href="https://www.buymeacoffee.com/AidanMJ25" target="_blank" rel="noopener">
+      <span>Buy Me a Coffee</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/posts/index.xml" target="_blank" rel="noopener" aria-label="Subscribe via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Subscribe via RSS</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--newsletter" href="https://buttondown.com/AidanMJ25" target="_blank" rel="noopener">Newsletter via Email</a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/newsletter/index.xml" target="_blank" rel="noopener" aria-label="Newsletter via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Newsletter via RSS</span>
+    </a>
+  </div>
+</div>
+
+]]></content:encoded>
+        
+      </item>
+    
+  </channel>
+</rss>

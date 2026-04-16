@@ -1,0 +1,27 @@
+{{- $page := .page -}}
+{{- $title := .title | default "Feeds" -}}
+{{- $showHome := .show_home | default false -}}
+{{- $showSections := .show_sections | default true -}}
+<section class="feed-band" aria-label="RSS feeds">
+  <p class="feed-band__title">{{ $title }}</p>
+  <div class="feed-links">
+    {{ if $showHome }}
+      {{ with site.Home.OutputFormats.Get "RSS" }}
+        <a class="feed-links__item" href="{{ .RelPermalink }}">Everything</a>
+      {{ end }}
+    {{ end }}
+    {{ if $showSections }}
+      {{ range site.Sections.ByTitle }}
+        {{ $section := . }}
+        {{ with $section.OutputFormats.Get "RSS" }}
+          <a class="feed-links__item" href="{{ .RelPermalink }}">{{ $section.Title }}</a>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+    {{ with $page.OutputFormats.Get "RSS" }}
+      {{ if and (not $page.IsHome) (not $page.IsSection) }}
+        <a class="feed-links__item" href="{{ .RelPermalink }}">This page</a>
+      {{ end }}
+    {{ end }}
+  </div>
+</section>

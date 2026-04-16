@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Aidan Maurin-Jones | AppleScript</title>
+    <link>https://www.blog.aidanmaurinjones.com/tags/applescript/</link>
+    <description>AppleScript</description>
+    <language>en</language>
+    
+      <atom:link href="https://www.blog.aidanmaurinjones.com/tags/applescript/index.xml" rel="self" type="application/rss+xml"></atom:link>
+    
+    
+      <item>
+        <title>Fighting Spam with Automation: A Shortcut for Writing Hilarious Replies</title>
+        <link>https://www.blog.aidanmaurinjones.com/posts/fighting-spam-with-automation--a-shortcut-for-writing-hilarious-replies/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/fighting-spam-with-automation--a-shortcut-for-writing-hilarious-replies/</guid>
+        
+          <pubDate>Fri, 26 Sep 2025 00:00:00 &#43;0000</pubDate>
+        
+        
+          <description><![CDATA[<p>One of the joys of Shortcuts on macOS is bending the system to your will. With a little
+creativity and some AppleScript, you can pull off automations that feel both absurd and brilliant.
+My latest project? A Shortcut that automatically drafts a brutally funny, sarcastic reply to
+spam and junk emails—powered by a local AI model running in LM Studio.</p>
+<p>It’s not practical. It’s not productive. But it’s very satisfying.</p>
+<p>⸻</p>
+<h3 id="how-it-works">How It Works</h3>
+<p>At its core, the Shortcut is a four-part pipeline:</p>
+<ol>
+<li><strong>Grab the Email Contents</strong>
+Using a short AppleScript snippet, the Shortcut fetches the subject, sender, and body of the
+currently selected message in Apple Mail. If no message is selected, it returns a friendly
+“No message selected.” To keep things stable, the Shortcut also checks if the text exceeds
+LM Studio’s character limit and truncates it if necessary.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-applescript" data-lang="applescript"><span style="display:flex;"><span><span style="color:#66d9ef">tell</span> application <span style="color:#e6db74">&#34;Mail&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">set</span> selectedMessages <span style="color:#66d9ef">to</span> selection
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> selectedMessages <span style="color:#f92672">is not</span> {} <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">set</span> theMessage <span style="color:#66d9ef">to</span> item <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">of</span> selectedMessages
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">set</span> theSubject <span style="color:#66d9ef">to</span> subject <span style="color:#66d9ef">of</span> theMessage
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">set</span> theSender <span style="color:#66d9ef">to</span> sender <span style="color:#66d9ef">of</span> theMessage
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">set</span> theContent <span style="color:#66d9ef">to</span> <span style="color:#a6e22e">content</span> <span style="color:#66d9ef">of</span> theMessage
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Subject: &#34;</span> <span style="color:#f92672">&amp;</span> theSubject <span style="color:#f92672">&amp;</span> <span style="color:#66d9ef">linefeed</span> <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;From: &#34;</span> <span style="color:#f92672">&amp;</span> theSender <span style="color:#f92672">&amp;</span> <span style="color:#66d9ef">linefeed</span> <span style="color:#f92672">&amp;</span> <span style="color:#66d9ef">linefeed</span> <span style="color:#f92672">&amp;</span> theContent
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;No message selected.&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">end</span> <span style="color:#66d9ef">if</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">tell</span>
+</span></span></code></pre></div><ol start="2">
+<li>
+<p><strong>Prepare the Prompt</strong>
+The Shortcut sets a variable for the LM Studio model ID (gemma-3-4b-it in my case) and builds
+a carefully worded prompt. The instructions tell the model to write a “brutally funny, insult-filled
+response to a spam email. Be sarcastic and creatively rude… End with an absurd, over-the-top
+(but never threatening) final warning.” The result is a prompt that guides the AI into crafting
+exactly the kind of unhinged reply you’d never actually send, but will absolutely laugh at.</p>
+</li>
+<li>
+<p><strong>Send It to LM Studio</strong>
+With the email contents and the prompt combined, the Shortcut makes a call to LM Studio’s
+local API (http://localhost:1234/v1/chat/completions). The response is parsed as JSON, and
+the draft text is extracted. Because it runs locally, there are no cloud services
+involved—everything stays private.</p>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -X POST <span style="color:#e6db74">&#34;http://localhost:1234/v1/chat/completions&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  -H <span style="color:#e6db74">&#34;Content-Type: application/json&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  -d <span style="color:#e6db74">&#39;{
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;model&#34;: &#34;gemma-3-4b-it&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;messages&#34;: [
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;role&#34;: &#34;system&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;content&#34;: &#34;Write a brutally funny, insult-filled response to a spam email. Be 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        sarcastic and creatively rude (no slurs or hate speech). Make it clear I never 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        want to hear from them again. Reference the content of the email when possible. 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        End with an absurd, over-the-top (but never threatening) final warning, and a 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        signature that sounds unhinged yet articulate. Do Not include subject lines or 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        metadata.&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      },
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;role&#34;: &#34;user&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;content&#34;: &#34;&lt;&lt;&lt; email contents go here &gt;&gt;&gt;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      }
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    ]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  }&#39;</span>
+</span></span></code></pre></div><ol start="4">
+<li><strong>Open in Mail’s Reply Window</strong>
+Finally, another AppleScript takes over: it opens a reply window to the original spam message
+and drops the AI-generated draft into the compose area. From here, you can either hit send (bold!)
+or just chuckle at the absurdity and close the window.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-applescript" data-lang="applescript"><span style="display:flex;"><span><span style="color:#66d9ef">on</span> run {input}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">tell</span> application <span style="color:#e6db74">&#34;Mail&#34;</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">set</span> selectedMessages <span style="color:#66d9ef">to</span> selection
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> selectedMessages <span style="color:#f92672">is not</span> {} <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">set</span> theMessage <span style="color:#66d9ef">to</span> item <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">of</span> selectedMessages
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">set</span> replyMessage <span style="color:#66d9ef">to</span> reply theMessage <span style="color:#66d9ef">with</span> opening <span style="color:#a6e22e">window</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">set</span> <span style="color:#a6e22e">content</span> <span style="color:#66d9ef">of</span> replyMessage <span style="color:#66d9ef">to</span> input
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">end</span> <span style="color:#66d9ef">if</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">end</span> <span style="color:#66d9ef">tell</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> run
+</span></span></code></pre></div><p>⸻</p>
+<h3 id="why-build-this">Why Build This?</h3>
+<p>I won’t pretend this Shortcut is essential to my workflow. Nobody needs an AI-crafted insult
+generator for spam. But that’s the fun of automation: sometimes it’s about play, not productivity.</p>
+<p>Spam clogs our inboxes daily, and most of us simply delete it. This Shortcut flips the script,
+giving you a mischievous outlet for all that frustration. Whether you actually send the replies
+or just read them for a laugh, it makes the experience of dealing with spam weirdly delightful.</p>
+<p>⸻</p>
+<h3 id="a-perfect-example-of-local-ai--shortcuts">A Perfect Example of Local AI + Shortcuts</h3>
+<p>The real story here is how easily Shortcuts can integrate with local AI tools like LM Studio. By
+combining AppleScript’s system-level hooks with Shortcuts’ automation glue, you can build
+workflows that feel custom-tailored to your sense of humor—or your productivity needs.</p>
+<p>In this case, the Shortcut isn’t saving me time or streamlining my day. But it is showcasing
+the power of running AI models locally, where latency is low, privacy is intact, and you can
+experiment with ideas that wouldn’t make sense on a cloud-based service.</p>
+<p>⸻</p>
+<h3 id="the-result">The Result</h3>
+<p>The first time I ran the Shortcut, the reply draft began with a sarcastic takedown of the
+email’s fake “investment opportunity,” segued into a rant about how the spammer’s grammar
+deserved jail time, and closed with a completely unhinged signature that read:</p>
+<p>“Sincerely, Lord Emperor of My Inbox, Eternal Defender Against Your Nonsense.”</p>
+<p>I didn’t send it. But I laughed harder than I have at an email in years. And that’s exactly
+the point.</p>
+<p>⸻</p>
+<p><strong>Bottom line:</strong> Not every Shortcut has to be practical. Sometimes, the best ones are the ones
+that bring you joy—even if that joy comes from imagining a spammer’s reaction to an AI-written
+roast they’ll never actually read.</p>
+<article class="app-card">
+  <a class="app-card__icon" href="https://www.icloud.com/shortcuts/a53cf7be25fe438d9425e73ff461f063" target="_blank" rel="noopener">
+    <img src="/images/Shortcuts%20Icons/Write%20Reply%20to%20Spam%20&amp;%20Junk%20Email%20Icon.jpg" alt="Write Reply to Spam &amp; Junk Email app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://www.icloud.com/shortcuts/a53cf7be25fe438d9425e73ff461f063" target="_blank" rel="noopener">
+    Write Reply to Spam &amp; Junk Email
+  </a>
+</article>
+
+<h3 id="apps-used-to-create-this-shortcut">Apps Used to Create This Shortcut</h3>
+<div class="app-row">
+  
+<article class="app-card">
+  <a class="app-card__icon" href="https://lmstudio.ai/download?os=mac" target="_blank" rel="noopener">
+    <img src="/images/App%20Icons/LM%20Studio%20Icon.jpg" alt="LM Studio app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://lmstudio.ai/download?os=mac" target="_blank" rel="noopener">
+    LM Studio
+  </a>
+</article>
+
+<article class="app-card">
+  <a class="app-card__icon" href="https://latenightsw.com/" target="_blank" rel="noopener">
+    <img src="/images/App%20Icons/Script%20Debugger%20Icon.jpg" alt="Script Debugger app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://latenightsw.com/" target="_blank" rel="noopener">
+    Script Debugger
+  </a>
+</article>
+
+
+</div>
+
+<div class="amj-cta" aria-label="Support and subscription links">
+  <div class="amj-cta__item amj-cta__item--coffee">
+    <a class="amj-cta__button amj-cta__button--coffee" href="https://www.buymeacoffee.com/AidanMJ25" target="_blank" rel="noopener">
+      <span>Buy Me a Coffee</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/posts/index.xml" target="_blank" rel="noopener" aria-label="Subscribe via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Subscribe via RSS</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--newsletter" href="https://buttondown.com/AidanMJ25" target="_blank" rel="noopener">Newsletter via Email</a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/newsletter/index.xml" target="_blank" rel="noopener" aria-label="Newsletter via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Newsletter via RSS</span>
+    </a>
+  </div>
+</div>
+
+]]></description>
+          <content:encoded><![CDATA[<p>One of the joys of Shortcuts on macOS is bending the system to your will. With a little
+creativity and some AppleScript, you can pull off automations that feel both absurd and brilliant.
+My latest project? A Shortcut that automatically drafts a brutally funny, sarcastic reply to
+spam and junk emails—powered by a local AI model running in LM Studio.</p>
+<p>It’s not practical. It’s not productive. But it’s very satisfying.</p>
+<p>⸻</p>
+<h3 id="how-it-works">How It Works</h3>
+<p>At its core, the Shortcut is a four-part pipeline:</p>
+<ol>
+<li><strong>Grab the Email Contents</strong>
+Using a short AppleScript snippet, the Shortcut fetches the subject, sender, and body of the
+currently selected message in Apple Mail. If no message is selected, it returns a friendly
+“No message selected.” To keep things stable, the Shortcut also checks if the text exceeds
+LM Studio’s character limit and truncates it if necessary.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-applescript" data-lang="applescript"><span style="display:flex;"><span><span style="color:#66d9ef">tell</span> application <span style="color:#e6db74">&#34;Mail&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">set</span> selectedMessages <span style="color:#66d9ef">to</span> selection
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> selectedMessages <span style="color:#f92672">is not</span> {} <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">set</span> theMessage <span style="color:#66d9ef">to</span> item <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">of</span> selectedMessages
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">set</span> theSubject <span style="color:#66d9ef">to</span> subject <span style="color:#66d9ef">of</span> theMessage
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">set</span> theSender <span style="color:#66d9ef">to</span> sender <span style="color:#66d9ef">of</span> theMessage
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">set</span> theContent <span style="color:#66d9ef">to</span> <span style="color:#a6e22e">content</span> <span style="color:#66d9ef">of</span> theMessage
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Subject: &#34;</span> <span style="color:#f92672">&amp;</span> theSubject <span style="color:#f92672">&amp;</span> <span style="color:#66d9ef">linefeed</span> <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;From: &#34;</span> <span style="color:#f92672">&amp;</span> theSender <span style="color:#f92672">&amp;</span> <span style="color:#66d9ef">linefeed</span> <span style="color:#f92672">&amp;</span> <span style="color:#66d9ef">linefeed</span> <span style="color:#f92672">&amp;</span> theContent
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;No message selected.&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">end</span> <span style="color:#66d9ef">if</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">tell</span>
+</span></span></code></pre></div><ol start="2">
+<li>
+<p><strong>Prepare the Prompt</strong>
+The Shortcut sets a variable for the LM Studio model ID (gemma-3-4b-it in my case) and builds
+a carefully worded prompt. The instructions tell the model to write a “brutally funny, insult-filled
+response to a spam email. Be sarcastic and creatively rude… End with an absurd, over-the-top
+(but never threatening) final warning.” The result is a prompt that guides the AI into crafting
+exactly the kind of unhinged reply you’d never actually send, but will absolutely laugh at.</p>
+</li>
+<li>
+<p><strong>Send It to LM Studio</strong>
+With the email contents and the prompt combined, the Shortcut makes a call to LM Studio’s
+local API (http://localhost:1234/v1/chat/completions). The response is parsed as JSON, and
+the draft text is extracted. Because it runs locally, there are no cloud services
+involved—everything stays private.</p>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -X POST <span style="color:#e6db74">&#34;http://localhost:1234/v1/chat/completions&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  -H <span style="color:#e6db74">&#34;Content-Type: application/json&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  -d <span style="color:#e6db74">&#39;{
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;model&#34;: &#34;gemma-3-4b-it&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;messages&#34;: [
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;role&#34;: &#34;system&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;content&#34;: &#34;Write a brutally funny, insult-filled response to a spam email. Be 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        sarcastic and creatively rude (no slurs or hate speech). Make it clear I never 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        want to hear from them again. Reference the content of the email when possible. 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        End with an absurd, over-the-top (but never threatening) final warning, and a 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        signature that sounds unhinged yet articulate. Do Not include subject lines or 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        metadata.&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      },
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;role&#34;: &#34;user&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;content&#34;: &#34;&lt;&lt;&lt; email contents go here &gt;&gt;&gt;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      }
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    ]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  }&#39;</span>
+</span></span></code></pre></div><ol start="4">
+<li><strong>Open in Mail’s Reply Window</strong>
+Finally, another AppleScript takes over: it opens a reply window to the original spam message
+and drops the AI-generated draft into the compose area. From here, you can either hit send (bold!)
+or just chuckle at the absurdity and close the window.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-applescript" data-lang="applescript"><span style="display:flex;"><span><span style="color:#66d9ef">on</span> run {input}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">tell</span> application <span style="color:#e6db74">&#34;Mail&#34;</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">set</span> selectedMessages <span style="color:#66d9ef">to</span> selection
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> selectedMessages <span style="color:#f92672">is not</span> {} <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">set</span> theMessage <span style="color:#66d9ef">to</span> item <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">of</span> selectedMessages
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">set</span> replyMessage <span style="color:#66d9ef">to</span> reply theMessage <span style="color:#66d9ef">with</span> opening <span style="color:#a6e22e">window</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">set</span> <span style="color:#a6e22e">content</span> <span style="color:#66d9ef">of</span> replyMessage <span style="color:#66d9ef">to</span> input
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">end</span> <span style="color:#66d9ef">if</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">end</span> <span style="color:#66d9ef">tell</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> run
+</span></span></code></pre></div><p>⸻</p>
+<h3 id="why-build-this">Why Build This?</h3>
+<p>I won’t pretend this Shortcut is essential to my workflow. Nobody needs an AI-crafted insult
+generator for spam. But that’s the fun of automation: sometimes it’s about play, not productivity.</p>
+<p>Spam clogs our inboxes daily, and most of us simply delete it. This Shortcut flips the script,
+giving you a mischievous outlet for all that frustration. Whether you actually send the replies
+or just read them for a laugh, it makes the experience of dealing with spam weirdly delightful.</p>
+<p>⸻</p>
+<h3 id="a-perfect-example-of-local-ai--shortcuts">A Perfect Example of Local AI + Shortcuts</h3>
+<p>The real story here is how easily Shortcuts can integrate with local AI tools like LM Studio. By
+combining AppleScript’s system-level hooks with Shortcuts’ automation glue, you can build
+workflows that feel custom-tailored to your sense of humor—or your productivity needs.</p>
+<p>In this case, the Shortcut isn’t saving me time or streamlining my day. But it is showcasing
+the power of running AI models locally, where latency is low, privacy is intact, and you can
+experiment with ideas that wouldn’t make sense on a cloud-based service.</p>
+<p>⸻</p>
+<h3 id="the-result">The Result</h3>
+<p>The first time I ran the Shortcut, the reply draft began with a sarcastic takedown of the
+email’s fake “investment opportunity,” segued into a rant about how the spammer’s grammar
+deserved jail time, and closed with a completely unhinged signature that read:</p>
+<p>“Sincerely, Lord Emperor of My Inbox, Eternal Defender Against Your Nonsense.”</p>
+<p>I didn’t send it. But I laughed harder than I have at an email in years. And that’s exactly
+the point.</p>
+<p>⸻</p>
+<p><strong>Bottom line:</strong> Not every Shortcut has to be practical. Sometimes, the best ones are the ones
+that bring you joy—even if that joy comes from imagining a spammer’s reaction to an AI-written
+roast they’ll never actually read.</p>
+<article class="app-card">
+  <a class="app-card__icon" href="https://www.icloud.com/shortcuts/a53cf7be25fe438d9425e73ff461f063" target="_blank" rel="noopener">
+    <img src="/images/Shortcuts%20Icons/Write%20Reply%20to%20Spam%20&amp;%20Junk%20Email%20Icon.jpg" alt="Write Reply to Spam &amp; Junk Email app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://www.icloud.com/shortcuts/a53cf7be25fe438d9425e73ff461f063" target="_blank" rel="noopener">
+    Write Reply to Spam &amp; Junk Email
+  </a>
+</article>
+
+<h3 id="apps-used-to-create-this-shortcut">Apps Used to Create This Shortcut</h3>
+<div class="app-row">
+  
+<article class="app-card">
+  <a class="app-card__icon" href="https://lmstudio.ai/download?os=mac" target="_blank" rel="noopener">
+    <img src="/images/App%20Icons/LM%20Studio%20Icon.jpg" alt="LM Studio app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://lmstudio.ai/download?os=mac" target="_blank" rel="noopener">
+    LM Studio
+  </a>
+</article>
+
+<article class="app-card">
+  <a class="app-card__icon" href="https://latenightsw.com/" target="_blank" rel="noopener">
+    <img src="/images/App%20Icons/Script%20Debugger%20Icon.jpg" alt="Script Debugger app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://latenightsw.com/" target="_blank" rel="noopener">
+    Script Debugger
+  </a>
+</article>
+
+
+</div>
+
+<div class="amj-cta" aria-label="Support and subscription links">
+  <div class="amj-cta__item amj-cta__item--coffee">
+    <a class="amj-cta__button amj-cta__button--coffee" href="https://www.buymeacoffee.com/AidanMJ25" target="_blank" rel="noopener">
+      <span>Buy Me a Coffee</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/posts/index.xml" target="_blank" rel="noopener" aria-label="Subscribe via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Subscribe via RSS</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--newsletter" href="https://buttondown.com/AidanMJ25" target="_blank" rel="noopener">Newsletter via Email</a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/newsletter/index.xml" target="_blank" rel="noopener" aria-label="Newsletter via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Newsletter via RSS</span>
+    </a>
+  </div>
+</div>
+
+]]></content:encoded>
+        
+      </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,12 @@
+{{- $pages := .Pages.ByDate.Reverse -}}
+{{- if .IsSection -}}
+  {{- $pages = .RegularPages.ByDate.Reverse -}}
+{{- end -}}
+{{- partial "rss.xml" (dict
+  "page" .
+  "title" (printf "%s | %s" site.Title .Title)
+  "link" .Permalink
+  "description" (.Description | default .Title | default site.Params.description)
+  "pages" $pages
+  "self" ((.OutputFormats.Get "RSS").Permalink)
+) -}}

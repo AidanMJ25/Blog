@@ -1,0 +1,50 @@
+{{ define "main" }}
+  {{ $mainSections := site.Params.mainSections | default (slice "posts") }}
+  {{ $pages := where site.RegularPages "Section" "in" $mainSections }}
+  {{ $ordered := $pages.ByDate.Reverse }}
+  {{ $lead := first 1 $ordered }}
+  {{ $stream := after 1 $ordered }}
+  {{ $postsSection := site.GetPage `section` (index $mainSections 0) }}
+
+  <section class="frontpage-grid" aria-label="Featured stories">
+    <div class="frontpage-grid__lead">
+      {{ range $lead }}
+        {{ partial "story-card.html" (dict "page" . "variant" "feature") }}
+      {{ else }}
+        <section class="story-card story-card--feature">
+          <h2 id="featured-story" class="story-card__title">No posts yet</h2>
+        </section>
+      {{ end }}
+
+      <section class="story-stream" aria-labelledby="recent-posts">
+        <div class="section-stack">
+          {{ if gt (len $stream) 0 }}
+            {{ range first 3 $stream }}
+              {{ partial "story-card.html" (dict "page" . "variant" "default") }}
+            {{ end }}
+          {{ else }}
+            <section class="story-card">
+              <h3 class="story-card__title">The front page is up to date.</h3>
+              <p class="story-card__summary">Newer stories will appear here automatically as you publish them.</p>
+            </section>
+          {{ end }}
+        </div>
+      </section>
+
+      {{ if gt (len $stream) 3 }}
+        <nav class="pagination" aria-label="Older posts">
+          <div class="pagination__status">More posts are available in the archive.</div>
+          <div class="feed-links">
+            {{ with $postsSection }}
+              <a class="button button--ghost" href="{{ .RelPermalink }}">Older</a>
+            {{ end }}
+          </div>
+        </nav>
+      {{ end }}
+    </div>
+    <aside class="frontpage-grid__rail">
+      {{ partial "feed-links.html" (dict "page" . "title" "Subscribe" "show_home" true "show_sections" true) }}
+      {{ partial "tags-panel.html" . }}
+    </aside>
+  </section>
+{{ end }}

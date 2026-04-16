@@ -1,0 +1,29 @@
+{{ $page := .page }}
+{{ $variant := .variant | default "default" }}
+<article class="story-card{{ if eq $variant `feature` }} story-card--feature{{ end }}{{ if eq $variant `compact` }} story-card--compact{{ end }}">
+  {{ with $page.CurrentSection }}
+    <p class="story-card__section"><a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
+  {{ end }}
+  <h2 class="story-card__title"><a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a></h2>
+  <div class="story-card__meta">
+    <span>{{ $page.Date.Format "January 2, 2006" }}</span>
+    <span>{{ $page.ReadingTime }} min read</span>
+    <span>By {{ site.Params.author | default site.Title }}</span>
+  </div>
+  {{ if ne $variant "compact" }}
+    {{ with $page.Summary }}
+      <p class="story-card__summary">{{ . | plainify }}</p>
+    {{ else }}
+      <p class="story-card__summary">{{ $page.Plain | truncate 240 }}</p>
+    {{ end }}
+  {{ end }}
+  {{ with $page.GetTerms "tags" }}
+    {{ if ne $variant "compact" }}
+      <div class="story-card__tags">
+        {{ range first 3 . }}
+          <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+        {{ end }}
+      </div>
+    {{ end }}
+  {{ end }}
+</article>

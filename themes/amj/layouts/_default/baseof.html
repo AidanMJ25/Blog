@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.Lang | default site.LanguageCode | default `en-us` }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ block "title" . }}{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}{{ end }}</title>
+  {{- $description := .Description | default .Summary | default site.Params.description -}}
+  <meta name="description" content="{{ $description | plainify | htmlUnescape | truncate 160 }}">
+  <link rel="canonical" href="{{ .Permalink }}">
+  {{ with resources.Get "css/style.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
+  {{ end }}
+  {{ range site.Params.customCSS }}
+  <link rel="stylesheet" href="{{ . | relURL }}">
+  {{ end }}
+  {{ with site.Home.OutputFormats.Get "RSS" }}
+  <link rel="alternate" type="{{ .MediaType.Type }}" title="{{ site.Title }} RSS" href="{{ .RelPermalink }}">
+  {{ end }}
+  {{ if ne .Kind "home" }}
+  {{ with .OutputFormats.Get "RSS" }}
+  <link rel="alternate" type="{{ .MediaType.Type }}" title="{{ $.Title }} RSS" href="{{ .RelPermalink }}">
+  {{ end }}
+  {{ end }}
+  <link rel="icon" href="{{ `favicon.ico` | relURL }}">
+</head>
+<body>
+  <div class="site-shell">
+    {{ partial "header.html" . }}
+    <main class="page">
+      {{ block "main" . }}{{ end }}
+    </main>
+    {{ partial "footer.html" . }}
+  </div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{{ with site.Taxonomies.tags.Alphabetical }}
+  <section class="rail-panel">
+    <div class="rail-panel__header">
+      <p class="rail-panel__eyebrow">Explore</p>
+      <h2 class="rail-panel__title">Tags</h2>
+    </div>
+    <div class="rail-tags">
+      {{ range . }}
+        <a class="rail-tags__item" href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }}</a>
+      {{ end }}
+    </div>
+  </section>
+{{ end }}

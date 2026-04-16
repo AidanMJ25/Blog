@@ -1,0 +1,13 @@
+name = "amj"
+license = "MIT"
+licenselink = "https://opensource.org/licenses/MIT"
+description = "A first-party Hugo theme for Aidan's blog with multi-feed RSS support and YAML-first authoring."
+homepage = "https://www.blog.aidanmaurinjones.com/"
+demosite = "https://www.blog.aidanmaurinjones.com/"
+tags = ["blog", "rss", "custom", "yaml", "markdown"]
+features = ["blog", "rss", "responsive", "yaml front matter", "markdown"]
+min_version = "0.160.0"
+
+[author]
+  name = "Aidan Maurin-Jones"
+  homepage = "https://www.aidanmaurinjones.com/"

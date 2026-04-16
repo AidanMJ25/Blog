@@ -1,7 +1,7 @@
 baseURL = 'https://www.blog.aidanmaurinjones.com/'
 languageCode = 'en-us'
 title = 'Aidan Maurin-Jones'
-theme = 'mainroad'
+theme = 'amj'
 
 [menu]
   [[menu.main]]
@@ -19,43 +19,23 @@ theme = 'mainroad'
     url = "/newsletter/"
     weight = 60
 
-
 [params]
-  dateFormat = "January 2, 2006"   # keep (harmless)
-  dateformat = "January 2, 2006"   # <- Mainroad usually reads this one
-  post_meta = ["date"]
+  author = "Aidan Maurin-Jones"
   description = "Aidan Maurin-Jones shares tools, automations, and thoughts on whatever’s interesting this week."
   rssFullText = true
+  mainSections = ["posts"]
+  feedSections = ["posts", "newsletter"]
 
-  # (optional) keep your sidebar + widgets here under [params], not [Params]
-  [params.sidebar]
-    home = "right"
-    list = "right"
-    single = "right"
-    widgets = ["taglist", "clearall"]
-
-  [params.widgets]
-    tags_counter = true
-
-
-# Use Google as the target (Mainroad’s default)
-[params.widgets.search]
-  url = "https://google.com/search"
-
-  # Mainroad builds the full query for you. Leave these as docs recommend:
-  [params.widgets.search.input]
-    name = "sitesearch"
-    pre  = ""
-    
-# These belong at top-level (you already have them right)
-mainSections = ["posts"]
-paginate = 10
-
-rssURI = "index.xml"
+[pagination]
+  pagerSize = 10
 
 [outputs]
-home    = ["HTML"]   # keep only the global feed
-section = ["HTML", "RSS"]          # no section feeds
-taxonomy = ["HTML"]         # no tag/category feeds
-term     = ["HTML"]
+home = ["HTML", "RSS"]
+section = ["HTML", "RSS"]
+taxonomy = ["HTML"]
+term = ["HTML", "RSS"]
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

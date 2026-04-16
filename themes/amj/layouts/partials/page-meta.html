@@ -1,0 +1,16 @@
+<div class="meta">
+  <span>By {{ site.Params.author | default site.Title }}</span>
+  {{ with .Date }}
+    <span>{{ .Format "January 2, 2006" }}</span>
+  {{ end }}
+  {{ with .ReadingTime }}
+    <span>{{ . }} min read</span>
+  {{ end }}
+  {{ with .GetTerms "tags" }}
+    <span class="tag-list">
+      {{ range . }}
+        <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+      {{ end }}
+    </span>
+  {{ end }}
+</div>

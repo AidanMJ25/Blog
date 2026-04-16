@@ -1,0 +1,10 @@
+{{- $feedSections := site.Params.feedSections | default (site.Params.mainSections | default (slice "posts")) -}}
+{{- $pages := where site.RegularPages "Section" "in" $feedSections -}}
+{{- partial "rss.xml" (dict
+  "page" .
+  "title" site.Title
+  "link" site.BaseURL
+  "description" (site.Params.description | default site.Title)
+  "pages" ($pages.ByDate.Reverse)
+  "self" ((.OutputFormats.Get "RSS").Permalink)
+) -}}

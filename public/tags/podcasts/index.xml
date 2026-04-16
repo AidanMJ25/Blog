@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Aidan Maurin-Jones | Podcasts</title>
+    <link>https://www.blog.aidanmaurinjones.com/tags/podcasts/</link>
+    <description>Podcasts</description>
+    <language>en</language>
+    
+      <atom:link href="https://www.blog.aidanmaurinjones.com/tags/podcasts/index.xml" rel="self" type="application/rss+xml"></atom:link>
+    
+    
+      <item>
+        <title>Save URLs from Show Notes with Overcast and Drafts</title>
+        <link>https://www.blog.aidanmaurinjones.com/posts/save-urls-from-show-notes-with-overcast-and-drafts/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/save-urls-from-show-notes-with-overcast-and-drafts/</guid>
+        
+          <pubDate>Sat, 20 Sep 2025 00:00:00 &#43;0000</pubDate>
+        
+        
+          <description><![CDATA[<p>I listen to a lot of podcasts in Overcast, and more often than not, I find myself wanting
+to save a link mentioned in the show notes&ndash;an app, a website, a follow-up article. Overcast
+does a great job of presenting those notes, but getting the links into my notes system has
+always been more work than it should be.</p>
+<p>So, I built a Shortcut that solves this problem: it extracts every link from an episode&rsquo;s
+show notes in Overcast and saves them neatly to Drafts.</p>
+<hr>
+<h3 id="how-the-shortcut-works">How the Shortcut Works</h3>
+<p>The Shortcut starts with Current Episode Info from Overcast, which hands me both the title
+of the episode and its full show notes in raw HTML.</p>
+<p>From there, I do a quick conversion dance:</p>
+<ul>
+<li>Make Rich Text from Show Notes HTML</li>
+<li>Make Markdown from Rich Text</li>
+</ul>
+<p>The reason? Markdown gives me a predictable link structure that&rsquo;s easy to parse with a regex.</p>
+<hr>
+<h3 id="extracting-the-links">Extracting the Links</h3>
+<p>With the text in Markdown, I use a Match Text action to find every link in the notes. The
+Shortcut then lets me pick which ones I actually want to save. That way, I&rsquo;m not cluttering
+Drafts with every single link from an episode&ndash;just the ones I care about.</p>
+<hr>
+<h3 id="saving-to-drafts">Saving to Drafts</h3>
+<p>Here&rsquo;s the clever bit: before creating a new draft, the Shortcut searches Drafts to see if
+I already have a note for that episode.</p>
+<ul>
+<li>If nothing exists, it creates a brand new draft with the episode title and the selected
+link(s).</li>
+<li>If a draft already exists, it appends the new links to it&ndash;no duplicates, no mess.</li>
+</ul>
+<p>The end result is a running note per episode with all the links I wanted to keep.</p>
+<hr>
+<h2 id="why-this-is-useful">Why This Is Useful</h2>
+<p>This Shortcut saves me from the usual friction of copy-pasting URLs out of Overcast. I don&rsquo;t
+have to jump between apps or worry about losing context. Everything ends up in Drafts, which
+is my text inbox and the place where I process notes later.</p>
+<p>It&rsquo;s a small thing, but like so many good automations, it&rsquo;s one less manual step in my day.
+Now, when a host mentions a new app or service, I know I can capture the link in a couple
+of taps without breaking my listening flow.</p>
+<hr>
+<h2 id="final-thoughts">Final Thoughts</h2>
+<p>This is exactly the kind of automation I love: lightweight, repeatable, and tuned to the way
+I work. Overcast gives me the show notes, Drafts gives me the archive, and Shortcuts does
+the glue work in between.</p>
+<p>The next time I need to reference that obscure link from a podcast episode I heard weeks ago,
+it&rsquo;ll be sitting there in Drafts, right where it belongs.</p>
+<article class="app-card">
+  <a class="app-card__icon" href="https://www.icloud.com/shortcuts/8f82fa10d4bd469e9a11dd4d839eb04b" target="_blank" rel="noopener">
+    <img src="/images/Shortcuts%20Icons/Save%20URLs%20from%20Show%20Notes%20Icon.jpg" alt="Save URLs from Show Notes app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://www.icloud.com/shortcuts/8f82fa10d4bd469e9a11dd4d839eb04b" target="_blank" rel="noopener">
+    Save URLs from Show Notes
+  </a>
+</article>
+
+<h3 id="apps--tools-used-to-create-this-shortcut">Apps &amp; Tools Used to Create this Shortcut</h3>
+<div class="app-row">
+  
+<article class="app-card">
+  <a class="app-card__icon" href="https://apps.apple.com/ca/app/overcast/id888422857?uo=4" target="_blank" rel="noopener">
+    <img src="/images/App%20Store%20App%20Icons/Overcast%20Icon.jpg" alt="Overcast app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://apps.apple.com/ca/app/overcast/id888422857?uo=4" target="_blank" rel="noopener">
+    Overcast
+  </a>
+</article>
+
+<article class="app-card">
+  <a class="app-card__icon" href="https://apps.apple.com/ca/app/drafts/id1236254471?uo=4" target="_blank" rel="noopener">
+    <img src="/images/App%20Store%20App%20Icons/Drafts%20Icon.jpg" alt="Drafts app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://apps.apple.com/ca/app/drafts/id1236254471?uo=4" target="_blank" rel="noopener">
+    Drafts
+  </a>
+</article>
+
+
+</div>
+
+<div class="amj-cta" aria-label="Support and subscription links">
+  <div class="amj-cta__item amj-cta__item--coffee">
+    <a class="amj-cta__button amj-cta__button--coffee" href="https://www.buymeacoffee.com/AidanMJ25" target="_blank" rel="noopener">
+      <span>Buy Me a Coffee</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/posts/index.xml" target="_blank" rel="noopener" aria-label="Subscribe via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Subscribe via RSS</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--newsletter" href="https://buttondown.com/AidanMJ25" target="_blank" rel="noopener">Newsletter via Email</a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/newsletter/index.xml" target="_blank" rel="noopener" aria-label="Newsletter via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Newsletter via RSS</span>
+    </a>
+  </div>
+</div>
+
+]]></description>
+          <content:encoded><![CDATA[<p>I listen to a lot of podcasts in Overcast, and more often than not, I find myself wanting
+to save a link mentioned in the show notes&ndash;an app, a website, a follow-up article. Overcast
+does a great job of presenting those notes, but getting the links into my notes system has
+always been more work than it should be.</p>
+<p>So, I built a Shortcut that solves this problem: it extracts every link from an episode&rsquo;s
+show notes in Overcast and saves them neatly to Drafts.</p>
+<hr>
+<h3 id="how-the-shortcut-works">How the Shortcut Works</h3>
+<p>The Shortcut starts with Current Episode Info from Overcast, which hands me both the title
+of the episode and its full show notes in raw HTML.</p>
+<p>From there, I do a quick conversion dance:</p>
+<ul>
+<li>Make Rich Text from Show Notes HTML</li>
+<li>Make Markdown from Rich Text</li>
+</ul>
+<p>The reason? Markdown gives me a predictable link structure that&rsquo;s easy to parse with a regex.</p>
+<hr>
+<h3 id="extracting-the-links">Extracting the Links</h3>
+<p>With the text in Markdown, I use a Match Text action to find every link in the notes. The
+Shortcut then lets me pick which ones I actually want to save. That way, I&rsquo;m not cluttering
+Drafts with every single link from an episode&ndash;just the ones I care about.</p>
+<hr>
+<h3 id="saving-to-drafts">Saving to Drafts</h3>
+<p>Here&rsquo;s the clever bit: before creating a new draft, the Shortcut searches Drafts to see if
+I already have a note for that episode.</p>
+<ul>
+<li>If nothing exists, it creates a brand new draft with the episode title and the selected
+link(s).</li>
+<li>If a draft already exists, it appends the new links to it&ndash;no duplicates, no mess.</li>
+</ul>
+<p>The end result is a running note per episode with all the links I wanted to keep.</p>
+<hr>
+<h2 id="why-this-is-useful">Why This Is Useful</h2>
+<p>This Shortcut saves me from the usual friction of copy-pasting URLs out of Overcast. I don&rsquo;t
+have to jump between apps or worry about losing context. Everything ends up in Drafts, which
+is my text inbox and the place where I process notes later.</p>
+<p>It&rsquo;s a small thing, but like so many good automations, it&rsquo;s one less manual step in my day.
+Now, when a host mentions a new app or service, I know I can capture the link in a couple
+of taps without breaking my listening flow.</p>
+<hr>
+<h2 id="final-thoughts">Final Thoughts</h2>
+<p>This is exactly the kind of automation I love: lightweight, repeatable, and tuned to the way
+I work. Overcast gives me the show notes, Drafts gives me the archive, and Shortcuts does
+the glue work in between.</p>
+<p>The next time I need to reference that obscure link from a podcast episode I heard weeks ago,
+it&rsquo;ll be sitting there in Drafts, right where it belongs.</p>
+<article class="app-card">
+  <a class="app-card__icon" href="https://www.icloud.com/shortcuts/8f82fa10d4bd469e9a11dd4d839eb04b" target="_blank" rel="noopener">
+    <img src="/images/Shortcuts%20Icons/Save%20URLs%20from%20Show%20Notes%20Icon.jpg" alt="Save URLs from Show Notes app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://www.icloud.com/shortcuts/8f82fa10d4bd469e9a11dd4d839eb04b" target="_blank" rel="noopener">
+    Save URLs from Show Notes
+  </a>
+</article>
+
+<h3 id="apps--tools-used-to-create-this-shortcut">Apps &amp; Tools Used to Create this Shortcut</h3>
+<div class="app-row">
+  
+<article class="app-card">
+  <a class="app-card__icon" href="https://apps.apple.com/ca/app/overcast/id888422857?uo=4" target="_blank" rel="noopener">
+    <img src="/images/App%20Store%20App%20Icons/Overcast%20Icon.jpg" alt="Overcast app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://apps.apple.com/ca/app/overcast/id888422857?uo=4" target="_blank" rel="noopener">
+    Overcast
+  </a>
+</article>
+
+<article class="app-card">
+  <a class="app-card__icon" href="https://apps.apple.com/ca/app/drafts/id1236254471?uo=4" target="_blank" rel="noopener">
+    <img src="/images/App%20Store%20App%20Icons/Drafts%20Icon.jpg" alt="Drafts app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://apps.apple.com/ca/app/drafts/id1236254471?uo=4" target="_blank" rel="noopener">
+    Drafts
+  </a>
+</article>
+
+
+</div>
+
+<div class="amj-cta" aria-label="Support and subscription links">
+  <div class="amj-cta__item amj-cta__item--coffee">
+    <a class="amj-cta__button amj-cta__button--coffee" href="https://www.buymeacoffee.com/AidanMJ25" target="_blank" rel="noopener">
+      <span>Buy Me a Coffee</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/posts/index.xml" target="_blank" rel="noopener" aria-label="Subscribe via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Subscribe via RSS</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--newsletter" href="https://buttondown.com/AidanMJ25" target="_blank" rel="noopener">Newsletter via Email</a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/newsletter/index.xml" target="_blank" rel="noopener" aria-label="Newsletter via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Newsletter via RSS</span>
+    </a>
+  </div>
+</div>
+
+]]></content:encoded>
+        
+      </item>
+    
+  </channel>
+</rss>

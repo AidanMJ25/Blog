@@ -1,0 +1,59 @@
+{{ define "main" }}
+  {{ if eq (.Type | lower) "page" }}
+    <article class="article-page">
+      <header class="article-hero">
+        <h1 class="article-hero__title">{{ .Title }}</h1>
+      </header>
+
+      <div class="entry">
+        <div class="entry__content prose">
+          {{ .Content }}
+        </div>
+      </div>
+    </article>
+  {{ else }}
+  <article class="article-page">
+    <header class="article-hero">
+      {{ with .CurrentSection }}
+        <p class="article-hero__section"><a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
+      {{ end }}
+      <h1 class="article-hero__title">{{ .Title }}</h1>
+      {{ with .Summary }}
+        <p class="article-hero__summary">{{ . | plainify }}</p>
+      {{ end }}
+    </header>
+
+    <div class="article-flow">
+      <section class="rail-panel article-details">
+        <div class="meta">
+          <span>By {{ site.Params.author | default site.Title }}</span>
+          {{ with .Date }}
+            <span>{{ .Format "January 2, 2006" }}</span>
+          {{ end }}
+          {{ with .ReadingTime }}
+            <span>{{ . }} min read</span>
+          {{ end }}
+          <span class="tag-list">
+            {{ with .GetTerms "tags" }}
+              {{ range . }}
+                <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+              {{ end }}
+            {{ end }}
+          </span>
+          {{ with .CurrentSection }}
+            {{ with .OutputFormats.Get "RSS" }}
+              <a class="tag-list__rss" href="{{ .RelPermalink }}">{{ $.CurrentSection.Title }} RSS</a>
+            {{ end }}
+          {{ end }}
+        </div>
+      </section>
+
+      <div class="entry">
+        <div class="entry__content prose">
+          {{ .Content }}
+        </div>
+      </div>
+    </div>
+  </article>
+  {{ end }}
+{{ end }}

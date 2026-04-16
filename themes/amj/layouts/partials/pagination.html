@@ -1,0 +1,32 @@
+{{ with .Paginator }}
+  {{ if gt .TotalPages 1 }}
+    {{ $isPostsArchive := and $.IsSection (eq $.Section "posts") }}
+    {{ $displayPage := .PageNumber }}
+    {{ $displayTotal := .TotalPages }}
+    {{ if $isPostsArchive }}
+      {{ $displayPage = add .PageNumber 1 }}
+      {{ $displayTotal = add .TotalPages 1 }}
+    {{ end }}
+    <nav class="pagination" aria-label="Pagination">
+      <div class="pagination__status">Page {{ $displayPage }} of {{ $displayTotal }}</div>
+      <div class="feed-links">
+        {{ if $isPostsArchive }}
+          {{ if eq .PageNumber 1 }}
+            <a class="button button--ghost" href="{{ site.Home.RelPermalink }}">Newer</a>
+          {{ else }}
+            {{ with .Prev }}
+              <a class="button button--ghost" href="{{ .URL }}">Newer</a>
+            {{ end }}
+          {{ end }}
+        {{ else }}
+          {{ with .Prev }}
+            <a class="button button--ghost" href="{{ .URL }}">Newer</a>
+          {{ end }}
+        {{ end }}
+        {{ with .Next }}
+          <a class="button button--ghost" href="{{ .URL }}">Older</a>
+        {{ end }}
+      </div>
+    </nav>
+  {{ end }}
+{{ end }}

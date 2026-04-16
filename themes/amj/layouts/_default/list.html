@@ -1,0 +1,63 @@
+{{ define "main" }}
+  {{ $pages := .Pages.ByDate.Reverse }}
+  {{ if .IsSection }}
+    {{ $pages = .RegularPages.ByDate.Reverse }}
+  {{ end }}
+  {{ if and .IsSection (eq .Section "posts") }}
+    {{ $pages = after 4 $pages }}
+  {{ end }}
+  {{ $paginator := .Paginate $pages 5 }}
+
+  <section class="section-page">
+    <div class="section-page__main">
+      {{ if not (and .IsSection (eq .Section "posts")) }}
+        <header class="section-hero">
+          <p class="section-hero__eyebrow">{{ .Kind }}</p>
+          <h1 class="section-hero__title">{{ .Title }}</h1>
+          <div class="section-hero__body prose">
+            {{ if .Content }}
+              {{ .Content }}
+            {{ else if .Description }}
+              <p>{{ .Description }}</p>
+            {{ else }}
+              <p>{{ site.Params.description }}</p>
+            {{ end }}
+          </div>
+        </header>
+      {{ end }}
+
+      {{ if gt (len $paginator.Pages) 0 }}
+        <section class="section-stack">
+          {{ range $paginator.Pages }}
+            {{ partial "story-card.html" (dict "page" . "variant" "default") }}
+          {{ end }}
+        </section>
+        {{ partial "pagination.html" . }}
+      {{ else if eq .Kind "taxonomy" }}
+        <section class="taxonomy-list">
+          <ul>
+            {{ range .Pages }}
+              <li><a class="feed-links__item" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+            {{ end }}
+          </ul>
+        </section>
+      {{ end }}
+    </div>
+
+    <aside class="section-page__rail">
+      {{ with .OutputFormats.Get "RSS" }}
+        <section class="rail-panel">
+          <div class="rail-panel__header">
+            <p class="rail-panel__eyebrow">Section Feed</p>
+            <h2 class="rail-panel__title">Subscribe</h2>
+          </div>
+          <a class="button button--ghost button--full" href="{{ .RelPermalink }}">RSS for {{ $.Title }}</a>
+        </section>
+      {{ end }}
+      {{ partial "feed-links.html" (dict "page" . "title" "Other Feeds" "show_home" true "show_sections" true) }}
+      {{ if not (and .IsSection (eq .Section "newsletter")) }}
+        {{ partial "tags-panel.html" . }}
+      {{ end }}
+    </aside>
+  </section>
+{{ end }}

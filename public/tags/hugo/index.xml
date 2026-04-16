@@ -1,0 +1,1590 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Aidan Maurin-Jones | Hugo</title>
+    <link>https://www.blog.aidanmaurinjones.com/tags/hugo/</link>
+    <description>Hugo</description>
+    <language>en</language>
+    
+      <atom:link href="https://www.blog.aidanmaurinjones.com/tags/hugo/index.xml" rel="self" type="application/rss+xml"></atom:link>
+    
+    
+      <item>
+        <title>A New Landing Page &amp; the Blog&#39;s New Home</title>
+        <link>https://www.blog.aidanmaurinjones.com/posts/a-new-landing-page--the-blogs-new-home/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/a-new-landing-page--the-blogs-new-home/</guid>
+        
+          <pubDate>Sun, 19 Oct 2025 00:00:00 &#43;0000</pubDate>
+        
+        
+          <description><![CDATA[<p>I finally have a proper home on the web — a simple, fast, no-nonsense landing page that ties
+everything together at <a href="https://aidanmaurinjones.com">aidanmaurinjones.com</a>.</p>
+<p>Now the <strong>landing page</strong> handles introductions while the <strong>blog</strong> lives at
+<a href="https://blog.aidanmaurinjones.com">blog.aidanmaurinjones.com</a>, focused entirely on posts
+and projects.</p>
+<hr>
+<h2 id="the-goal">The Goal</h2>
+<p>I wanted something that:</p>
+<ul>
+<li>loads instantly</li>
+<li>works entirely from static files</li>
+<li>stays easy to maintain</li>
+<li>feels like me — straightforward, clean, and a little nerdy around the edges</li>
+</ul>
+<p>No flashy animations, no bloat, no signup forms. Just a name, a short blurb, and a link to
+the blog.</p>
+<hr>
+<h2 id="the-build">The Build</h2>
+<p>The site runs on <a href="https://gohugo.io/">Hugo</a> with the <a href="https://github.com/1bl4z3r/hermit-V2">Hermit-V2</a> theme — lightweight, elegant, and fast.<br>
+I kept the layout minimal: title, subtitle, one link to the blog, and a simple contact section.</p>
+<p>Everything is built locally with Hugo Extended, then deployed automatically using GitHub Pages.<br>
+Once the workflow was behaving, the entire site could rebuild and publish in under 30 seconds.</p>
+<hr>
+<h2 id="the-result">The Result</h2>
+<p>What you see now is the distilled version of everything I wanted:<br>
+a quiet, fast landing page that does exactly one job — introduce me and point you in the
+right direction.</p>
+<p>It’s clean, responsive, and entirely under my control.<br>
+No third-party builders, no analytics scripts, no compromises.</p>
+<hr>
+<h2 id="closing-thoughts">Closing Thoughts</h2>
+<p>I didn’t rebuild the blog — I just gave it a better home.<br>
+The content, feeds, and archives all live on at <a href="https://blog.aidanmaurinjones.com">blog.aidanmaurinjones.com</a>;
+the main domain is now a simple, focused landing page that introduces who I am and where to find my work.</p>
+<p>It’s a small change that makes everything clearer and easier to manage — one site for reading,
+one site for meeting.</p>
+<p>→ <a href="https://aidanmaurinjones.com">aidanmaurinjones.com</a><br>
+→ <a href="https://blog.aidanmaurinjones.com">blog.aidanmaurinjones.com</a></p>
+<div class="amj-cta" aria-label="Support and subscription links">
+  <div class="amj-cta__item amj-cta__item--coffee">
+    <a class="amj-cta__button amj-cta__button--coffee" href="https://www.buymeacoffee.com/AidanMJ25" target="_blank" rel="noopener">
+      <span>Buy Me a Coffee</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/posts/index.xml" target="_blank" rel="noopener" aria-label="Subscribe via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Subscribe via RSS</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--newsletter" href="https://buttondown.com/AidanMJ25" target="_blank" rel="noopener">Newsletter via Email</a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/newsletter/index.xml" target="_blank" rel="noopener" aria-label="Newsletter via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Newsletter via RSS</span>
+    </a>
+  </div>
+</div>
+
+]]></description>
+          <content:encoded><![CDATA[<p>I finally have a proper home on the web — a simple, fast, no-nonsense landing page that ties
+everything together at <a href="https://aidanmaurinjones.com">aidanmaurinjones.com</a>.</p>
+<p>Now the <strong>landing page</strong> handles introductions while the <strong>blog</strong> lives at
+<a href="https://blog.aidanmaurinjones.com">blog.aidanmaurinjones.com</a>, focused entirely on posts
+and projects.</p>
+<hr>
+<h2 id="the-goal">The Goal</h2>
+<p>I wanted something that:</p>
+<ul>
+<li>loads instantly</li>
+<li>works entirely from static files</li>
+<li>stays easy to maintain</li>
+<li>feels like me — straightforward, clean, and a little nerdy around the edges</li>
+</ul>
+<p>No flashy animations, no bloat, no signup forms. Just a name, a short blurb, and a link to
+the blog.</p>
+<hr>
+<h2 id="the-build">The Build</h2>
+<p>The site runs on <a href="https://gohugo.io/">Hugo</a> with the <a href="https://github.com/1bl4z3r/hermit-V2">Hermit-V2</a> theme — lightweight, elegant, and fast.<br>
+I kept the layout minimal: title, subtitle, one link to the blog, and a simple contact section.</p>
+<p>Everything is built locally with Hugo Extended, then deployed automatically using GitHub Pages.<br>
+Once the workflow was behaving, the entire site could rebuild and publish in under 30 seconds.</p>
+<hr>
+<h2 id="the-result">The Result</h2>
+<p>What you see now is the distilled version of everything I wanted:<br>
+a quiet, fast landing page that does exactly one job — introduce me and point you in the
+right direction.</p>
+<p>It’s clean, responsive, and entirely under my control.<br>
+No third-party builders, no analytics scripts, no compromises.</p>
+<hr>
+<h2 id="closing-thoughts">Closing Thoughts</h2>
+<p>I didn’t rebuild the blog — I just gave it a better home.<br>
+The content, feeds, and archives all live on at <a href="https://blog.aidanmaurinjones.com">blog.aidanmaurinjones.com</a>;
+the main domain is now a simple, focused landing page that introduces who I am and where to find my work.</p>
+<p>It’s a small change that makes everything clearer and easier to manage — one site for reading,
+one site for meeting.</p>
+<p>→ <a href="https://aidanmaurinjones.com">aidanmaurinjones.com</a><br>
+→ <a href="https://blog.aidanmaurinjones.com">blog.aidanmaurinjones.com</a></p>
+<div class="amj-cta" aria-label="Support and subscription links">
+  <div class="amj-cta__item amj-cta__item--coffee">
+    <a class="amj-cta__button amj-cta__button--coffee" href="https://www.buymeacoffee.com/AidanMJ25" target="_blank" rel="noopener">
+      <span>Buy Me a Coffee</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/posts/index.xml" target="_blank" rel="noopener" aria-label="Subscribe via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Subscribe via RSS</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--newsletter" href="https://buttondown.com/AidanMJ25" target="_blank" rel="noopener">Newsletter via Email</a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/newsletter/index.xml" target="_blank" rel="noopener" aria-label="Newsletter via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Newsletter via RSS</span>
+    </a>
+  </div>
+</div>
+
+]]></content:encoded>
+        
+      </item>
+    
+      <item>
+        <title>Automating My Newsletter Workflow: One Markdown File for Hugo and Buttondown</title>
+        <link>https://www.blog.aidanmaurinjones.com/posts/automating-my-newsletter-workflow-one-markdown-file-for-hugo-and-buttondown/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/automating-my-newsletter-workflow-one-markdown-file-for-hugo-and-buttondown/</guid>
+        
+          <pubDate>Wed, 01 Oct 2025 00:00:00 &#43;0000</pubDate>
+        
+        
+          <description><![CDATA[<p>I’ve been working toward a goal for years: a single place to write, and as many automated
+outputs as possible. I don’t want to copy and paste, re-format, or duplicate my writing. The
+same Markdown file that powers a blog post should also power a newsletter, an archive, or
+whatever else I decide to publish.</p>
+<p>That philosophy led me to a new Shortcut I built for my Buttondown newsletter. With it, I
+can take the exact same Markdown file I use for my Hugo-based site’s Newsletter Archive page,
+and publish it straight to Buttondown in one step. No duplication, no reformatting, and no
+breaking my Markdown-first workflow.</p>
+<p>⸻</p>
+<h3 id="a-dual-purpose-draft">A Dual-Purpose Draft</h3>
+<p>Every newsletter draft I write starts as a Markdown file in my Hugo project. It includes
+the standard YAML front matter — title, date, tags — so it can live side-by-side with my
+blog posts and generate an archive page on my site.</p>
+<p>At the bottom, I’ve also standardized on a Hugo shortcode that handles things like subscribe
+links and callouts.</p>
+<p>The front matter makes it valid Hugo content, but Buttondown doesn’t need that metadata. Likewise,
+the shortcode at the bottom is great for my archive page but doesn’t belong in an email. The
+Shortcut’s job is to strip out those bits and isolate the actual content.</p>
+<p>⸻</p>
+<h3 id="regex-to-the-rescue">Regex to the Rescue</h3>
+<p>To solve that, I leaned on regular expressions. The Shortcut matches everything after the
+closing &mdash; of the YAML front matter and before the buttons-list shortcode.</p>
+<p>The pattern looks like this:</p>
+<pre><code>\A---[\n\s\S]*?---\s*([\n\s\S]*?)\s*\{\{\s*buttons-list\s*\}\}
+</code></pre>
+<p>The captured group becomes the newsletter body. Meanwhile, the Shortcut takes the filename
+of the Markdown draft and uses it as the subject line. That way, one file works for both Hugo
+(which uses the front matter) and Buttondown (which only needs subject + body but I hope one
+day it supports front matter).</p>
+<p>⸻</p>
+<h3 id="publishing-via-buttondowns-api">Publishing via Buttondown’s API</h3>
+<p>The final step is an API call. The Shortcut uses the Get Contents of URL action, configured with:</p>
+<ul>
+<li>Endpoint: <a href="https://api.buttondown.com/v1/emails">https://api.buttondown.com/v1/emails</a></li>
+<li>Headers: Authorization token (pulled from a secure Shortcut)</li>
+<li>Body: JSON with subject, body, and status</li>
+</ul>
+<p>I set status to about_to_send, which creates the email in Buttondown ready for review. If
+I’m confident, I can flip this to sent and fire it off instantly.</p>
+<p>⸻</p>
+<h3 id="why-this-matters">Why This Matters</h3>
+<p>The beauty of this setup is that I never have to write the same thing twice. My Hugo site
+automatically builds out a Newsletter Archive page from the Markdown file, while this
+Shortcut takes that same file and pushes it to Buttondown.</p>
+<p>Plain text is the source of truth, Hugo and Buttondown are just outputs.</p>
+<p>This also gives me flexibility: if I ever change services, or if I want to generate a PDF
+archive, I don’t need to rewrite anything. I’ve already got everything in a neutral,
+Markdown-first format that can be re-used anywhere.</p>
+<p>⸻</p>
+<h3 id="why-this-works-so-well">Why This Works So Well</h3>
+<p>Like many of my favorite automations, this Shortcut doesn’t feel flashy — it feels inevitable. Once
+you decide everything should start as Markdown, the next step is making sure the publishing
+side bends around your workflow, not the other way around.</p>
+<p>Shortcuts, Buttondown, and Hugo all line up perfectly here. It’s one file, two destinations,
+and zero overhead. And that’s exactly the kind of automation that keeps me writing and publishing
+more often.</p>
+<article class="app-card">
+  <a class="app-card__icon" href="https://www.icloud.com/shortcuts/b08625600f25483fa55e19207d004eec" target="_blank" rel="noopener">
+    <img src="/images/Shortcuts%20Icons/Publish%20Newsletter%20to%20Buttondown%20%28Public%29%20Icon.jpg" alt="Publish Newsletter to Buttondown app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://www.icloud.com/shortcuts/b08625600f25483fa55e19207d004eec" target="_blank" rel="noopener">
+    Publish Newsletter to Buttondown
+  </a>
+</article>
+
+<div class="amj-cta" aria-label="Support and subscription links">
+  <div class="amj-cta__item amj-cta__item--coffee">
+    <a class="amj-cta__button amj-cta__button--coffee" href="https://www.buymeacoffee.com/AidanMJ25" target="_blank" rel="noopener">
+      <span>Buy Me a Coffee</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/posts/index.xml" target="_blank" rel="noopener" aria-label="Subscribe via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Subscribe via RSS</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--newsletter" href="https://buttondown.com/AidanMJ25" target="_blank" rel="noopener">Newsletter via Email</a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/newsletter/index.xml" target="_blank" rel="noopener" aria-label="Newsletter via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Newsletter via RSS</span>
+    </a>
+  </div>
+</div>
+
+]]></description>
+          <content:encoded><![CDATA[<p>I’ve been working toward a goal for years: a single place to write, and as many automated
+outputs as possible. I don’t want to copy and paste, re-format, or duplicate my writing. The
+same Markdown file that powers a blog post should also power a newsletter, an archive, or
+whatever else I decide to publish.</p>
+<p>That philosophy led me to a new Shortcut I built for my Buttondown newsletter. With it, I
+can take the exact same Markdown file I use for my Hugo-based site’s Newsletter Archive page,
+and publish it straight to Buttondown in one step. No duplication, no reformatting, and no
+breaking my Markdown-first workflow.</p>
+<p>⸻</p>
+<h3 id="a-dual-purpose-draft">A Dual-Purpose Draft</h3>
+<p>Every newsletter draft I write starts as a Markdown file in my Hugo project. It includes
+the standard YAML front matter — title, date, tags — so it can live side-by-side with my
+blog posts and generate an archive page on my site.</p>
+<p>At the bottom, I’ve also standardized on a Hugo shortcode that handles things like subscribe
+links and callouts.</p>
+<p>The front matter makes it valid Hugo content, but Buttondown doesn’t need that metadata. Likewise,
+the shortcode at the bottom is great for my archive page but doesn’t belong in an email. The
+Shortcut’s job is to strip out those bits and isolate the actual content.</p>
+<p>⸻</p>
+<h3 id="regex-to-the-rescue">Regex to the Rescue</h3>
+<p>To solve that, I leaned on regular expressions. The Shortcut matches everything after the
+closing &mdash; of the YAML front matter and before the buttons-list shortcode.</p>
+<p>The pattern looks like this:</p>
+<pre><code>\A---[\n\s\S]*?---\s*([\n\s\S]*?)\s*\{\{\s*buttons-list\s*\}\}
+</code></pre>
+<p>The captured group becomes the newsletter body. Meanwhile, the Shortcut takes the filename
+of the Markdown draft and uses it as the subject line. That way, one file works for both Hugo
+(which uses the front matter) and Buttondown (which only needs subject + body but I hope one
+day it supports front matter).</p>
+<p>⸻</p>
+<h3 id="publishing-via-buttondowns-api">Publishing via Buttondown’s API</h3>
+<p>The final step is an API call. The Shortcut uses the Get Contents of URL action, configured with:</p>
+<ul>
+<li>Endpoint: <a href="https://api.buttondown.com/v1/emails">https://api.buttondown.com/v1/emails</a></li>
+<li>Headers: Authorization token (pulled from a secure Shortcut)</li>
+<li>Body: JSON with subject, body, and status</li>
+</ul>
+<p>I set status to about_to_send, which creates the email in Buttondown ready for review. If
+I’m confident, I can flip this to sent and fire it off instantly.</p>
+<p>⸻</p>
+<h3 id="why-this-matters">Why This Matters</h3>
+<p>The beauty of this setup is that I never have to write the same thing twice. My Hugo site
+automatically builds out a Newsletter Archive page from the Markdown file, while this
+Shortcut takes that same file and pushes it to Buttondown.</p>
+<p>Plain text is the source of truth, Hugo and Buttondown are just outputs.</p>
+<p>This also gives me flexibility: if I ever change services, or if I want to generate a PDF
+archive, I don’t need to rewrite anything. I’ve already got everything in a neutral,
+Markdown-first format that can be re-used anywhere.</p>
+<p>⸻</p>
+<h3 id="why-this-works-so-well">Why This Works So Well</h3>
+<p>Like many of my favorite automations, this Shortcut doesn’t feel flashy — it feels inevitable. Once
+you decide everything should start as Markdown, the next step is making sure the publishing
+side bends around your workflow, not the other way around.</p>
+<p>Shortcuts, Buttondown, and Hugo all line up perfectly here. It’s one file, two destinations,
+and zero overhead. And that’s exactly the kind of automation that keeps me writing and publishing
+more often.</p>
+<article class="app-card">
+  <a class="app-card__icon" href="https://www.icloud.com/shortcuts/b08625600f25483fa55e19207d004eec" target="_blank" rel="noopener">
+    <img src="/images/Shortcuts%20Icons/Publish%20Newsletter%20to%20Buttondown%20%28Public%29%20Icon.jpg" alt="Publish Newsletter to Buttondown app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://www.icloud.com/shortcuts/b08625600f25483fa55e19207d004eec" target="_blank" rel="noopener">
+    Publish Newsletter to Buttondown
+  </a>
+</article>
+
+<div class="amj-cta" aria-label="Support and subscription links">
+  <div class="amj-cta__item amj-cta__item--coffee">
+    <a class="amj-cta__button amj-cta__button--coffee" href="https://www.buymeacoffee.com/AidanMJ25" target="_blank" rel="noopener">
+      <span>Buy Me a Coffee</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/posts/index.xml" target="_blank" rel="noopener" aria-label="Subscribe via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Subscribe via RSS</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--newsletter" href="https://buttondown.com/AidanMJ25" target="_blank" rel="noopener">Newsletter via Email</a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/newsletter/index.xml" target="_blank" rel="noopener" aria-label="Newsletter via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Newsletter via RSS</span>
+    </a>
+  </div>
+</div>
+
+]]></content:encoded>
+        
+      </item>
+    
+      <item>
+        <title>Turning iCloud Shortcut Links into Share Buttons</title>
+        <link>https://www.blog.aidanmaurinjones.com/posts/turning-icloud-shortcut-links-into-share-buttons/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/turning-icloud-shortcut-links-into-share-buttons/</guid>
+        
+          <pubDate>Tue, 23 Sep 2025 00:00:00 &#43;0000</pubDate>
+        
+        
+          <description><![CDATA[<p>One of the best things about Shortcuts is that it can bridge services that were never designed
+to talk to each other. The Shortcut I’ve been using lately—Share Shortcut HTML Button—is a
+perfect example of that. With it, I can take any iCloud Shortcut link and instantly generate
+a fully-formed Hugo shortcode that embeds the Shortcut on my blog with its name and icon, no
+copy-pasting or manual uploading required.</p>
+<p>⸻</p>
+<h3 id="the-problem">The Problem</h3>
+<p>When you share a Shortcut publicly, Apple gives you an iCloud link that looks something
+like this:</p>
+<p><a href="https://www.icloud.com/shortcuts/123abc">https://www.icloud.com/shortcuts/123abc</a>&hellip;</p>
+<p>It works fine for sharing with friends, but when I want to add that Shortcut to my blog, I
+need more than just the link. I need:</p>
+<ul>
+<li>The Shortcut’s proper name</li>
+<li>Its icon image</li>
+<li>A clean HTML/Hugo shortcode block I can drop into a Markdown file</li>
+</ul>
+<p>Doing all of this by hand was tedious. So I automated it.</p>
+<p>⸻</p>
+<h3 id="how-the-shortcut-works">How the Shortcut Works</h3>
+<p>The Shortcut breaks down into three key stages: fetching metadata, processing the icon, and
+generating the blog card.</p>
+<p><strong>Fetching Metadata</strong></p>
+<p>The Shortcut starts by receiving a Shortcut iCloud link (or grabbing it from the clipboard
+if none is passed in). From there:</p>
+<ul>
+<li>It rewrites the link into Apple’s hidden API endpoint at <a href="https://www.icloud.com/shortcuts/api/records/">https://www.icloud.com/shortcuts/api/records/</a>.</li>
+<li>Using Get Contents of URL, it downloads the Shortcut’s metadata as JSON.</li>
+<li>With Get Dictionary from Contents of URL, I can then pull out fields like fields.name.value
+(the Shortcut’s title) and fields.icon.value.downloadURL (the actual icon).</li>
+</ul>
+<p><strong>Processing the Icon</strong></p>
+<p>Here’s the clever part: I don’t just hotlink the icon from iCloud. Instead:</p>
+<ul>
+<li>I construct a GitHub API URL pointing to my site’s static/images/Shortcuts Icons folder.</li>
+<li>The Shortcut checks whether a file with the same name already exists (by calling GitHub’s
+API and looking for a SHA).</li>
+<li>If the icon isn’t there, it downloads the image, renames it with the Shortcut’s title, and
+encodes it in Base64.</li>
+<li>Finally, it uploads the icon to GitHub via the API, neatly slotting it into my Hugo site’s
+image folder.</li>
+</ul>
+<p>Now every Shortcut I publish has its own local icon, version-controlled alongside the rest
+of my site.</p>
+<p><strong>Generating the Blog Card</strong></p>
+<p>The Shortcut assembles the code automatically, copies it to my clipboard, and I can paste
+it directly into my Markdown post. No typing, no file juggling, no guesswork.</p>
+<p>⸻</p>
+<h3 id="why-it-matters">Why It Matters</h3>
+<p>This Shortcut may sound niche, but it’s been a huge time saver for me. I publish a lot of
+posts about Shortcuts, and before this, each one meant multiple minutes of repetitive work:
+saving icons, renaming them, uploading them, writing out HTML. Now it’s one tap.</p>
+<p>The broader lesson here is that Shortcuts isn’t limited to “personal productivity” hacks.
+It’s powerful enough to serve as part of a publishing pipeline, gluing together iCloud’s
+hidden APIs, GitHub’s developer endpoints, and Hugo’s templating system.</p>
+<p>And that’s why I love this Shortcut: it turns Apple’s barebones sharing into a complete,
+blog-ready package.</p>
+<article class="app-card">
+  <a class="app-card__icon" href="https://www.icloud.com/shortcuts/feeec271478543b299710fb20e6bffab" target="_blank" rel="noopener">
+    <img src="/images/Shortcuts%20Icons/Share%20Shortcut%20HTML%20Button%20%28Public%29%20Icon.jpg" alt="Share Shortcut HTML Button app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://www.icloud.com/shortcuts/feeec271478543b299710fb20e6bffab" target="_blank" rel="noopener">
+    Share Shortcut HTML Button
+  </a>
+</article>
+
+<h3 id="apps-used-to-create-this-shortcut">Apps Used to Create this Shortcut</h3>
+<article class="app-card">
+  <a class="app-card__icon" href="https://apps.apple.com/ca/app/jayson/id1468691718?mt=12&amp;uo=4" target="_blank" rel="noopener">
+    <img src="/images/App%20Store%20App%20Icons/Jayson%20Icon.jpg" alt="Jayson app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://apps.apple.com/ca/app/jayson/id1468691718?mt=12&amp;uo=4" target="_blank" rel="noopener">
+    Jayson
+  </a>
+</article>
+
+<div class="amj-cta" aria-label="Support and subscription links">
+  <div class="amj-cta__item amj-cta__item--coffee">
+    <a class="amj-cta__button amj-cta__button--coffee" href="https://www.buymeacoffee.com/AidanMJ25" target="_blank" rel="noopener">
+      <span>Buy Me a Coffee</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/posts/index.xml" target="_blank" rel="noopener" aria-label="Subscribe via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Subscribe via RSS</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--newsletter" href="https://buttondown.com/AidanMJ25" target="_blank" rel="noopener">Newsletter via Email</a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/newsletter/index.xml" target="_blank" rel="noopener" aria-label="Newsletter via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Newsletter via RSS</span>
+    </a>
+  </div>
+</div>
+
+]]></description>
+          <content:encoded><![CDATA[<p>One of the best things about Shortcuts is that it can bridge services that were never designed
+to talk to each other. The Shortcut I’ve been using lately—Share Shortcut HTML Button—is a
+perfect example of that. With it, I can take any iCloud Shortcut link and instantly generate
+a fully-formed Hugo shortcode that embeds the Shortcut on my blog with its name and icon, no
+copy-pasting or manual uploading required.</p>
+<p>⸻</p>
+<h3 id="the-problem">The Problem</h3>
+<p>When you share a Shortcut publicly, Apple gives you an iCloud link that looks something
+like this:</p>
+<p><a href="https://www.icloud.com/shortcuts/123abc">https://www.icloud.com/shortcuts/123abc</a>&hellip;</p>
+<p>It works fine for sharing with friends, but when I want to add that Shortcut to my blog, I
+need more than just the link. I need:</p>
+<ul>
+<li>The Shortcut’s proper name</li>
+<li>Its icon image</li>
+<li>A clean HTML/Hugo shortcode block I can drop into a Markdown file</li>
+</ul>
+<p>Doing all of this by hand was tedious. So I automated it.</p>
+<p>⸻</p>
+<h3 id="how-the-shortcut-works">How the Shortcut Works</h3>
+<p>The Shortcut breaks down into three key stages: fetching metadata, processing the icon, and
+generating the blog card.</p>
+<p><strong>Fetching Metadata</strong></p>
+<p>The Shortcut starts by receiving a Shortcut iCloud link (or grabbing it from the clipboard
+if none is passed in). From there:</p>
+<ul>
+<li>It rewrites the link into Apple’s hidden API endpoint at <a href="https://www.icloud.com/shortcuts/api/records/">https://www.icloud.com/shortcuts/api/records/</a>.</li>
+<li>Using Get Contents of URL, it downloads the Shortcut’s metadata as JSON.</li>
+<li>With Get Dictionary from Contents of URL, I can then pull out fields like fields.name.value
+(the Shortcut’s title) and fields.icon.value.downloadURL (the actual icon).</li>
+</ul>
+<p><strong>Processing the Icon</strong></p>
+<p>Here’s the clever part: I don’t just hotlink the icon from iCloud. Instead:</p>
+<ul>
+<li>I construct a GitHub API URL pointing to my site’s static/images/Shortcuts Icons folder.</li>
+<li>The Shortcut checks whether a file with the same name already exists (by calling GitHub’s
+API and looking for a SHA).</li>
+<li>If the icon isn’t there, it downloads the image, renames it with the Shortcut’s title, and
+encodes it in Base64.</li>
+<li>Finally, it uploads the icon to GitHub via the API, neatly slotting it into my Hugo site’s
+image folder.</li>
+</ul>
+<p>Now every Shortcut I publish has its own local icon, version-controlled alongside the rest
+of my site.</p>
+<p><strong>Generating the Blog Card</strong></p>
+<p>The Shortcut assembles the code automatically, copies it to my clipboard, and I can paste
+it directly into my Markdown post. No typing, no file juggling, no guesswork.</p>
+<p>⸻</p>
+<h3 id="why-it-matters">Why It Matters</h3>
+<p>This Shortcut may sound niche, but it’s been a huge time saver for me. I publish a lot of
+posts about Shortcuts, and before this, each one meant multiple minutes of repetitive work:
+saving icons, renaming them, uploading them, writing out HTML. Now it’s one tap.</p>
+<p>The broader lesson here is that Shortcuts isn’t limited to “personal productivity” hacks.
+It’s powerful enough to serve as part of a publishing pipeline, gluing together iCloud’s
+hidden APIs, GitHub’s developer endpoints, and Hugo’s templating system.</p>
+<p>And that’s why I love this Shortcut: it turns Apple’s barebones sharing into a complete,
+blog-ready package.</p>
+<article class="app-card">
+  <a class="app-card__icon" href="https://www.icloud.com/shortcuts/feeec271478543b299710fb20e6bffab" target="_blank" rel="noopener">
+    <img src="/images/Shortcuts%20Icons/Share%20Shortcut%20HTML%20Button%20%28Public%29%20Icon.jpg" alt="Share Shortcut HTML Button app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://www.icloud.com/shortcuts/feeec271478543b299710fb20e6bffab" target="_blank" rel="noopener">
+    Share Shortcut HTML Button
+  </a>
+</article>
+
+<h3 id="apps-used-to-create-this-shortcut">Apps Used to Create this Shortcut</h3>
+<article class="app-card">
+  <a class="app-card__icon" href="https://apps.apple.com/ca/app/jayson/id1468691718?mt=12&amp;uo=4" target="_blank" rel="noopener">
+    <img src="/images/App%20Store%20App%20Icons/Jayson%20Icon.jpg" alt="Jayson app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://apps.apple.com/ca/app/jayson/id1468691718?mt=12&amp;uo=4" target="_blank" rel="noopener">
+    Jayson
+  </a>
+</article>
+
+<div class="amj-cta" aria-label="Support and subscription links">
+  <div class="amj-cta__item amj-cta__item--coffee">
+    <a class="amj-cta__button amj-cta__button--coffee" href="https://www.buymeacoffee.com/AidanMJ25" target="_blank" rel="noopener">
+      <span>Buy Me a Coffee</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/posts/index.xml" target="_blank" rel="noopener" aria-label="Subscribe via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Subscribe via RSS</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--newsletter" href="https://buttondown.com/AidanMJ25" target="_blank" rel="noopener">Newsletter via Email</a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/newsletter/index.xml" target="_blank" rel="noopener" aria-label="Newsletter via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Newsletter via RSS</span>
+    </a>
+  </div>
+</div>
+
+]]></content:encoded>
+        
+      </item>
+    
+      <item>
+        <title>Share Mac App HTML Button: Automating App Cards from Alfred</title>
+        <link>https://www.blog.aidanmaurinjones.com/posts/share-mac-app-html-button---automating-app-cards-from-alfred/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/share-mac-app-html-button---automating-app-cards-from-alfred/</guid>
+        
+          <pubDate>Tue, 23 Sep 2025 00:00:00 &#43;0000</pubDate>
+        
+        
+          <description><![CDATA[<p>One of the realities of being a Mac user today is that many of the best apps you’ll discover
+aren’t on the Mac App Store. Developers often prefer to sell directly, avoiding Apple’s restrictions
+and revenue cut. That’s great for them (and often for us too, since it means more powerful software),
+but it leaves one problem: how do you share those apps elegantly in a blog post?</p>
+<p>The Mac App Store gives you a tidy preview link and icon, but direct-purchase apps don’t. That
+means if I want to share an app like BBEdit or Audio Hijack, I’d normally have to dig into
+the app bundle, extract the icon, save it out, rename it, upload it, then write the HTML
+myself. Way too much friction.</p>
+<p>So I built a Shortcut that does all of it for me. And because I run it as an Alfred File
+Action, all I have to do is select the app and hit the hotkey. The Shortcut takes care of
+the rest, turning any Mac app—App Store or not—into a polished HTML app card ready to paste
+into my Hugo blog.</p>
+<p>⸻</p>
+<h3 id="how-it-works">How It Works</h3>
+<p>The Shortcut is split into two halves: finding the app’s details and icon, then uploading
+and generating the HTML snippet.</p>
+<p><strong>Extracting the app’s icon and name</strong></p>
+<p>It begins with an AppleScript that points at the selected .app bundle and looks inside its
+Info.plist for the CFBundleIconFile. If that value’s missing, the script gracefully falls
+back to the default AppIcon.</p>
+<p>From there, it resolves the .icns file inside /Contents/Resources/, hands it back to Shortcuts,
+and Shortcuts grabs the actual image. At the same time, it extracts the app’s display name so
+I don’t have to type it myself later.</p>
+<p><strong>Handling the upload</strong></p>
+<p>With the icon in hand, the Shortcut preps the upload for GitHub. It checks if the icon is
+already in my site’s /static/images/App Icons/ folder using the GitHub API. If it doesn’t
+exist, the Shortcut converts the image to base64 and uploads it automatically.</p>
+<p>This is especially handy for apps outside the Mac App Store, since I can’t rely on Apple’s
+CDN to serve up a clean app icon for me. Once uploaded, the image is there permanently, ready
+for reuse across future posts.</p>
+<p><strong>Assembling the HTML card</strong></p>
+<p>Finally, the Shortcut generates the Hugo shortcode I use for app cards. This snippet is copied
+straight to my clipboard, so I can paste it into BBEdit alongside the rest of the post. To help
+me fill in the missing link (since there’s no App Store URL), the Shortcut even runs a DuckDuckGo
+search for the app’s name + “mac app.” Nine times out of ten, that surfaces the official
+website instantly.</p>
+<p>⸻</p>
+<h3 id="why-this-shortcut-matters">Why This Shortcut Matters</h3>
+<p>This automation is all about eliminating barriers. Whether the app is on the Mac App Store or
+sold directly through a developer’s site, I get the same consistent app card on my blog. No
+manual exporting, no renaming files, no repetitive uploads.</p>
+<p>It also means I can highlight great indie apps without worrying about the extra effort. For
+someone who posts often, these saved minutes add up, but more importantly, they keep me in
+flow. When the tools fade into the background, the writing comes forward.</p>
+<p>⸻</p>
+<h3 id="alfred--shortcuts--a-perfect-match">Alfred + Shortcuts = A Perfect Match</h3>
+<p>Running this Shortcut through Alfred is what makes it truly seamless. Instead of digging
+through Finder or hunting down app paths manually, I just select the app in Alfred, trigger
+the File Action, and let Shortcuts do the heavy lifting.</p>
+<p>This combination works beautifully: Alfred is my quick-launch interface, and Shortcuts is the
+automation engine in the background. Together, they make sharing Mac apps—App Store or not—as
+easy as a keyboard command.</p>
+<p>⸻</p>
+<h3 id="the-bigger-picture">The Bigger Picture</h3>
+<p>This Shortcut fits into a larger workflow where I’ve automated nearly every part of blogging,
+from uploading screenshots to posting entire drafts to GitHub. Each piece removes just enough
+friction to make publishing easier and more enjoyable.</p>
+<p>The end result is that I can write more, share more, and showcase apps without worrying about
+where they’re sold. The Mac App Store doesn’t have to be the gatekeeper for clean links and
+icons anymore.</p>
+<article class="app-card">
+  <a class="app-card__icon" href="https://www.icloud.com/shortcuts/ad57e1ca98d6430ca512e8649ffc96b8" target="_blank" rel="noopener">
+    <img src="/images/Shortcuts%20Icons/Share%20Mac%20App%20HTML%20Button%20%28Public%29%20Icon.jpg" alt="Share Mac App HTML Button app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://www.icloud.com/shortcuts/ad57e1ca98d6430ca512e8649ffc96b8" target="_blank" rel="noopener">
+    Share Mac App HTML Button
+  </a>
+</article>
+
+<h3 id="apps-used-to-create-this-automation">Apps Used to Create this Automation</h3>
+<div class="app-row">
+  
+<article class="app-card">
+  <a class="app-card__icon" href="https://apps.apple.com/ca/app/jayson/id1468691718?mt=12&amp;uo=4" target="_blank" rel="noopener">
+    <img src="/images/App%20Store%20App%20Icons/Jayson%20Icon.jpg" alt="Jayson app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://apps.apple.com/ca/app/jayson/id1468691718?mt=12&amp;uo=4" target="_blank" rel="noopener">
+    Jayson
+  </a>
+</article>
+
+<article class="app-card">
+  <a class="app-card__icon" href="https://www.alfredapp.com/" target="_blank" rel="noopener">
+    <img src="/images/App%20Icons/Alfred%205%20Icon.jpg" alt="Alfred 5 app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://www.alfredapp.com/" target="_blank" rel="noopener">
+    Alfred 5
+  </a>
+</article>
+
+<article class="app-card">
+  <a class="app-card__icon" href="https://latenightsw.com/" target="_blank" rel="noopener">
+    <img src="/images/App%20Icons/Script%20Debugger%20Icon.jpg" alt="Script Debugger app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://latenightsw.com/" target="_blank" rel="noopener">
+    Script Debugger
+  </a>
+</article>
+
+
+</div>
+
+<div class="amj-cta" aria-label="Support and subscription links">
+  <div class="amj-cta__item amj-cta__item--coffee">
+    <a class="amj-cta__button amj-cta__button--coffee" href="https://www.buymeacoffee.com/AidanMJ25" target="_blank" rel="noopener">
+      <span>Buy Me a Coffee</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/posts/index.xml" target="_blank" rel="noopener" aria-label="Subscribe via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Subscribe via RSS</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--newsletter" href="https://buttondown.com/AidanMJ25" target="_blank" rel="noopener">Newsletter via Email</a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/newsletter/index.xml" target="_blank" rel="noopener" aria-label="Newsletter via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Newsletter via RSS</span>
+    </a>
+  </div>
+</div>
+
+]]></description>
+          <content:encoded><![CDATA[<p>One of the realities of being a Mac user today is that many of the best apps you’ll discover
+aren’t on the Mac App Store. Developers often prefer to sell directly, avoiding Apple’s restrictions
+and revenue cut. That’s great for them (and often for us too, since it means more powerful software),
+but it leaves one problem: how do you share those apps elegantly in a blog post?</p>
+<p>The Mac App Store gives you a tidy preview link and icon, but direct-purchase apps don’t. That
+means if I want to share an app like BBEdit or Audio Hijack, I’d normally have to dig into
+the app bundle, extract the icon, save it out, rename it, upload it, then write the HTML
+myself. Way too much friction.</p>
+<p>So I built a Shortcut that does all of it for me. And because I run it as an Alfred File
+Action, all I have to do is select the app and hit the hotkey. The Shortcut takes care of
+the rest, turning any Mac app—App Store or not—into a polished HTML app card ready to paste
+into my Hugo blog.</p>
+<p>⸻</p>
+<h3 id="how-it-works">How It Works</h3>
+<p>The Shortcut is split into two halves: finding the app’s details and icon, then uploading
+and generating the HTML snippet.</p>
+<p><strong>Extracting the app’s icon and name</strong></p>
+<p>It begins with an AppleScript that points at the selected .app bundle and looks inside its
+Info.plist for the CFBundleIconFile. If that value’s missing, the script gracefully falls
+back to the default AppIcon.</p>
+<p>From there, it resolves the .icns file inside /Contents/Resources/, hands it back to Shortcuts,
+and Shortcuts grabs the actual image. At the same time, it extracts the app’s display name so
+I don’t have to type it myself later.</p>
+<p><strong>Handling the upload</strong></p>
+<p>With the icon in hand, the Shortcut preps the upload for GitHub. It checks if the icon is
+already in my site’s /static/images/App Icons/ folder using the GitHub API. If it doesn’t
+exist, the Shortcut converts the image to base64 and uploads it automatically.</p>
+<p>This is especially handy for apps outside the Mac App Store, since I can’t rely on Apple’s
+CDN to serve up a clean app icon for me. Once uploaded, the image is there permanently, ready
+for reuse across future posts.</p>
+<p><strong>Assembling the HTML card</strong></p>
+<p>Finally, the Shortcut generates the Hugo shortcode I use for app cards. This snippet is copied
+straight to my clipboard, so I can paste it into BBEdit alongside the rest of the post. To help
+me fill in the missing link (since there’s no App Store URL), the Shortcut even runs a DuckDuckGo
+search for the app’s name + “mac app.” Nine times out of ten, that surfaces the official
+website instantly.</p>
+<p>⸻</p>
+<h3 id="why-this-shortcut-matters">Why This Shortcut Matters</h3>
+<p>This automation is all about eliminating barriers. Whether the app is on the Mac App Store or
+sold directly through a developer’s site, I get the same consistent app card on my blog. No
+manual exporting, no renaming files, no repetitive uploads.</p>
+<p>It also means I can highlight great indie apps without worrying about the extra effort. For
+someone who posts often, these saved minutes add up, but more importantly, they keep me in
+flow. When the tools fade into the background, the writing comes forward.</p>
+<p>⸻</p>
+<h3 id="alfred--shortcuts--a-perfect-match">Alfred + Shortcuts = A Perfect Match</h3>
+<p>Running this Shortcut through Alfred is what makes it truly seamless. Instead of digging
+through Finder or hunting down app paths manually, I just select the app in Alfred, trigger
+the File Action, and let Shortcuts do the heavy lifting.</p>
+<p>This combination works beautifully: Alfred is my quick-launch interface, and Shortcuts is the
+automation engine in the background. Together, they make sharing Mac apps—App Store or not—as
+easy as a keyboard command.</p>
+<p>⸻</p>
+<h3 id="the-bigger-picture">The Bigger Picture</h3>
+<p>This Shortcut fits into a larger workflow where I’ve automated nearly every part of blogging,
+from uploading screenshots to posting entire drafts to GitHub. Each piece removes just enough
+friction to make publishing easier and more enjoyable.</p>
+<p>The end result is that I can write more, share more, and showcase apps without worrying about
+where they’re sold. The Mac App Store doesn’t have to be the gatekeeper for clean links and
+icons anymore.</p>
+<article class="app-card">
+  <a class="app-card__icon" href="https://www.icloud.com/shortcuts/ad57e1ca98d6430ca512e8649ffc96b8" target="_blank" rel="noopener">
+    <img src="/images/Shortcuts%20Icons/Share%20Mac%20App%20HTML%20Button%20%28Public%29%20Icon.jpg" alt="Share Mac App HTML Button app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://www.icloud.com/shortcuts/ad57e1ca98d6430ca512e8649ffc96b8" target="_blank" rel="noopener">
+    Share Mac App HTML Button
+  </a>
+</article>
+
+<h3 id="apps-used-to-create-this-automation">Apps Used to Create this Automation</h3>
+<div class="app-row">
+  
+<article class="app-card">
+  <a class="app-card__icon" href="https://apps.apple.com/ca/app/jayson/id1468691718?mt=12&amp;uo=4" target="_blank" rel="noopener">
+    <img src="/images/App%20Store%20App%20Icons/Jayson%20Icon.jpg" alt="Jayson app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://apps.apple.com/ca/app/jayson/id1468691718?mt=12&amp;uo=4" target="_blank" rel="noopener">
+    Jayson
+  </a>
+</article>
+
+<article class="app-card">
+  <a class="app-card__icon" href="https://www.alfredapp.com/" target="_blank" rel="noopener">
+    <img src="/images/App%20Icons/Alfred%205%20Icon.jpg" alt="Alfred 5 app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://www.alfredapp.com/" target="_blank" rel="noopener">
+    Alfred 5
+  </a>
+</article>
+
+<article class="app-card">
+  <a class="app-card__icon" href="https://latenightsw.com/" target="_blank" rel="noopener">
+    <img src="/images/App%20Icons/Script%20Debugger%20Icon.jpg" alt="Script Debugger app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://latenightsw.com/" target="_blank" rel="noopener">
+    Script Debugger
+  </a>
+</article>
+
+
+</div>
+
+<div class="amj-cta" aria-label="Support and subscription links">
+  <div class="amj-cta__item amj-cta__item--coffee">
+    <a class="amj-cta__button amj-cta__button--coffee" href="https://www.buymeacoffee.com/AidanMJ25" target="_blank" rel="noopener">
+      <span>Buy Me a Coffee</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/posts/index.xml" target="_blank" rel="noopener" aria-label="Subscribe via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Subscribe via RSS</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--newsletter" href="https://buttondown.com/AidanMJ25" target="_blank" rel="noopener">Newsletter via Email</a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/newsletter/index.xml" target="_blank" rel="noopener" aria-label="Newsletter via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Newsletter via RSS</span>
+    </a>
+  </div>
+</div>
+
+]]></content:encoded>
+        
+      </item>
+    
+      <item>
+        <title>App Store Links Made Beautiful with Shortcuts</title>
+        <link>https://www.blog.aidanmaurinjones.com/posts/app-store-links-made-beautiful-with-shortcuts/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/app-store-links-made-beautiful-with-shortcuts/</guid>
+        
+          <pubDate>Tue, 23 Sep 2025 00:00:00 &#43;0000</pubDate>
+        
+        
+          <description><![CDATA[<p>One of the small but constant frictions of running a blog about apps is dealing with App
+Store links. Grabbing the name, copying the link, fetching an icon, turning it all into a
+nicely formatted snippet—it’s not hard, but it’s repetitive. And if you do it often enough,
+it’s exactly the kind of thing that cries out for automation.</p>
+<p>That’s where this Shortcut comes in. Built entirely with stock Shortcuts actions, it takes
+a single App Store link and spits out a polished Hugo shortcode ready to paste into a blog
+post, complete with app name, link, and icon. What used to be a multi-step process is now
+a single tap.</p>
+<p>⸻</p>
+<h3 id="how-it-works">How It Works</h3>
+<p><strong>Getting the App Store ID</strong></p>
+<p>The Shortcut starts by receiving an App Store URL, either from the Share Sheet or your
+clipboard. Using a quick regex ((?&lt;=id)\d+), it extracts the numeric app ID buried in the
+link. That ID becomes the key for looking up everything else.</p>
+<p><strong>Pulling App Metadata</strong></p>
+<p>Next, Shortcuts’ built-in Find on the App Store action does the heavy lifting. It takes the
+app ID and returns structured data: the app’s name, its store page, and, crucially, the artwork
+URL for the icon.</p>
+<p>At this point, the Shortcut already knows enough to generate a working app card, but it
+goes further.</p>
+<p><strong>Naming and File Prep</strong></p>
+<p>The app’s name is cleaned up and stored in a variable, then URL-encoded so it can be used
+safely as a filename. That ensures that even apps with spaces, dashes, or punctuation won’t
+break the upload process later.</p>
+<p><strong>Uploading the Icon</strong></p>
+<p>Here’s where things get clever. The Shortcut builds a GitHub API request to upload the app
+icon directly into the site’s repository. It grabs your personal API key, encodes the file,
+and sends it off with a PUT request. If the file already exists, the Shortcut skips the upload
+to avoid duplicates.</p>
+<p>Behind the scenes, this means your blog’s /static/images/App Store App Icons/ folder is automatically
+updated with the latest app logos—no manual dragging or renaming required.</p>
+<p><strong>Assembling the Shortcode</strong></p>
+<p>Finally, everything comes together in a Hugo appcard snippet:</p>
+<p>This block gets copied straight to your clipboard, ready to paste into any Markdown file. The
+icon path matches the uploaded file, the link points back to the store, and the name is exactly
+as it appears in Apple’s listing.</p>
+<p>⸻</p>
+<h3 id="why-it-matters">Why It Matters</h3>
+<p>This is a classic example of automation as time-saving infrastructure. Writing about apps
+often involves dozens of small formatting chores that add up. By moving them into a Shortcut,
+you don’t just save a few clicks—you make the whole workflow predictable, repeatable, and
+error-free.</p>
+<p>Better still, it’s all built with the tools Apple ships on every device. No third-party apps,
+no scripting languages, no dependencies. Just Shortcuts, GitHub, and a bit of creativity.</p>
+<p>⸻</p>
+<h3 id="the-result">The Result</h3>
+<p>Now, when inspiration strikes, I don’t have to think about sourcing icons or formatting
+snippets. I just share an App Store link, run the Shortcut, and paste the finished card into
+my blog post. It’s instant, it’s reliable, and it makes my site look great with zero extra
+effort.</p>
+<p>For a blog that lives and breathes apps, this Shortcut has become one of those invisible
+automations that pays dividends every single day.</p>
+<article class="app-card">
+  <a class="app-card__icon" href="https://www.icloud.com/shortcuts/7e33edc6ca804b259747d50c768bcf7d" target="_blank" rel="noopener">
+    <img src="/images/Shortcuts%20Icons/Share%20App%20Store%20App%20HTML%20Button%20%28Public%29%20Icon.jpg" alt="Share App Store App HTML Button app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://www.icloud.com/shortcuts/7e33edc6ca804b259747d50c768bcf7d" target="_blank" rel="noopener">
+    Share App Store App HTML Button
+  </a>
+</article>
+
+<h3 id="apps-used-to-create-this-shortcut">Apps Used to Create this Shortcut</h3>
+<article class="app-card">
+  <a class="app-card__icon" href="https://apps.apple.com/ca/app/jayson/id1468691718?mt=12&amp;uo=4" target="_blank" rel="noopener">
+    <img src="/images/App%20Store%20App%20Icons/Jayson%20Icon.jpg" alt="Jayson app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://apps.apple.com/ca/app/jayson/id1468691718?mt=12&amp;uo=4" target="_blank" rel="noopener">
+    Jayson
+  </a>
+</article>
+
+<div class="amj-cta" aria-label="Support and subscription links">
+  <div class="amj-cta__item amj-cta__item--coffee">
+    <a class="amj-cta__button amj-cta__button--coffee" href="https://www.buymeacoffee.com/AidanMJ25" target="_blank" rel="noopener">
+      <span>Buy Me a Coffee</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/posts/index.xml" target="_blank" rel="noopener" aria-label="Subscribe via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Subscribe via RSS</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--newsletter" href="https://buttondown.com/AidanMJ25" target="_blank" rel="noopener">Newsletter via Email</a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/newsletter/index.xml" target="_blank" rel="noopener" aria-label="Newsletter via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Newsletter via RSS</span>
+    </a>
+  </div>
+</div>
+
+]]></description>
+          <content:encoded><![CDATA[<p>One of the small but constant frictions of running a blog about apps is dealing with App
+Store links. Grabbing the name, copying the link, fetching an icon, turning it all into a
+nicely formatted snippet—it’s not hard, but it’s repetitive. And if you do it often enough,
+it’s exactly the kind of thing that cries out for automation.</p>
+<p>That’s where this Shortcut comes in. Built entirely with stock Shortcuts actions, it takes
+a single App Store link and spits out a polished Hugo shortcode ready to paste into a blog
+post, complete with app name, link, and icon. What used to be a multi-step process is now
+a single tap.</p>
+<p>⸻</p>
+<h3 id="how-it-works">How It Works</h3>
+<p><strong>Getting the App Store ID</strong></p>
+<p>The Shortcut starts by receiving an App Store URL, either from the Share Sheet or your
+clipboard. Using a quick regex ((?&lt;=id)\d+), it extracts the numeric app ID buried in the
+link. That ID becomes the key for looking up everything else.</p>
+<p><strong>Pulling App Metadata</strong></p>
+<p>Next, Shortcuts’ built-in Find on the App Store action does the heavy lifting. It takes the
+app ID and returns structured data: the app’s name, its store page, and, crucially, the artwork
+URL for the icon.</p>
+<p>At this point, the Shortcut already knows enough to generate a working app card, but it
+goes further.</p>
+<p><strong>Naming and File Prep</strong></p>
+<p>The app’s name is cleaned up and stored in a variable, then URL-encoded so it can be used
+safely as a filename. That ensures that even apps with spaces, dashes, or punctuation won’t
+break the upload process later.</p>
+<p><strong>Uploading the Icon</strong></p>
+<p>Here’s where things get clever. The Shortcut builds a GitHub API request to upload the app
+icon directly into the site’s repository. It grabs your personal API key, encodes the file,
+and sends it off with a PUT request. If the file already exists, the Shortcut skips the upload
+to avoid duplicates.</p>
+<p>Behind the scenes, this means your blog’s /static/images/App Store App Icons/ folder is automatically
+updated with the latest app logos—no manual dragging or renaming required.</p>
+<p><strong>Assembling the Shortcode</strong></p>
+<p>Finally, everything comes together in a Hugo appcard snippet:</p>
+<p>This block gets copied straight to your clipboard, ready to paste into any Markdown file. The
+icon path matches the uploaded file, the link points back to the store, and the name is exactly
+as it appears in Apple’s listing.</p>
+<p>⸻</p>
+<h3 id="why-it-matters">Why It Matters</h3>
+<p>This is a classic example of automation as time-saving infrastructure. Writing about apps
+often involves dozens of small formatting chores that add up. By moving them into a Shortcut,
+you don’t just save a few clicks—you make the whole workflow predictable, repeatable, and
+error-free.</p>
+<p>Better still, it’s all built with the tools Apple ships on every device. No third-party apps,
+no scripting languages, no dependencies. Just Shortcuts, GitHub, and a bit of creativity.</p>
+<p>⸻</p>
+<h3 id="the-result">The Result</h3>
+<p>Now, when inspiration strikes, I don’t have to think about sourcing icons or formatting
+snippets. I just share an App Store link, run the Shortcut, and paste the finished card into
+my blog post. It’s instant, it’s reliable, and it makes my site look great with zero extra
+effort.</p>
+<p>For a blog that lives and breathes apps, this Shortcut has become one of those invisible
+automations that pays dividends every single day.</p>
+<article class="app-card">
+  <a class="app-card__icon" href="https://www.icloud.com/shortcuts/7e33edc6ca804b259747d50c768bcf7d" target="_blank" rel="noopener">
+    <img src="/images/Shortcuts%20Icons/Share%20App%20Store%20App%20HTML%20Button%20%28Public%29%20Icon.jpg" alt="Share App Store App HTML Button app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://www.icloud.com/shortcuts/7e33edc6ca804b259747d50c768bcf7d" target="_blank" rel="noopener">
+    Share App Store App HTML Button
+  </a>
+</article>
+
+<h3 id="apps-used-to-create-this-shortcut">Apps Used to Create this Shortcut</h3>
+<article class="app-card">
+  <a class="app-card__icon" href="https://apps.apple.com/ca/app/jayson/id1468691718?mt=12&amp;uo=4" target="_blank" rel="noopener">
+    <img src="/images/App%20Store%20App%20Icons/Jayson%20Icon.jpg" alt="Jayson app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://apps.apple.com/ca/app/jayson/id1468691718?mt=12&amp;uo=4" target="_blank" rel="noopener">
+    Jayson
+  </a>
+</article>
+
+<div class="amj-cta" aria-label="Support and subscription links">
+  <div class="amj-cta__item amj-cta__item--coffee">
+    <a class="amj-cta__button amj-cta__button--coffee" href="https://www.buymeacoffee.com/AidanMJ25" target="_blank" rel="noopener">
+      <span>Buy Me a Coffee</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/posts/index.xml" target="_blank" rel="noopener" aria-label="Subscribe via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Subscribe via RSS</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--newsletter" href="https://buttondown.com/AidanMJ25" target="_blank" rel="noopener">Newsletter via Email</a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/newsletter/index.xml" target="_blank" rel="noopener" aria-label="Newsletter via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Newsletter via RSS</span>
+    </a>
+  </div>
+</div>
+
+]]></content:encoded>
+        
+      </item>
+    
+      <item>
+        <title>I Could Write This Blog in Notepad</title>
+        <link>https://www.blog.aidanmaurinjones.com/posts/i-could-write-this-blog-in-notepad/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/i-could-write-this-blog-in-notepad/</guid>
+        
+          <pubDate>Sun, 21 Sep 2025 00:00:00 &#43;0000</pubDate>
+        
+        
+          <description><![CDATA[<p>I’ve started a lot of projects over the years, but few have clicked as quickly and completely
+as my Hugo blog hosted on GitHub Pages. I can’t emphasize enough how much I love this setup.</p>
+<p>Unlike platforms like Squarespace, Wix, or WordPress, I don’t have to deal with heavy
+dashboards, recurring subscription fees, or bloated themes that can slow everything down. There
+are no hidden limits, no proprietary lock-in, and no fear that a company will suddenly change
+its pricing model or redesign the editor. My blog is lean, fast, and completely mine — built
+from plain Markdown files and served directly from GitHub with almost no overhead.</p>
+<hr>
+<h3 id="fast-free-and-reliable">Fast, Free, and Reliable</h3>
+<p>Hugo compiles my site in seconds, spitting out plain HTML that GitHub Pages serves instantly.  That’s the beauty of a <strong>static site</strong>: it’s nothing more than pre-built pages sitting on a
+server, ready to be delivered the moment someone visits. There’s no database query, no
+server-side code, no waiting for templates to render. The site is already fully assembled
+before it ever reaches the browser, which is why it loads so quickly.</p>
+<p>Contrast that with a site you’d build on Squarespace or a traditional CMS like WordPress.
+Those platforms generate pages on the fly. When a reader visits, the server has to pull content
+from a database, render it through a template engine, load plugins, and then send it all back.
+That’s powerful, but it adds complexity and overhead — more moving parts, more chances for
+something to break, and more ways for the site to slow down.</p>
+<p>With Hugo and GitHub Pages, none of that exists. The entire site is already built ahead of
+time on my computer, then pushed as plain HTML, CSS, and JavaScript. GitHub Pages simply
+serves those files as-is. The result is a site that’s incredibly fast, nearly impossible to
+break, and requires zero maintenance.</p>
+<p>And because GitHub Pages is handling hosting, I get free HTTPS, rock-solid uptime, and
+global distribution without ever paying a cent. That’s tough to beat.</p>
+<hr>
+<h3 id="version-control-built-in">Version Control Built In</h3>
+<p>Because it’s GitHub, every change is automatically versioned. If I make a mistake, I can roll
+back with a single command. If I want to experiment with a new design, I can branch, test, and
+merge—exactly like software development, but for my writing.</p>
+<hr>
+<h3 id="markdown-as-the-foundation">Markdown as the Foundation</h3>
+<p>The most important part, though, is that everything is <em><strong>just Markdown files</strong></em>. My posts aren’t
+trapped in a database or hidden behind a proprietary editor. They’re plain text, human-readable,
+and universally portable. If Hugo disappeared tomorrow, I’d still have every word I’ve written,
+ready to be dropped into another system.</p>
+<p>Markdown makes my blog future-proof. It’s a format that has stood the test of time, and it
+gives me confidence that I’ll never lose access to my own content. I can edit posts in Drafts,
+VS Code, or even Notes if I want to — the tools don’t matter, because the content is mine.</p>
+<hr>
+<h3 id="the-right-balance-workflow-over-design">The Right Balance: Workflow Over Design</h3>
+<p>What makes this setup perfect for me is that it lets me focus on the part I actually care
+about: the backend and the posting workflow. I never wanted to spend hours tweaking a front-end
+or dragging blocks around to make a site look just right. With Hugo, I pick a theme once,
+and that’s it. The design takes care of itself.</p>
+<p>What matters to me is how I write, publish, and maintain my blog. And in that respect, Hugo +
+GitHub Pages is ideal. My workflow is streamlined: write in Markdown, commit to Git, push,
+and I’m done. I get all the reliability, portability, and automation I want on the backend
+without having to think about the front-end at all.</p>
+<hr>
+<h3 id="backups-made-simple">Backups Made Simple</h3>
+<p>Because my site is nothing more than a folder of Markdown files and a Git repository, backing
+it up is effortless. I always have a complete copy on my computer, and duplicating it anywhere
+else is as simple as syncing the folder.</p>
+<p>Want a backup on an external drive? Copy the folder. Want cloud redundancy? Drop it in iCloud,
+Syncthing, or any storage service I like. There’s no complex database export, no special tools,
+no hoops to jump through.</p>
+<p>The result is peace of mind: no matter what happens to GitHub or my computer, my blog exists
+in multiple places, always under my control.</p>
+<hr>
+<h3 id="automation-heaven">Automation Heaven</h3>
+<p>One of my favorite parts is how well this setup fits into my automation workflows. From
+Shortcuts on my iPhone to custom scripts on my Mac, I can publish new posts, upload images,
+or tweak site layouts without ever opening a CMS. It’s just Markdown files and Git.</p>
+<hr>
+<h3 id="true-ownership-of-content">True Ownership of Content</h3>
+<p>That’s the real magic of this setup: ownership. My words live in my repository, under my
+control. No ads. No third-party lock-in. No subscription to keep the lights on. Just a blog
+I fully control, powered by the simplest possible ingredients.</p>
+<hr>
+<h3 id="why-it-works-for-me">Why It Works for Me</h3>
+<p>There are plenty of publishing platforms out there, but Hugo + GitHub Pages hits the balance
+I’ve been chasing for years. It’s fast, reliable, and deeply personal. Most importantly, it
+ensures my writing will always be accessible, portable, and safely backed up.</p>
+<p>The biggest win, though, is simplicity. Since my posts are just Markdown files, I don’t have
+to wrestle with a visual editor, fight with formatting, or wonder if my text will look
+different once it’s published. I write in plain text, add a little front matter for metadata,
+and Hugo handles the rest. My words stay clean and consistent, no matter how long I’ve been
+away or what app I use to write them.</p>
+<p>That simplicity takes away the friction. Instead of spending energy maintaining a CMS,
+updating plugins, or tweaking layouts, I can focus entirely on the thing that matters:
+writing. The blog feels invisible in the best possible way — it doesn’t demand attention, it
+just works.</p>
+<p>Sometimes the best platform is the one that gets out of the way. For me, that’s Hugo, GitHub
+Pages, and a folder full of Markdown files. It’s a setup that respects my time, my content,
+and my workflow. And I’ve never enjoyed blogging more.</p>
+<div class="amj-cta" aria-label="Support and subscription links">
+  <div class="amj-cta__item amj-cta__item--coffee">
+    <a class="amj-cta__button amj-cta__button--coffee" href="https://www.buymeacoffee.com/AidanMJ25" target="_blank" rel="noopener">
+      <span>Buy Me a Coffee</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/posts/index.xml" target="_blank" rel="noopener" aria-label="Subscribe via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Subscribe via RSS</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--newsletter" href="https://buttondown.com/AidanMJ25" target="_blank" rel="noopener">Newsletter via Email</a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/newsletter/index.xml" target="_blank" rel="noopener" aria-label="Newsletter via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Newsletter via RSS</span>
+    </a>
+  </div>
+</div>
+
+]]></description>
+          <content:encoded><![CDATA[<p>I’ve started a lot of projects over the years, but few have clicked as quickly and completely
+as my Hugo blog hosted on GitHub Pages. I can’t emphasize enough how much I love this setup.</p>
+<p>Unlike platforms like Squarespace, Wix, or WordPress, I don’t have to deal with heavy
+dashboards, recurring subscription fees, or bloated themes that can slow everything down. There
+are no hidden limits, no proprietary lock-in, and no fear that a company will suddenly change
+its pricing model or redesign the editor. My blog is lean, fast, and completely mine — built
+from plain Markdown files and served directly from GitHub with almost no overhead.</p>
+<hr>
+<h3 id="fast-free-and-reliable">Fast, Free, and Reliable</h3>
+<p>Hugo compiles my site in seconds, spitting out plain HTML that GitHub Pages serves instantly.  That’s the beauty of a <strong>static site</strong>: it’s nothing more than pre-built pages sitting on a
+server, ready to be delivered the moment someone visits. There’s no database query, no
+server-side code, no waiting for templates to render. The site is already fully assembled
+before it ever reaches the browser, which is why it loads so quickly.</p>
+<p>Contrast that with a site you’d build on Squarespace or a traditional CMS like WordPress.
+Those platforms generate pages on the fly. When a reader visits, the server has to pull content
+from a database, render it through a template engine, load plugins, and then send it all back.
+That’s powerful, but it adds complexity and overhead — more moving parts, more chances for
+something to break, and more ways for the site to slow down.</p>
+<p>With Hugo and GitHub Pages, none of that exists. The entire site is already built ahead of
+time on my computer, then pushed as plain HTML, CSS, and JavaScript. GitHub Pages simply
+serves those files as-is. The result is a site that’s incredibly fast, nearly impossible to
+break, and requires zero maintenance.</p>
+<p>And because GitHub Pages is handling hosting, I get free HTTPS, rock-solid uptime, and
+global distribution without ever paying a cent. That’s tough to beat.</p>
+<hr>
+<h3 id="version-control-built-in">Version Control Built In</h3>
+<p>Because it’s GitHub, every change is automatically versioned. If I make a mistake, I can roll
+back with a single command. If I want to experiment with a new design, I can branch, test, and
+merge—exactly like software development, but for my writing.</p>
+<hr>
+<h3 id="markdown-as-the-foundation">Markdown as the Foundation</h3>
+<p>The most important part, though, is that everything is <em><strong>just Markdown files</strong></em>. My posts aren’t
+trapped in a database or hidden behind a proprietary editor. They’re plain text, human-readable,
+and universally portable. If Hugo disappeared tomorrow, I’d still have every word I’ve written,
+ready to be dropped into another system.</p>
+<p>Markdown makes my blog future-proof. It’s a format that has stood the test of time, and it
+gives me confidence that I’ll never lose access to my own content. I can edit posts in Drafts,
+VS Code, or even Notes if I want to — the tools don’t matter, because the content is mine.</p>
+<hr>
+<h3 id="the-right-balance-workflow-over-design">The Right Balance: Workflow Over Design</h3>
+<p>What makes this setup perfect for me is that it lets me focus on the part I actually care
+about: the backend and the posting workflow. I never wanted to spend hours tweaking a front-end
+or dragging blocks around to make a site look just right. With Hugo, I pick a theme once,
+and that’s it. The design takes care of itself.</p>
+<p>What matters to me is how I write, publish, and maintain my blog. And in that respect, Hugo +
+GitHub Pages is ideal. My workflow is streamlined: write in Markdown, commit to Git, push,
+and I’m done. I get all the reliability, portability, and automation I want on the backend
+without having to think about the front-end at all.</p>
+<hr>
+<h3 id="backups-made-simple">Backups Made Simple</h3>
+<p>Because my site is nothing more than a folder of Markdown files and a Git repository, backing
+it up is effortless. I always have a complete copy on my computer, and duplicating it anywhere
+else is as simple as syncing the folder.</p>
+<p>Want a backup on an external drive? Copy the folder. Want cloud redundancy? Drop it in iCloud,
+Syncthing, or any storage service I like. There’s no complex database export, no special tools,
+no hoops to jump through.</p>
+<p>The result is peace of mind: no matter what happens to GitHub or my computer, my blog exists
+in multiple places, always under my control.</p>
+<hr>
+<h3 id="automation-heaven">Automation Heaven</h3>
+<p>One of my favorite parts is how well this setup fits into my automation workflows. From
+Shortcuts on my iPhone to custom scripts on my Mac, I can publish new posts, upload images,
+or tweak site layouts without ever opening a CMS. It’s just Markdown files and Git.</p>
+<hr>
+<h3 id="true-ownership-of-content">True Ownership of Content</h3>
+<p>That’s the real magic of this setup: ownership. My words live in my repository, under my
+control. No ads. No third-party lock-in. No subscription to keep the lights on. Just a blog
+I fully control, powered by the simplest possible ingredients.</p>
+<hr>
+<h3 id="why-it-works-for-me">Why It Works for Me</h3>
+<p>There are plenty of publishing platforms out there, but Hugo + GitHub Pages hits the balance
+I’ve been chasing for years. It’s fast, reliable, and deeply personal. Most importantly, it
+ensures my writing will always be accessible, portable, and safely backed up.</p>
+<p>The biggest win, though, is simplicity. Since my posts are just Markdown files, I don’t have
+to wrestle with a visual editor, fight with formatting, or wonder if my text will look
+different once it’s published. I write in plain text, add a little front matter for metadata,
+and Hugo handles the rest. My words stay clean and consistent, no matter how long I’ve been
+away or what app I use to write them.</p>
+<p>That simplicity takes away the friction. Instead of spending energy maintaining a CMS,
+updating plugins, or tweaking layouts, I can focus entirely on the thing that matters:
+writing. The blog feels invisible in the best possible way — it doesn’t demand attention, it
+just works.</p>
+<p>Sometimes the best platform is the one that gets out of the way. For me, that’s Hugo, GitHub
+Pages, and a folder full of Markdown files. It’s a setup that respects my time, my content,
+and my workflow. And I’ve never enjoyed blogging more.</p>
+<div class="amj-cta" aria-label="Support and subscription links">
+  <div class="amj-cta__item amj-cta__item--coffee">
+    <a class="amj-cta__button amj-cta__button--coffee" href="https://www.buymeacoffee.com/AidanMJ25" target="_blank" rel="noopener">
+      <span>Buy Me a Coffee</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/posts/index.xml" target="_blank" rel="noopener" aria-label="Subscribe via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Subscribe via RSS</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--newsletter" href="https://buttondown.com/AidanMJ25" target="_blank" rel="noopener">Newsletter via Email</a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/newsletter/index.xml" target="_blank" rel="noopener" aria-label="Newsletter via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Newsletter via RSS</span>
+    </a>
+  </div>
+</div>
+
+]]></content:encoded>
+        
+      </item>
+    
+      <item>
+        <title>A Hundred &amp; One Post Buttons</title>
+        <link>https://www.blog.aidanmaurinjones.com/posts/a-hundred--one-post-buttons/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/a-hundred--one-post-buttons/</guid>
+        
+          <pubDate>Sun, 21 Sep 2025 00:00:00 &#43;0000</pubDate>
+        
+        
+          <description><![CDATA[<p>One of the reasons I love this setup so much is that publishing isn&rsquo;t just simple &ndash; it&rsquo;s
+fully automated with nothing more than stock Shortcuts actions on iOS and macOS. No scripts,
+no extra tools. Just Shortcuts and GitHub&rsquo;s API.</p>
+<p>Here&rsquo;s how it works, step by step:</p>
+<hr>
+<h3 id="1-take-a-markdown-file-as-input">1. Take a Markdown file as input</h3>
+<p>The Shortcut starts by receiving a file &ndash; either from the Share Sheet or by prompting me
+to pick one. This file is the blog post I&rsquo;ve written in plain text.</p>
+<ul>
+<li>Action: Receive Files from Share Sheet</li>
+<li>Why: Keeps things flexible &ndash; I can run the Shortcut from Finder on my Mac, Drafts on my
+iPhone, or anywhere else that can share a Markdown file.</li>
+</ul>
+<hr>
+<h3 id="2-prepare-the-file-name">2. Prepare the file name</h3>
+<p>Next, the Shortcut grabs the file&rsquo;s name, URL-encodes it (so it&rsquo;s safe for GitHub&rsquo;s API),
+and saves it as Pretty File Name.</p>
+<ul>
+<li>Action: Get Name from Blog Post → URL Encode → Set Variable</li>
+</ul>
+<p>This ensures my post shows up as my-post.md inside the Hugo content/posts/ folder.</p>
+<hr>
+<h3 id="3-encode-the-post-content">3. Encode the post content</h3>
+<p>The raw text of the file is pulled out and converted to Base64. GitHub&rsquo;s API requires files
+to be sent this way.</p>
+<ul>
+<li>Action: Get Text from Blog Post → Encode Text with Base64</li>
+</ul>
+<p>Now I&rsquo;ve got my post ready in a format GitHub understands.</p>
+<hr>
+<h3 id="4-build-the-api-request">4. Build the API request</h3>
+<p>The Shortcut constructs a URL to the right location in my repo:</p>
+<pre><code>https://api.github.com/repos/&lt;username&gt;/&lt;repo&gt;/contents/content/posts/&lt;Pretty File Name&gt;.md
+</code></pre>
+<p>This points GitHub&rsquo;s API directly to where the Markdown file should live.</p>
+<hr>
+<h3 id="5-check-if-the-post-exists">5. Check if the post exists</h3>
+<p>The Shortcut sends a GET request to that URL:</p>
+<ul>
+<li>If a file exists, GitHub&rsquo;s response includes a sha value (basically the file&rsquo;s unique ID).</li>
+<li>If it doesn&rsquo;t exist, there&rsquo;s no sha.</li>
+</ul>
+<p>This lets the Shortcut decide whether to update an existing post or create a brand new one.</p>
+<hr>
+<h3 id="6-update-or-create-the-post">6. Update or create the post</h3>
+<p>Depending on the result, the Shortcut runs one of two PUT requests:</p>
+<ul>
+<li>Update Blog Post → PUT with the sha included</li>
+<li>Post New Blog Post → PUT without the sha</li>
+</ul>
+<p>Both requests send JSON with:</p>
+<pre><code>{
+  &quot;message&quot;: &quot;Posted via Shortcuts - &lt;Name of BlogPost&gt;&quot;,
+  &quot;content&quot;: &quot;&lt;Base64 Encoded Markdown&gt;&quot;,
+  &quot;branch&quot;: &quot;main&quot;,
+  &quot;sha&quot;: &quot;&lt;if updating&gt;&quot;
+}
+</code></pre>
+<p>GitHub commits the file to my repo, and Hugo + GitHub Pages do the rest.</p>
+<hr>
+<h3 id="7-done">7. Done!</h3>
+<p>That&rsquo;s it. Within seconds, the post appears on my live site &ndash; no browser, no dashboard, no
+manual uploads.</p>
+<hr>
+<h3 id="why-this-is-so-good">Why This Is So Good</h3>
+<ul>
+<li>Cross-platform: I use it on my Mac via Finder + Service Station, as an Alfred file action,
+in BBEdit via AppleScript, and on my iPhone via Drafts. If I had an iPad, it would work there too.</li>
+<li>Minimal setup: The Shortcut is just a chain of built-in actions. No scripts, no third-party
+apps.</li>
+<li>Future-proof: The only input it needs is a Markdown file &ndash; and that&rsquo;s the one thing my
+blog will always be built on.</li>
+</ul>
+<article class="app-card">
+  <a class="app-card__icon" href="https://www.icloud.com/shortcuts/d96fe2195053424793b4a4a9a3bfab33" target="_blank" rel="noopener">
+    <img src="/images/Shortcuts%20Icons/Post%20to%20Blog%20%28Public%29%20Icon.jpg" alt="Post to Blog app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://www.icloud.com/shortcuts/d96fe2195053424793b4a4a9a3bfab33" target="_blank" rel="noopener">
+    Post to Blog
+  </a>
+</article>
+
+<h3 id="apps-mentioned-in-this-post">Apps Mentioned in this Post</h3>
+<div class="app-row">
+  
+<article class="app-card">
+  <a class="app-card__icon" href="https://apps.apple.com/ca/app/drafts/id1435957248?mt=12&amp;uo=4" target="_blank" rel="noopener">
+    <img src="/images/App%20Store%20App%20Icons/Drafts%20Icon.jpg" alt="Drafts app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://apps.apple.com/ca/app/drafts/id1435957248?mt=12&amp;uo=4" target="_blank" rel="noopener">
+    Drafts
+  </a>
+</article>
+
+<article class="app-card">
+  <a class="app-card__icon" href="https://apps.apple.com/ca/app/service-station/id1503136033?mt=12&amp;uo=4" target="_blank" rel="noopener">
+    <img src="/images/App%20Store%20App%20Icons/Service%20Station%20Icon.jpg" alt="Service Station app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://apps.apple.com/ca/app/service-station/id1503136033?mt=12&amp;uo=4" target="_blank" rel="noopener">
+    Service Station
+  </a>
+</article>
+
+<article class="app-card">
+  <a class="app-card__icon" href="http://www.barebones.com/products/bbedit/index.html" target="_blank" rel="noopener">
+    <img src="/images/App%20Icons/BBEdit%20Icon.jpg" alt="BBEdit app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="http://www.barebones.com/products/bbedit/index.html" target="_blank" rel="noopener">
+    BBEdit
+  </a>
+</article>
+
+<article class="app-card">
+  <a class="app-card__icon" href="https://www.alfredapp.com/" target="_blank" rel="noopener">
+    <img src="/images/App%20Icons/Alfred%205%20Icon.jpg" alt="Alfred 5 app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://www.alfredapp.com/" target="_blank" rel="noopener">
+    Alfred 5
+  </a>
+</article>
+
+
+</div>
+
+<div class="amj-cta" aria-label="Support and subscription links">
+  <div class="amj-cta__item amj-cta__item--coffee">
+    <a class="amj-cta__button amj-cta__button--coffee" href="https://www.buymeacoffee.com/AidanMJ25" target="_blank" rel="noopener">
+      <span>Buy Me a Coffee</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/posts/index.xml" target="_blank" rel="noopener" aria-label="Subscribe via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Subscribe via RSS</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--newsletter" href="https://buttondown.com/AidanMJ25" target="_blank" rel="noopener">Newsletter via Email</a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/newsletter/index.xml" target="_blank" rel="noopener" aria-label="Newsletter via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Newsletter via RSS</span>
+    </a>
+  </div>
+</div>
+
+]]></description>
+          <content:encoded><![CDATA[<p>One of the reasons I love this setup so much is that publishing isn&rsquo;t just simple &ndash; it&rsquo;s
+fully automated with nothing more than stock Shortcuts actions on iOS and macOS. No scripts,
+no extra tools. Just Shortcuts and GitHub&rsquo;s API.</p>
+<p>Here&rsquo;s how it works, step by step:</p>
+<hr>
+<h3 id="1-take-a-markdown-file-as-input">1. Take a Markdown file as input</h3>
+<p>The Shortcut starts by receiving a file &ndash; either from the Share Sheet or by prompting me
+to pick one. This file is the blog post I&rsquo;ve written in plain text.</p>
+<ul>
+<li>Action: Receive Files from Share Sheet</li>
+<li>Why: Keeps things flexible &ndash; I can run the Shortcut from Finder on my Mac, Drafts on my
+iPhone, or anywhere else that can share a Markdown file.</li>
+</ul>
+<hr>
+<h3 id="2-prepare-the-file-name">2. Prepare the file name</h3>
+<p>Next, the Shortcut grabs the file&rsquo;s name, URL-encodes it (so it&rsquo;s safe for GitHub&rsquo;s API),
+and saves it as Pretty File Name.</p>
+<ul>
+<li>Action: Get Name from Blog Post → URL Encode → Set Variable</li>
+</ul>
+<p>This ensures my post shows up as my-post.md inside the Hugo content/posts/ folder.</p>
+<hr>
+<h3 id="3-encode-the-post-content">3. Encode the post content</h3>
+<p>The raw text of the file is pulled out and converted to Base64. GitHub&rsquo;s API requires files
+to be sent this way.</p>
+<ul>
+<li>Action: Get Text from Blog Post → Encode Text with Base64</li>
+</ul>
+<p>Now I&rsquo;ve got my post ready in a format GitHub understands.</p>
+<hr>
+<h3 id="4-build-the-api-request">4. Build the API request</h3>
+<p>The Shortcut constructs a URL to the right location in my repo:</p>
+<pre><code>https://api.github.com/repos/&lt;username&gt;/&lt;repo&gt;/contents/content/posts/&lt;Pretty File Name&gt;.md
+</code></pre>
+<p>This points GitHub&rsquo;s API directly to where the Markdown file should live.</p>
+<hr>
+<h3 id="5-check-if-the-post-exists">5. Check if the post exists</h3>
+<p>The Shortcut sends a GET request to that URL:</p>
+<ul>
+<li>If a file exists, GitHub&rsquo;s response includes a sha value (basically the file&rsquo;s unique ID).</li>
+<li>If it doesn&rsquo;t exist, there&rsquo;s no sha.</li>
+</ul>
+<p>This lets the Shortcut decide whether to update an existing post or create a brand new one.</p>
+<hr>
+<h3 id="6-update-or-create-the-post">6. Update or create the post</h3>
+<p>Depending on the result, the Shortcut runs one of two PUT requests:</p>
+<ul>
+<li>Update Blog Post → PUT with the sha included</li>
+<li>Post New Blog Post → PUT without the sha</li>
+</ul>
+<p>Both requests send JSON with:</p>
+<pre><code>{
+  &quot;message&quot;: &quot;Posted via Shortcuts - &lt;Name of BlogPost&gt;&quot;,
+  &quot;content&quot;: &quot;&lt;Base64 Encoded Markdown&gt;&quot;,
+  &quot;branch&quot;: &quot;main&quot;,
+  &quot;sha&quot;: &quot;&lt;if updating&gt;&quot;
+}
+</code></pre>
+<p>GitHub commits the file to my repo, and Hugo + GitHub Pages do the rest.</p>
+<hr>
+<h3 id="7-done">7. Done!</h3>
+<p>That&rsquo;s it. Within seconds, the post appears on my live site &ndash; no browser, no dashboard, no
+manual uploads.</p>
+<hr>
+<h3 id="why-this-is-so-good">Why This Is So Good</h3>
+<ul>
+<li>Cross-platform: I use it on my Mac via Finder + Service Station, as an Alfred file action,
+in BBEdit via AppleScript, and on my iPhone via Drafts. If I had an iPad, it would work there too.</li>
+<li>Minimal setup: The Shortcut is just a chain of built-in actions. No scripts, no third-party
+apps.</li>
+<li>Future-proof: The only input it needs is a Markdown file &ndash; and that&rsquo;s the one thing my
+blog will always be built on.</li>
+</ul>
+<article class="app-card">
+  <a class="app-card__icon" href="https://www.icloud.com/shortcuts/d96fe2195053424793b4a4a9a3bfab33" target="_blank" rel="noopener">
+    <img src="/images/Shortcuts%20Icons/Post%20to%20Blog%20%28Public%29%20Icon.jpg" alt="Post to Blog app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://www.icloud.com/shortcuts/d96fe2195053424793b4a4a9a3bfab33" target="_blank" rel="noopener">
+    Post to Blog
+  </a>
+</article>
+
+<h3 id="apps-mentioned-in-this-post">Apps Mentioned in this Post</h3>
+<div class="app-row">
+  
+<article class="app-card">
+  <a class="app-card__icon" href="https://apps.apple.com/ca/app/drafts/id1435957248?mt=12&amp;uo=4" target="_blank" rel="noopener">
+    <img src="/images/App%20Store%20App%20Icons/Drafts%20Icon.jpg" alt="Drafts app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://apps.apple.com/ca/app/drafts/id1435957248?mt=12&amp;uo=4" target="_blank" rel="noopener">
+    Drafts
+  </a>
+</article>
+
+<article class="app-card">
+  <a class="app-card__icon" href="https://apps.apple.com/ca/app/service-station/id1503136033?mt=12&amp;uo=4" target="_blank" rel="noopener">
+    <img src="/images/App%20Store%20App%20Icons/Service%20Station%20Icon.jpg" alt="Service Station app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://apps.apple.com/ca/app/service-station/id1503136033?mt=12&amp;uo=4" target="_blank" rel="noopener">
+    Service Station
+  </a>
+</article>
+
+<article class="app-card">
+  <a class="app-card__icon" href="http://www.barebones.com/products/bbedit/index.html" target="_blank" rel="noopener">
+    <img src="/images/App%20Icons/BBEdit%20Icon.jpg" alt="BBEdit app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="http://www.barebones.com/products/bbedit/index.html" target="_blank" rel="noopener">
+    BBEdit
+  </a>
+</article>
+
+<article class="app-card">
+  <a class="app-card__icon" href="https://www.alfredapp.com/" target="_blank" rel="noopener">
+    <img src="/images/App%20Icons/Alfred%205%20Icon.jpg" alt="Alfred 5 app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://www.alfredapp.com/" target="_blank" rel="noopener">
+    Alfred 5
+  </a>
+</article>
+
+
+</div>
+
+<div class="amj-cta" aria-label="Support and subscription links">
+  <div class="amj-cta__item amj-cta__item--coffee">
+    <a class="amj-cta__button amj-cta__button--coffee" href="https://www.buymeacoffee.com/AidanMJ25" target="_blank" rel="noopener">
+      <span>Buy Me a Coffee</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/posts/index.xml" target="_blank" rel="noopener" aria-label="Subscribe via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Subscribe via RSS</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--newsletter" href="https://buttondown.com/AidanMJ25" target="_blank" rel="noopener">Newsletter via Email</a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/newsletter/index.xml" target="_blank" rel="noopener" aria-label="Newsletter via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Newsletter via RSS</span>
+    </a>
+  </div>
+</div>
+
+]]></content:encoded>
+        
+      </item>
+    
+  </channel>
+</rss>

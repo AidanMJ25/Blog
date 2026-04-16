@@ -1,0 +1,18 @@
+<header class="site-header">
+  <div class="site-header__brand">
+    <p class="site-header__title"><a href="{{ site.Home.RelPermalink }}">{{ site.Title }}</a></p>
+    <p class="site-header__tagline">{{ site.Params.description }}</p>
+  </div>
+  <nav class="site-nav site-nav--desktop" aria-label="Primary">
+    {{ partial "nav-links.html" . }}
+  </nav>
+  <details class="site-nav-toggle">
+    <summary class="site-nav-toggle__summary" aria-label="Open menu">
+      <span class="site-nav-toggle__label">Menu</span>
+      <span class="site-nav-toggle__icon" aria-hidden="true"></span>
+    </summary>
+    <nav class="site-nav site-nav--mobile" aria-label="Mobile primary">
+      {{ partial "nav-links.html" . }}
+    </nav>
+  </details>
+</header>
