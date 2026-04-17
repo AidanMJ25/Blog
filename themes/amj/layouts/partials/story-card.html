@@ -1,9 +1,6 @@
 {{ $page := .page }}
 {{ $variant := .variant | default "default" }}
 <article class="story-card{{ if eq $variant `feature` }} story-card--feature{{ end }}{{ if eq $variant `compact` }} story-card--compact{{ end }}">
-  {{ with $page.CurrentSection }}
-    <p class="story-card__section"><a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
-  {{ end }}
   <h2 class="story-card__title"><a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a></h2>
   <div class="story-card__meta">
     <span>{{ $page.Date.Format "January 2, 2006" }}</span>

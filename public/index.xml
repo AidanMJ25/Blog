@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Aidan Maurin-Jones</title>
-    <link>http://localhost:1313/</link>
+    <link>https://www.blog.aidanmaurinjones.com/</link>
     <description>Aidan Maurin-Jones shares tools, automations, and thoughts on whatever’s interesting this week.</description>
     <language>en</language>
     
-      <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml"></atom:link>
+      <atom:link href="https://www.blog.aidanmaurinjones.com/index.xml" rel="self" type="application/rss+xml"></atom:link>
     
     
       <item>
         <title>Building a Smarter Home, One Screen at a Time</title>
-        <link>http://localhost:1313/posts/building-a-smarter-home-one-screen-at-a-time/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/building-a-smarter-home-one-screen-at-a-time/</guid>
+        <link>https://www.blog.aidanmaurinjones.com/posts/building-a-smarter-home-one-screen-at-a-time/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/building-a-smarter-home-one-screen-at-a-time/</guid>
         
           <pubDate>Fri, 03 Apr 2026 00:00:00 &#43;0000</pubDate>
         
@@ -208,8 +208,8 @@
     
       <item>
         <title>A Remote That Finally Belongs to You</title>
-        <link>http://localhost:1313/posts/a-remote-that-finally-belongs-to-you/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/a-remote-that-finally-belongs-to-you/</guid>
+        <link>https://www.blog.aidanmaurinjones.com/posts/a-remote-that-finally-belongs-to-you/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/a-remote-that-finally-belongs-to-you/</guid>
         
           <pubDate>Thu, 02 Apr 2026 00:00:00 &#43;0000</pubDate>
         
@@ -549,8 +549,8 @@
     
       <item>
         <title>A New Landing Page &amp; the Blog&#39;s New Home</title>
-        <link>http://localhost:1313/posts/a-new-landing-page--the-blogs-new-home/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/a-new-landing-page--the-blogs-new-home/</guid>
+        <link>https://www.blog.aidanmaurinjones.com/posts/a-new-landing-page--the-blogs-new-home/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/a-new-landing-page--the-blogs-new-home/</guid>
         
           <pubDate>Sun, 19 Oct 2025 00:00:00 &#43;0000</pubDate>
         
@@ -690,8 +690,8 @@ one site for meeting.</p>
     
       <item>
         <title>Why Obsidian Doesn’t Work for Me</title>
-        <link>http://localhost:1313/posts/why-obsidian-doesnt-work-for-me/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/why-obsidian-doesnt-work-for-me/</guid>
+        <link>https://www.blog.aidanmaurinjones.com/posts/why-obsidian-doesnt-work-for-me/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/why-obsidian-doesnt-work-for-me/</guid>
         
           <pubDate>Fri, 03 Oct 2025 00:00:00 &#43;0000</pubDate>
         
@@ -913,8 +913,8 @@ one that disappears into your workflow and feels natural every day.</p>
     
       <item>
         <title>Automating My Newsletter Workflow: One Markdown File for Hugo and Buttondown</title>
-        <link>http://localhost:1313/posts/automating-my-newsletter-workflow-one-markdown-file-for-hugo-and-buttondown/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/automating-my-newsletter-workflow-one-markdown-file-for-hugo-and-buttondown/</guid>
+        <link>https://www.blog.aidanmaurinjones.com/posts/automating-my-newsletter-workflow-one-markdown-file-for-hugo-and-buttondown/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/automating-my-newsletter-workflow-one-markdown-file-for-hugo-and-buttondown/</guid>
         
           <pubDate>Wed, 01 Oct 2025 00:00:00 &#43;0000</pubDate>
         
@@ -1108,8 +1108,8 @@ more often.</p>
     
       <item>
         <title>What&#39;s New at the Blog - Shortcuts, Automation &amp; a Dash of Humor</title>
-        <link>http://localhost:1313/newsletter/whats-new-at-the-blog---shortcuts-automation--a-dash-of-humor/</link>
-        <guid isPermaLink="true">http://localhost:1313/newsletter/whats-new-at-the-blog---shortcuts-automation--a-dash-of-humor/</guid>
+        <link>https://www.blog.aidanmaurinjones.com/newsletter/whats-new-at-the-blog---shortcuts-automation--a-dash-of-humor/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/newsletter/whats-new-at-the-blog---shortcuts-automation--a-dash-of-humor/</guid>
         
           <pubDate>Mon, 29 Sep 2025 00:00:00 &#43;0000</pubDate>
         
@@ -1285,8 +1285,8 @@ HomeKit, or combining shortcuts + other tools you love). Stay tuned.</p>
     
       <item>
         <title>Fighting Spam with Automation: A Shortcut for Writing Hilarious Replies</title>
-        <link>http://localhost:1313/posts/fighting-spam-with-automation--a-shortcut-for-writing-hilarious-replies/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/fighting-spam-with-automation--a-shortcut-for-writing-hilarious-replies/</guid>
+        <link>https://www.blog.aidanmaurinjones.com/posts/fighting-spam-with-automation--a-shortcut-for-writing-hilarious-replies/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/fighting-spam-with-automation--a-shortcut-for-writing-hilarious-replies/</guid>
         
           <pubDate>Fri, 26 Sep 2025 00:00:00 &#43;0000</pubDate>
         
@@ -1630,8 +1630,8 @@ roast they’ll never actually read.</p>
     
       <item>
         <title>Get This Week’s Events: A Smarter Calendar Shortcut</title>
-        <link>http://localhost:1313/posts/get-this-weeks-events-a-smarter-calendar-shortcut/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/get-this-weeks-events-a-smarter-calendar-shortcut/</guid>
+        <link>https://www.blog.aidanmaurinjones.com/posts/get-this-weeks-events-a-smarter-calendar-shortcut/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/get-this-weeks-events-a-smarter-calendar-shortcut/</guid>
         
           <pubDate>Thu, 25 Sep 2025 00:00:00 &#43;0000</pubDate>
         
@@ -1771,8 +1771,8 @@ roast they’ll never actually read.</p>
     
       <item>
         <title>Convert Current Date to Unix Time with Shortcuts</title>
-        <link>http://localhost:1313/posts/convert-current-date-to-unix-time-with-shortcuts/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/convert-current-date-to-unix-time-with-shortcuts/</guid>
+        <link>https://www.blog.aidanmaurinjones.com/posts/convert-current-date-to-unix-time-with-shortcuts/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/convert-current-date-to-unix-time-with-shortcuts/</guid>
         
           <pubDate>Thu, 25 Sep 2025 00:00:00 &#43;0000</pubDate>
         
@@ -1896,8 +1896,8 @@ roast they’ll never actually read.</p>
     
       <item>
         <title>Automating TP-Link Kasa Devices with Shortcuts</title>
-        <link>http://localhost:1313/posts/automating-tp-link-kasa-devices-with-shortcuts/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/automating-tp-link-kasa-devices-with-shortcuts/</guid>
+        <link>https://www.blog.aidanmaurinjones.com/posts/automating-tp-link-kasa-devices-with-shortcuts/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/automating-tp-link-kasa-devices-with-shortcuts/</guid>
         
           <pubDate>Thu, 25 Sep 2025 00:00:00 &#43;0000</pubDate>
         
@@ -2245,8 +2245,8 @@ giving you the tools to bend devices and services to your will&ndash;even when t
     
       <item>
         <title>Controlling SwitchBot Devices with Shortcuts and the Web API</title>
-        <link>http://localhost:1313/posts/controlling-switchbot-devices-with-shortcuts-and-the-web-api/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/controlling-switchbot-devices-with-shortcuts-and-the-web-api/</guid>
+        <link>https://www.blog.aidanmaurinjones.com/posts/controlling-switchbot-devices-with-shortcuts-and-the-web-api/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/controlling-switchbot-devices-with-shortcuts-and-the-web-api/</guid>
         
           <pubDate>Wed, 24 Sep 2025 00:00:00 &#43;0000</pubDate>
         
@@ -2436,8 +2436,8 @@ giving you the tools to bend devices and services to your will&ndash;even when t
     
       <item>
         <title>Turning iCloud Shortcut Links into Share Buttons</title>
-        <link>http://localhost:1313/posts/turning-icloud-shortcut-links-into-share-buttons/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/turning-icloud-shortcut-links-into-share-buttons/</guid>
+        <link>https://www.blog.aidanmaurinjones.com/posts/turning-icloud-shortcut-links-into-share-buttons/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/turning-icloud-shortcut-links-into-share-buttons/</guid>
         
           <pubDate>Tue, 23 Sep 2025 00:00:00 &#43;0000</pubDate>
         
@@ -2653,8 +2653,8 @@ blog-ready package.</p>
     
       <item>
         <title>Share Mac App HTML Button: Automating App Cards from Alfred</title>
-        <link>http://localhost:1313/posts/share-mac-app-html-button---automating-app-cards-from-alfred/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/share-mac-app-html-button---automating-app-cards-from-alfred/</guid>
+        <link>https://www.blog.aidanmaurinjones.com/posts/share-mac-app-html-button---automating-app-cards-from-alfred/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/share-mac-app-html-button---automating-app-cards-from-alfred/</guid>
         
           <pubDate>Tue, 23 Sep 2025 00:00:00 &#43;0000</pubDate>
         
@@ -2922,8 +2922,8 @@ icons anymore.</p>
     
       <item>
         <title>App Store Links Made Beautiful with Shortcuts</title>
-        <link>http://localhost:1313/posts/app-store-links-made-beautiful-with-shortcuts/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/app-store-links-made-beautiful-with-shortcuts/</guid>
+        <link>https://www.blog.aidanmaurinjones.com/posts/app-store-links-made-beautiful-with-shortcuts/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/app-store-links-made-beautiful-with-shortcuts/</guid>
         
           <pubDate>Tue, 23 Sep 2025 00:00:00 &#43;0000</pubDate>
         
@@ -3129,8 +3129,8 @@ automations that pays dividends every single day.</p>
     
       <item>
         <title>I Could Write This Blog in Notepad</title>
-        <link>http://localhost:1313/posts/i-could-write-this-blog-in-notepad/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/i-could-write-this-blog-in-notepad/</guid>
+        <link>https://www.blog.aidanmaurinjones.com/posts/i-could-write-this-blog-in-notepad/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/i-could-write-this-blog-in-notepad/</guid>
         
           <pubDate>Sun, 21 Sep 2025 00:00:00 &#43;0000</pubDate>
         
@@ -3364,8 +3364,8 @@ and my workflow. And I’ve never enjoyed blogging more.</p>
     
       <item>
         <title>A Hundred &amp; One Post Buttons</title>
-        <link>http://localhost:1313/posts/a-hundred--one-post-buttons/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/a-hundred--one-post-buttons/</guid>
+        <link>https://www.blog.aidanmaurinjones.com/posts/a-hundred--one-post-buttons/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/a-hundred--one-post-buttons/</guid>
         
           <pubDate>Sun, 21 Sep 2025 00:00:00 &#43;0000</pubDate>
         
@@ -3677,8 +3677,8 @@ blog will always be built on.</li>
     
       <item>
         <title>Save URLs from Show Notes with Overcast and Drafts</title>
-        <link>http://localhost:1313/posts/save-urls-from-show-notes-with-overcast-and-drafts/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/save-urls-from-show-notes-with-overcast-and-drafts/</guid>
+        <link>https://www.blog.aidanmaurinjones.com/posts/save-urls-from-show-notes-with-overcast-and-drafts/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/save-urls-from-show-notes-with-overcast-and-drafts/</guid>
         
           <pubDate>Sat, 20 Sep 2025 00:00:00 &#43;0000</pubDate>
         
@@ -3900,8 +3900,8 @@ it&rsquo;ll be sitting there in Drafts, right where it belongs.</p>
     
       <item>
         <title>Open Ride Share Apps: A Beginner-Friendly Shortcut That Saves Me Money</title>
-        <link>http://localhost:1313/posts/open-ride-share-apps-a-beginner-friendly-shortcut-that-saves-me-money/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/open-ride-share-apps-a-beginner-friendly-shortcut-that-saves-me-money/</guid>
+        <link>https://www.blog.aidanmaurinjones.com/posts/open-ride-share-apps-a-beginner-friendly-shortcut-that-saves-me-money/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/open-ride-share-apps-a-beginner-friendly-shortcut-that-saves-me-money/</guid>
         
           <pubDate>Sat, 20 Sep 2025 00:00:00 &#43;0000</pubDate>
         
@@ -4123,8 +4123,8 @@ month of rides.</p>
     
       <item>
         <title>Wikipedia Article Downloader: A Shortcut for Offline Reading</title>
-        <link>http://localhost:1313/posts/wikipedia-article-downloader--a-shortcut-for-offline-reading/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/wikipedia-article-downloader--a-shortcut-for-offline-reading/</guid>
+        <link>https://www.blog.aidanmaurinjones.com/posts/wikipedia-article-downloader--a-shortcut-for-offline-reading/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/wikipedia-article-downloader--a-shortcut-for-offline-reading/</guid>
         
           <pubDate>Fri, 19 Sep 2025 00:00:00 &#43;0000</pubDate>
         
@@ -4334,8 +4334,8 @@ as I do, this little Shortcut makes it effortless to keep what you find.</p>
     
       <item>
         <title>Wordle, But With a Twist: A Shortcut I Built That Gives You Hints</title>
-        <link>http://localhost:1313/posts/wordle-but-with-a-twist-a-shortcut-i-built-that-gives-you-hints/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/wordle-but-with-a-twist-a-shortcut-i-built-that-gives-you-hints/</guid>
+        <link>https://www.blog.aidanmaurinjones.com/posts/wordle-but-with-a-twist-a-shortcut-i-built-that-gives-you-hints/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/wordle-but-with-a-twist-a-shortcut-i-built-that-gives-you-hints/</guid>
         
           <pubDate>Thu, 18 Sep 2025 00:00:00 &#43;0000</pubDate>
         
@@ -4561,8 +4561,8 @@ simple automation, but it feels fresh and playful every time I use it.</p>
     
       <item>
         <title>Automating My City&#39;s Garbage Schedule with Shortcuts</title>
-        <link>http://localhost:1313/posts/automating-my-citys-garbage-schedule-with-shortcuts/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/automating-my-citys-garbage-schedule-with-shortcuts/</guid>
+        <link>https://www.blog.aidanmaurinjones.com/posts/automating-my-citys-garbage-schedule-with-shortcuts/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/automating-my-citys-garbage-schedule-with-shortcuts/</guid>
         
           <pubDate>Thu, 18 Sep 2025 00:00:00 &#43;0000</pubDate>
         
@@ -4810,8 +4810,8 @@ of those little automations that quietly makes life better&ndash;one trash day a
     
       <item>
         <title>Where To Watch: A Shortcut for Finding Streaming Availability with The Movie Database</title>
-        <link>http://localhost:1313/posts/where-to-watch-a-shortcut-for-finding-streaming-availability-with-the-movie-database/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/where-to-watch-a-shortcut-for-finding-streaming-availability-with-the-movie-database/</guid>
+        <link>https://www.blog.aidanmaurinjones.com/posts/where-to-watch-a-shortcut-for-finding-streaming-availability-with-the-movie-database/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/where-to-watch-a-shortcut-for-finding-streaming-availability-with-the-movie-database/</guid>
         
           <pubDate>Wed, 17 Sep 2025 00:00:00 &#43;0000</pubDate>
         
@@ -5007,8 +5007,8 @@ something&ndash;or if I need to wait until it arrives in Canada.</p>
     
       <item>
         <title>Scan QR Code on Screen: A Shortcut I Built for My Mac</title>
-        <link>http://localhost:1313/posts/scan-qr-code-on-screen---a-shortcut-i-built-for-my-mac/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/scan-qr-code-on-screen---a-shortcut-i-built-for-my-mac/</guid>
+        <link>https://www.blog.aidanmaurinjones.com/posts/scan-qr-code-on-screen---a-shortcut-i-built-for-my-mac/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/scan-qr-code-on-screen---a-shortcut-i-built-for-my-mac/</guid>
         
           <pubDate>Tue, 16 Sep 2025 00:00:00 &#43;0000</pubDate>
         
@@ -5196,8 +5196,8 @@ not having it anymore.</p>
     
       <item>
         <title>Smarter MacBook Charging with Shortcuts and BetterTouchTool</title>
-        <link>http://localhost:1313/posts/smarter-macbook-charging-with-shortcuts-and-bettertouchtool/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/smarter-macbook-charging-with-shortcuts-and-bettertouchtool/</guid>
+        <link>https://www.blog.aidanmaurinjones.com/posts/smarter-macbook-charging-with-shortcuts-and-bettertouchtool/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/smarter-macbook-charging-with-shortcuts-and-bettertouchtool/</guid>
         
           <pubDate>Mon, 15 Sep 2025 00:00:00 &#43;0000</pubDate>
         
@@ -5477,8 +5477,8 @@ background.</p>
     
       <item>
         <title>A Raspberry Pi Stream Deck Server controlled by ESPHome</title>
-        <link>http://localhost:1313/posts/a-raspberry-pi-stream-deck-server-controlled-by-esphome/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/a-raspberry-pi-stream-deck-server-controlled-by-esphome/</guid>
+        <link>https://www.blog.aidanmaurinjones.com/posts/a-raspberry-pi-stream-deck-server-controlled-by-esphome/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/a-raspberry-pi-stream-deck-server-controlled-by-esphome/</guid>
         
           <pubDate>Mon, 15 Sep 2025 00:00:00 &#43;0000</pubDate>
         
@@ -5784,8 +5784,8 @@ result makes my whole setup feel more “finished.”</p>
     
       <item>
         <title>TTC Service Alerts Shortcut: Real-Time Transit Notifications Made Simple</title>
-        <link>http://localhost:1313/posts/ttc-service-alerts-shortcut-blog-post/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/ttc-service-alerts-shortcut-blog-post/</guid>
+        <link>https://www.blog.aidanmaurinjones.com/posts/ttc-service-alerts-shortcut-blog-post/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/ttc-service-alerts-shortcut-blog-post/</guid>
         
           <pubDate>Sun, 14 Sep 2025 00:00:00 &#43;0000</pubDate>
         
@@ -5993,8 +5993,8 @@ official TTC feed, formatted in a way that’s quick to read.</p>
     
       <item>
         <title>Automating Toronto’s Beach Water Quality with Shortcuts</title>
-        <link>http://localhost:1313/posts/beach-water-quality-shortcut-blog-post/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/beach-water-quality-shortcut-blog-post/</guid>
+        <link>https://www.blog.aidanmaurinjones.com/posts/beach-water-quality-shortcut-blog-post/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/beach-water-quality-shortcut-blog-post/</guid>
         
           <pubDate>Sun, 14 Sep 2025 00:00:00 &#43;0000</pubDate>
         
@@ -6218,8 +6218,8 @@ how it turns raw open data into something practical and personal.</p>
     
       <item>
         <title>Automating Fire Ban Updates with Shortcuts</title>
-        <link>http://localhost:1313/posts/automating-fire-ban-updates-with-shortcuts/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/automating-fire-ban-updates-with-shortcuts/</guid>
+        <link>https://www.blog.aidanmaurinjones.com/posts/automating-fire-ban-updates-with-shortcuts/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/automating-fire-ban-updates-with-shortcuts/</guid>
         
           <pubDate>Sun, 14 Sep 2025 00:00:00 &#43;0000</pubDate>
         

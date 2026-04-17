@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Aidan Maurin-Jones | Alfred</title>
-    <link>http://localhost:1313/tags/alfred/</link>
+    <link>https://www.blog.aidanmaurinjones.com/tags/alfred/</link>
     <description>Alfred</description>
     <language>en</language>
     
-      <atom:link href="http://localhost:1313/tags/alfred/index.xml" rel="self" type="application/rss+xml"></atom:link>
+      <atom:link href="https://www.blog.aidanmaurinjones.com/tags/alfred/index.xml" rel="self" type="application/rss+xml"></atom:link>
     
     
       <item>
         <title>Share Mac App HTML Button: Automating App Cards from Alfred</title>
-        <link>http://localhost:1313/posts/share-mac-app-html-button---automating-app-cards-from-alfred/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/share-mac-app-html-button---automating-app-cards-from-alfred/</guid>
+        <link>https://www.blog.aidanmaurinjones.com/posts/share-mac-app-html-button---automating-app-cards-from-alfred/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/share-mac-app-html-button---automating-app-cards-from-alfred/</guid>
         
           <pubDate>Tue, 23 Sep 2025 00:00:00 &#43;0000</pubDate>
         

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Aidan Maurin-Jones | ESPHome</title>
-    <link>http://localhost:1313/tags/esphome/</link>
+    <link>https://www.blog.aidanmaurinjones.com/tags/esphome/</link>
     <description>ESPHome</description>
     <language>en</language>
     
-      <atom:link href="http://localhost:1313/tags/esphome/index.xml" rel="self" type="application/rss+xml"></atom:link>
+      <atom:link href="https://www.blog.aidanmaurinjones.com/tags/esphome/index.xml" rel="self" type="application/rss+xml"></atom:link>
     
     
       <item>
         <title>Building a Smarter Home, One Screen at a Time</title>
-        <link>http://localhost:1313/posts/building-a-smarter-home-one-screen-at-a-time/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/building-a-smarter-home-one-screen-at-a-time/</guid>
+        <link>https://www.blog.aidanmaurinjones.com/posts/building-a-smarter-home-one-screen-at-a-time/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/building-a-smarter-home-one-screen-at-a-time/</guid>
         
           <pubDate>Fri, 03 Apr 2026 00:00:00 &#43;0000</pubDate>
         
@@ -208,8 +208,8 @@
     
       <item>
         <title>A Remote That Finally Belongs to You</title>
-        <link>http://localhost:1313/posts/a-remote-that-finally-belongs-to-you/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/a-remote-that-finally-belongs-to-you/</guid>
+        <link>https://www.blog.aidanmaurinjones.com/posts/a-remote-that-finally-belongs-to-you/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/a-remote-that-finally-belongs-to-you/</guid>
         
           <pubDate>Thu, 02 Apr 2026 00:00:00 &#43;0000</pubDate>
         
@@ -549,8 +549,8 @@
     
       <item>
         <title>A Raspberry Pi Stream Deck Server controlled by ESPHome</title>
-        <link>http://localhost:1313/posts/a-raspberry-pi-stream-deck-server-controlled-by-esphome/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/a-raspberry-pi-stream-deck-server-controlled-by-esphome/</guid>
+        <link>https://www.blog.aidanmaurinjones.com/posts/a-raspberry-pi-stream-deck-server-controlled-by-esphome/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/a-raspberry-pi-stream-deck-server-controlled-by-esphome/</guid>
         
           <pubDate>Mon, 15 Sep 2025 00:00:00 &#43;0000</pubDate>
         

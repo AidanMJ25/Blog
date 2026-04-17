@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Aidan Maurin-Jones | Workflow</title>
-    <link>http://localhost:1313/tags/workflow/</link>
+    <link>https://www.blog.aidanmaurinjones.com/tags/workflow/</link>
     <description>Workflow</description>
     <language>en</language>
     
-      <atom:link href="http://localhost:1313/tags/workflow/index.xml" rel="self" type="application/rss+xml"></atom:link>
+      <atom:link href="https://www.blog.aidanmaurinjones.com/tags/workflow/index.xml" rel="self" type="application/rss+xml"></atom:link>
     
     
       <item>
         <title>Why Obsidian Doesn’t Work for Me</title>
-        <link>http://localhost:1313/posts/why-obsidian-doesnt-work-for-me/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/why-obsidian-doesnt-work-for-me/</guid>
+        <link>https://www.blog.aidanmaurinjones.com/posts/why-obsidian-doesnt-work-for-me/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/why-obsidian-doesnt-work-for-me/</guid>
         
           <pubDate>Fri, 03 Oct 2025 00:00:00 &#43;0000</pubDate>
         

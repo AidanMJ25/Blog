@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Aidan Maurin-Jones | Smart Home</title>
-    <link>http://localhost:1313/tags/smart-home/</link>
+    <link>https://www.blog.aidanmaurinjones.com/tags/smart-home/</link>
     <description>Smart Home</description>
     <language>en</language>
     
-      <atom:link href="http://localhost:1313/tags/smart-home/index.xml" rel="self" type="application/rss+xml"></atom:link>
+      <atom:link href="https://www.blog.aidanmaurinjones.com/tags/smart-home/index.xml" rel="self" type="application/rss+xml"></atom:link>
     
     
       <item>
         <title>Automating TP-Link Kasa Devices with Shortcuts</title>
-        <link>http://localhost:1313/posts/automating-tp-link-kasa-devices-with-shortcuts/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/automating-tp-link-kasa-devices-with-shortcuts/</guid>
+        <link>https://www.blog.aidanmaurinjones.com/posts/automating-tp-link-kasa-devices-with-shortcuts/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/automating-tp-link-kasa-devices-with-shortcuts/</guid>
         
           <pubDate>Thu, 25 Sep 2025 00:00:00 &#43;0000</pubDate>
         
@@ -360,8 +360,8 @@ giving you the tools to bend devices and services to your will&ndash;even when t
     
       <item>
         <title>Controlling SwitchBot Devices with Shortcuts and the Web API</title>
-        <link>http://localhost:1313/posts/controlling-switchbot-devices-with-shortcuts-and-the-web-api/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/controlling-switchbot-devices-with-shortcuts-and-the-web-api/</guid>
+        <link>https://www.blog.aidanmaurinjones.com/posts/controlling-switchbot-devices-with-shortcuts-and-the-web-api/</link>
+        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/controlling-switchbot-devices-with-shortcuts-and-the-web-api/</guid>
         
           <pubDate>Wed, 24 Sep 2025 00:00:00 &#43;0000</pubDate>
         
