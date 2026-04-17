@@ -2,6 +2,3 @@
 {{ range site.Menus.main }}
   <a href="{{ .URL | relURL }}" {{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }}aria-current="page"{{ end }}>{{ .Name }}</a>
 {{ end }}
-{{ with site.Home.OutputFormats.Get "RSS" }}
-  <a href="{{ .RelPermalink }}">RSS</a>
-{{ end }}
