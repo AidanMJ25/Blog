@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Aidan Maurin-Jones | Webscraping</title>
-    <link>https://www.blog.aidanmaurinjones.com/tags/webscraping/</link>
+    <link>http://localhost:1313/tags/webscraping/</link>
     <description>Webscraping</description>
     <language>en</language>
     
-      <atom:link href="https://www.blog.aidanmaurinjones.com/tags/webscraping/index.xml" rel="self" type="application/rss+xml"></atom:link>
+      <atom:link href="http://localhost:1313/tags/webscraping/index.xml" rel="self" type="application/rss+xml"></atom:link>
     
     
       <item>
         <title>Wikipedia Article Downloader: A Shortcut for Offline Reading</title>
-        <link>https://www.blog.aidanmaurinjones.com/posts/wikipedia-article-downloader--a-shortcut-for-offline-reading/</link>
-        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/wikipedia-article-downloader--a-shortcut-for-offline-reading/</guid>
+        <link>http://localhost:1313/posts/wikipedia-article-downloader--a-shortcut-for-offline-reading/</link>
+        <guid isPermaLink="true">http://localhost:1313/posts/wikipedia-article-downloader--a-shortcut-for-offline-reading/</guid>
         
           <pubDate>Fri, 19 Sep 2025 00:00:00 &#43;0000</pubDate>
         
@@ -222,8 +222,8 @@ as I do, this little Shortcut makes it effortless to keep what you find.</p>
     
       <item>
         <title>Automating My City&#39;s Garbage Schedule with Shortcuts</title>
-        <link>https://www.blog.aidanmaurinjones.com/posts/automating-my-citys-garbage-schedule-with-shortcuts/</link>
-        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/automating-my-citys-garbage-schedule-with-shortcuts/</guid>
+        <link>http://localhost:1313/posts/automating-my-citys-garbage-schedule-with-shortcuts/</link>
+        <guid isPermaLink="true">http://localhost:1313/posts/automating-my-citys-garbage-schedule-with-shortcuts/</guid>
         
           <pubDate>Thu, 18 Sep 2025 00:00:00 &#43;0000</pubDate>
         
@@ -471,8 +471,8 @@ of those little automations that quietly makes life better&ndash;one trash day a
     
       <item>
         <title>TTC Service Alerts Shortcut: Real-Time Transit Notifications Made Simple</title>
-        <link>https://www.blog.aidanmaurinjones.com/posts/ttc-service-alerts-shortcut-blog-post/</link>
-        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/ttc-service-alerts-shortcut-blog-post/</guid>
+        <link>http://localhost:1313/posts/ttc-service-alerts-shortcut-blog-post/</link>
+        <guid isPermaLink="true">http://localhost:1313/posts/ttc-service-alerts-shortcut-blog-post/</guid>
         
           <pubDate>Sun, 14 Sep 2025 00:00:00 &#43;0000</pubDate>
         
@@ -680,8 +680,8 @@ official TTC feed, formatted in a way that’s quick to read.</p>
     
       <item>
         <title>Automating Toronto’s Beach Water Quality with Shortcuts</title>
-        <link>https://www.blog.aidanmaurinjones.com/posts/beach-water-quality-shortcut-blog-post/</link>
-        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/beach-water-quality-shortcut-blog-post/</guid>
+        <link>http://localhost:1313/posts/beach-water-quality-shortcut-blog-post/</link>
+        <guid isPermaLink="true">http://localhost:1313/posts/beach-water-quality-shortcut-blog-post/</guid>
         
           <pubDate>Sun, 14 Sep 2025 00:00:00 &#43;0000</pubDate>
         
@@ -905,8 +905,8 @@ how it turns raw open data into something practical and personal.</p>
     
       <item>
         <title>Automating Fire Ban Updates with Shortcuts</title>
-        <link>https://www.blog.aidanmaurinjones.com/posts/automating-fire-ban-updates-with-shortcuts/</link>
-        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/automating-fire-ban-updates-with-shortcuts/</guid>
+        <link>http://localhost:1313/posts/automating-fire-ban-updates-with-shortcuts/</link>
+        <guid isPermaLink="true">http://localhost:1313/posts/automating-fire-ban-updates-with-shortcuts/</guid>
         
           <pubDate>Sun, 14 Sep 2025 00:00:00 &#43;0000</pubDate>
         

@@ -10,6 +10,9 @@
   {{ with resources.Get "css/style.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
   {{ end }}
+  {{ with resources.Get "js/code-copy.js" | minify | fingerprint }}
+  <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" defer></script>
+  {{ end }}
   {{ range site.Params.customCSS }}
   <link rel="stylesheet" href="{{ . | relURL }}">
   {{ end }}

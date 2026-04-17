@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Aidan Maurin-Jones | GitHub Pages</title>
-    <link>https://www.blog.aidanmaurinjones.com/tags/github-pages/</link>
+    <link>http://localhost:1313/tags/github-pages/</link>
     <description>GitHub Pages</description>
     <language>en</language>
     
-      <atom:link href="https://www.blog.aidanmaurinjones.com/tags/github-pages/index.xml" rel="self" type="application/rss+xml"></atom:link>
+      <atom:link href="http://localhost:1313/tags/github-pages/index.xml" rel="self" type="application/rss+xml"></atom:link>
     
     
       <item>
         <title>A New Landing Page &amp; the Blog&#39;s New Home</title>
-        <link>https://www.blog.aidanmaurinjones.com/posts/a-new-landing-page--the-blogs-new-home/</link>
-        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/a-new-landing-page--the-blogs-new-home/</guid>
+        <link>http://localhost:1313/posts/a-new-landing-page--the-blogs-new-home/</link>
+        <guid isPermaLink="true">http://localhost:1313/posts/a-new-landing-page--the-blogs-new-home/</guid>
         
           <pubDate>Sun, 19 Oct 2025 00:00:00 &#43;0000</pubDate>
         
@@ -152,8 +152,8 @@ one site for meeting.</p>
     
       <item>
         <title>I Could Write This Blog in Notepad</title>
-        <link>https://www.blog.aidanmaurinjones.com/posts/i-could-write-this-blog-in-notepad/</link>
-        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/i-could-write-this-blog-in-notepad/</guid>
+        <link>http://localhost:1313/posts/i-could-write-this-blog-in-notepad/</link>
+        <guid isPermaLink="true">http://localhost:1313/posts/i-could-write-this-blog-in-notepad/</guid>
         
           <pubDate>Sun, 21 Sep 2025 00:00:00 &#43;0000</pubDate>
         
@@ -387,8 +387,8 @@ and my workflow. And I’ve never enjoyed blogging more.</p>
     
       <item>
         <title>A Hundred &amp; One Post Buttons</title>
-        <link>https://www.blog.aidanmaurinjones.com/posts/a-hundred--one-post-buttons/</link>
-        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/a-hundred--one-post-buttons/</guid>
+        <link>http://localhost:1313/posts/a-hundred--one-post-buttons/</link>
+        <guid isPermaLink="true">http://localhost:1313/posts/a-hundred--one-post-buttons/</guid>
         
           <pubDate>Sun, 21 Sep 2025 00:00:00 &#43;0000</pubDate>
         

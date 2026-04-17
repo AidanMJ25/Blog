@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Aidan Maurin-Jones | BetterTouchTool</title>
-    <link>https://www.blog.aidanmaurinjones.com/tags/bettertouchtool/</link>
+    <link>http://localhost:1313/tags/bettertouchtool/</link>
     <description>BetterTouchTool</description>
     <language>en</language>
     
-      <atom:link href="https://www.blog.aidanmaurinjones.com/tags/bettertouchtool/index.xml" rel="self" type="application/rss+xml"></atom:link>
+      <atom:link href="http://localhost:1313/tags/bettertouchtool/index.xml" rel="self" type="application/rss+xml"></atom:link>
     
     
       <item>
         <title>Smarter MacBook Charging with Shortcuts and BetterTouchTool</title>
-        <link>https://www.blog.aidanmaurinjones.com/posts/smarter-macbook-charging-with-shortcuts-and-bettertouchtool/</link>
-        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/smarter-macbook-charging-with-shortcuts-and-bettertouchtool/</guid>
+        <link>http://localhost:1313/posts/smarter-macbook-charging-with-shortcuts-and-bettertouchtool/</link>
+        <guid isPermaLink="true">http://localhost:1313/posts/smarter-macbook-charging-with-shortcuts-and-bettertouchtool/</guid>
         
           <pubDate>Mon, 15 Sep 2025 00:00:00 &#43;0000</pubDate>
         

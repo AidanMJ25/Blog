@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Aidan Maurin-Jones | Raspberry Pi</title>
-    <link>https://www.blog.aidanmaurinjones.com/tags/raspberry-pi/</link>
+    <link>http://localhost:1313/tags/raspberry-pi/</link>
     <description>Raspberry Pi</description>
     <language>en</language>
     
-      <atom:link href="https://www.blog.aidanmaurinjones.com/tags/raspberry-pi/index.xml" rel="self" type="application/rss+xml"></atom:link>
+      <atom:link href="http://localhost:1313/tags/raspberry-pi/index.xml" rel="self" type="application/rss+xml"></atom:link>
     
     
       <item>
         <title>A Raspberry Pi Stream Deck Server controlled by ESPHome</title>
-        <link>https://www.blog.aidanmaurinjones.com/posts/a-raspberry-pi-stream-deck-server-controlled-by-esphome/</link>
-        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/a-raspberry-pi-stream-deck-server-controlled-by-esphome/</guid>
+        <link>http://localhost:1313/posts/a-raspberry-pi-stream-deck-server-controlled-by-esphome/</link>
+        <guid isPermaLink="true">http://localhost:1313/posts/a-raspberry-pi-stream-deck-server-controlled-by-esphome/</guid>
         
           <pubDate>Mon, 15 Sep 2025 00:00:00 &#43;0000</pubDate>
         

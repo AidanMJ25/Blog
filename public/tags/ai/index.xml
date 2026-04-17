@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Aidan Maurin-Jones | AI</title>
-    <link>https://www.blog.aidanmaurinjones.com/tags/ai/</link>
+    <link>http://localhost:1313/tags/ai/</link>
     <description>AI</description>
     <language>en</language>
     
-      <atom:link href="https://www.blog.aidanmaurinjones.com/tags/ai/index.xml" rel="self" type="application/rss+xml"></atom:link>
+      <atom:link href="http://localhost:1313/tags/ai/index.xml" rel="self" type="application/rss+xml"></atom:link>
     
     
       <item>
         <title>Fighting Spam with Automation: A Shortcut for Writing Hilarious Replies</title>
-        <link>https://www.blog.aidanmaurinjones.com/posts/fighting-spam-with-automation--a-shortcut-for-writing-hilarious-replies/</link>
-        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/fighting-spam-with-automation--a-shortcut-for-writing-hilarious-replies/</guid>
+        <link>http://localhost:1313/posts/fighting-spam-with-automation--a-shortcut-for-writing-hilarious-replies/</link>
+        <guid isPermaLink="true">http://localhost:1313/posts/fighting-spam-with-automation--a-shortcut-for-writing-hilarious-replies/</guid>
         
           <pubDate>Fri, 26 Sep 2025 00:00:00 &#43;0000</pubDate>
         
@@ -356,8 +356,8 @@ roast they’ll never actually read.</p>
     
       <item>
         <title>Wordle, But With a Twist: A Shortcut I Built That Gives You Hints</title>
-        <link>https://www.blog.aidanmaurinjones.com/posts/wordle-but-with-a-twist-a-shortcut-i-built-that-gives-you-hints/</link>
-        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/wordle-but-with-a-twist-a-shortcut-i-built-that-gives-you-hints/</guid>
+        <link>http://localhost:1313/posts/wordle-but-with-a-twist-a-shortcut-i-built-that-gives-you-hints/</link>
+        <guid isPermaLink="true">http://localhost:1313/posts/wordle-but-with-a-twist-a-shortcut-i-built-that-gives-you-hints/</guid>
         
           <pubDate>Thu, 18 Sep 2025 00:00:00 &#43;0000</pubDate>
         
