@@ -151,6 +151,10 @@ td {
   display: none;
 }
 
+.site-search-mobile {
+  display: none;
+}
+
 .site-nav-toggle__summary {
   display: inline-flex;
   align-items: center;
@@ -1007,6 +1011,11 @@ td {
     width: 100%;
   }
 
+  .site-search-mobile {
+    display: block;
+    width: 100%;
+  }
+
   .site-nav-toggle__summary {
     width: 100%;
   }
@@ -1023,7 +1032,7 @@ td {
     justify-content: flex-start;
   }
 
-  .site-nav--mobile .site-search {
+  .site-search-mobile .site-search {
     width: 100%;
     min-width: 0;
     margin-left: 0;

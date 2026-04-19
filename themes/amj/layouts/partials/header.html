@@ -14,7 +14,9 @@
     </summary>
     <nav class="site-nav site-nav--mobile" aria-label="Mobile primary">
       {{ partial "nav-links.html" . }}
-      {{ partial "search-form.html" (dict "Suffix" "mobile") }}
     </nav>
   </details>
+  <div class="site-search-mobile">
+    {{ partial "search-form.html" (dict "Suffix" "mobile") }}
+  </div>
 </header>
