@@ -1,23 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Aidan Maurin-Jones | Podcasts</title>
-    <link>https://www.blog.aidanmaurinjones.com/tags/podcasts/</link>
-    <description>Podcasts</description>
-    <language>en</language>
-    
-      <atom:link href="https://www.blog.aidanmaurinjones.com/tags/podcasts/index.xml" rel="self" type="application/rss+xml"></atom:link>
-    
-    
-      <item>
-        <title>Save URLs from Show Notes with Overcast and Drafts</title>
-        <link>https://www.blog.aidanmaurinjones.com/posts/save-urls-from-show-notes-with-overcast-and-drafts/</link>
-        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/save-urls-from-show-notes-with-overcast-and-drafts/</guid>
-        
-          <pubDate>Sat, 20 Sep 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>I listen to a lot of podcasts in Overcast, and more often than not, I find myself wanting
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Aidan Maurin-Jones | Podcasts</title><link>https://blog.aidanmaurinjones.com/tags/podcasts/</link><description>Podcasts</description><language>en</language><atom:link href="https://blog.aidanmaurinjones.com/tags/podcasts/index.xml" rel="self" type="application/rss+xml"/><item><title>Save URLs from Show Notes with Overcast and Drafts</title><link>https://blog.aidanmaurinjones.com/posts/save-urls-from-show-notes-with-overcast-and-drafts/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/save-urls-from-show-notes-with-overcast-and-drafts/</guid><pubDate>Sat, 20 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>I listen to a lot of podcasts in Overcast, and more often than not, I find myself wanting
 to save a link mentioned in the show notes&ndash;an app, a website, a follow-up article. Overcast
 does a great job of presenting those notes, but getting the links into my notes system has
 always been more work than it should be.</p>
@@ -122,8 +103,7 @@ it&rsquo;ll be sitting there in Drafts, right where it belongs.</p>
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>I listen to a lot of podcasts in Overcast, and more often than not, I find myself wanting
+]]></description><content:encoded><![CDATA[<p>I listen to a lot of podcasts in Overcast, and more often than not, I find myself wanting
 to save a link mentioned in the show notes&ndash;an app, a website, a follow-up article. Overcast
 does a great job of presenting those notes, but getting the links into my notes system has
 always been more work than it should be.</p>
@@ -228,9 +208,4 @@ it&rsquo;ll be sitting there in Drafts, right where it belongs.</p>
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-  </channel>
-</rss>
+]]></content:encoded></item></channel></rss>

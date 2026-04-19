@@ -1,23 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Aidan Maurin-Jones | Alfred</title>
-    <link>https://www.blog.aidanmaurinjones.com/tags/alfred/</link>
-    <description>Alfred</description>
-    <language>en</language>
-    
-      <atom:link href="https://www.blog.aidanmaurinjones.com/tags/alfred/index.xml" rel="self" type="application/rss+xml"></atom:link>
-    
-    
-      <item>
-        <title>Share Mac App HTML Button: Automating App Cards from Alfred</title>
-        <link>https://www.blog.aidanmaurinjones.com/posts/share-mac-app-html-button---automating-app-cards-from-alfred/</link>
-        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/share-mac-app-html-button---automating-app-cards-from-alfred/</guid>
-        
-          <pubDate>Tue, 23 Sep 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>One of the realities of being a Mac user today is that many of the best apps you’ll discover
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Aidan Maurin-Jones | Alfred</title><link>https://blog.aidanmaurinjones.com/tags/alfred/</link><description>Alfred</description><language>en</language><atom:link href="https://blog.aidanmaurinjones.com/tags/alfred/index.xml" rel="self" type="application/rss+xml"/><item><title>Share Mac App HTML Button: Automating App Cards from Alfred</title><link>https://blog.aidanmaurinjones.com/posts/share-mac-app-html-button---automating-app-cards-from-alfred/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/share-mac-app-html-button---automating-app-cards-from-alfred/</guid><pubDate>Tue, 23 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>One of the realities of being a Mac user today is that many of the best apps you’ll discover
 aren’t on the Mac App Store. Developers often prefer to sell directly, avoiding Apple’s restrictions
 and revenue cut. That’s great for them (and often for us too, since it means more powerful software),
 but it leaves one problem: how do you share those apps elegantly in a blog post?</p>
@@ -145,8 +126,7 @@ icons anymore.</p>
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>One of the realities of being a Mac user today is that many of the best apps you’ll discover
+]]></description><content:encoded><![CDATA[<p>One of the realities of being a Mac user today is that many of the best apps you’ll discover
 aren’t on the Mac App Store. Developers often prefer to sell directly, avoiding Apple’s restrictions
 and revenue cut. That’s great for them (and often for us too, since it means more powerful software),
 but it leaves one problem: how do you share those apps elegantly in a blog post?</p>
@@ -274,9 +254,4 @@ icons anymore.</p>
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-  </channel>
-</rss>
+]]></content:encoded></item></channel></rss>

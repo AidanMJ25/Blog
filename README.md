@@ -1,6 +1,6 @@
 # Aidan Maurin-Jones Blog
 
-This repository contains the source for [blog.aidanmaurinjones.com](https://www.blog.aidanmaurinjones.com/), built with Hugo and deployed to GitHub Pages.
+This repository contains the source for [blog.aidanmaurinjones.com](https://blog.aidanmaurinjones.com/), built with Hugo and deployed to GitHub Pages.
 
 ## Stack
 

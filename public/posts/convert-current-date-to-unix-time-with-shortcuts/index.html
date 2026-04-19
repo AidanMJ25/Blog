@@ -1,194 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Convert Current Date to Unix Time with Shortcuts | Aidan Maurin-Jones</title><meta name="description" content="A simple Shortcut that converts any date—or the current one—into Unix time, perfect for APIs, logging, and automation workflows.">
-  <link rel="canonical" href="https://www.blog.aidanmaurinjones.com/posts/convert-current-date-to-unix-time-with-shortcuts/">
-  
-  <link rel="stylesheet" href="/css/style.min.eeb7e39efd09fc7328023e954ed2a36db8fc89baf7373dc72c4069664fb3a6b0.css" integrity="sha256-7rfjnv0J/HMoAj6VTtKjbbj8ibr3Nz3HLEBpZk&#43;zprA=">
-  
-	  
-	  <script src="/js/code-copy.min.0f8459a011f490588fbc8675943fa09eb746a461aa8ec7ebbcf31e43244d0258.js" integrity="sha256-D4RZoBH0kFiPvIZ1lD&#43;gnrdGpGGqjsfrvPMeQyRNAlg=" defer></script>
-	  
-	  
-	  
-  
-  <link rel="alternate" type="application/rss&#43;xml" title="Aidan Maurin-Jones RSS" href="/index.xml">
-  
-  
-  
-  
-  <link rel="icon" href="/favicon.ico">
-</head>
-<body>
-  <div class="site-shell">
-    <header class="site-header">
-  <div class="site-header__brand">
-    <p class="site-header__title"><a href="/">Aidan Maurin-Jones</a></p>
-    <p class="site-header__tagline">Aidan Maurin-Jones shares tools, automations, and thoughts on whatever’s interesting this week.</p>
-  </div>
-  <nav class="site-nav site-nav--desktop" aria-label="Primary">
-    <a href="/" >Home</a>
-
-  <a href="/about/" >About</a>
-
-  <a href="/contact/" >Contact</a>
-
-  <a href="/newsletter/" >Newsletter Archive</a>
-
-
-    <form class="site-search" role="search" method="get" action="/search/">
-  <label class="sr-only" for="site-search-desktop">Search this site</label>
-  <input id="site-search-desktop" class="site-search__field" type="search" name="q" placeholder="Search" autocomplete="off">
-  <button class="site-search__submit" type="submit" aria-label="Search">
-    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <path d="M10.75 4a6.75 6.75 0 0 1 5.36 10.86l3.52 3.52-1.25 1.25-3.52-3.52A6.75 6.75 0 1 1 10.75 4Zm0 1.75a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z"/>
-    </svg>
-  </button>
-</form>
-
-  </nav>
-  <details class="site-nav-toggle">
-    <summary class="site-nav-toggle__summary" aria-label="Open menu">
-      <span class="site-nav-toggle__label">Menu</span>
-      <span class="site-nav-toggle__icon" aria-hidden="true"></span>
-    </summary>
-    <nav class="site-nav site-nav--mobile" aria-label="Mobile primary">
-      <a href="/" >Home</a>
-
-  <a href="/about/" >About</a>
-
-  <a href="/contact/" >Contact</a>
-
-  <a href="/newsletter/" >Newsletter Archive</a>
-
-
-    </nav>
-  </details>
-  <div class="site-search-mobile">
-    <form class="site-search" role="search" method="get" action="/search/">
-  <label class="sr-only" for="site-search-mobile">Search this site</label>
-  <input id="site-search-mobile" class="site-search__field" type="search" name="q" placeholder="Search" autocomplete="off">
-  <button class="site-search__submit" type="submit" aria-label="Search">
-    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <path d="M10.75 4a6.75 6.75 0 0 1 5.36 10.86l3.52 3.52-1.25 1.25-3.52-3.52A6.75 6.75 0 1 1 10.75 4Zm0 1.75a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z"/>
-    </svg>
-  </button>
-</form>
-
-  </div>
-</header>
-
-    <main class="page">
-      
-  
-  <article class="article-page">
-    <header class="article-hero">
-      
-        <p class="article-hero__section"><a href="/posts/">Blog Posts</a></p>
-      
-      <h1 class="article-hero__title">Convert Current Date to Unix Time with Shortcuts</h1>
-      
-        <p class="article-hero__summary">A simple Shortcut that converts any date—or the current one—into Unix time, perfect for APIs, logging, and automation workflows.</p>
-      
-    </header>
-
-    <div class="article-flow">
-      <section class="rail-panel article-details">
-        <div class="meta">
-          <span>By Aidan Maurin-Jones</span>
-          
-            <span>September 25, 2025</span>
-          
-          
-            <span>2 min read</span>
-          
-          <span class="tag-list">
-            
-              
-                <a href="/tags/shortcuts/">Shortcuts</a>
-              
-            
-          </span>
-          
-            
-              <a class="tag-list__rss" href="/posts/index.xml">Blog Posts RSS</a>
-            
-          
-        </div>
-      </section>
-
-      <div class="entry">
-        <div class="entry__content prose">
-          <p>Some automations are so simple that they almost feel like magic tricks. A great example of this is my Shortcut for converting any date&ndash;or just the current one&ndash;into Unix time.</p>
-<p>For those unfamiliar, Unix time is a standard way of representing dates as the number of seconds since January 1, 1970, at midnight UTC. It&rsquo;s widely used in APIs, databases, and automation tools because it turns messy human dates into a single number that&rsquo;s easy for computers to understand.</p>
-<hr>
-<h3 id="how-the-shortcut-works">How the Shortcut Works</h3>
-<p>The Shortcut begins with a conditional check:</p>
-<ul>
-<li>If Shortcut Input has a value → use that as the date.</li>
-<li>Otherwise → fall back to the current date.</li>
-</ul>
-<p>This flexibility means you can pass in a date from another Shortcut, an app, or a file&ndash;and it&rsquo;ll just work. If you don&rsquo;t supply anything, it defaults to &ldquo;now,&rdquo; which is handy for most uses.</p>
-<p>Next, the Shortcut defines a fixed reference point:</p>
-<p>1970-01-01T00:00:00Z</p>
-<p>This is the start of Unix time (known as the epoch). The Shortcut parses that text into a date object.</p>
-<p>Finally, it calculates the difference in seconds between the chosen date (from input or current) and the epoch date. The result is a clean integer: Unix time.</p>
-<hr>
-<h3 id="why-this-is-useful">Why This Is Useful</h3>
-<p>I reach for this Shortcut whenever I&rsquo;m working with APIs that require timestamps or when I need a quick way to normalize dates into a standard format. It&rsquo;s especially useful in web automations, logging workflows, and even in Home Assistant setups where Unix time values can simplify comparisons.</p>
-<p>What I love about this Shortcut is how it elegantly combines a few building blocks&ndash;conditional input, a static reference date, and a date difference&ndash;into a tool I use far more often than I expected. It turns a concept buried deep in programming textbooks into a tap-friendly utility.</p>
-<hr>
-<h3 id="try-it-yourself">Try It Yourself</h3>
-<p>You can run this Shortcut as-is for an instant timestamp or pass in dates from elsewhere to convert them. Either way, you&rsquo;ll always get a precise Unix time value at the end.</p>
-<article class="app-card">
-  <a class="app-card__icon" href="https://www.icloud.com/shortcuts/0c224e59ffa14ae7a1f285199f3b1b15" target="_blank" rel="noopener">
-    <img src="/images/Shortcuts%20Icons/Convert%20Current%20Date%20to%20Unix%20Time%20Icon.jpg" alt="Convert Current Date to Unix Time app icon" width="52" height="52">
-  </a>
-  <a class="app-card__title" href="https://www.icloud.com/shortcuts/0c224e59ffa14ae7a1f285199f3b1b15" target="_blank" rel="noopener">
-    Convert Current Date to Unix Time
-  </a>
-</article>
-
-<div class="amj-cta" aria-label="Support and subscription links">
-  <div class="amj-cta__item amj-cta__item--coffee">
-    <a class="amj-cta__button amj-cta__button--coffee" href="https://www.buymeacoffee.com/AidanMJ25" target="_blank" rel="noopener">
-      <span>Buy Me a Coffee</span>
-    </a>
-  </div>
-
-  <div class="amj-cta__item">
-    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/posts/index.xml" target="_blank" rel="noopener" aria-label="Subscribe via RSS">
-      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
-      <span>Subscribe via RSS</span>
-    </a>
-  </div>
-
-  <div class="amj-cta__item">
-    <a class="amj-cta__button amj-cta__button--newsletter" href="https://buttondown.com/AidanMJ25" target="_blank" rel="noopener">Newsletter via Email</a>
-  </div>
-
-  <div class="amj-cta__item">
-    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/newsletter/index.xml" target="_blank" rel="noopener" aria-label="Newsletter via RSS">
-      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
-      <span>Newsletter via RSS</span>
-    </a>
-  </div>
-</div>
-
-
-        </div>
-      </div>
-    </div>
-  </article>
-  
-
-    </main>
-    <footer class="site-footer">
-  <p>2026 Aidan Maurin-Jones. Built with Hugo, Markdown, YAML front matter, and section-specific RSS feeds.</p>
-</footer>
-
-  </div>
-</body>
-</html>
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Convert Current Date to Unix Time with Shortcuts | Aidan Maurin-Jones</title><meta name=description content="A simple Shortcut that converts any date—or the current one—into Unix time, perfect for APIs, logging, and automation workflows."><link rel=canonical href=https://blog.aidanmaurinjones.com/posts/convert-current-date-to-unix-time-with-shortcuts/><link rel=stylesheet href=/css/style.min.eeb7e39efd09fc7328023e954ed2a36db8fc89baf7373dc72c4069664fb3a6b0.css integrity="sha256-7rfjnv0J/HMoAj6VTtKjbbj8ibr3Nz3HLEBpZk+zprA="><script src=/js/code-copy.min.0f8459a011f490588fbc8675943fa09eb746a461aa8ec7ebbcf31e43244d0258.js integrity="sha256-D4RZoBH0kFiPvIZ1lD+gnrdGpGGqjsfrvPMeQyRNAlg=" defer></script><link rel=alternate type=application/rss+xml title="Aidan Maurin-Jones RSS" href=/index.xml><link rel=icon href=/favicon.ico></head><body><div class=site-shell><header class=site-header><div class=site-header__brand><p class=site-header__title><a href=/>Aidan Maurin-Jones</a></p><p class=site-header__tagline>Aidan Maurin-Jones shares tools, automations, and thoughts on whatever’s interesting this week.</p></div><nav class="site-nav site-nav--desktop" aria-label=Primary><a href=/>Home</a>
+<a href=/about/>About</a>
+<a href=/contact/>Contact</a>
+<a href=/newsletter/>Newsletter Archive</a><form class=site-search role=search method=get action=/search/><label class=sr-only for=site-search-desktop>Search this site</label>
+<input id=site-search-desktop class=site-search__field type=search name=q placeholder=Search autocomplete=off>
+<button class=site-search__submit type=submit aria-label=Search>
+<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.75 4a6.75 6.75.0 015.36 10.86l3.52 3.52-1.25 1.25-3.52-3.52A6.75 6.75.0 1110.75 4zm0 1.75a5 5 0 100 10 5 5 0 000-10z"/></svg></button></form></nav><details class=site-nav-toggle><summary class=site-nav-toggle__summary aria-label="Open menu"><span class=site-nav-toggle__label>Menu</span>
+<span class=site-nav-toggle__icon aria-hidden=true></span></summary><nav class="site-nav site-nav--mobile" aria-label="Mobile primary"><a href=/>Home</a>
+<a href=/about/>About</a>
+<a href=/contact/>Contact</a>
+<a href=/newsletter/>Newsletter Archive</a></nav></details><div class=site-search-mobile><form class=site-search role=search method=get action=/search/><label class=sr-only for=site-search-mobile>Search this site</label>
+<input id=site-search-mobile class=site-search__field type=search name=q placeholder=Search autocomplete=off>
+<button class=site-search__submit type=submit aria-label=Search>
+<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.75 4a6.75 6.75.0 015.36 10.86l3.52 3.52-1.25 1.25-3.52-3.52A6.75 6.75.0 1110.75 4zm0 1.75a5 5 0 100 10 5 5 0 000-10z"/></svg></button></form></div></header><main class=page><article class=article-page><header class=article-hero><p class=article-hero__section><a href=/posts/>Blog Posts</a></p><h1 class=article-hero__title>Convert Current Date to Unix Time with Shortcuts</h1><p class=article-hero__summary>A simple Shortcut that converts any date—or the current one—into Unix time, perfect for APIs, logging, and automation workflows.</p></header><div class=article-flow><section class="rail-panel article-details"><div class=meta><span>By Aidan Maurin-Jones</span>
+<span>September 25, 2025</span>
+<span>2 min read</span>
+<span class=tag-list><a href=/tags/shortcuts/>Shortcuts</a>
+</span><a class=tag-list__rss href=/posts/index.xml>Blog Posts RSS</a></div></section><div class=entry><div class="entry__content prose"><p>Some automations are so simple that they almost feel like magic tricks. A great example of this is my Shortcut for converting any date&ndash;or just the current one&ndash;into Unix time.</p><p>For those unfamiliar, Unix time is a standard way of representing dates as the number of seconds since January 1, 1970, at midnight UTC. It&rsquo;s widely used in APIs, databases, and automation tools because it turns messy human dates into a single number that&rsquo;s easy for computers to understand.</p><hr><h3 id=how-the-shortcut-works>How the Shortcut Works</h3><p>The Shortcut begins with a conditional check:</p><ul><li>If Shortcut Input has a value → use that as the date.</li><li>Otherwise → fall back to the current date.</li></ul><p>This flexibility means you can pass in a date from another Shortcut, an app, or a file&ndash;and it&rsquo;ll just work. If you don&rsquo;t supply anything, it defaults to &ldquo;now,&rdquo; which is handy for most uses.</p><p>Next, the Shortcut defines a fixed reference point:</p><p>1970-01-01T00:00:00Z</p><p>This is the start of Unix time (known as the epoch). The Shortcut parses that text into a date object.</p><p>Finally, it calculates the difference in seconds between the chosen date (from input or current) and the epoch date. The result is a clean integer: Unix time.</p><hr><h3 id=why-this-is-useful>Why This Is Useful</h3><p>I reach for this Shortcut whenever I&rsquo;m working with APIs that require timestamps or when I need a quick way to normalize dates into a standard format. It&rsquo;s especially useful in web automations, logging workflows, and even in Home Assistant setups where Unix time values can simplify comparisons.</p><p>What I love about this Shortcut is how it elegantly combines a few building blocks&ndash;conditional input, a static reference date, and a date difference&ndash;into a tool I use far more often than I expected. It turns a concept buried deep in programming textbooks into a tap-friendly utility.</p><hr><h3 id=try-it-yourself>Try It Yourself</h3><p>You can run this Shortcut as-is for an instant timestamp or pass in dates from elsewhere to convert them. Either way, you&rsquo;ll always get a precise Unix time value at the end.</p><article class=app-card><a class=app-card__icon href=https://www.icloud.com/shortcuts/0c224e59ffa14ae7a1f285199f3b1b15 target=_blank rel=noopener><img src=/images/Shortcuts%20Icons/Convert%20Current%20Date%20to%20Unix%20Time%20Icon.jpg alt="Convert Current Date to Unix Time app icon" width=52 height=52>
+</a><a class=app-card__title href=https://www.icloud.com/shortcuts/0c224e59ffa14ae7a1f285199f3b1b15 target=_blank rel=noopener>Convert Current Date to Unix Time</a></article><div class=amj-cta aria-label="Support and subscription links"><div class="amj-cta__item amj-cta__item--coffee"><a class="amj-cta__button amj-cta__button--coffee" href=https://www.buymeacoffee.com/AidanMJ25 target=_blank rel=noopener><span>Buy Me a Coffee</span></a></div><div class=amj-cta__item><a class="amj-cta__button amj-cta__button--rss" href=https://blog.aidanmaurinjones.com/posts/index.xml target=_blank rel=noopener aria-label="Subscribe via RSS"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82.0 110-3.64 1.82 1.82.0 010 3.64zm-3-8.18v2.73a8.64 8.64.0 018.64 8.64h2.73A11.36 11.36.0 003.18 9.64zm0-4.09v2.73A15.45 15.45.0 0118.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55z"/></svg>
+<span>Subscribe via RSS</span></a></div><div class=amj-cta__item><a class="amj-cta__button amj-cta__button--newsletter" href=https://buttondown.com/AidanMJ25 target=_blank rel=noopener>Newsletter via Email</a></div><div class=amj-cta__item><a class="amj-cta__button amj-cta__button--rss" href=https://blog.aidanmaurinjones.com/newsletter/index.xml target=_blank rel=noopener aria-label="Newsletter via RSS"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82.0 110-3.64 1.82 1.82.0 010 3.64zm-3-8.18v2.73a8.64 8.64.0 018.64 8.64h2.73A11.36 11.36.0 003.18 9.64zm0-4.09v2.73A15.45 15.45.0 0118.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55z"/></svg>
+<span>Newsletter via RSS</span></a></div></div></div></div></div></article></main><footer class=site-footer><p>2026 Aidan Maurin-Jones. Built with Hugo, Markdown, YAML front matter, and section-specific RSS feeds.</p></footer></div></body></html>

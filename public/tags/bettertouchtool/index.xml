@@ -1,23 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Aidan Maurin-Jones | BetterTouchTool</title>
-    <link>https://www.blog.aidanmaurinjones.com/tags/bettertouchtool/</link>
-    <description>BetterTouchTool</description>
-    <language>en</language>
-    
-      <atom:link href="https://www.blog.aidanmaurinjones.com/tags/bettertouchtool/index.xml" rel="self" type="application/rss+xml"></atom:link>
-    
-    
-      <item>
-        <title>Smarter MacBook Charging with Shortcuts and BetterTouchTool</title>
-        <link>https://www.blog.aidanmaurinjones.com/posts/smarter-macbook-charging-with-shortcuts-and-bettertouchtool/</link>
-        <guid isPermaLink="true">https://www.blog.aidanmaurinjones.com/posts/smarter-macbook-charging-with-shortcuts-and-bettertouchtool/</guid>
-        
-          <pubDate>Mon, 15 Sep 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>I’ve been working on a smarter way to manage my MacBook’s charging routine. Instead of
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Aidan Maurin-Jones | BetterTouchTool</title><link>https://blog.aidanmaurinjones.com/tags/bettertouchtool/</link><description>BetterTouchTool</description><language>en</language><atom:link href="https://blog.aidanmaurinjones.com/tags/bettertouchtool/index.xml" rel="self" type="application/rss+xml"/><item><title>Smarter MacBook Charging with Shortcuts and BetterTouchTool</title><link>https://blog.aidanmaurinjones.com/posts/smarter-macbook-charging-with-shortcuts-and-bettertouchtool/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/smarter-macbook-charging-with-shortcuts-and-bettertouchtool/</guid><pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>I’ve been working on a smarter way to manage my MacBook’s charging routine. Instead of
 keeping it constantly plugged in—or worse, draining too far—I built a pair of Shortcuts that
 tie into Home Assistant and give me precise control over when my MacBook starts and stops
 charging.</p>
@@ -151,8 +132,7 @@ background.</p>
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>I’ve been working on a smarter way to manage my MacBook’s charging routine. Instead of
+]]></description><content:encoded><![CDATA[<p>I’ve been working on a smarter way to manage my MacBook’s charging routine. Instead of
 keeping it constantly plugged in—or worse, draining too far—I built a pair of Shortcuts that
 tie into Home Assistant and give me precise control over when my MacBook starts and stops
 charging.</p>
@@ -286,9 +266,4 @@ background.</p>
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-  </channel>
-</rss>
+]]></content:encoded></item></channel></rss>
