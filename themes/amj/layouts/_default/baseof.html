@@ -10,12 +10,17 @@
   {{ with resources.Get "css/style.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
   {{ end }}
-  {{ with resources.Get "js/code-copy.js" | minify | fingerprint }}
-  <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" defer></script>
-  {{ end }}
-  {{ range site.Params.customCSS }}
-  <link rel="stylesheet" href="{{ . | relURL }}">
-  {{ end }}
+	  {{ with resources.Get "js/code-copy.js" | minify | fingerprint }}
+	  <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" defer></script>
+	  {{ end }}
+	  {{ if .Params.searchPage }}
+	  {{ with resources.Get "js/search.js" | minify | fingerprint }}
+	  <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" defer></script>
+	  {{ end }}
+	  {{ end }}
+	  {{ range site.Params.customCSS }}
+	  <link rel="stylesheet" href="{{ . | relURL }}">
+	  {{ end }}
   {{ with site.Home.OutputFormats.Get "RSS" }}
   <link rel="alternate" type="{{ .MediaType.Type }}" title="{{ site.Title }} RSS" href="{{ .RelPermalink }}">
   {{ end }}

@@ -1,6 +1,7 @@
 ---
 title: "About"
 type: "page"
+searchExclude: true
 draft: false
 ---
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Aidan Maurin-Jones | GitHub Pages</title>
+    <title>Aidan Maurin-Jones | Github Pages</title>
     <link>https://www.blog.aidanmaurinjones.com/tags/github-pages/</link>
-    <description>GitHub Pages</description>
+    <description>Github Pages</description>
     <language>en</language>
     
       <atom:link href="https://www.blog.aidanmaurinjones.com/tags/github-pages/index.xml" rel="self" type="application/rss+xml"></atom:link>

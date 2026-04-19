@@ -1,0 +1,26 @@
+{{ define "main" }}
+  <section class="section-page search-page">
+    <div class="section-page__main">
+      <header class="section-hero">
+        <p class="section-hero__eyebrow">Search</p>
+        <h1 class="section-hero__title">{{ .Title }}</h1>
+        <div class="section-hero__body prose">
+          <form class="search-page__form" role="search" method="get" action="{{ .RelPermalink }}">
+            <label class="sr-only" for="search-page-query">Search this site</label>
+            <input id="search-page-query" class="search-page__field" type="search" name="q" placeholder="Search posts, tags, and pages" autocomplete="off" data-search-input>
+            <button class="button button--primary" type="submit">Search</button>
+          </form>
+        </div>
+      </header>
+
+      <section class="entry search-results" aria-live="polite">
+        <p class="search-results__status" data-search-status>Type a search term to search the site.</p>
+        <div class="search-results__list" data-search-list></div>
+      </section>
+    </div>
+
+    <aside class="section-page__rail">
+      {{ partial "tags-panel.html" . }}
+    </aside>
+  </section>
+{{ end }}

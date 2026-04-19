@@ -30,7 +30,7 @@ theme = 'amj'
   pagerSize = 10
 
 [outputs]
-home = ["HTML", "RSS"]
+home = ["HTML", "RSS", "JSON"]
 section = ["HTML", "RSS"]
 taxonomy = ["HTML"]
 term = ["HTML", "RSS"]

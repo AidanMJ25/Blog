@@ -1,0 +1,10 @@
+{{- $suffix := .Suffix | default "site" -}}
+<form class="site-search" role="search" method="get" action="{{ `search/` | relURL }}">
+  <label class="sr-only" for="site-search-{{ $suffix }}">Search this site</label>
+  <input id="site-search-{{ $suffix }}" class="site-search__field" type="search" name="q" placeholder="Search" autocomplete="off">
+  <button class="site-search__submit" type="submit" aria-label="Search">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M10.75 4a6.75 6.75 0 0 1 5.36 10.86l3.52 3.52-1.25 1.25-3.52-3.52A6.75 6.75 0 1 1 10.75 4Zm0 1.75a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z"/>
+    </svg>
+  </button>
+</form>
