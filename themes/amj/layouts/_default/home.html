@@ -6,6 +6,8 @@
   {{ $stream := after 1 $ordered }}
   {{ $postsSection := site.GetPage `section` (index $mainSections 0) }}
 
+  <h1 class="sr-only">{{ site.Params.siteName | default site.Title }}</h1>
+
   <section class="frontpage-grid" aria-label="Featured stories">
     <div class="frontpage-grid__lead">
       {{ range $lead }}

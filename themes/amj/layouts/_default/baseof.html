@@ -3,10 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ block "title" . }}{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}{{ end }}</title>
+  {{- $siteName := site.Params.siteName | default site.Title -}}
+  {{- $pageTitle := cond .IsHome $siteName (printf "%s | %s" .Title site.Title) -}}
+  <title>{{ $pageTitle }}</title>
   {{- $description := .Description | default .Summary | default site.Params.description -}}
   <meta name="description" content="{{ $description | plainify | htmlUnescape | truncate 160 }}">
   <link rel="canonical" href="{{ .Permalink }}">
+  {{ partial "seo.html" . }}
   {{ with resources.Get "css/style.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
   {{ end }}

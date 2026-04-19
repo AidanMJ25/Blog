@@ -21,6 +21,8 @@ theme = 'amj'
 
 [params]
   author = "Aidan Maurin-Jones"
+  authorURL = "https://aidanmaurinjones.com/"
+  siteName = "Aidan Maurin-Jones Blog"
   description = "Aidan Maurin-Jones shares tools, automations, and thoughts on whatever’s interesting this week."
   rssFullText = true
   mainSections = ["posts"]
