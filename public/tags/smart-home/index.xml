@@ -1,4 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Aidan Maurin-Jones | Smart Home</title><link>https://blog.aidanmaurinjones.com/tags/smart-home/</link><description>Smart Home</description><language>en</language><atom:link href="https://blog.aidanmaurinjones.com/tags/smart-home/index.xml" rel="self" type="application/rss+xml"/><item><title>Automating TP-Link Kasa Devices with Shortcuts</title><link>https://blog.aidanmaurinjones.com/posts/automating-tp-link-kasa-devices-with-shortcuts/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/automating-tp-link-kasa-devices-with-shortcuts/</guid><pubDate>Thu, 25 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>One of the things I love about Shortcuts is how it can act as a bridge between apps and services
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Aidan Maurin-Jones | Smart Home</title>
+    <link>http://localhost:1313/tags/smart-home/</link>
+    <description>Smart Home</description>
+    <language>en</language>
+    
+      <atom:link href="http://localhost:1313/tags/smart-home/index.xml" rel="self" type="application/rss+xml"></atom:link>
+    
+    
+      <item>
+        <title>Automating TP-Link Kasa Devices with Shortcuts</title>
+        <link>http://localhost:1313/posts/automating-tp-link-kasa-devices-with-shortcuts/</link>
+        <guid isPermaLink="true">http://localhost:1313/posts/automating-tp-link-kasa-devices-with-shortcuts/</guid>
+        
+          <pubDate>Thu, 25 Sep 2025 00:00:00 &#43;0000</pubDate>
+        
+        
+          <description><![CDATA[<p>One of the things I love about Shortcuts is how it can act as a bridge between apps and services
 that don&rsquo;t officially support Apple&rsquo;s automation ecosystem. A perfect example of this is TP-Link&rsquo;s
 Kasa line of smart plugs, switches, and bulbs. Kasa devices don&rsquo;t natively integrate with
 Shortcuts&ndash;but with a little API trickery, you can bring them right into your automations.</p>
@@ -166,7 +185,8 @@ giving you the tools to bend devices and services to your will&ndash;even when t
   </div>
 </div>
 
-]]></description><content:encoded><![CDATA[<p>One of the things I love about Shortcuts is how it can act as a bridge between apps and services
+]]></description>
+          <content:encoded><![CDATA[<p>One of the things I love about Shortcuts is how it can act as a bridge between apps and services
 that don&rsquo;t officially support Apple&rsquo;s automation ecosystem. A perfect example of this is TP-Link&rsquo;s
 Kasa line of smart plugs, switches, and bulbs. Kasa devices don&rsquo;t natively integrate with
 Shortcuts&ndash;but with a little API trickery, you can bring them right into your automations.</p>
@@ -334,7 +354,19 @@ giving you the tools to bend devices and services to your will&ndash;even when t
   </div>
 </div>
 
-]]></content:encoded></item><item><title>Controlling SwitchBot Devices with Shortcuts and the Web API</title><link>https://blog.aidanmaurinjones.com/posts/controlling-switchbot-devices-with-shortcuts-and-the-web-api/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/controlling-switchbot-devices-with-shortcuts-and-the-web-api/</guid><pubDate>Wed, 24 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>One of my favorite things about Apple&rsquo;s Shortcuts app is how it can bridge the gap between hardware and cloud APIs without requiring a single line of &ldquo;real&rdquo; code. A perfect example of this is SwitchBot: a line of Bluetooth and Wi-Fi-enabled devices that can be controlled through their official app&ndash;or, with a bit of setup, entirely through Shortcuts.</p>
+]]></content:encoded>
+        
+      </item>
+    
+      <item>
+        <title>Controlling SwitchBot Devices with Shortcuts and the Web API</title>
+        <link>http://localhost:1313/posts/controlling-switchbot-devices-with-shortcuts-and-the-web-api/</link>
+        <guid isPermaLink="true">http://localhost:1313/posts/controlling-switchbot-devices-with-shortcuts-and-the-web-api/</guid>
+        
+          <pubDate>Wed, 24 Sep 2025 00:00:00 &#43;0000</pubDate>
+        
+        
+          <description><![CDATA[<p>One of my favorite things about Apple&rsquo;s Shortcuts app is how it can bridge the gap between hardware and cloud APIs without requiring a single line of &ldquo;real&rdquo; code. A perfect example of this is SwitchBot: a line of Bluetooth and Wi-Fi-enabled devices that can be controlled through their official app&ndash;or, with a bit of setup, entirely through Shortcuts.</p>
 <p>In this post, I&rsquo;ll walk you through two Shortcuts I built: one to fetch a list of all my SwitchBot devices, and another to send commands to them. Together, they let me control my smart home directly from Siri, widgets, or automations.</p>
 <hr>
 <h3 id="getting-device-details">Getting Device Details</h3>
@@ -423,7 +455,8 @@ giving you the tools to bend devices and services to your will&ndash;even when t
   </div>
 </div>
 
-]]></description><content:encoded><![CDATA[<p>One of my favorite things about Apple&rsquo;s Shortcuts app is how it can bridge the gap between hardware and cloud APIs without requiring a single line of &ldquo;real&rdquo; code. A perfect example of this is SwitchBot: a line of Bluetooth and Wi-Fi-enabled devices that can be controlled through their official app&ndash;or, with a bit of setup, entirely through Shortcuts.</p>
+]]></description>
+          <content:encoded><![CDATA[<p>One of my favorite things about Apple&rsquo;s Shortcuts app is how it can bridge the gap between hardware and cloud APIs without requiring a single line of &ldquo;real&rdquo; code. A perfect example of this is SwitchBot: a line of Bluetooth and Wi-Fi-enabled devices that can be controlled through their official app&ndash;or, with a bit of setup, entirely through Shortcuts.</p>
 <p>In this post, I&rsquo;ll walk you through two Shortcuts I built: one to fetch a list of all my SwitchBot devices, and another to send commands to them. Together, they let me control my smart home directly from Siri, widgets, or automations.</p>
 <hr>
 <h3 id="getting-device-details">Getting Device Details</h3>
@@ -512,4 +545,9 @@ giving you the tools to bend devices and services to your will&ndash;even when t
   </div>
 </div>
 
-]]></content:encoded></item></channel></rss>
+]]></content:encoded>
+        
+      </item>
+    
+  </channel>
+</rss>

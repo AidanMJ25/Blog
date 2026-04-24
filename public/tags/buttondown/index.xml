@@ -1,4 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Aidan Maurin-Jones | Buttondown</title><link>https://blog.aidanmaurinjones.com/tags/buttondown/</link><description>Buttondown</description><language>en</language><atom:link href="https://blog.aidanmaurinjones.com/tags/buttondown/index.xml" rel="self" type="application/rss+xml"/><item><title>Automating My Newsletter Workflow: One Markdown File for Hugo and Buttondown</title><link>https://blog.aidanmaurinjones.com/posts/automating-my-newsletter-workflow-one-markdown-file-for-hugo-and-buttondown/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/automating-my-newsletter-workflow-one-markdown-file-for-hugo-and-buttondown/</guid><pubDate>Wed, 01 Oct 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>I’ve been working toward a goal for years: a single place to write, and as many automated
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Aidan Maurin-Jones | Buttondown</title>
+    <link>http://localhost:1313/tags/buttondown/</link>
+    <description>Buttondown</description>
+    <language>en</language>
+    
+      <atom:link href="http://localhost:1313/tags/buttondown/index.xml" rel="self" type="application/rss+xml"></atom:link>
+    
+    
+      <item>
+        <title>Automating My Newsletter Workflow: One Markdown File for Hugo and Buttondown</title>
+        <link>http://localhost:1313/posts/automating-my-newsletter-workflow-one-markdown-file-for-hugo-and-buttondown/</link>
+        <guid isPermaLink="true">http://localhost:1313/posts/automating-my-newsletter-workflow-one-markdown-file-for-hugo-and-buttondown/</guid>
+        
+          <pubDate>Wed, 01 Oct 2025 00:00:00 &#43;0000</pubDate>
+        
+        
+          <description><![CDATA[<p>I’ve been working toward a goal for years: a single place to write, and as many automated
 outputs as possible. I don’t want to copy and paste, re-format, or duplicate my writing. The
 same Markdown file that powers a blog post should also power a newsletter, an archive, or
 whatever else I decide to publish.</p>
@@ -89,7 +108,8 @@ more often.</p>
   </div>
 </div>
 
-]]></description><content:encoded><![CDATA[<p>I’ve been working toward a goal for years: a single place to write, and as many automated
+]]></description>
+          <content:encoded><![CDATA[<p>I’ve been working toward a goal for years: a single place to write, and as many automated
 outputs as possible. I don’t want to copy and paste, re-format, or duplicate my writing. The
 same Markdown file that powers a blog post should also power a newsletter, an archive, or
 whatever else I decide to publish.</p>
@@ -180,4 +200,9 @@ more often.</p>
   </div>
 </div>
 
-]]></content:encoded></item></channel></rss>
+]]></content:encoded>
+        
+      </item>
+    
+  </channel>
+</rss>

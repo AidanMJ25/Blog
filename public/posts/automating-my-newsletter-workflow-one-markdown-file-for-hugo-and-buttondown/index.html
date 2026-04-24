@@ -1,48 +1,247 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Automating My Newsletter Workflow: One Markdown File for Hugo and Buttondown | Aidan Maurin-Jones</title><meta name=description content="I built a Shortcut that takes the same Markdown file I use for my Hugo site’s Newsletter Archive and publishes it directly to Buttondown. One file, two …"><link rel=canonical href=https://blog.aidanmaurinjones.com/posts/automating-my-newsletter-workflow-one-markdown-file-for-hugo-and-buttondown/><meta property="og:site_name" content="Aidan Maurin-Jones Blog"><meta property="og:title" content="Automating My Newsletter Workflow: One Markdown File for Hugo and Buttondown | Aidan Maurin-Jones"><meta property="og:description" content="I built a Shortcut that takes the same Markdown file I use for my Hugo site’s Newsletter Archive and publishes it directly to Buttondown. One file, two …"><meta property="og:url" content="https://blog.aidanmaurinjones.com/posts/automating-my-newsletter-workflow-one-markdown-file-for-hugo-and-buttondown/"><meta property="og:type" content="article"><meta property="og:locale" content="en_US"><meta property="article:published_time" content="2025-10-01T00:00:00Z"><meta property="article:modified_time" content="2025-10-01T00:00:00Z"><meta property="article:tag" content="Shortcuts"><meta property="article:tag" content="Buttondown"><meta property="article:tag" content="Hugo"><meta name=twitter:card content="summary"><meta name=twitter:title content="Automating My Newsletter Workflow: One Markdown File for Hugo and Buttondown | Aidan Maurin-Jones"><meta name=twitter:description content="I built a Shortcut that takes the same Markdown file I use for my Hugo site’s Newsletter Archive and publishes it directly to Buttondown. One file, two …"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","articleSection":"Blog Posts","author":{"@type":"Person","name":"Aidan Maurin-Jones","url":"https://aidanmaurinjones.com/"},"dateModified":"2025-10-01T00:00:00Z","datePublished":"2025-10-01T00:00:00Z","description":"I built a Shortcut that takes the same Markdown file I use for my Hugo site’s Newsletter Archive and publishes it directly to Buttondown. One file, two …","headline":"Automating My Newsletter Workflow: One Markdown File for Hugo and Buttondown","inLanguage":"en-us","keywords":["Shortcuts","Buttondown","Hugo"],"mainEntityOfPage":"https://blog.aidanmaurinjones.com/posts/automating-my-newsletter-workflow-one-markdown-file-for-hugo-and-buttondown/","publisher":{"@type":"Person","name":"Aidan Maurin-Jones","url":"https://aidanmaurinjones.com/"},"url":"https://blog.aidanmaurinjones.com/posts/automating-my-newsletter-workflow-one-markdown-file-for-hugo-and-buttondown/","wordCount":571}</script><link rel=stylesheet href=/css/style.min.eeb7e39efd09fc7328023e954ed2a36db8fc89baf7373dc72c4069664fb3a6b0.css integrity="sha256-7rfjnv0J/HMoAj6VTtKjbbj8ibr3Nz3HLEBpZk+zprA="><script src=/js/code-copy.min.0f8459a011f490588fbc8675943fa09eb746a461aa8ec7ebbcf31e43244d0258.js integrity="sha256-D4RZoBH0kFiPvIZ1lD+gnrdGpGGqjsfrvPMeQyRNAlg=" defer></script><link rel=alternate type=application/rss+xml title="Aidan Maurin-Jones RSS" href=/index.xml><link rel=icon href=/favicon.ico></head><body><div class=site-shell><header class=site-header><div class=site-header__brand><p class=site-header__title><a href=/>Aidan Maurin-Jones</a></p><p class=site-header__tagline>Aidan Maurin-Jones shares tools, automations, and thoughts on whatever’s interesting this week.</p></div><nav class="site-nav site-nav--desktop" aria-label=Primary><a href=/>Home</a>
-<a href=/about/>About</a>
-<a href=/contact/>Contact</a>
-<a href=/newsletter/>Newsletter Archive</a><form class=site-search role=search method=get action=/search/><label class=sr-only for=site-search-desktop>Search this site</label>
-<input id=site-search-desktop class=site-search__field type=search name=q placeholder=Search autocomplete=off>
-<button class=site-search__submit type=submit aria-label=Search>
-<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.75 4a6.75 6.75.0 015.36 10.86l3.52 3.52-1.25 1.25-3.52-3.52A6.75 6.75.0 1110.75 4zm0 1.75a5 5 0 100 10 5 5 0 000-10z"/></svg></button></form></nav><details class=site-nav-toggle><summary class=site-nav-toggle__summary aria-label="Open menu"><span class=site-nav-toggle__label>Menu</span>
-<span class=site-nav-toggle__icon aria-hidden=true></span></summary><nav class="site-nav site-nav--mobile" aria-label="Mobile primary"><a href=/>Home</a>
-<a href=/about/>About</a>
-<a href=/contact/>Contact</a>
-<a href=/newsletter/>Newsletter Archive</a></nav></details><div class=site-search-mobile><form class=site-search role=search method=get action=/search/><label class=sr-only for=site-search-mobile>Search this site</label>
-<input id=site-search-mobile class=site-search__field type=search name=q placeholder=Search autocomplete=off>
-<button class=site-search__submit type=submit aria-label=Search>
-<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.75 4a6.75 6.75.0 015.36 10.86l3.52 3.52-1.25 1.25-3.52-3.52A6.75 6.75.0 1110.75 4zm0 1.75a5 5 0 100 10 5 5 0 000-10z"/></svg></button></form></div></header><main class=page><article class=article-page><header class=article-hero><p class=article-hero__section><a href=/posts/>Blog Posts</a></p><h1 class=article-hero__title>Automating My Newsletter Workflow: One Markdown File for Hugo and Buttondown</h1><p class=article-hero__summary>I built a Shortcut that takes the same Markdown file I use for my Hugo site’s Newsletter Archive and publishes it directly to Buttondown. One file, two destinations, no extra work.</p></header><div class=article-flow><section class="rail-panel article-details"><div class=meta><span>By Aidan Maurin-Jones</span>
-<span>October 1, 2025</span>
-<span>3 min read</span>
-<span class=tag-list><a href=/tags/shortcuts/>Shortcuts</a>
-<a href=/tags/buttondown/>Buttondown</a>
-<a href=/tags/hugo/>Hugo</a>
-</span><a class=tag-list__rss href=/posts/index.xml>Blog Posts RSS</a></div></section><div class=entry><div class="entry__content prose"><p>I’ve been working toward a goal for years: a single place to write, and as many automated
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><title>Automating My Newsletter Workflow: One Markdown File for Hugo and Buttondown | Aidan Maurin-Jones</title><meta name="description" content="I built a Shortcut that takes the same Markdown file I use for my Hugo site’s Newsletter Archive and publishes it directly to Buttondown. One file, two …">
+  <link rel="canonical" href="http://localhost:1313/posts/automating-my-newsletter-workflow-one-markdown-file-for-hugo-and-buttondown/">
+  <meta property="og:site_name" content="Aidan Maurin-Jones Blog">
+<meta property="og:title" content="Automating My Newsletter Workflow: One Markdown File for Hugo and Buttondown | Aidan Maurin-Jones">
+<meta property="og:description" content="I built a Shortcut that takes the same Markdown file I use for my Hugo site’s Newsletter Archive and publishes it directly to Buttondown. One file, two …">
+<meta property="og:url" content="http://localhost:1313/posts/automating-my-newsletter-workflow-one-markdown-file-for-hugo-and-buttondown/">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+
+  <meta property="article:published_time" content="2025-10-01T00:00:00Z">
+  <meta property="article:modified_time" content="2025-10-01T00:00:00Z">
+  <meta property="article:tag" content="Shortcuts"><meta property="article:tag" content="Buttondown"><meta property="article:tag" content="Hugo">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Automating My Newsletter Workflow: One Markdown File for Hugo and Buttondown | Aidan Maurin-Jones">
+<meta name="twitter:description" content="I built a Shortcut that takes the same Markdown file I use for my Hugo site’s Newsletter Archive and publishes it directly to Buttondown. One file, two …"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","articleSection":"Blog Posts","author":{"@type":"Person","name":"Aidan Maurin-Jones","url":"https://aidanmaurinjones.com/"},"dateModified":"2025-10-01T00:00:00Z","datePublished":"2025-10-01T00:00:00Z","description":"I built a Shortcut that takes the same Markdown file I use for my Hugo site’s Newsletter Archive and publishes it directly to Buttondown. One file, two …","headline":"Automating My Newsletter Workflow: One Markdown File for Hugo and Buttondown","inLanguage":"en-us","keywords":["Shortcuts","Buttondown","Hugo"],"mainEntityOfPage":"http://localhost:1313/posts/automating-my-newsletter-workflow-one-markdown-file-for-hugo-and-buttondown/","publisher":{"@type":"Person","name":"Aidan Maurin-Jones","url":"https://aidanmaurinjones.com/"},"url":"http://localhost:1313/posts/automating-my-newsletter-workflow-one-markdown-file-for-hugo-and-buttondown/","wordCount":571}</script>
+
+  
+  <link rel="stylesheet" href="/css/style.min.eeb7e39efd09fc7328023e954ed2a36db8fc89baf7373dc72c4069664fb3a6b0.css" integrity="sha256-7rfjnv0J/HMoAj6VTtKjbbj8ibr3Nz3HLEBpZk&#43;zprA=">
+  
+	  
+	  <script src="/js/code-copy.min.0f8459a011f490588fbc8675943fa09eb746a461aa8ec7ebbcf31e43244d0258.js" integrity="sha256-D4RZoBH0kFiPvIZ1lD&#43;gnrdGpGGqjsfrvPMeQyRNAlg=" defer></script>
+	  
+	  
+	  
+  
+  <link rel="alternate" type="application/rss&#43;xml" title="Aidan Maurin-Jones RSS" href="/index.xml">
+  
+  
+  
+  
+  <link rel="icon" href="/favicon.ico">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+  <div class="site-header__brand">
+    <p class="site-header__title"><a href="/">Aidan Maurin-Jones</a></p>
+    <p class="site-header__tagline">Aidan Maurin-Jones shares tools, automations, and thoughts on whatever’s interesting this week.</p>
+  </div>
+  <nav class="site-nav site-nav--desktop" aria-label="Primary">
+    <a href="/" >Home</a>
+
+  <a href="/about/" >About</a>
+
+  <a href="/contact/" >Contact</a>
+
+  <a href="/newsletter/" >Newsletter Archive</a>
+
+
+    <form class="site-search" role="search" method="get" action="/search/">
+  <label class="sr-only" for="site-search-desktop">Search this site</label>
+  <input id="site-search-desktop" class="site-search__field" type="search" name="q" placeholder="Search" autocomplete="off">
+  <button class="site-search__submit" type="submit" aria-label="Search">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M10.75 4a6.75 6.75 0 0 1 5.36 10.86l3.52 3.52-1.25 1.25-3.52-3.52A6.75 6.75 0 1 1 10.75 4Zm0 1.75a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z"/>
+    </svg>
+  </button>
+</form>
+
+  </nav>
+  <details class="site-nav-toggle">
+    <summary class="site-nav-toggle__summary" aria-label="Open menu">
+      <span class="site-nav-toggle__label">Menu</span>
+      <span class="site-nav-toggle__icon" aria-hidden="true"></span>
+    </summary>
+    <nav class="site-nav site-nav--mobile" aria-label="Mobile primary">
+      <a href="/" >Home</a>
+
+  <a href="/about/" >About</a>
+
+  <a href="/contact/" >Contact</a>
+
+  <a href="/newsletter/" >Newsletter Archive</a>
+
+
+    </nav>
+  </details>
+  <div class="site-search-mobile">
+    <form class="site-search" role="search" method="get" action="/search/">
+  <label class="sr-only" for="site-search-mobile">Search this site</label>
+  <input id="site-search-mobile" class="site-search__field" type="search" name="q" placeholder="Search" autocomplete="off">
+  <button class="site-search__submit" type="submit" aria-label="Search">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M10.75 4a6.75 6.75 0 0 1 5.36 10.86l3.52 3.52-1.25 1.25-3.52-3.52A6.75 6.75 0 1 1 10.75 4Zm0 1.75a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z"/>
+    </svg>
+  </button>
+</form>
+
+  </div>
+</header>
+
+    <main class="page">
+      
+  
+  <article class="article-page">
+    <header class="article-hero">
+      
+        <p class="article-hero__section"><a href="/posts/">Blog Posts</a></p>
+      
+      <h1 class="article-hero__title">Automating My Newsletter Workflow: One Markdown File for Hugo and Buttondown</h1>
+      
+        <p class="article-hero__summary">I built a Shortcut that takes the same Markdown file I use for my Hugo site’s Newsletter Archive and publishes it directly to Buttondown. One file, two destinations, no extra work.</p>
+      
+    </header>
+
+    <div class="article-flow">
+      <section class="rail-panel article-details">
+        <div class="meta">
+          <span>By Aidan Maurin-Jones</span>
+          
+            <span>October 1, 2025</span>
+          
+          
+            <span>3 min read</span>
+          
+          <span class="tag-list">
+            
+              
+                <a href="/tags/shortcuts/">Shortcuts</a>
+              
+                <a href="/tags/buttondown/">Buttondown</a>
+              
+                <a href="/tags/hugo/">Hugo</a>
+              
+            
+          </span>
+          
+            
+              <a class="tag-list__rss" href="/posts/index.xml">Blog Posts RSS</a>
+            
+          
+        </div>
+      </section>
+
+      <div class="entry">
+        <div class="entry__content prose">
+          <p>I’ve been working toward a goal for years: a single place to write, and as many automated
 outputs as possible. I don’t want to copy and paste, re-format, or duplicate my writing. The
 same Markdown file that powers a blog post should also power a newsletter, an archive, or
-whatever else I decide to publish.</p><p>That philosophy led me to a new Shortcut I built for my Buttondown newsletter. With it, I
+whatever else I decide to publish.</p>
+<p>That philosophy led me to a new Shortcut I built for my Buttondown newsletter. With it, I
 can take the exact same Markdown file I use for my Hugo-based site’s Newsletter Archive page,
 and publish it straight to Buttondown in one step. No duplication, no reformatting, and no
-breaking my Markdown-first workflow.</p><p>⸻</p><h3 id=a-dual-purpose-draft>A Dual-Purpose Draft</h3><p>Every newsletter draft I write starts as a Markdown file in my Hugo project. It includes
+breaking my Markdown-first workflow.</p>
+<p>⸻</p>
+<h3 id="a-dual-purpose-draft">A Dual-Purpose Draft</h3>
+<p>Every newsletter draft I write starts as a Markdown file in my Hugo project. It includes
 the standard YAML front matter — title, date, tags — so it can live side-by-side with my
-blog posts and generate an archive page on my site.</p><p>At the bottom, I’ve also standardized on a Hugo shortcode that handles things like subscribe
-links and callouts.</p><p>The front matter makes it valid Hugo content, but Buttondown doesn’t need that metadata. Likewise,
+blog posts and generate an archive page on my site.</p>
+<p>At the bottom, I’ve also standardized on a Hugo shortcode that handles things like subscribe
+links and callouts.</p>
+<p>The front matter makes it valid Hugo content, but Buttondown doesn’t need that metadata. Likewise,
 the shortcode at the bottom is great for my archive page but doesn’t belong in an email. The
-Shortcut’s job is to strip out those bits and isolate the actual content.</p><p>⸻</p><h3 id=regex-to-the-rescue>Regex to the Rescue</h3><p>To solve that, I leaned on regular expressions. The Shortcut matches everything after the
-closing &mdash; of the YAML front matter and before the buttons-list shortcode.</p><p>The pattern looks like this:</p><pre><code>\A---[\n\s\S]*?---\s*([\n\s\S]*?)\s*\{\{\s*buttons-list\s*\}\}
-</code></pre><p>The captured group becomes the newsletter body. Meanwhile, the Shortcut takes the filename
+Shortcut’s job is to strip out those bits and isolate the actual content.</p>
+<p>⸻</p>
+<h3 id="regex-to-the-rescue">Regex to the Rescue</h3>
+<p>To solve that, I leaned on regular expressions. The Shortcut matches everything after the
+closing &mdash; of the YAML front matter and before the buttons-list shortcode.</p>
+<p>The pattern looks like this:</p>
+<pre><code>\A---[\n\s\S]*?---\s*([\n\s\S]*?)\s*\{\{\s*buttons-list\s*\}\}
+</code></pre>
+<p>The captured group becomes the newsletter body. Meanwhile, the Shortcut takes the filename
 of the Markdown draft and uses it as the subject line. That way, one file works for both Hugo
 (which uses the front matter) and Buttondown (which only needs subject + body but I hope one
-day it supports front matter).</p><p>⸻</p><h3 id=publishing-via-buttondowns-api>Publishing via Buttondown’s API</h3><p>The final step is an API call. The Shortcut uses the Get Contents of URL action, configured with:</p><ul><li>Endpoint: <a href=https://api.buttondown.com/v1/emails>https://api.buttondown.com/v1/emails</a></li><li>Headers: Authorization token (pulled from a secure Shortcut)</li><li>Body: JSON with subject, body, and status</li></ul><p>I set status to about_to_send, which creates the email in Buttondown ready for review. If
-I’m confident, I can flip this to sent and fire it off instantly.</p><p>⸻</p><h3 id=why-this-matters>Why This Matters</h3><p>The beauty of this setup is that I never have to write the same thing twice. My Hugo site
+day it supports front matter).</p>
+<p>⸻</p>
+<h3 id="publishing-via-buttondowns-api">Publishing via Buttondown’s API</h3>
+<p>The final step is an API call. The Shortcut uses the Get Contents of URL action, configured with:</p>
+<ul>
+<li>Endpoint: <a href="https://api.buttondown.com/v1/emails">https://api.buttondown.com/v1/emails</a></li>
+<li>Headers: Authorization token (pulled from a secure Shortcut)</li>
+<li>Body: JSON with subject, body, and status</li>
+</ul>
+<p>I set status to about_to_send, which creates the email in Buttondown ready for review. If
+I’m confident, I can flip this to sent and fire it off instantly.</p>
+<p>⸻</p>
+<h3 id="why-this-matters">Why This Matters</h3>
+<p>The beauty of this setup is that I never have to write the same thing twice. My Hugo site
 automatically builds out a Newsletter Archive page from the Markdown file, while this
-Shortcut takes that same file and pushes it to Buttondown.</p><p>Plain text is the source of truth, Hugo and Buttondown are just outputs.</p><p>This also gives me flexibility: if I ever change services, or if I want to generate a PDF
+Shortcut takes that same file and pushes it to Buttondown.</p>
+<p>Plain text is the source of truth, Hugo and Buttondown are just outputs.</p>
+<p>This also gives me flexibility: if I ever change services, or if I want to generate a PDF
 archive, I don’t need to rewrite anything. I’ve already got everything in a neutral,
-Markdown-first format that can be re-used anywhere.</p><p>⸻</p><h3 id=why-this-works-so-well>Why This Works So Well</h3><p>Like many of my favorite automations, this Shortcut doesn’t feel flashy — it feels inevitable. Once
+Markdown-first format that can be re-used anywhere.</p>
+<p>⸻</p>
+<h3 id="why-this-works-so-well">Why This Works So Well</h3>
+<p>Like many of my favorite automations, this Shortcut doesn’t feel flashy — it feels inevitable. Once
 you decide everything should start as Markdown, the next step is making sure the publishing
-side bends around your workflow, not the other way around.</p><p>Shortcuts, Buttondown, and Hugo all line up perfectly here. It’s one file, two destinations,
+side bends around your workflow, not the other way around.</p>
+<p>Shortcuts, Buttondown, and Hugo all line up perfectly here. It’s one file, two destinations,
 and zero overhead. And that’s exactly the kind of automation that keeps me writing and publishing
-more often.</p><article class=app-card><a class=app-card__icon href=https://www.icloud.com/shortcuts/b08625600f25483fa55e19207d004eec target=_blank rel=noopener><img src=/images/Shortcuts%20Icons/Publish%20Newsletter%20to%20Buttondown%20%28Public%29%20Icon.jpg alt="Publish Newsletter to Buttondown app icon" width=52 height=52>
-</a><a class=app-card__title href=https://www.icloud.com/shortcuts/b08625600f25483fa55e19207d004eec target=_blank rel=noopener>Publish Newsletter to Buttondown</a></article><div class=amj-cta aria-label="Support and subscription links"><div class="amj-cta__item amj-cta__item--coffee"><a class="amj-cta__button amj-cta__button--coffee" href=https://www.buymeacoffee.com/AidanMJ25 target=_blank rel=noopener><span>Buy Me a Coffee</span></a></div><div class=amj-cta__item><a class="amj-cta__button amj-cta__button--rss" href=https://blog.aidanmaurinjones.com/posts/index.xml target=_blank rel=noopener aria-label="Subscribe via RSS"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82.0 110-3.64 1.82 1.82.0 010 3.64zm-3-8.18v2.73a8.64 8.64.0 018.64 8.64h2.73A11.36 11.36.0 003.18 9.64zm0-4.09v2.73A15.45 15.45.0 0118.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55z"/></svg>
-<span>Subscribe via RSS</span></a></div><div class=amj-cta__item><a class="amj-cta__button amj-cta__button--newsletter" href=https://buttondown.com/AidanMJ25 target=_blank rel=noopener>Newsletter via Email</a></div><div class=amj-cta__item><a class="amj-cta__button amj-cta__button--rss" href=https://blog.aidanmaurinjones.com/newsletter/index.xml target=_blank rel=noopener aria-label="Newsletter via RSS"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82.0 110-3.64 1.82 1.82.0 010 3.64zm-3-8.18v2.73a8.64 8.64.0 018.64 8.64h2.73A11.36 11.36.0 003.18 9.64zm0-4.09v2.73A15.45 15.45.0 0118.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55z"/></svg>
-<span>Newsletter via RSS</span></a></div></div></div></div></div></article></main><footer class=site-footer><p>2026 Aidan Maurin-Jones. Built with Hugo, Markdown, YAML front matter, and section-specific RSS feeds.</p></footer></div></body></html>
+more often.</p>
+<article class="app-card">
+  <a class="app-card__icon" href="https://www.icloud.com/shortcuts/b08625600f25483fa55e19207d004eec" target="_blank" rel="noopener">
+    <img src="/images/Shortcuts%20Icons/Publish%20Newsletter%20to%20Buttondown%20%28Public%29%20Icon.jpg" alt="Publish Newsletter to Buttondown app icon" width="52" height="52">
+  </a>
+  <a class="app-card__title" href="https://www.icloud.com/shortcuts/b08625600f25483fa55e19207d004eec" target="_blank" rel="noopener">
+    Publish Newsletter to Buttondown
+  </a>
+</article>
+
+<div class="amj-cta" aria-label="Support and subscription links">
+  <div class="amj-cta__item amj-cta__item--coffee">
+    <a class="amj-cta__button amj-cta__button--coffee" href="https://www.buymeacoffee.com/AidanMJ25" target="_blank" rel="noopener">
+      <span>Buy Me a Coffee</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/posts/index.xml" target="_blank" rel="noopener" aria-label="Subscribe via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Subscribe via RSS</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--newsletter" href="https://buttondown.com/AidanMJ25" target="_blank" rel="noopener">Newsletter via Email</a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/newsletter/index.xml" target="_blank" rel="noopener" aria-label="Newsletter via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Newsletter via RSS</span>
+    </a>
+  </div>
+</div>
+
+
+        </div>
+      </div>
+    </div>
+  </article>
+  
+
+    </main>
+    <footer class="site-footer">
+  <p>2026 Aidan Maurin-Jones. Built with Hugo, Markdown, YAML front matter, and section-specific RSS feeds.</p>
+</footer>
+
+  </div>
+</body>
+</html>
