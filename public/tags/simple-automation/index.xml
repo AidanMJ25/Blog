@@ -1,23 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Aidan Maurin-Jones | Simple Automation</title>
-    <link>http://localhost:1313/tags/simple-automation/</link>
-    <description>Simple Automation</description>
-    <language>en</language>
-    
-      <atom:link href="http://localhost:1313/tags/simple-automation/index.xml" rel="self" type="application/rss+xml"></atom:link>
-    
-    
-      <item>
-        <title>Open Ride Share Apps: A Beginner-Friendly Shortcut That Saves Me Money</title>
-        <link>http://localhost:1313/posts/open-ride-share-apps-a-beginner-friendly-shortcut-that-saves-me-money/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/open-ride-share-apps-a-beginner-friendly-shortcut-that-saves-me-money/</guid>
-        
-          <pubDate>Sat, 20 Sep 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>Not every Shortcut has to be complex to be life-changing. Some of the best automations are
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Aidan Maurin-Jones | Simple Automation</title><link>https://blog.aidanmaurinjones.com/tags/simple-automation/</link><description>Simple Automation</description><language>en</language><atom:link href="https://blog.aidanmaurinjones.com/tags/simple-automation/index.xml" rel="self" type="application/rss+xml"/><item><title>Open Ride Share Apps: A Beginner-Friendly Shortcut That Saves Me Money</title><link>https://blog.aidanmaurinjones.com/posts/open-ride-share-apps-a-beginner-friendly-shortcut-that-saves-me-money/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/open-ride-share-apps-a-beginner-friendly-shortcut-that-saves-me-money/</guid><pubDate>Sat, 20 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>Not every Shortcut has to be complex to be life-changing. Some of the best automations are
 the simplest ones&ndash;and my new Shortcut, Open Ride Share Apps, is a perfect example. It&rsquo;s
 literally just a launcher for Uber, Lyft, and Hopp. That&rsquo;s it. But in practice, it&rsquo;s saved
 me both time and a surprising amount of money.</p>
@@ -122,8 +103,7 @@ month of rides.</p>
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>Not every Shortcut has to be complex to be life-changing. Some of the best automations are
+]]></description><content:encoded><![CDATA[<p>Not every Shortcut has to be complex to be life-changing. Some of the best automations are
 the simplest ones&ndash;and my new Shortcut, Open Ride Share Apps, is a perfect example. It&rsquo;s
 literally just a launcher for Uber, Lyft, and Hopp. That&rsquo;s it. But in practice, it&rsquo;s saved
 me both time and a surprising amount of money.</p>
@@ -228,9 +208,4 @@ month of rides.</p>
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-  </channel>
-</rss>
+]]></content:encoded></item></channel></rss>

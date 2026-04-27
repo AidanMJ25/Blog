@@ -1,305 +1,113 @@
-<!DOCTYPE html>
-<html lang="en">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1"><title>A Raspberry Pi Stream Deck Server controlled by ESPHome | Aidan Maurin-Jones</title><meta name="description" content="I built a Raspberry Pi Stream Deck server with ESPHome power control, letting me turn it on, reboot, shut down, and monitor its state from Home Assistant.">
-  <link rel="canonical" href="http://localhost:1313/posts/a-raspberry-pi-stream-deck-server-controlled-by-esphome/">
-  <meta property="og:site_name" content="Blog - Aidan Maurin-Jones">
-<meta property="og:title" content="A Raspberry Pi Stream Deck Server controlled by ESPHome | Aidan Maurin-Jones">
-<meta property="og:description" content="I built a Raspberry Pi Stream Deck server with ESPHome power control, letting me turn it on, reboot, shut down, and monitor its state from Home Assistant.">
-<meta property="og:url" content="http://localhost:1313/posts/a-raspberry-pi-stream-deck-server-controlled-by-esphome/">
-<meta property="og:type" content="article">
-<meta property="og:locale" content="en_US">
-
-  <meta property="article:published_time" content="2025-09-15T00:00:00Z">
-  <meta property="article:modified_time" content="2025-09-15T00:00:00Z">
-  <meta property="article:tag" content="Home Assistant"><meta property="article:tag" content="ESPHome"><meta property="article:tag" content="Stream Deck"><meta property="article:tag" content="Raspberry Pi">
-
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="A Raspberry Pi Stream Deck Server controlled by ESPHome | Aidan Maurin-Jones">
-<meta name="twitter:description" content="I built a Raspberry Pi Stream Deck server with ESPHome power control, letting me turn it on, reboot, shut down, and monitor its state from Home Assistant."><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","articleSection":"Blog Posts","author":{"@type":"Person","name":"Aidan Maurin-Jones","url":"https://aidanmaurinjones.com/"},"dateModified":"2025-09-15T00:00:00Z","datePublished":"2025-09-15T00:00:00Z","description":"I built a Raspberry Pi Stream Deck server with ESPHome power control, letting me turn it on, reboot, shut down, and monitor its state from Home Assistant.","headline":"A Raspberry Pi Stream Deck Server controlled by ESPHome","inLanguage":"en-us","keywords":["Home Assistant","ESPHome","Stream Deck","Raspberry Pi"],"mainEntityOfPage":"http://localhost:1313/posts/a-raspberry-pi-stream-deck-server-controlled-by-esphome/","publisher":{"@type":"Person","name":"Aidan Maurin-Jones","url":"https://aidanmaurinjones.com/"},"url":"http://localhost:1313/posts/a-raspberry-pi-stream-deck-server-controlled-by-esphome/","wordCount":716}</script>
-
-  
-  <link rel="stylesheet" href="/css/style.min.eeb7e39efd09fc7328023e954ed2a36db8fc89baf7373dc72c4069664fb3a6b0.css" integrity="sha256-7rfjnv0J/HMoAj6VTtKjbbj8ibr3Nz3HLEBpZk&#43;zprA=">
-  
-	  
-	  <script src="/js/code-copy.min.0f8459a011f490588fbc8675943fa09eb746a461aa8ec7ebbcf31e43244d0258.js" integrity="sha256-D4RZoBH0kFiPvIZ1lD&#43;gnrdGpGGqjsfrvPMeQyRNAlg=" defer></script>
-	  
-	  
-	  
-  
-  <link rel="alternate" type="application/rss&#43;xml" title="Aidan Maurin-Jones RSS" href="/index.xml">
-  
-  
-  
-  
-  <link rel="icon" href="/favicon.ico">
-</head>
-<body>
-  <div class="site-shell">
-    <header class="site-header">
-  <div class="site-header__brand">
-    <p class="site-header__title"><a href="/">Aidan Maurin-Jones</a></p>
-    <p class="site-header__tagline">Aidan Maurin-Jones shares tools, automations, and thoughts on whatever’s interesting this week.</p>
-  </div>
-  <nav class="site-nav site-nav--desktop" aria-label="Primary">
-    <a href="/" >Home</a>
-
-  <a href="/about/" >About</a>
-
-  <a href="/contact/" >Contact</a>
-
-  <a href="/newsletter/" >Newsletter Archive</a>
-
-
-    <form class="site-search" role="search" method="get" action="/search/">
-  <label class="sr-only" for="site-search-desktop">Search this site</label>
-  <input id="site-search-desktop" class="site-search__field" type="search" name="q" placeholder="Search" autocomplete="off">
-  <button class="site-search__submit" type="submit" aria-label="Search">
-    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <path d="M10.75 4a6.75 6.75 0 0 1 5.36 10.86l3.52 3.52-1.25 1.25-3.52-3.52A6.75 6.75 0 1 1 10.75 4Zm0 1.75a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z"/>
-    </svg>
-  </button>
-</form>
-
-  </nav>
-  <details class="site-nav-toggle">
-    <summary class="site-nav-toggle__summary" aria-label="Open menu">
-      <span class="site-nav-toggle__label">Menu</span>
-      <span class="site-nav-toggle__icon" aria-hidden="true"></span>
-    </summary>
-    <nav class="site-nav site-nav--mobile" aria-label="Mobile primary">
-      <a href="/" >Home</a>
-
-  <a href="/about/" >About</a>
-
-  <a href="/contact/" >Contact</a>
-
-  <a href="/newsletter/" >Newsletter Archive</a>
-
-
-    </nav>
-  </details>
-  <div class="site-search-mobile">
-    <form class="site-search" role="search" method="get" action="/search/">
-  <label class="sr-only" for="site-search-mobile">Search this site</label>
-  <input id="site-search-mobile" class="site-search__field" type="search" name="q" placeholder="Search" autocomplete="off">
-  <button class="site-search__submit" type="submit" aria-label="Search">
-    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <path d="M10.75 4a6.75 6.75 0 0 1 5.36 10.86l3.52 3.52-1.25 1.25-3.52-3.52A6.75 6.75 0 1 1 10.75 4Zm0 1.75a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z"/>
-    </svg>
-  </button>
-</form>
-
-  </div>
-</header>
-
-    <main class="page">
-      
-  
-  <article class="article-page">
-    <header class="article-hero">
-      
-        <p class="article-hero__section"><a href="/posts/">Blog Posts</a></p>
-      
-      <h1 class="article-hero__title">A Raspberry Pi Stream Deck Server controlled by ESPHome</h1>
-      
-        <p class="article-hero__summary">I built a Raspberry Pi Stream Deck server with ESPHome power control, letting me turn it on, reboot, shut down, and monitor its state from Home Assistant.</p>
-      
-    </header>
-
-    <div class="article-flow">
-      <section class="rail-panel article-details">
-        <div class="meta">
-          <span>By Aidan Maurin-Jones</span>
-          
-            <span>September 15, 2025</span>
-          
-          
-            <span>4 min read</span>
-          
-          <span class="tag-list">
-            
-              
-                <a href="/tags/home-assistant/">Home Assistant</a>
-              
-                <a href="/tags/esphome/">ESPHome</a>
-              
-                <a href="/tags/stream-deck/">Stream Deck</a>
-              
-                <a href="/tags/raspberry-pi/">Raspberry Pi</a>
-              
-            
-          </span>
-          
-            
-              <a class="tag-list__rss" href="/posts/index.xml">Blog Posts RSS</a>
-            
-          
-        </div>
-      </section>
-
-      <div class="entry">
-        <div class="entry__content prose">
-          <p>I’ve turned one of my Raspberry Pi 4s into a dedicated Stream Deck hub. It’s hooked up to
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>A Raspberry Pi Stream Deck Server controlled by ESPHome | Aidan Maurin-Jones</title><meta name=description content="I built a Raspberry Pi Stream Deck server with ESPHome power control, letting me turn it on, reboot, shut down, and monitor its state from Home Assistant."><link rel=canonical href=https://blog.aidanmaurinjones.com/posts/a-raspberry-pi-stream-deck-server-controlled-by-esphome/><meta name=robots content="index, follow"><meta property="og:site_name" content="Blog - Aidan Maurin-Jones"><meta property="og:title" content="A Raspberry Pi Stream Deck Server controlled by ESPHome | Aidan Maurin-Jones"><meta property="og:description" content="I built a Raspberry Pi Stream Deck server with ESPHome power control, letting me turn it on, reboot, shut down, and monitor its state from Home Assistant."><meta property="og:url" content="https://blog.aidanmaurinjones.com/posts/a-raspberry-pi-stream-deck-server-controlled-by-esphome/"><meta property="og:type" content="article"><meta property="og:locale" content="en_US"><meta property="article:published_time" content="2025-09-15T00:00:00Z"><meta property="article:modified_time" content="2025-09-15T00:00:00Z"><meta property="article:tag" content="Home Assistant"><meta property="article:tag" content="ESPHome"><meta property="article:tag" content="Stream Deck"><meta property="article:tag" content="Raspberry Pi"><meta name=twitter:card content="summary"><meta name=twitter:title content="A Raspberry Pi Stream Deck Server controlled by ESPHome | Aidan Maurin-Jones"><meta name=twitter:description content="I built a Raspberry Pi Stream Deck server with ESPHome power control, letting me turn it on, reboot, shut down, and monitor its state from Home Assistant."><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","articleSection":"Blog Posts","author":{"@type":"Person","name":"Aidan Maurin-Jones","url":"https://aidanmaurinjones.com/"},"dateModified":"2025-09-15T00:00:00Z","datePublished":"2025-09-15T00:00:00Z","description":"I built a Raspberry Pi Stream Deck server with ESPHome power control, letting me turn it on, reboot, shut down, and monitor its state from Home Assistant.","headline":"A Raspberry Pi Stream Deck Server controlled by ESPHome","inLanguage":"en-us","keywords":["Home Assistant","ESPHome","Stream Deck","Raspberry Pi"],"mainEntityOfPage":"https://blog.aidanmaurinjones.com/posts/a-raspberry-pi-stream-deck-server-controlled-by-esphome/","publisher":{"@type":"Person","name":"Aidan Maurin-Jones","url":"https://aidanmaurinjones.com/"},"url":"https://blog.aidanmaurinjones.com/posts/a-raspberry-pi-stream-deck-server-controlled-by-esphome/","wordCount":716}</script><link rel=stylesheet href=/css/style.min.eeb7e39efd09fc7328023e954ed2a36db8fc89baf7373dc72c4069664fb3a6b0.css integrity="sha256-7rfjnv0J/HMoAj6VTtKjbbj8ibr3Nz3HLEBpZk+zprA="><script src=/js/code-copy.min.0f8459a011f490588fbc8675943fa09eb746a461aa8ec7ebbcf31e43244d0258.js integrity="sha256-D4RZoBH0kFiPvIZ1lD+gnrdGpGGqjsfrvPMeQyRNAlg=" defer></script><link rel=alternate type=application/rss+xml title="Aidan Maurin-Jones RSS" href=/index.xml><link rel=icon href=/favicon.ico></head><body><div class=site-shell><header class=site-header><div class=site-header__brand><p class=site-header__title><a href=/>Aidan Maurin-Jones</a></p><p class=site-header__tagline>Aidan Maurin-Jones shares tools, automations, and thoughts on whatever’s interesting this week.</p></div><nav class="site-nav site-nav--desktop" aria-label=Primary><a href=/>Home</a>
+<a href=/about/>About</a>
+<a href=/contact/>Contact</a>
+<a href=/newsletter/>Newsletter Archive</a><form class=site-search role=search method=get action=/search/><label class=sr-only for=site-search-desktop>Search this site</label>
+<input id=site-search-desktop class=site-search__field type=search name=q placeholder=Search autocomplete=off>
+<button class=site-search__submit type=submit aria-label=Search>
+<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.75 4a6.75 6.75.0 015.36 10.86l3.52 3.52-1.25 1.25-3.52-3.52A6.75 6.75.0 1110.75 4zm0 1.75a5 5 0 100 10 5 5 0 000-10z"/></svg></button></form></nav><details class=site-nav-toggle><summary class=site-nav-toggle__summary aria-label="Open menu"><span class=site-nav-toggle__label>Menu</span>
+<span class=site-nav-toggle__icon aria-hidden=true></span></summary><nav class="site-nav site-nav--mobile" aria-label="Mobile primary"><a href=/>Home</a>
+<a href=/about/>About</a>
+<a href=/contact/>Contact</a>
+<a href=/newsletter/>Newsletter Archive</a></nav></details><div class=site-search-mobile><form class=site-search role=search method=get action=/search/><label class=sr-only for=site-search-mobile>Search this site</label>
+<input id=site-search-mobile class=site-search__field type=search name=q placeholder=Search autocomplete=off>
+<button class=site-search__submit type=submit aria-label=Search>
+<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.75 4a6.75 6.75.0 015.36 10.86l3.52 3.52-1.25 1.25-3.52-3.52A6.75 6.75.0 1110.75 4zm0 1.75a5 5 0 100 10 5 5 0 000-10z"/></svg></button></form></div></header><main class=page><article class=article-page><header class=article-hero><p class=article-hero__section><a href=/posts/>Blog Posts</a></p><h1 class=article-hero__title>A Raspberry Pi Stream Deck Server controlled by ESPHome</h1><p class=article-hero__summary>I built a Raspberry Pi Stream Deck server with ESPHome power control, letting me turn it on, reboot, shut down, and monitor its state from Home Assistant.</p></header><div class=article-flow><section class="rail-panel article-details"><div class=meta><span>By Aidan Maurin-Jones</span>
+<span>September 15, 2025</span>
+<span>4 min read</span>
+<span class=tag-list><a href=/tags/home-assistant/>Home Assistant</a>
+<a href=/tags/esphome/>ESPHome</a>
+<a href=/tags/stream-deck/>Stream Deck</a>
+<a href=/tags/raspberry-pi/>Raspberry Pi</a>
+</span><a class=tag-list__rss href=/posts/index.xml>Blog Posts RSS</a></div></section><div class=entry><div class="entry__content prose"><p>I’ve turned one of my Raspberry Pi 4s into a dedicated Stream Deck hub. It’s hooked up to
 a 32-button Stream Deck that controls devices and automations in Home Assistant, which runs
 on a separate machine. The Pi’s only job is to sit there, listen, and push out commands —
 but if it ever hangs or I need to reboot it, I wanted a way to manage it properly without
-pulling cables.</p>
-<p>That’s where the ESP32 comes in. I flashed it with ESPHome and wired it straight into the
+pulling cables.</p><p>That’s where the ESP32 comes in. I flashed it with ESPHome and wired it straight into the
 Pi’s GPIO pins so I can treat the whole setup like a real smart-home appliance: I can power
-it on, shut it down safely, reboot it, and always know its current state inside Home Assistant.</p>
-<p>⸻</p>
-<h3 id="how-i-wired-it">How I Wired It</h3>
-<p>The wiring is pretty simple. Raspberry Pi GPIO14 goes into ESP32 GPIO27, which gives me
+it on, shut it down safely, reboot it, and always know its current state inside Home Assistant.</p><p>⸻</p><h3 id=how-i-wired-it>How I Wired It</h3><p>The wiring is pretty simple. Raspberry Pi GPIO14 goes into ESP32 GPIO27, which gives me
 feedback about whether the Pi is on or off. The Pi’s RUN pins are connected to ESP32 GPIO13,
 so I can pulse them to power it on. For shutdown and reboot, I used GPIO26 and GPIO13 on the
-Pi, wired to ESP32 pins that trigger those actions.</p>
-<p>This way, the ESP32 can send commands to the Pi, and the Pi can talk back about its state.</p>
-<p>⸻</p>
-<h3 id="my-esphome-config">My ESPHome Config</h3>
-<p>On the ESP32, I wrote an ESPHome config with a few pieces:</p>
-<ul>
-<li>A template switch that acts as the main power control. It checks the binary sensor to
-see if the Pi is already on before trying to pulse the RUN pins.</li>
-<li>A shutdown switch that pulls Pi GPIO26 high, which my shutdown script listens for.</li>
-<li>A reboot button that does the same thing with GPIO13 for rebooting.</li>
-<li>A binary sensor tied to GPIO14 that tells me if the Pi is running or not.</li>
-</ul>
-<p>Here’s the core YAML I’m running:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-YAML" data-lang="YAML"><span style="display:flex;"><span><span style="color:#f92672">switch</span>:
-</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">platform</span>: <span style="color:#ae81ff">template</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;Raspberry Pi Switch&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#ae81ff">raspberry_pi_switch</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">lambda</span>: |-<span style="color:#e6db74">
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      return id(raspberry_pi_power_state).state;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">turn_on_action</span>:
-</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">if</span>:
-</span></span><span style="display:flex;"><span>          <span style="color:#f92672">condition</span>:
-</span></span><span style="display:flex;"><span>            <span style="color:#f92672">lambda</span>: <span style="color:#e6db74">&#39;return !id(raspberry_pi_power_state).state;&#39;</span>
-</span></span><span style="display:flex;"><span>          <span style="color:#f92672">then</span>:
-</span></span><span style="display:flex;"><span>            - <span style="color:#f92672">switch.turn_on</span>: <span style="color:#ae81ff">turn_on_pi</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">turn_off_action</span>:
-</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">switch.turn_on</span>: <span style="color:#ae81ff">turn_off_pi</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">platform</span>: <span style="color:#ae81ff">gpio</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;Turn On Raspberry Pi&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">pin</span>: <span style="color:#ae81ff">GPIO13</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">inverted</span>: <span style="color:#66d9ef">true</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#ae81ff">turn_on_pi</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">internal</span>: <span style="color:#66d9ef">true</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">on_turn_on</span>:
-</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">delay</span>: <span style="color:#ae81ff">500ms</span>
-</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">switch.turn_off</span>: <span style="color:#ae81ff">turn_on_pi</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">platform</span>: <span style="color:#ae81ff">gpio</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;Shutdown Raspberry Pi&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">pin</span>: <span style="color:#ae81ff">GPIO12</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#ae81ff">turn_off_pi</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">internal</span>: <span style="color:#66d9ef">true</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">on_turn_on</span>:
-</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">delay</span>: <span style="color:#ae81ff">500ms</span>
-</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">switch.turn_off</span>: <span style="color:#ae81ff">turn_off_pi</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">platform</span>: <span style="color:#ae81ff">gpio</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;Reboot Raspberry Pi&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">pin</span>: <span style="color:#ae81ff">GPIO14</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#ae81ff">reboot_pi</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">internal</span>: <span style="color:#66d9ef">true</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">on_turn_on</span>:
-</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">delay</span>: <span style="color:#ae81ff">500ms</span>
-</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">switch.turn_off</span>: <span style="color:#ae81ff">reboot_pi</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">binary_sensor</span>:
-</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">platform</span>: <span style="color:#ae81ff">gpio</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">pin</span>: <span style="color:#ae81ff">GPIO27</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;Raspberry Pi Power State&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#ae81ff">raspberry_pi_power_state</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">device_class</span>: <span style="color:#ae81ff">power</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">filters</span>:
-</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">delayed_on_off</span>: <span style="color:#ae81ff">800ms</span>
-</span></span></code></pre></div><p>⸻</p>
-<h3 id="the-pi-side">The Pi Side</h3>
-<p>On the Raspberry Pi, I wrote two tiny Python scripts. One listens on GPIO26 and calls shutdown
+Pi, wired to ESP32 pins that trigger those actions.</p><p>This way, the ESP32 can send commands to the Pi, and the Pi can talk back about its state.</p><p>⸻</p><h3 id=my-esphome-config>My ESPHome Config</h3><p>On the ESP32, I wrote an ESPHome config with a few pieces:</p><ul><li>A template switch that acts as the main power control. It checks the binary sensor to
+see if the Pi is already on before trying to pulse the RUN pins.</li><li>A shutdown switch that pulls Pi GPIO26 high, which my shutdown script listens for.</li><li>A reboot button that does the same thing with GPIO13 for rebooting.</li><li>A binary sensor tied to GPIO14 that tells me if the Pi is running or not.</li></ul><p>Here’s the core YAML I’m running:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-YAML data-lang=YAML><span style=display:flex><span><span style=color:#f92672>switch</span>:
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>platform</span>: <span style=color:#ae81ff>template</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>name</span>: <span style=color:#e6db74>&#34;Raspberry Pi Switch&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>id</span>: <span style=color:#ae81ff>raspberry_pi_switch</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>lambda</span>: |-<span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>      return id(raspberry_pi_power_state).state;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>turn_on_action</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>if</span>:
+</span></span><span style=display:flex><span>          <span style=color:#f92672>condition</span>:
+</span></span><span style=display:flex><span>            <span style=color:#f92672>lambda</span>: <span style=color:#e6db74>&#39;return !id(raspberry_pi_power_state).state;&#39;</span>
+</span></span><span style=display:flex><span>          <span style=color:#f92672>then</span>:
+</span></span><span style=display:flex><span>            - <span style=color:#f92672>switch.turn_on</span>: <span style=color:#ae81ff>turn_on_pi</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>turn_off_action</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>switch.turn_on</span>: <span style=color:#ae81ff>turn_off_pi</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>platform</span>: <span style=color:#ae81ff>gpio</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>name</span>: <span style=color:#e6db74>&#34;Turn On Raspberry Pi&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>pin</span>: <span style=color:#ae81ff>GPIO13</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>inverted</span>: <span style=color:#66d9ef>true</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>id</span>: <span style=color:#ae81ff>turn_on_pi</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>internal</span>: <span style=color:#66d9ef>true</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>on_turn_on</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>delay</span>: <span style=color:#ae81ff>500ms</span>
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>switch.turn_off</span>: <span style=color:#ae81ff>turn_on_pi</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>platform</span>: <span style=color:#ae81ff>gpio</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>name</span>: <span style=color:#e6db74>&#34;Shutdown Raspberry Pi&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>pin</span>: <span style=color:#ae81ff>GPIO12</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>id</span>: <span style=color:#ae81ff>turn_off_pi</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>internal</span>: <span style=color:#66d9ef>true</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>on_turn_on</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>delay</span>: <span style=color:#ae81ff>500ms</span>
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>switch.turn_off</span>: <span style=color:#ae81ff>turn_off_pi</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>platform</span>: <span style=color:#ae81ff>gpio</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>name</span>: <span style=color:#e6db74>&#34;Reboot Raspberry Pi&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>pin</span>: <span style=color:#ae81ff>GPIO14</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>id</span>: <span style=color:#ae81ff>reboot_pi</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>internal</span>: <span style=color:#66d9ef>true</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>on_turn_on</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>delay</span>: <span style=color:#ae81ff>500ms</span>
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>switch.turn_off</span>: <span style=color:#ae81ff>reboot_pi</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>binary_sensor</span>:
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>platform</span>: <span style=color:#ae81ff>gpio</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>pin</span>: <span style=color:#ae81ff>GPIO27</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>name</span>: <span style=color:#e6db74>&#34;Raspberry Pi Power State&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>id</span>: <span style=color:#ae81ff>raspberry_pi_power_state</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>device_class</span>: <span style=color:#ae81ff>power</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>filters</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>delayed_on_off</span>: <span style=color:#ae81ff>800ms</span>
+</span></span></code></pre></div><p>⸻</p><h3 id=the-pi-side>The Pi Side</h3><p>On the Raspberry Pi, I wrote two tiny Python scripts. One listens on GPIO26 and calls shutdown
 now, the other listens on GPIO13 and calls reboot. They just loop forever in the background,
-waiting for a HIGH signal from the ESP32:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span><span style="color:#75715e"># shutdown_monitor.py</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> RPi.GPIO <span style="color:#66d9ef">as</span> GPIO<span style="color:#f92672">,</span> time<span style="color:#f92672">,</span> os
-</span></span><span style="display:flex;"><span>GPIO<span style="color:#f92672">.</span>setmode(GPIO<span style="color:#f92672">.</span>BCM)
-</span></span><span style="display:flex;"><span>GPIO<span style="color:#f92672">.</span>setup(<span style="color:#ae81ff">26</span>, GPIO<span style="color:#f92672">.</span>IN, pull_up_down<span style="color:#f92672">=</span>GPIO<span style="color:#f92672">.</span>PUD_DOWN)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> GPIO<span style="color:#f92672">.</span>input(<span style="color:#ae81ff">26</span>) <span style="color:#f92672">==</span> GPIO<span style="color:#f92672">.</span>HIGH:
-</span></span><span style="display:flex;"><span>        os<span style="color:#f92672">.</span>system(<span style="color:#e6db74">&#34;sudo shutdown now&#34;</span>)
-</span></span><span style="display:flex;"><span>    time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">0.5</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># reboot_pi.py</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> RPi.GPIO <span style="color:#66d9ef">as</span> GPIO<span style="color:#f92672">,</span> time<span style="color:#f92672">,</span> os
-</span></span><span style="display:flex;"><span>GPIO<span style="color:#f92672">.</span>setmode(GPIO<span style="color:#f92672">.</span>BCM)
-</span></span><span style="display:flex;"><span>GPIO<span style="color:#f92672">.</span>setup(<span style="color:#ae81ff">13</span>, GPIO<span style="color:#f92672">.</span>IN, pull_up_down<span style="color:#f92672">=</span>GPIO<span style="color:#f92672">.</span>PUD_DOWN)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> GPIO<span style="color:#f92672">.</span>input(<span style="color:#ae81ff">13</span>) <span style="color:#f92672">==</span> GPIO<span style="color:#f92672">.</span>HIGH:
-</span></span><span style="display:flex;"><span>        os<span style="color:#f92672">.</span>system(<span style="color:#e6db74">&#34;sudo reboot&#34;</span>)
-</span></span><span style="display:flex;"><span>    time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">0.5</span>)
+waiting for a HIGH signal from the ESP32:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-Python data-lang=Python><span style=display:flex><span><span style=color:#75715e># shutdown_monitor.py</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> RPi.GPIO <span style=color:#66d9ef>as</span> GPIO<span style=color:#f92672>,</span> time<span style=color:#f92672>,</span> os
+</span></span><span style=display:flex><span>GPIO<span style=color:#f92672>.</span>setmode(GPIO<span style=color:#f92672>.</span>BCM)
+</span></span><span style=display:flex><span>GPIO<span style=color:#f92672>.</span>setup(<span style=color:#ae81ff>26</span>, GPIO<span style=color:#f92672>.</span>IN, pull_up_down<span style=color:#f92672>=</span>GPIO<span style=color:#f92672>.</span>PUD_DOWN)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>while</span> <span style=color:#66d9ef>True</span>:
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> GPIO<span style=color:#f92672>.</span>input(<span style=color:#ae81ff>26</span>) <span style=color:#f92672>==</span> GPIO<span style=color:#f92672>.</span>HIGH:
+</span></span><span style=display:flex><span>        os<span style=color:#f92672>.</span>system(<span style=color:#e6db74>&#34;sudo shutdown now&#34;</span>)
+</span></span><span style=display:flex><span>    time<span style=color:#f92672>.</span>sleep(<span style=color:#ae81ff>0.5</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># reboot_pi.py</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> RPi.GPIO <span style=color:#66d9ef>as</span> GPIO<span style=color:#f92672>,</span> time<span style=color:#f92672>,</span> os
+</span></span><span style=display:flex><span>GPIO<span style=color:#f92672>.</span>setmode(GPIO<span style=color:#f92672>.</span>BCM)
+</span></span><span style=display:flex><span>GPIO<span style=color:#f92672>.</span>setup(<span style=color:#ae81ff>13</span>, GPIO<span style=color:#f92672>.</span>IN, pull_up_down<span style=color:#f92672>=</span>GPIO<span style=color:#f92672>.</span>PUD_DOWN)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>while</span> <span style=color:#66d9ef>True</span>:
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> GPIO<span style=color:#f92672>.</span>input(<span style=color:#ae81ff>13</span>) <span style=color:#f92672>==</span> GPIO<span style=color:#f92672>.</span>HIGH:
+</span></span><span style=display:flex><span>        os<span style=color:#f92672>.</span>system(<span style=color:#e6db74>&#34;sudo reboot&#34;</span>)
+</span></span><span style=display:flex><span>    time<span style=color:#f92672>.</span>sleep(<span style=color:#ae81ff>0.5</span>)
 </span></span></code></pre></div><p>I wrapped both of these in simple systemd services so they start automatically on boot and
-restart if they crash. That way, the Pi is always listening for signals from the ESP32.</p>
-<p>⸻</p>
-<h3 id="what-it-feels-like-in-practice">What It Feels Like in Practice</h3>
-<p>Now, inside Home Assistant, the Pi just shows up like any other smart switch. If it’s off,
+restart if they crash. That way, the Pi is always listening for signals from the ESP32.</p><p>⸻</p><h3 id=what-it-feels-like-in-practice>What It Feels Like in Practice</h3><p>Now, inside Home Assistant, the Pi just shows up like any other smart switch. If it’s off,
 flipping the switch pulses the RUN pins and boots it up. If it’s on, flipping the switch
 triggers the shutdown script and powers it down cleanly. There’s also a reboot button when I
-need it. And the binary sensor tied to GPIO14 means I always know its current state.</p>
-<p>The best part is how natural it feels. The Pi and Stream Deck live on my desk like a little
+need it. And the binary sensor tied to GPIO14 means I always know its current state.</p><p>The best part is how natural it feels. The Pi and Stream Deck live on my desk like a little
 smart-home console, but behind the scenes it’s running with the same polish you’d expect from
 a dedicated appliance. Everything is local, reliable, and integrated with the rest of my Home
-Assistant setup.</p>
-<p>It’s one of those projects where the wiring is simple, the software is lightweight, but the
-result makes my whole setup feel more “finished.”</p>
-<h3 id="apps-and-tools-used-for-this-project">Apps and Tools Used for this Project</h3>
-<ul>
-<li><a href="https://github.com/Patrick762/hassio-streamdeck">Stream Deck HACS Integration</a></li>
-<li><a href="https://www.home-assistant.io/">Home Assistant</a></li>
-<li><a href="https://esphome.io/">ESPHome - Smart Home Made Simple</a></li>
-</ul>
-<div class="amj-cta" aria-label="Support and subscription links">
-  <div class="amj-cta__item amj-cta__item--coffee">
-    <a class="amj-cta__button amj-cta__button--coffee" href="https://www.buymeacoffee.com/AidanMJ25" target="_blank" rel="noopener">
-      <span>Buy Me a Coffee</span>
-    </a>
-  </div>
-
-  <div class="amj-cta__item">
-    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/posts/index.xml" target="_blank" rel="noopener" aria-label="Subscribe via RSS">
-      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
-      <span>Subscribe via RSS</span>
-    </a>
-  </div>
-
-  <div class="amj-cta__item">
-    <a class="amj-cta__button amj-cta__button--newsletter" href="https://buttondown.com/AidanMJ25" target="_blank" rel="noopener">Newsletter via Email</a>
-  </div>
-
-  <div class="amj-cta__item">
-    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/newsletter/index.xml" target="_blank" rel="noopener" aria-label="Newsletter via RSS">
-      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
-      <span>Newsletter via RSS</span>
-    </a>
-  </div>
-</div>
-
-
-        </div>
-      </div>
-    </div>
-  </article>
-  
-
-    </main>
-    <footer class="site-footer">
-  <p>2026 Aidan Maurin-Jones. Built with Hugo, Markdown, YAML front matter, and section-specific RSS feeds.</p>
-</footer>
-
-  </div>
-</body>
-</html>
+Assistant setup.</p><p>It’s one of those projects where the wiring is simple, the software is lightweight, but the
+result makes my whole setup feel more “finished.”</p><h3 id=apps-and-tools-used-for-this-project>Apps and Tools Used for this Project</h3><ul><li><a href=https://github.com/Patrick762/hassio-streamdeck>Stream Deck HACS Integration</a></li><li><a href=https://www.home-assistant.io/>Home Assistant</a></li><li><a href=https://esphome.io/>ESPHome - Smart Home Made Simple</a></li></ul><div class=amj-cta aria-label="Support and subscription links"><div class="amj-cta__item amj-cta__item--coffee"><a class="amj-cta__button amj-cta__button--coffee" href=https://www.buymeacoffee.com/AidanMJ25 target=_blank rel=noopener><span>Buy Me a Coffee</span></a></div><div class=amj-cta__item><a class="amj-cta__button amj-cta__button--rss" href=https://blog.aidanmaurinjones.com/posts/index.xml target=_blank rel=noopener aria-label="Subscribe via RSS"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82.0 110-3.64 1.82 1.82.0 010 3.64zm-3-8.18v2.73a8.64 8.64.0 018.64 8.64h2.73A11.36 11.36.0 003.18 9.64zm0-4.09v2.73A15.45 15.45.0 0118.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55z"/></svg>
+<span>Subscribe via RSS</span></a></div><div class=amj-cta__item><a class="amj-cta__button amj-cta__button--newsletter" href=https://buttondown.com/AidanMJ25 target=_blank rel=noopener>Newsletter via Email</a></div><div class=amj-cta__item><a class="amj-cta__button amj-cta__button--rss" href=https://blog.aidanmaurinjones.com/newsletter/index.xml target=_blank rel=noopener aria-label="Newsletter via RSS"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82.0 110-3.64 1.82 1.82.0 010 3.64zm-3-8.18v2.73a8.64 8.64.0 018.64 8.64h2.73A11.36 11.36.0 003.18 9.64zm0-4.09v2.73A15.45 15.45.0 0118.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55z"/></svg>
+<span>Newsletter via RSS</span></a></div></div></div></div></div></article></main><footer class=site-footer><p>2026 Aidan Maurin-Jones. Built with Hugo, Markdown, YAML front matter, and section-specific RSS feeds.</p></footer></div></body></html>

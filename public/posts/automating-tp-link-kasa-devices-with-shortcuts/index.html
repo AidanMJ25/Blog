@@ -1,322 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1"><title>Automating TP-Link Kasa Devices with Shortcuts | Aidan Maurin-Jones</title><meta name="description" content="Using three clever Shortcuts and the Kasa cloud API, you can log in, list devices, and control TP-Link Kasa smart plugs and switches directly from Shortcuts—no …">
-  <link rel="canonical" href="http://localhost:1313/posts/automating-tp-link-kasa-devices-with-shortcuts/">
-  <meta property="og:site_name" content="Blog - Aidan Maurin-Jones">
-<meta property="og:title" content="Automating TP-Link Kasa Devices with Shortcuts | Aidan Maurin-Jones">
-<meta property="og:description" content="Using three clever Shortcuts and the Kasa cloud API, you can log in, list devices, and control TP-Link Kasa smart plugs and switches directly from Shortcuts—no …">
-<meta property="og:url" content="http://localhost:1313/posts/automating-tp-link-kasa-devices-with-shortcuts/">
-<meta property="og:type" content="article">
-<meta property="og:locale" content="en_US">
-
-  <meta property="article:published_time" content="2025-09-25T00:00:00Z">
-  <meta property="article:modified_time" content="2025-09-25T00:00:00Z">
-  <meta property="article:tag" content="Shortcuts"><meta property="article:tag" content="Smart Home">
-
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Automating TP-Link Kasa Devices with Shortcuts | Aidan Maurin-Jones">
-<meta name="twitter:description" content="Using three clever Shortcuts and the Kasa cloud API, you can log in, list devices, and control TP-Link Kasa smart plugs and switches directly from Shortcuts—no …"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","articleSection":"Blog Posts","author":{"@type":"Person","name":"Aidan Maurin-Jones","url":"https://aidanmaurinjones.com/"},"dateModified":"2025-09-25T00:00:00Z","datePublished":"2025-09-25T00:00:00Z","description":"Using three clever Shortcuts and the Kasa cloud API, you can log in, list devices, and control TP-Link Kasa smart plugs and switches directly from Shortcuts—no …","headline":"Automating TP-Link Kasa Devices with Shortcuts","inLanguage":"en-us","keywords":["Shortcuts","Smart Home"],"mainEntityOfPage":"http://localhost:1313/posts/automating-tp-link-kasa-devices-with-shortcuts/","publisher":{"@type":"Person","name":"Aidan Maurin-Jones","url":"https://aidanmaurinjones.com/"},"url":"http://localhost:1313/posts/automating-tp-link-kasa-devices-with-shortcuts/","wordCount":714}</script>
-
-  
-  <link rel="stylesheet" href="/css/style.min.eeb7e39efd09fc7328023e954ed2a36db8fc89baf7373dc72c4069664fb3a6b0.css" integrity="sha256-7rfjnv0J/HMoAj6VTtKjbbj8ibr3Nz3HLEBpZk&#43;zprA=">
-  
-	  
-	  <script src="/js/code-copy.min.0f8459a011f490588fbc8675943fa09eb746a461aa8ec7ebbcf31e43244d0258.js" integrity="sha256-D4RZoBH0kFiPvIZ1lD&#43;gnrdGpGGqjsfrvPMeQyRNAlg=" defer></script>
-	  
-	  
-	  
-  
-  <link rel="alternate" type="application/rss&#43;xml" title="Aidan Maurin-Jones RSS" href="/index.xml">
-  
-  
-  
-  
-  <link rel="icon" href="/favicon.ico">
-</head>
-<body>
-  <div class="site-shell">
-    <header class="site-header">
-  <div class="site-header__brand">
-    <p class="site-header__title"><a href="/">Aidan Maurin-Jones</a></p>
-    <p class="site-header__tagline">Aidan Maurin-Jones shares tools, automations, and thoughts on whatever’s interesting this week.</p>
-  </div>
-  <nav class="site-nav site-nav--desktop" aria-label="Primary">
-    <a href="/" >Home</a>
-
-  <a href="/about/" >About</a>
-
-  <a href="/contact/" >Contact</a>
-
-  <a href="/newsletter/" >Newsletter Archive</a>
-
-
-    <form class="site-search" role="search" method="get" action="/search/">
-  <label class="sr-only" for="site-search-desktop">Search this site</label>
-  <input id="site-search-desktop" class="site-search__field" type="search" name="q" placeholder="Search" autocomplete="off">
-  <button class="site-search__submit" type="submit" aria-label="Search">
-    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <path d="M10.75 4a6.75 6.75 0 0 1 5.36 10.86l3.52 3.52-1.25 1.25-3.52-3.52A6.75 6.75 0 1 1 10.75 4Zm0 1.75a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z"/>
-    </svg>
-  </button>
-</form>
-
-  </nav>
-  <details class="site-nav-toggle">
-    <summary class="site-nav-toggle__summary" aria-label="Open menu">
-      <span class="site-nav-toggle__label">Menu</span>
-      <span class="site-nav-toggle__icon" aria-hidden="true"></span>
-    </summary>
-    <nav class="site-nav site-nav--mobile" aria-label="Mobile primary">
-      <a href="/" >Home</a>
-
-  <a href="/about/" >About</a>
-
-  <a href="/contact/" >Contact</a>
-
-  <a href="/newsletter/" >Newsletter Archive</a>
-
-
-    </nav>
-  </details>
-  <div class="site-search-mobile">
-    <form class="site-search" role="search" method="get" action="/search/">
-  <label class="sr-only" for="site-search-mobile">Search this site</label>
-  <input id="site-search-mobile" class="site-search__field" type="search" name="q" placeholder="Search" autocomplete="off">
-  <button class="site-search__submit" type="submit" aria-label="Search">
-    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <path d="M10.75 4a6.75 6.75 0 0 1 5.36 10.86l3.52 3.52-1.25 1.25-3.52-3.52A6.75 6.75 0 1 1 10.75 4Zm0 1.75a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z"/>
-    </svg>
-  </button>
-</form>
-
-  </div>
-</header>
-
-    <main class="page">
-      
-  
-  <article class="article-page">
-    <header class="article-hero">
-      
-        <p class="article-hero__section"><a href="/posts/">Blog Posts</a></p>
-      
-      <h1 class="article-hero__title">Automating TP-Link Kasa Devices with Shortcuts</h1>
-      
-        <p class="article-hero__summary">Using three clever Shortcuts and the Kasa cloud API, you can log in, list devices, and control TP-Link Kasa smart plugs and switches directly from Shortcuts—no Homebridge required.</p>
-      
-    </header>
-
-    <div class="article-flow">
-      <section class="rail-panel article-details">
-        <div class="meta">
-          <span>By Aidan Maurin-Jones</span>
-          
-            <span>September 25, 2025</span>
-          
-          
-            <span>4 min read</span>
-          
-          <span class="tag-list">
-            
-              
-                <a href="/tags/shortcuts/">Shortcuts</a>
-              
-                <a href="/tags/smart-home/">Smart Home</a>
-              
-            
-          </span>
-          
-            
-              <a class="tag-list__rss" href="/posts/index.xml">Blog Posts RSS</a>
-            
-          
-        </div>
-      </section>
-
-      <div class="entry">
-        <div class="entry__content prose">
-          <p>One of the things I love about Shortcuts is how it can act as a bridge between apps and services
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Automating TP-Link Kasa Devices with Shortcuts | Aidan Maurin-Jones</title><meta name=description content="Using three clever Shortcuts and the Kasa cloud API, you can log in, list devices, and control TP-Link Kasa smart plugs and switches directly from Shortcuts—no …"><link rel=canonical href=https://blog.aidanmaurinjones.com/posts/automating-tp-link-kasa-devices-with-shortcuts/><meta name=robots content="index, follow"><meta property="og:site_name" content="Blog - Aidan Maurin-Jones"><meta property="og:title" content="Automating TP-Link Kasa Devices with Shortcuts | Aidan Maurin-Jones"><meta property="og:description" content="Using three clever Shortcuts and the Kasa cloud API, you can log in, list devices, and control TP-Link Kasa smart plugs and switches directly from Shortcuts—no …"><meta property="og:url" content="https://blog.aidanmaurinjones.com/posts/automating-tp-link-kasa-devices-with-shortcuts/"><meta property="og:type" content="article"><meta property="og:locale" content="en_US"><meta property="article:published_time" content="2025-09-25T00:00:00Z"><meta property="article:modified_time" content="2025-09-25T00:00:00Z"><meta property="article:tag" content="Shortcuts"><meta property="article:tag" content="Smart Home"><meta name=twitter:card content="summary"><meta name=twitter:title content="Automating TP-Link Kasa Devices with Shortcuts | Aidan Maurin-Jones"><meta name=twitter:description content="Using three clever Shortcuts and the Kasa cloud API, you can log in, list devices, and control TP-Link Kasa smart plugs and switches directly from Shortcuts—no …"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","articleSection":"Blog Posts","author":{"@type":"Person","name":"Aidan Maurin-Jones","url":"https://aidanmaurinjones.com/"},"dateModified":"2025-09-25T00:00:00Z","datePublished":"2025-09-25T00:00:00Z","description":"Using three clever Shortcuts and the Kasa cloud API, you can log in, list devices, and control TP-Link Kasa smart plugs and switches directly from Shortcuts—no …","headline":"Automating TP-Link Kasa Devices with Shortcuts","inLanguage":"en-us","keywords":["Shortcuts","Smart Home"],"mainEntityOfPage":"https://blog.aidanmaurinjones.com/posts/automating-tp-link-kasa-devices-with-shortcuts/","publisher":{"@type":"Person","name":"Aidan Maurin-Jones","url":"https://aidanmaurinjones.com/"},"url":"https://blog.aidanmaurinjones.com/posts/automating-tp-link-kasa-devices-with-shortcuts/","wordCount":714}</script><link rel=stylesheet href=/css/style.min.eeb7e39efd09fc7328023e954ed2a36db8fc89baf7373dc72c4069664fb3a6b0.css integrity="sha256-7rfjnv0J/HMoAj6VTtKjbbj8ibr3Nz3HLEBpZk+zprA="><script src=/js/code-copy.min.0f8459a011f490588fbc8675943fa09eb746a461aa8ec7ebbcf31e43244d0258.js integrity="sha256-D4RZoBH0kFiPvIZ1lD+gnrdGpGGqjsfrvPMeQyRNAlg=" defer></script><link rel=alternate type=application/rss+xml title="Aidan Maurin-Jones RSS" href=/index.xml><link rel=icon href=/favicon.ico></head><body><div class=site-shell><header class=site-header><div class=site-header__brand><p class=site-header__title><a href=/>Aidan Maurin-Jones</a></p><p class=site-header__tagline>Aidan Maurin-Jones shares tools, automations, and thoughts on whatever’s interesting this week.</p></div><nav class="site-nav site-nav--desktop" aria-label=Primary><a href=/>Home</a>
+<a href=/about/>About</a>
+<a href=/contact/>Contact</a>
+<a href=/newsletter/>Newsletter Archive</a><form class=site-search role=search method=get action=/search/><label class=sr-only for=site-search-desktop>Search this site</label>
+<input id=site-search-desktop class=site-search__field type=search name=q placeholder=Search autocomplete=off>
+<button class=site-search__submit type=submit aria-label=Search>
+<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.75 4a6.75 6.75.0 015.36 10.86l3.52 3.52-1.25 1.25-3.52-3.52A6.75 6.75.0 1110.75 4zm0 1.75a5 5 0 100 10 5 5 0 000-10z"/></svg></button></form></nav><details class=site-nav-toggle><summary class=site-nav-toggle__summary aria-label="Open menu"><span class=site-nav-toggle__label>Menu</span>
+<span class=site-nav-toggle__icon aria-hidden=true></span></summary><nav class="site-nav site-nav--mobile" aria-label="Mobile primary"><a href=/>Home</a>
+<a href=/about/>About</a>
+<a href=/contact/>Contact</a>
+<a href=/newsletter/>Newsletter Archive</a></nav></details><div class=site-search-mobile><form class=site-search role=search method=get action=/search/><label class=sr-only for=site-search-mobile>Search this site</label>
+<input id=site-search-mobile class=site-search__field type=search name=q placeholder=Search autocomplete=off>
+<button class=site-search__submit type=submit aria-label=Search>
+<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.75 4a6.75 6.75.0 015.36 10.86l3.52 3.52-1.25 1.25-3.52-3.52A6.75 6.75.0 1110.75 4zm0 1.75a5 5 0 100 10 5 5 0 000-10z"/></svg></button></form></div></header><main class=page><article class=article-page><header class=article-hero><p class=article-hero__section><a href=/posts/>Blog Posts</a></p><h1 class=article-hero__title>Automating TP-Link Kasa Devices with Shortcuts</h1><p class=article-hero__summary>Using three clever Shortcuts and the Kasa cloud API, you can log in, list devices, and control TP-Link Kasa smart plugs and switches directly from Shortcuts—no Homebridge required.</p></header><div class=article-flow><section class="rail-panel article-details"><div class=meta><span>By Aidan Maurin-Jones</span>
+<span>September 25, 2025</span>
+<span>4 min read</span>
+<span class=tag-list><a href=/tags/shortcuts/>Shortcuts</a>
+<a href=/tags/smart-home/>Smart Home</a>
+</span><a class=tag-list__rss href=/posts/index.xml>Blog Posts RSS</a></div></section><div class=entry><div class="entry__content prose"><p>One of the things I love about Shortcuts is how it can act as a bridge between apps and services
 that don&rsquo;t officially support Apple&rsquo;s automation ecosystem. A perfect example of this is TP-Link&rsquo;s
 Kasa line of smart plugs, switches, and bulbs. Kasa devices don&rsquo;t natively integrate with
-Shortcuts&ndash;but with a little API trickery, you can bring them right into your automations.</p>
-<p>Over the past week, I&rsquo;ve been experimenting with three public Shortcuts that unlock the Kasa
-cloud API:</p>
-<ol>
-<li>
-<p>Get Kasa API Token</p>
-</li>
-<li>
-<p>Get Kasa Device Details</p>
-</li>
-<li>
-<p>Turn On/Off Kasa Device</p>
-</li>
-</ol>
-<p>Together, they form a powerful workflow that lets you log in to your account, retrieve all
-of your devices, and control them&ndash;all without ever opening the Kasa app.</p>
-<hr>
-<h3 id="step-1-authenticating-with-the-kasa-cloud">Step 1: Authenticating with the Kasa Cloud</h3>
-<p>Everything starts with the Get Kasa API Token Shortcut. This Shortcut asks for the email and
+Shortcuts&ndash;but with a little API trickery, you can bring them right into your automations.</p><p>Over the past week, I&rsquo;ve been experimenting with three public Shortcuts that unlock the Kasa
+cloud API:</p><ol><li><p>Get Kasa API Token</p></li><li><p>Get Kasa Device Details</p></li><li><p>Turn On/Off Kasa Device</p></li></ol><p>Together, they form a powerful workflow that lets you log in to your account, retrieve all
+of your devices, and control them&ndash;all without ever opening the Kasa app.</p><hr><h3 id=step-1-authenticating-with-the-kasa-cloud>Step 1: Authenticating with the Kasa Cloud</h3><p>Everything starts with the Get Kasa API Token Shortcut. This Shortcut asks for the email and
 password tied to your Kasa account, along with a UUID (a unique identifier that mimics the
 Kasa app itself). With these values, the Shortcut sends a login request to the Kasa cloud
-endpoint:</p>
-<pre><code>https://wap.tplinkcloud.com/
-</code></pre>
-<p>The response includes a temporary API token&ndash;your golden ticket for making further requests. Without
+endpoint:</p><pre><code>https://wap.tplinkcloud.com/
+</code></pre><p>The response includes a temporary API token&ndash;your golden ticket for making further requests. Without
 it, nothing else works. Tokens do expire occasionally (usually after an app update), but
-re-running the Shortcut instantly refreshes your access.</p>
-<hr>
-<h3 id="step-2-retrieving-your-devices">Step 2: Retrieving Your Devices</h3>
-<p>Once you have a token, the next step is to get a list of devices tied to your account. That&rsquo;s
-where Get Kasa Device Details comes in.</p>
-<p>This Shortcut takes your token and sends a getDeviceList request. The response is a JSON
+re-running the Shortcut instantly refreshes your access.</p><hr><h3 id=step-2-retrieving-your-devices>Step 2: Retrieving Your Devices</h3><p>Once you have a token, the next step is to get a list of devices tied to your account. That&rsquo;s
+where Get Kasa Device Details comes in.</p><p>This Shortcut takes your token and sends a getDeviceList request. The response is a JSON
 dictionary containing all of your Kasa devices&ndash;each with a friendly name (alias), a deviceId,
-and an appServerUrl (the regional server that manages the device).</p>
-<p>The Shortcut loops through this dictionary, extracts the essentials, and combines them into
-a clean, human-readable list. Instead of parsing raw JSON, you get something like:</p>
-<pre><code>&quot;Living Room Plug&quot;: {&quot;Device ID&quot;: &quot;8006XXXXXX&quot;, &quot;App Server URL&quot;: &quot;https://use1-wap.tplinkcloud.com&quot;}
-</code></pre>
-<p>This is the crucial information you&rsquo;ll need to actually control the device.</p>
-<hr>
-<h3 id="step-3-turning-devices-on-and-off">Step 3: Turning Devices On and Off</h3>
-<p>With the token, device ID, and server URL in hand, the final piece of the puzzle is Turn
-On/Off Kasa Device.</p>
-<p>This Shortcut first prompts you for the values you retrieved in step two, then asks you to
+and an appServerUrl (the regional server that manages the device).</p><p>The Shortcut loops through this dictionary, extracts the essentials, and combines them into
+a clean, human-readable list. Instead of parsing raw JSON, you get something like:</p><pre><code>&quot;Living Room Plug&quot;: {&quot;Device ID&quot;: &quot;8006XXXXXX&quot;, &quot;App Server URL&quot;: &quot;https://use1-wap.tplinkcloud.com&quot;}
+</code></pre><p>This is the crucial information you&rsquo;ll need to actually control the device.</p><hr><h3 id=step-3-turning-devices-on-and-off>Step 3: Turning Devices On and Off</h3><p>With the token, device ID, and server URL in hand, the final piece of the puzzle is Turn
+On/Off Kasa Device.</p><p>This Shortcut first prompts you for the values you retrieved in step two, then asks you to
 choose an action: On or Off. Internally, those options map to 1 and 0, which the API uses
-to change the relay state.</p>
-<p>The Shortcut builds a JSON request that looks like this:</p>
-<pre><code>{
+to change the relay state.</p><p>The Shortcut builds a JSON request that looks like this:</p><pre><code>{
   &quot;method&quot;: &quot;passthrough&quot;,
   &quot;params&quot;: {
     &quot;deviceId&quot;: &quot;YOUR_DEVICE_ID&quot;,
     &quot;requestData&quot;: &quot;{\&quot;system\&quot;:{\&quot;set_relay_state\&quot;:{\&quot;state\&quot;:1}}}&quot;
   }
 }
-</code></pre>
-<p>Send that request to the Kasa cloud, and&ndash;like magic&ndash;your smart plug or bulb responds instantly.</p>
-<hr>
-<h3 id="why-this-matters">Why This Matters</h3>
-<p>Kasa devices are popular because they&rsquo;re inexpensive, reliable, and don&rsquo;t require a separate
+</code></pre><p>Send that request to the Kasa cloud, and&ndash;like magic&ndash;your smart plug or bulb responds instantly.</p><hr><h3 id=why-this-matters>Why This Matters</h3><p>Kasa devices are popular because they&rsquo;re inexpensive, reliable, and don&rsquo;t require a separate
 hub. But until now, integrating them with Shortcuts has meant relying on Homebridge, third-party apps,
-or clunky workarounds.</p>
-<p>These three Shortcuts cut out the middleman. They give you direct control over your Kasa
-devices from within Shortcuts, meaning you can tie them into existing automations:</p>
-<ul>
-<li>Turn on a desk lamp when you start a Focus mode.</li>
-<li>Power cycle your router with a tap on the Home Screen.</li>
-<li>Shut off everything in the house with a single command to Siri.</li>
-</ul>
-<hr>
-<h3 id="credit-where-its-due">Credit Where It&rsquo;s Due</h3>
-<p>All of this is made possible thanks to the excellent research and documentation by Joshua
-Tz, who published the Kasa API details. His guide <a href="https://docs.joshuatz.com/random/tp-link-kasa/">is available here</a>
+or clunky workarounds.</p><p>These three Shortcuts cut out the middleman. They give you direct control over your Kasa
+devices from within Shortcuts, meaning you can tie them into existing automations:</p><ul><li>Turn on a desk lamp when you start a Focus mode.</li><li>Power cycle your router with a tap on the Home Screen.</li><li>Shut off everything in the house with a single command to Siri.</li></ul><hr><h3 id=credit-where-its-due>Credit Where It&rsquo;s Due</h3><p>All of this is made possible thanks to the excellent research and documentation by Joshua
+Tz, who published the Kasa API details. His guide <a href=https://docs.joshuatz.com/random/tp-link-kasa/>is available here</a>
 and is an invaluable resource for anyone who wants to go deeper into the API beyond what
-Shortcuts can do.</p>
-<hr>
-<h3 id="future-improvements">Future Improvements</h3>
-<p>Right now, the workflow involves some copy-paste steps&ndash;retrieving the token in one Shortcut,
+Shortcuts can do.</p><hr><h3 id=future-improvements>Future Improvements</h3><p>Right now, the workflow involves some copy-paste steps&ndash;retrieving the token in one Shortcut,
 then pasting it into another. With a bit of refinement, the whole process could be chained
 into a single Shortcut: log in, fetch devices, pick one, and toggle it&ndash;all in one go. That&rsquo;s
-the kind of polish that makes Shortcuts shine.</p>
-<p>But even as-is, this trio of Shortcuts transforms Kasa devices from &ldquo;app-only&rdquo; gadgets into
+the kind of polish that makes Shortcuts shine.</p><p>But even as-is, this trio of Shortcuts transforms Kasa devices from &ldquo;app-only&rdquo; gadgets into
 fully programmable components of your Apple ecosystem. And that&rsquo;s the magic of Shortcuts:
-giving you the tools to bend devices and services to your will&ndash;even when their makers don&rsquo;t.</p>
-<div class="app-row">
-  
-<article class="app-card">
-  <a class="app-card__icon" href="https://www.icloud.com/shortcuts/997094909661423e99810869f493d5ce" target="_blank" rel="noopener">
-    <img src="/images/Shortcuts%20Icons/Get%20Kasa%20API%20Token%20%28Public%29%20Icon.jpg" alt="Get Kasa API Token app icon" width="52" height="52">
-  </a>
-  <a class="app-card__title" href="https://www.icloud.com/shortcuts/997094909661423e99810869f493d5ce" target="_blank" rel="noopener">
-    Get Kasa API Token
-  </a>
-</article>
-
-<article class="app-card">
-  <a class="app-card__icon" href="https://www.icloud.com/shortcuts/56b5bf3a4abe4a6e946ba2d3ee4fc9b7" target="_blank" rel="noopener">
-    <img src="/images/Shortcuts%20Icons/Get%20Kasa%20Device%20Details%20%28Public%29%20Icon.jpg" alt="Get Kasa Device Details app icon" width="52" height="52">
-  </a>
-  <a class="app-card__title" href="https://www.icloud.com/shortcuts/56b5bf3a4abe4a6e946ba2d3ee4fc9b7" target="_blank" rel="noopener">
-    Get Kasa Device Details
-  </a>
-</article>
-
-<article class="app-card">
-  <a class="app-card__icon" href="https://www.icloud.com/shortcuts/0f8d26fecc294230bac0f1a0611bee1e" target="_blank" rel="noopener">
-    <img src="/images/Shortcuts%20Icons/Turn%20ON%20&amp;%20OFF%20Kasa%20Device%20%28Public%29%20Icon.jpg" alt="Turn ON &amp; OFF Kasa Device app icon" width="52" height="52">
-  </a>
-  <a class="app-card__title" href="https://www.icloud.com/shortcuts/0f8d26fecc294230bac0f1a0611bee1e" target="_blank" rel="noopener">
-    Turn ON &amp; OFF Kasa Device
-  </a>
-</article>
-
-
-</div>
-
-<h3 id="apps-used-to-create-this-shortcut">Apps Used to Create This Shortcut</h3>
-<div class="app-row">
-  
-<article class="app-card">
-  <a class="app-card__icon" href="https://apps.apple.com/ca/app/actions/id1586435171?uo=4" target="_blank" rel="noopener">
-    <img src="/images/App%20Store%20App%20Icons/Actions%20Icon.jpg" alt="Actions app icon" width="52" height="52">
-  </a>
-  <a class="app-card__title" href="https://apps.apple.com/ca/app/actions/id1586435171?uo=4" target="_blank" rel="noopener">
-    Actions
-  </a>
-</article>
-
-<article class="app-card">
-  <a class="app-card__icon" href="https://apps.apple.com/ca/app/jayson/id1447750768?uo=4" target="_blank" rel="noopener">
-    <img src="/images/App%20Store%20App%20Icons/Jayson%20Icon.jpg" alt="Jayson app icon" width="52" height="52">
-  </a>
-  <a class="app-card__title" href="https://apps.apple.com/ca/app/jayson/id1447750768?uo=4" target="_blank" rel="noopener">
-    Jayson
-  </a>
-</article>
-
-
-</div>
-
-<div class="amj-cta" aria-label="Support and subscription links">
-  <div class="amj-cta__item amj-cta__item--coffee">
-    <a class="amj-cta__button amj-cta__button--coffee" href="https://www.buymeacoffee.com/AidanMJ25" target="_blank" rel="noopener">
-      <span>Buy Me a Coffee</span>
-    </a>
-  </div>
-
-  <div class="amj-cta__item">
-    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/posts/index.xml" target="_blank" rel="noopener" aria-label="Subscribe via RSS">
-      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
-      <span>Subscribe via RSS</span>
-    </a>
-  </div>
-
-  <div class="amj-cta__item">
-    <a class="amj-cta__button amj-cta__button--newsletter" href="https://buttondown.com/AidanMJ25" target="_blank" rel="noopener">Newsletter via Email</a>
-  </div>
-
-  <div class="amj-cta__item">
-    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/newsletter/index.xml" target="_blank" rel="noopener" aria-label="Newsletter via RSS">
-      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
-      <span>Newsletter via RSS</span>
-    </a>
-  </div>
-</div>
-
-
-        </div>
-      </div>
-    </div>
-  </article>
-  
-
-    </main>
-    <footer class="site-footer">
-  <p>2026 Aidan Maurin-Jones. Built with Hugo, Markdown, YAML front matter, and section-specific RSS feeds.</p>
-</footer>
-
-  </div>
-</body>
-</html>
+giving you the tools to bend devices and services to your will&ndash;even when their makers don&rsquo;t.</p><div class=app-row><article class=app-card><a class=app-card__icon href=https://www.icloud.com/shortcuts/997094909661423e99810869f493d5ce target=_blank rel=noopener><img src=/images/Shortcuts%20Icons/Get%20Kasa%20API%20Token%20%28Public%29%20Icon.jpg alt="Get Kasa API Token app icon" width=52 height=52>
+</a><a class=app-card__title href=https://www.icloud.com/shortcuts/997094909661423e99810869f493d5ce target=_blank rel=noopener>Get Kasa API Token</a></article><article class=app-card><a class=app-card__icon href=https://www.icloud.com/shortcuts/56b5bf3a4abe4a6e946ba2d3ee4fc9b7 target=_blank rel=noopener><img src=/images/Shortcuts%20Icons/Get%20Kasa%20Device%20Details%20%28Public%29%20Icon.jpg alt="Get Kasa Device Details app icon" width=52 height=52>
+</a><a class=app-card__title href=https://www.icloud.com/shortcuts/56b5bf3a4abe4a6e946ba2d3ee4fc9b7 target=_blank rel=noopener>Get Kasa Device Details</a></article><article class=app-card><a class=app-card__icon href=https://www.icloud.com/shortcuts/0f8d26fecc294230bac0f1a0611bee1e target=_blank rel=noopener><img src=/images/Shortcuts%20Icons/Turn%20ON%20&%20OFF%20Kasa%20Device%20%28Public%29%20Icon.jpg alt="Turn ON & OFF Kasa Device app icon" width=52 height=52>
+</a><a class=app-card__title href=https://www.icloud.com/shortcuts/0f8d26fecc294230bac0f1a0611bee1e target=_blank rel=noopener>Turn ON & OFF Kasa Device</a></article></div><h3 id=apps-used-to-create-this-shortcut>Apps Used to Create This Shortcut</h3><div class=app-row><article class=app-card><a class=app-card__icon href="https://apps.apple.com/ca/app/actions/id1586435171?uo=4" target=_blank rel=noopener><img src=/images/App%20Store%20App%20Icons/Actions%20Icon.jpg alt="Actions app icon" width=52 height=52>
+</a><a class=app-card__title href="https://apps.apple.com/ca/app/actions/id1586435171?uo=4" target=_blank rel=noopener>Actions</a></article><article class=app-card><a class=app-card__icon href="https://apps.apple.com/ca/app/jayson/id1447750768?uo=4" target=_blank rel=noopener><img src=/images/App%20Store%20App%20Icons/Jayson%20Icon.jpg alt="Jayson app icon" width=52 height=52>
+</a><a class=app-card__title href="https://apps.apple.com/ca/app/jayson/id1447750768?uo=4" target=_blank rel=noopener>Jayson</a></article></div><div class=amj-cta aria-label="Support and subscription links"><div class="amj-cta__item amj-cta__item--coffee"><a class="amj-cta__button amj-cta__button--coffee" href=https://www.buymeacoffee.com/AidanMJ25 target=_blank rel=noopener><span>Buy Me a Coffee</span></a></div><div class=amj-cta__item><a class="amj-cta__button amj-cta__button--rss" href=https://blog.aidanmaurinjones.com/posts/index.xml target=_blank rel=noopener aria-label="Subscribe via RSS"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82.0 110-3.64 1.82 1.82.0 010 3.64zm-3-8.18v2.73a8.64 8.64.0 018.64 8.64h2.73A11.36 11.36.0 003.18 9.64zm0-4.09v2.73A15.45 15.45.0 0118.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55z"/></svg>
+<span>Subscribe via RSS</span></a></div><div class=amj-cta__item><a class="amj-cta__button amj-cta__button--newsletter" href=https://buttondown.com/AidanMJ25 target=_blank rel=noopener>Newsletter via Email</a></div><div class=amj-cta__item><a class="amj-cta__button amj-cta__button--rss" href=https://blog.aidanmaurinjones.com/newsletter/index.xml target=_blank rel=noopener aria-label="Newsletter via RSS"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82.0 110-3.64 1.82 1.82.0 010 3.64zm-3-8.18v2.73a8.64 8.64.0 018.64 8.64h2.73A11.36 11.36.0 003.18 9.64zm0-4.09v2.73A15.45 15.45.0 0118.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55z"/></svg>
+<span>Newsletter via RSS</span></a></div></div></div></div></div></article></main><footer class=site-footer><p>2026 Aidan Maurin-Jones. Built with Hugo, Markdown, YAML front matter, and section-specific RSS feeds.</p></footer></div></body></html>

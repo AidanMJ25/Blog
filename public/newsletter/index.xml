@@ -1,23 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Aidan Maurin-Jones | Newsletter Archive</title>
-    <link>http://localhost:1313/newsletter/</link>
-    <description>All Newsletter Issues.</description>
-    <language>en</language>
-    
-      <atom:link href="http://localhost:1313/newsletter/index.xml" rel="self" type="application/rss+xml"></atom:link>
-    
-    
-      <item>
-        <title>What&#39;s New at the Blog - Shortcuts, Automation &amp; a Dash of Humor</title>
-        <link>http://localhost:1313/newsletter/whats-new-at-the-blog---shortcuts-automation--a-dash-of-humor/</link>
-        <guid isPermaLink="true">http://localhost:1313/newsletter/whats-new-at-the-blog---shortcuts-automation--a-dash-of-humor/</guid>
-        
-          <pubDate>Mon, 29 Sep 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>Hey there,</p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Aidan Maurin-Jones | Newsletter Archive</title><link>https://blog.aidanmaurinjones.com/newsletter/</link><description>All Newsletter Issues.</description><language>en</language><atom:link href="https://blog.aidanmaurinjones.com/newsletter/index.xml" rel="self" type="application/rss+xml"/><item><title>What's New at the Blog - Shortcuts, Automation &amp; a Dash of Humor</title><link>https://blog.aidanmaurinjones.com/newsletter/whats-new-at-the-blog---shortcuts-automation--a-dash-of-humor/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/newsletter/whats-new-at-the-blog---shortcuts-automation--a-dash-of-humor/</guid><pubDate>Mon, 29 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>Hey there,</p>
 <p>I hope this finds you well and a little curious — I’ve got a fresh batch of blog posts to
 share! Whether you’re into smart home automations, shortcuts that save time, or just a little
 bit of silliness when dealing with spam, there’s something here for you.</p>
@@ -99,8 +80,7 @@ HomeKit, or combining shortcuts + other tools you love). Stay tuned.</p>
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>Hey there,</p>
+]]></description><content:encoded><![CDATA[<p>Hey there,</p>
 <p>I hope this finds you well and a little curious — I’ve got a fresh batch of blog posts to
 share! Whether you’re into smart home automations, shortcuts that save time, or just a little
 bit of silliness when dealing with spam, there’s something here for you.</p>
@@ -182,9 +162,4 @@ HomeKit, or combining shortcuts + other tools you love). Stay tuned.</p>
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-  </channel>
-</rss>
+]]></content:encoded></item></channel></rss>

@@ -1,261 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1"><title>Wordle, But With a Twist: A Shortcut I Built That Gives You Hints | Aidan Maurin-Jones</title><meta name="description" content="A Shortcut that grabs today’s Wordle answer, runs it through a local AI, and gives you a playful hint instead of a spoiler.">
-  <link rel="canonical" href="http://localhost:1313/posts/wordle-but-with-a-twist-a-shortcut-i-built-that-gives-you-hints/">
-  <meta property="og:site_name" content="Blog - Aidan Maurin-Jones">
-<meta property="og:title" content="Wordle, But With a Twist: A Shortcut I Built That Gives You Hints | Aidan Maurin-Jones">
-<meta property="og:description" content="A Shortcut that grabs today’s Wordle answer, runs it through a local AI, and gives you a playful hint instead of a spoiler.">
-<meta property="og:url" content="http://localhost:1313/posts/wordle-but-with-a-twist-a-shortcut-i-built-that-gives-you-hints/">
-<meta property="og:type" content="article">
-<meta property="og:locale" content="en_US">
-
-  <meta property="article:published_time" content="2025-09-18T00:00:00Z">
-  <meta property="article:modified_time" content="2025-09-18T00:00:00Z">
-  <meta property="article:tag" content="Shortcuts"><meta property="article:tag" content="AI">
-
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Wordle, But With a Twist: A Shortcut I Built That Gives You Hints | Aidan Maurin-Jones">
-<meta name="twitter:description" content="A Shortcut that grabs today’s Wordle answer, runs it through a local AI, and gives you a playful hint instead of a spoiler."><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","articleSection":"Blog Posts","author":{"@type":"Person","name":"Aidan Maurin-Jones","url":"https://aidanmaurinjones.com/"},"dateModified":"2025-09-18T00:00:00Z","datePublished":"2025-09-18T00:00:00Z","description":"A Shortcut that grabs today’s Wordle answer, runs it through a local AI, and gives you a playful hint instead of a spoiler.","headline":"Wordle, But With a Twist: A Shortcut I Built That Gives You Hints","inLanguage":"en-us","keywords":["Shortcuts","AI"],"mainEntityOfPage":"http://localhost:1313/posts/wordle-but-with-a-twist-a-shortcut-i-built-that-gives-you-hints/","publisher":{"@type":"Person","name":"Aidan Maurin-Jones","url":"https://aidanmaurinjones.com/"},"url":"http://localhost:1313/posts/wordle-but-with-a-twist-a-shortcut-i-built-that-gives-you-hints/","wordCount":348}</script>
-
-  
-  <link rel="stylesheet" href="/css/style.min.eeb7e39efd09fc7328023e954ed2a36db8fc89baf7373dc72c4069664fb3a6b0.css" integrity="sha256-7rfjnv0J/HMoAj6VTtKjbbj8ibr3Nz3HLEBpZk&#43;zprA=">
-  
-	  
-	  <script src="/js/code-copy.min.0f8459a011f490588fbc8675943fa09eb746a461aa8ec7ebbcf31e43244d0258.js" integrity="sha256-D4RZoBH0kFiPvIZ1lD&#43;gnrdGpGGqjsfrvPMeQyRNAlg=" defer></script>
-	  
-	  
-	  
-  
-  <link rel="alternate" type="application/rss&#43;xml" title="Aidan Maurin-Jones RSS" href="/index.xml">
-  
-  
-  
-  
-  <link rel="icon" href="/favicon.ico">
-</head>
-<body>
-  <div class="site-shell">
-    <header class="site-header">
-  <div class="site-header__brand">
-    <p class="site-header__title"><a href="/">Aidan Maurin-Jones</a></p>
-    <p class="site-header__tagline">Aidan Maurin-Jones shares tools, automations, and thoughts on whatever’s interesting this week.</p>
-  </div>
-  <nav class="site-nav site-nav--desktop" aria-label="Primary">
-    <a href="/" >Home</a>
-
-  <a href="/about/" >About</a>
-
-  <a href="/contact/" >Contact</a>
-
-  <a href="/newsletter/" >Newsletter Archive</a>
-
-
-    <form class="site-search" role="search" method="get" action="/search/">
-  <label class="sr-only" for="site-search-desktop">Search this site</label>
-  <input id="site-search-desktop" class="site-search__field" type="search" name="q" placeholder="Search" autocomplete="off">
-  <button class="site-search__submit" type="submit" aria-label="Search">
-    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <path d="M10.75 4a6.75 6.75 0 0 1 5.36 10.86l3.52 3.52-1.25 1.25-3.52-3.52A6.75 6.75 0 1 1 10.75 4Zm0 1.75a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z"/>
-    </svg>
-  </button>
-</form>
-
-  </nav>
-  <details class="site-nav-toggle">
-    <summary class="site-nav-toggle__summary" aria-label="Open menu">
-      <span class="site-nav-toggle__label">Menu</span>
-      <span class="site-nav-toggle__icon" aria-hidden="true"></span>
-    </summary>
-    <nav class="site-nav site-nav--mobile" aria-label="Mobile primary">
-      <a href="/" >Home</a>
-
-  <a href="/about/" >About</a>
-
-  <a href="/contact/" >Contact</a>
-
-  <a href="/newsletter/" >Newsletter Archive</a>
-
-
-    </nav>
-  </details>
-  <div class="site-search-mobile">
-    <form class="site-search" role="search" method="get" action="/search/">
-  <label class="sr-only" for="site-search-mobile">Search this site</label>
-  <input id="site-search-mobile" class="site-search__field" type="search" name="q" placeholder="Search" autocomplete="off">
-  <button class="site-search__submit" type="submit" aria-label="Search">
-    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <path d="M10.75 4a6.75 6.75 0 0 1 5.36 10.86l3.52 3.52-1.25 1.25-3.52-3.52A6.75 6.75 0 1 1 10.75 4Zm0 1.75a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z"/>
-    </svg>
-  </button>
-</form>
-
-  </div>
-</header>
-
-    <main class="page">
-      
-  
-  <article class="article-page">
-    <header class="article-hero">
-      
-        <p class="article-hero__section"><a href="/posts/">Blog Posts</a></p>
-      
-      <h1 class="article-hero__title">Wordle, But With a Twist: A Shortcut I Built That Gives You Hints</h1>
-      
-        <p class="article-hero__summary">A Shortcut that grabs today&rsquo;s Wordle answer, runs it through a local AI, and gives you a playful hint instead of a spoiler.</p>
-      
-    </header>
-
-    <div class="article-flow">
-      <section class="rail-panel article-details">
-        <div class="meta">
-          <span>By Aidan Maurin-Jones</span>
-          
-            <span>September 18, 2025</span>
-          
-          
-            <span>2 min read</span>
-          
-          <span class="tag-list">
-            
-              
-                <a href="/tags/shortcuts/">Shortcuts</a>
-              
-                <a href="/tags/ai/">AI</a>
-              
-            
-          </span>
-          
-            
-              <a class="tag-list__rss" href="/posts/index.xml">Blog Posts RSS</a>
-            
-          
-        </div>
-      </section>
-
-      <div class="entry">
-        <div class="entry__content prose">
-          <p>I&rsquo;ve been having fun experimenting with Shortcuts, APIs, and local AI models, and recently
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Wordle, But With a Twist: A Shortcut I Built That Gives You Hints | Aidan Maurin-Jones</title><meta name=description content="A Shortcut that grabs today’s Wordle answer, runs it through a local AI, and gives you a playful hint instead of a spoiler."><link rel=canonical href=https://blog.aidanmaurinjones.com/posts/wordle-but-with-a-twist-a-shortcut-i-built-that-gives-you-hints/><meta name=robots content="index, follow"><meta property="og:site_name" content="Blog - Aidan Maurin-Jones"><meta property="og:title" content="Wordle, But With a Twist: A Shortcut I Built That Gives You Hints | Aidan Maurin-Jones"><meta property="og:description" content="A Shortcut that grabs today’s Wordle answer, runs it through a local AI, and gives you a playful hint instead of a spoiler."><meta property="og:url" content="https://blog.aidanmaurinjones.com/posts/wordle-but-with-a-twist-a-shortcut-i-built-that-gives-you-hints/"><meta property="og:type" content="article"><meta property="og:locale" content="en_US"><meta property="article:published_time" content="2025-09-18T00:00:00Z"><meta property="article:modified_time" content="2025-09-18T00:00:00Z"><meta property="article:tag" content="Shortcuts"><meta property="article:tag" content="AI"><meta name=twitter:card content="summary"><meta name=twitter:title content="Wordle, But With a Twist: A Shortcut I Built That Gives You Hints | Aidan Maurin-Jones"><meta name=twitter:description content="A Shortcut that grabs today’s Wordle answer, runs it through a local AI, and gives you a playful hint instead of a spoiler."><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","articleSection":"Blog Posts","author":{"@type":"Person","name":"Aidan Maurin-Jones","url":"https://aidanmaurinjones.com/"},"dateModified":"2025-09-18T00:00:00Z","datePublished":"2025-09-18T00:00:00Z","description":"A Shortcut that grabs today’s Wordle answer, runs it through a local AI, and gives you a playful hint instead of a spoiler.","headline":"Wordle, But With a Twist: A Shortcut I Built That Gives You Hints","inLanguage":"en-us","keywords":["Shortcuts","AI"],"mainEntityOfPage":"https://blog.aidanmaurinjones.com/posts/wordle-but-with-a-twist-a-shortcut-i-built-that-gives-you-hints/","publisher":{"@type":"Person","name":"Aidan Maurin-Jones","url":"https://aidanmaurinjones.com/"},"url":"https://blog.aidanmaurinjones.com/posts/wordle-but-with-a-twist-a-shortcut-i-built-that-gives-you-hints/","wordCount":348}</script><link rel=stylesheet href=/css/style.min.eeb7e39efd09fc7328023e954ed2a36db8fc89baf7373dc72c4069664fb3a6b0.css integrity="sha256-7rfjnv0J/HMoAj6VTtKjbbj8ibr3Nz3HLEBpZk+zprA="><script src=/js/code-copy.min.0f8459a011f490588fbc8675943fa09eb746a461aa8ec7ebbcf31e43244d0258.js integrity="sha256-D4RZoBH0kFiPvIZ1lD+gnrdGpGGqjsfrvPMeQyRNAlg=" defer></script><link rel=alternate type=application/rss+xml title="Aidan Maurin-Jones RSS" href=/index.xml><link rel=icon href=/favicon.ico></head><body><div class=site-shell><header class=site-header><div class=site-header__brand><p class=site-header__title><a href=/>Aidan Maurin-Jones</a></p><p class=site-header__tagline>Aidan Maurin-Jones shares tools, automations, and thoughts on whatever’s interesting this week.</p></div><nav class="site-nav site-nav--desktop" aria-label=Primary><a href=/>Home</a>
+<a href=/about/>About</a>
+<a href=/contact/>Contact</a>
+<a href=/newsletter/>Newsletter Archive</a><form class=site-search role=search method=get action=/search/><label class=sr-only for=site-search-desktop>Search this site</label>
+<input id=site-search-desktop class=site-search__field type=search name=q placeholder=Search autocomplete=off>
+<button class=site-search__submit type=submit aria-label=Search>
+<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.75 4a6.75 6.75.0 015.36 10.86l3.52 3.52-1.25 1.25-3.52-3.52A6.75 6.75.0 1110.75 4zm0 1.75a5 5 0 100 10 5 5 0 000-10z"/></svg></button></form></nav><details class=site-nav-toggle><summary class=site-nav-toggle__summary aria-label="Open menu"><span class=site-nav-toggle__label>Menu</span>
+<span class=site-nav-toggle__icon aria-hidden=true></span></summary><nav class="site-nav site-nav--mobile" aria-label="Mobile primary"><a href=/>Home</a>
+<a href=/about/>About</a>
+<a href=/contact/>Contact</a>
+<a href=/newsletter/>Newsletter Archive</a></nav></details><div class=site-search-mobile><form class=site-search role=search method=get action=/search/><label class=sr-only for=site-search-mobile>Search this site</label>
+<input id=site-search-mobile class=site-search__field type=search name=q placeholder=Search autocomplete=off>
+<button class=site-search__submit type=submit aria-label=Search>
+<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.75 4a6.75 6.75.0 015.36 10.86l3.52 3.52-1.25 1.25-3.52-3.52A6.75 6.75.0 1110.75 4zm0 1.75a5 5 0 100 10 5 5 0 000-10z"/></svg></button></form></div></header><main class=page><article class=article-page><header class=article-hero><p class=article-hero__section><a href=/posts/>Blog Posts</a></p><h1 class=article-hero__title>Wordle, But With a Twist: A Shortcut I Built That Gives You Hints</h1><p class=article-hero__summary>A Shortcut that grabs today&rsquo;s Wordle answer, runs it through a local AI, and gives you a playful hint instead of a spoiler.</p></header><div class=article-flow><section class="rail-panel article-details"><div class=meta><span>By Aidan Maurin-Jones</span>
+<span>September 18, 2025</span>
+<span>2 min read</span>
+<span class=tag-list><a href=/tags/shortcuts/>Shortcuts</a>
+<a href=/tags/ai/>AI</a>
+</span><a class=tag-list__rss href=/posts/index.xml>Blog Posts RSS</a></div></section><div class=entry><div class="entry__content prose"><p>I&rsquo;ve been having fun experimenting with Shortcuts, APIs, and local AI models, and recently
 I built something that is kinda fun: a Shortcut that gives you a hint for the daily Wordle without
-spoiling the answer.</p>
-<hr>
-<h3 id="how-it-works">How It Works</h3>
-<p>Here&rsquo;s the flow I put together:</p>
-<ol>
-<li>Grab Today&rsquo;s Wordle</li>
-</ol>
-<p>The Shortcut starts by formatting the current date and plugging it into the New York Times&rsquo;
-Wordle API (<a href="https://www.nytimes.com/svc/wordle/v2/%5Bdate%5D.json)">https://www.nytimes.com/svc/wordle/v2/[date].json)</a>. That gives me the official
-solution for the day in JSON format.</p>
-<ol start="2">
-<li>Parse the API Response</li>
-</ol>
-<p>I use Shortcuts&rsquo; &ldquo;Get Dictionary from&rdquo; action to pull out the solution field &ndash; the actual
+spoiling the answer.</p><hr><h3 id=how-it-works>How It Works</h3><p>Here&rsquo;s the flow I put together:</p><ol><li>Grab Today&rsquo;s Wordle</li></ol><p>The Shortcut starts by formatting the current date and plugging it into the New York Times&rsquo;
+Wordle API (<a href=https://www.nytimes.com/svc/wordle/v2/%5Bdate%5D.json)>https://www.nytimes.com/svc/wordle/v2/[date].json)</a>. That gives me the official
+solution for the day in JSON format.</p><ol start=2><li>Parse the API Response</li></ol><p>I use Shortcuts&rsquo; &ldquo;Get Dictionary from&rdquo; action to pull out the solution field &ndash; the actual
 word for today&rsquo;s puzzle. Normally that would be game over, but that&rsquo;s where the next step
-comes in.</p>
-<ol start="3">
-<li>Ask AI for a Hint</li>
-</ol>
-<p>Instead of showing the word, the Shortcut creates a prompt:</p>
-<blockquote>
-<p>&ldquo;Without telling me the word, provide a hint to what the given word is below.&rdquo;</p>
-</blockquote>
-<p>I pass that along with the solution to Gemma 2B v2, a small local model I&rsquo;m running. The
-model generates a creative hint while keeping the answer hidden.</p>
-<ol start="4">
-<li>Show the Hint</li>
-</ol>
-<p>Finally, the Shortcut displays the hint in an alert, giving me just enough of a push without
-ruining the puzzle.</p>
-<hr>
-<h3 id="why-i-like-it">Why I Like It</h3>
-<p>What I enjoy about this Shortcut is how it combines three different things I love tinkering
-with:</p>
-<ul>
-<li>Web data: pulling JSON directly from the NYT Wordle API.</li>
-<li>Automation: using Shortcuts to parse and structure everything.</li>
-<li>Local AI: letting an on-device model do the fun part of writing the hint.</li>
-</ul>
-<p>The result is quick, private, and surprisingly fun &ndash; every time I run it, I get a slightly
-different hint for the same word.</p>
-<hr>
-<h3 id="final-thoughts">Final Thoughts</h3>
-<p>I wanted a way to make Wordle more approachable on the days when the word feels impossible,
+comes in.</p><ol start=3><li>Ask AI for a Hint</li></ol><p>Instead of showing the word, the Shortcut creates a prompt:</p><blockquote><p>&ldquo;Without telling me the word, provide a hint to what the given word is below.&rdquo;</p></blockquote><p>I pass that along with the solution to Gemma 2B v2, a small local model I&rsquo;m running. The
+model generates a creative hint while keeping the answer hidden.</p><ol start=4><li>Show the Hint</li></ol><p>Finally, the Shortcut displays the hint in an alert, giving me just enough of a push without
+ruining the puzzle.</p><hr><h3 id=why-i-like-it>Why I Like It</h3><p>What I enjoy about this Shortcut is how it combines three different things I love tinkering
+with:</p><ul><li>Web data: pulling JSON directly from the NYT Wordle API.</li><li>Automation: using Shortcuts to parse and structure everything.</li><li>Local AI: letting an on-device model do the fun part of writing the hint.</li></ul><p>The result is quick, private, and surprisingly fun &ndash; every time I run it, I get a slightly
+different hint for the same word.</p><hr><h3 id=final-thoughts>Final Thoughts</h3><p>I wanted a way to make Wordle more approachable on the days when the word feels impossible,
 without crossing into outright cheating. This Shortcut hits that sweet spot for me. It&rsquo;s a
-simple automation, but it feels fresh and playful every time I use it.</p>
-<article class="app-card">
-  <a class="app-card__icon" href="https://www.icloud.com/shortcuts/dc2aab47577a49ab9095c2f6920e60f7" target="_blank" rel="noopener">
-    <img src="/images/Shortcuts%20Icons/Wordle%20Hint%20Icon.jpg" alt="Wordle Hint app icon" width="52" height="52">
-  </a>
-  <a class="app-card__title" href="https://www.icloud.com/shortcuts/dc2aab47577a49ab9095c2f6920e60f7" target="_blank" rel="noopener">
-    Wordle Hint
-  </a>
-</article>
-
-<h3 id="apps-used-to-create-this-shortcut">Apps Used to Create this Shortcut</h3>
-<div class="app-row">
-  
-<article class="app-card">
-  <a class="app-card__icon" href="https://apps.apple.com/ca/app/offlinellm-private-ai-chat/id6474508768?uo=4" target="_blank" rel="noopener">
-    <img src="/images/App%20Store%20App%20Icons/OfflineLLM:%20Private%20AI%20Chat%20Icon.jpg" alt="OfflineLLM: Private AI Chat app icon" width="52" height="52">
-  </a>
-  <a class="app-card__title" href="https://apps.apple.com/ca/app/offlinellm-private-ai-chat/id6474508768?uo=4" target="_blank" rel="noopener">
-    OfflineLLM: Private AI Chat
-  </a>
-</article>
-
-<article class="app-card">
-  <a class="app-card__icon" href="https://apps.apple.com/ca/app/jayson/id1447750768?uo=4" target="_blank" rel="noopener">
-    <img src="/images/App%20Store%20App%20Icons/Jayson%20Icon.jpg" alt="Jayson app icon" width="52" height="52">
-  </a>
-  <a class="app-card__title" href="https://apps.apple.com/ca/app/jayson/id1447750768?uo=4" target="_blank" rel="noopener">
-    Jayson
-  </a>
-</article>
-
-
-</div>
-
-<div class="amj-cta" aria-label="Support and subscription links">
-  <div class="amj-cta__item amj-cta__item--coffee">
-    <a class="amj-cta__button amj-cta__button--coffee" href="https://www.buymeacoffee.com/AidanMJ25" target="_blank" rel="noopener">
-      <span>Buy Me a Coffee</span>
-    </a>
-  </div>
-
-  <div class="amj-cta__item">
-    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/posts/index.xml" target="_blank" rel="noopener" aria-label="Subscribe via RSS">
-      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
-      <span>Subscribe via RSS</span>
-    </a>
-  </div>
-
-  <div class="amj-cta__item">
-    <a class="amj-cta__button amj-cta__button--newsletter" href="https://buttondown.com/AidanMJ25" target="_blank" rel="noopener">Newsletter via Email</a>
-  </div>
-
-  <div class="amj-cta__item">
-    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/newsletter/index.xml" target="_blank" rel="noopener" aria-label="Newsletter via RSS">
-      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
-      <span>Newsletter via RSS</span>
-    </a>
-  </div>
-</div>
-
-
-        </div>
-      </div>
-    </div>
-  </article>
-  
-
-    </main>
-    <footer class="site-footer">
-  <p>2026 Aidan Maurin-Jones. Built with Hugo, Markdown, YAML front matter, and section-specific RSS feeds.</p>
-</footer>
-
-  </div>
-</body>
-</html>
+simple automation, but it feels fresh and playful every time I use it.</p><article class=app-card><a class=app-card__icon href=https://www.icloud.com/shortcuts/dc2aab47577a49ab9095c2f6920e60f7 target=_blank rel=noopener><img src=/images/Shortcuts%20Icons/Wordle%20Hint%20Icon.jpg alt="Wordle Hint app icon" width=52 height=52>
+</a><a class=app-card__title href=https://www.icloud.com/shortcuts/dc2aab47577a49ab9095c2f6920e60f7 target=_blank rel=noopener>Wordle Hint</a></article><h3 id=apps-used-to-create-this-shortcut>Apps Used to Create this Shortcut</h3><div class=app-row><article class=app-card><a class=app-card__icon href="https://apps.apple.com/ca/app/offlinellm-private-ai-chat/id6474508768?uo=4" target=_blank rel=noopener><img src=/images/App%20Store%20App%20Icons/OfflineLLM:%20Private%20AI%20Chat%20Icon.jpg alt="OfflineLLM: Private AI Chat app icon" width=52 height=52>
+</a><a class=app-card__title href="https://apps.apple.com/ca/app/offlinellm-private-ai-chat/id6474508768?uo=4" target=_blank rel=noopener>OfflineLLM: Private AI Chat</a></article><article class=app-card><a class=app-card__icon href="https://apps.apple.com/ca/app/jayson/id1447750768?uo=4" target=_blank rel=noopener><img src=/images/App%20Store%20App%20Icons/Jayson%20Icon.jpg alt="Jayson app icon" width=52 height=52>
+</a><a class=app-card__title href="https://apps.apple.com/ca/app/jayson/id1447750768?uo=4" target=_blank rel=noopener>Jayson</a></article></div><div class=amj-cta aria-label="Support and subscription links"><div class="amj-cta__item amj-cta__item--coffee"><a class="amj-cta__button amj-cta__button--coffee" href=https://www.buymeacoffee.com/AidanMJ25 target=_blank rel=noopener><span>Buy Me a Coffee</span></a></div><div class=amj-cta__item><a class="amj-cta__button amj-cta__button--rss" href=https://blog.aidanmaurinjones.com/posts/index.xml target=_blank rel=noopener aria-label="Subscribe via RSS"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82.0 110-3.64 1.82 1.82.0 010 3.64zm-3-8.18v2.73a8.64 8.64.0 018.64 8.64h2.73A11.36 11.36.0 003.18 9.64zm0-4.09v2.73A15.45 15.45.0 0118.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55z"/></svg>
+<span>Subscribe via RSS</span></a></div><div class=amj-cta__item><a class="amj-cta__button amj-cta__button--newsletter" href=https://buttondown.com/AidanMJ25 target=_blank rel=noopener>Newsletter via Email</a></div><div class=amj-cta__item><a class="amj-cta__button amj-cta__button--rss" href=https://blog.aidanmaurinjones.com/newsletter/index.xml target=_blank rel=noopener aria-label="Newsletter via RSS"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82.0 110-3.64 1.82 1.82.0 010 3.64zm-3-8.18v2.73a8.64 8.64.0 018.64 8.64h2.73A11.36 11.36.0 003.18 9.64zm0-4.09v2.73A15.45 15.45.0 0118.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55z"/></svg>
+<span>Newsletter via RSS</span></a></div></div></div></div></div></article></main><footer class=site-footer><p>2026 Aidan Maurin-Jones. Built with Hugo, Markdown, YAML front matter, and section-specific RSS feeds.</p></footer></div></body></html>

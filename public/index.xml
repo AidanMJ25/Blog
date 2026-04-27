@@ -1,23 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Aidan Maurin-Jones</title>
-    <link>http://localhost:1313/</link>
-    <description>Aidan Maurin-Jones shares tools, automations, and thoughts on whatever’s interesting this week.</description>
-    <language>en</language>
-    
-      <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml"></atom:link>
-    
-    
-      <item>
-        <title>Building a Smarter Home, One Screen at a Time</title>
-        <link>http://localhost:1313/posts/building-a-smarter-home-one-screen-at-a-time/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/building-a-smarter-home-one-screen-at-a-time/</guid>
-        
-          <pubDate>Fri, 03 Apr 2026 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>There&rsquo;s a certain point in any Home Assistant setup where dashboards stop feeling like control panels and start feeling like compromises.</p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Aidan Maurin-Jones</title><link>https://blog.aidanmaurinjones.com/</link><description>Aidan Maurin-Jones shares tools, automations, and thoughts on whatever’s interesting this week.</description><language>en</language><atom:link href="https://blog.aidanmaurinjones.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Building a Smarter Home, One Screen at a Time</title><link>https://blog.aidanmaurinjones.com/posts/building-a-smarter-home-one-screen-at-a-time/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/building-a-smarter-home-one-screen-at-a-time/</guid><pubDate>Fri, 03 Apr 2026 00:00:00 +0000</pubDate><description><![CDATA[<p>There&rsquo;s a certain point in any Home Assistant setup where dashboards stop feeling like control panels and start feeling like compromises.</p>
 <p>Too many taps. Too many menus. Too much &ldquo;smart&rdquo; layered on top of what should be instant.</p>
 <p>So instead of fighting the UI, I built my own.</p>
 <h3 id="the-touch-panel-that-replaced-everything">The Touch Panel That Replaced Everything</h3>
@@ -109,8 +90,7 @@
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>There&rsquo;s a certain point in any Home Assistant setup where dashboards stop feeling like control panels and start feeling like compromises.</p>
+]]></description><content:encoded><![CDATA[<p>There&rsquo;s a certain point in any Home Assistant setup where dashboards stop feeling like control panels and start feeling like compromises.</p>
 <p>Too many taps. Too many menus. Too much &ldquo;smart&rdquo; layered on top of what should be instant.</p>
 <p>So instead of fighting the UI, I built my own.</p>
 <h3 id="the-touch-panel-that-replaced-everything">The Touch Panel That Replaced Everything</h3>
@@ -202,19 +182,7 @@
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-      <item>
-        <title>A Remote That Finally Belongs to You</title>
-        <link>http://localhost:1313/posts/a-remote-that-finally-belongs-to-you/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/a-remote-that-finally-belongs-to-you/</guid>
-        
-          <pubDate>Thu, 02 Apr 2026 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>Most people think of IR remotes as relics. Dumb plastic wands that exist purely to be lost in couch cushions and die at the worst possible moment.</p>
+]]></content:encoded></item><item><title>A Remote That Finally Belongs to You</title><link>https://blog.aidanmaurinjones.com/posts/a-remote-that-finally-belongs-to-you/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/a-remote-that-finally-belongs-to-you/</guid><pubDate>Thu, 02 Apr 2026 00:00:00 +0000</pubDate><description><![CDATA[<p>Most people think of IR remotes as relics. Dumb plastic wands that exist purely to be lost in couch cushions and die at the worst possible moment.</p>
 <p>But strip away the UX sins and what you&rsquo;re left with is something surprisingly powerful: instant, local, zero-latency control.</p>
 <p>This ESPHome-based IR node leans into that idea hard.</p>
 <p>At its core, it&rsquo;s an ESP8266 (ESP8285 board) running both a receiver and transmitter. That alone isn&rsquo;t special. What makes it interesting is how it&rsquo;s wired into Home Assistant&ndash;not as a workaround, but as a first-class control layer.</p>
@@ -378,8 +346,7 @@
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>Most people think of IR remotes as relics. Dumb plastic wands that exist purely to be lost in couch cushions and die at the worst possible moment.</p>
+]]></description><content:encoded><![CDATA[<p>Most people think of IR remotes as relics. Dumb plastic wands that exist purely to be lost in couch cushions and die at the worst possible moment.</p>
 <p>But strip away the UX sins and what you&rsquo;re left with is something surprisingly powerful: instant, local, zero-latency control.</p>
 <p>This ESPHome-based IR node leans into that idea hard.</p>
 <p>At its core, it&rsquo;s an ESP8266 (ESP8285 board) running both a receiver and transmitter. That alone isn&rsquo;t special. What makes it interesting is how it&rsquo;s wired into Home Assistant&ndash;not as a workaround, but as a first-class control layer.</p>
@@ -543,19 +510,7 @@
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-      <item>
-        <title>A New Landing Page &amp; the Blog&#39;s New Home</title>
-        <link>http://localhost:1313/posts/a-new-landing-page--the-blogs-new-home/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/a-new-landing-page--the-blogs-new-home/</guid>
-        
-          <pubDate>Sun, 19 Oct 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>I finally have a proper home on the web — a simple, fast, no-nonsense landing page that ties
+]]></content:encoded></item><item><title>A New Landing Page &amp; the Blog's New Home</title><link>https://blog.aidanmaurinjones.com/posts/a-new-landing-page--the-blogs-new-home/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/a-new-landing-page--the-blogs-new-home/</guid><pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>I finally have a proper home on the web — a simple, fast, no-nonsense landing page that ties
 everything together at <a href="https://aidanmaurinjones.com">aidanmaurinjones.com</a>.</p>
 <p>Now the <strong>landing page</strong> handles introductions while the <strong>blog</strong> lives at
 <a href="https://blog.aidanmaurinjones.com">blog.aidanmaurinjones.com</a>, focused entirely on posts
@@ -619,8 +574,7 @@ one site for meeting.</p>
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>I finally have a proper home on the web — a simple, fast, no-nonsense landing page that ties
+]]></description><content:encoded><![CDATA[<p>I finally have a proper home on the web — a simple, fast, no-nonsense landing page that ties
 everything together at <a href="https://aidanmaurinjones.com">aidanmaurinjones.com</a>.</p>
 <p>Now the <strong>landing page</strong> handles introductions while the <strong>blog</strong> lives at
 <a href="https://blog.aidanmaurinjones.com">blog.aidanmaurinjones.com</a>, focused entirely on posts
@@ -684,19 +638,7 @@ one site for meeting.</p>
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-      <item>
-        <title>Why Obsidian Doesn’t Work for Me</title>
-        <link>http://localhost:1313/posts/why-obsidian-doesnt-work-for-me/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/why-obsidian-doesnt-work-for-me/</guid>
-        
-          <pubDate>Fri, 03 Oct 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>Every so often, I give Obsidian another try. On paper, it sounds like the perfect tool: a
+]]></content:encoded></item><item><title>Why Obsidian Doesn’t Work for Me</title><link>https://blog.aidanmaurinjones.com/posts/why-obsidian-doesnt-work-for-me/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/why-obsidian-doesnt-work-for-me/</guid><pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>Every so often, I give Obsidian another try. On paper, it sounds like the perfect tool: a
 local-first, Markdown-based note-taking app that’s cross-platform, extensible, and endlessly
 customizable. For many people, it really is a game changer.</p>
 <p>But every time I sit down with it, I leave thinking the same thing: “huh…”</p>
@@ -801,8 +743,7 @@ one that disappears into your workflow and feels natural every day.</p>
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>Every so often, I give Obsidian another try. On paper, it sounds like the perfect tool: a
+]]></description><content:encoded><![CDATA[<p>Every so often, I give Obsidian another try. On paper, it sounds like the perfect tool: a
 local-first, Markdown-based note-taking app that’s cross-platform, extensible, and endlessly
 customizable. For many people, it really is a game changer.</p>
 <p>But every time I sit down with it, I leave thinking the same thing: “huh…”</p>
@@ -907,19 +848,7 @@ one that disappears into your workflow and feels natural every day.</p>
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-      <item>
-        <title>Automating My Newsletter Workflow: One Markdown File for Hugo and Buttondown</title>
-        <link>http://localhost:1313/posts/automating-my-newsletter-workflow-one-markdown-file-for-hugo-and-buttondown/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/automating-my-newsletter-workflow-one-markdown-file-for-hugo-and-buttondown/</guid>
-        
-          <pubDate>Wed, 01 Oct 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>I’ve been working toward a goal for years: a single place to write, and as many automated
+]]></content:encoded></item><item><title>Automating My Newsletter Workflow: One Markdown File for Hugo and Buttondown</title><link>https://blog.aidanmaurinjones.com/posts/automating-my-newsletter-workflow-one-markdown-file-for-hugo-and-buttondown/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/automating-my-newsletter-workflow-one-markdown-file-for-hugo-and-buttondown/</guid><pubDate>Wed, 01 Oct 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>I’ve been working toward a goal for years: a single place to write, and as many automated
 outputs as possible. I don’t want to copy and paste, re-format, or duplicate my writing. The
 same Markdown file that powers a blog post should also power a newsletter, an archive, or
 whatever else I decide to publish.</p>
@@ -1010,8 +939,7 @@ more often.</p>
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>I’ve been working toward a goal for years: a single place to write, and as many automated
+]]></description><content:encoded><![CDATA[<p>I’ve been working toward a goal for years: a single place to write, and as many automated
 outputs as possible. I don’t want to copy and paste, re-format, or duplicate my writing. The
 same Markdown file that powers a blog post should also power a newsletter, an archive, or
 whatever else I decide to publish.</p>
@@ -1102,19 +1030,7 @@ more often.</p>
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-      <item>
-        <title>What&#39;s New at the Blog - Shortcuts, Automation &amp; a Dash of Humor</title>
-        <link>http://localhost:1313/newsletter/whats-new-at-the-blog---shortcuts-automation--a-dash-of-humor/</link>
-        <guid isPermaLink="true">http://localhost:1313/newsletter/whats-new-at-the-blog---shortcuts-automation--a-dash-of-humor/</guid>
-        
-          <pubDate>Mon, 29 Sep 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>Hey there,</p>
+]]></content:encoded></item><item><title>What's New at the Blog - Shortcuts, Automation &amp; a Dash of Humor</title><link>https://blog.aidanmaurinjones.com/newsletter/whats-new-at-the-blog---shortcuts-automation--a-dash-of-humor/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/newsletter/whats-new-at-the-blog---shortcuts-automation--a-dash-of-humor/</guid><pubDate>Mon, 29 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>Hey there,</p>
 <p>I hope this finds you well and a little curious — I’ve got a fresh batch of blog posts to
 share! Whether you’re into smart home automations, shortcuts that save time, or just a little
 bit of silliness when dealing with spam, there’s something here for you.</p>
@@ -1196,8 +1112,7 @@ HomeKit, or combining shortcuts + other tools you love). Stay tuned.</p>
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>Hey there,</p>
+]]></description><content:encoded><![CDATA[<p>Hey there,</p>
 <p>I hope this finds you well and a little curious — I’ve got a fresh batch of blog posts to
 share! Whether you’re into smart home automations, shortcuts that save time, or just a little
 bit of silliness when dealing with spam, there’s something here for you.</p>
@@ -1279,19 +1194,7 @@ HomeKit, or combining shortcuts + other tools you love). Stay tuned.</p>
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-      <item>
-        <title>Fighting Spam with Automation: A Shortcut for Writing Hilarious Replies</title>
-        <link>http://localhost:1313/posts/fighting-spam-with-automation--a-shortcut-for-writing-hilarious-replies/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/fighting-spam-with-automation--a-shortcut-for-writing-hilarious-replies/</guid>
-        
-          <pubDate>Fri, 26 Sep 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>One of the joys of Shortcuts on macOS is bending the system to your will. With a little
+]]></content:encoded></item><item><title>Fighting Spam with Automation: A Shortcut for Writing Hilarious Replies</title><link>https://blog.aidanmaurinjones.com/posts/fighting-spam-with-automation--a-shortcut-for-writing-hilarious-replies/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/fighting-spam-with-automation--a-shortcut-for-writing-hilarious-replies/</guid><pubDate>Fri, 26 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>One of the joys of Shortcuts on macOS is bending the system to your will. With a little
 creativity and some AppleScript, you can pull off automations that feel both absurd and brilliant.
 My latest project? A Shortcut that automatically drafts a brutally funny, sarcastic reply to
 spam and junk emails—powered by a local AI model running in LM Studio.</p>
@@ -1457,8 +1360,7 @@ roast they’ll never actually read.</p>
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>One of the joys of Shortcuts on macOS is bending the system to your will. With a little
+]]></description><content:encoded><![CDATA[<p>One of the joys of Shortcuts on macOS is bending the system to your will. With a little
 creativity and some AppleScript, you can pull off automations that feel both absurd and brilliant.
 My latest project? A Shortcut that automatically drafts a brutally funny, sarcastic reply to
 spam and junk emails—powered by a local AI model running in LM Studio.</p>
@@ -1624,19 +1526,7 @@ roast they’ll never actually read.</p>
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-      <item>
-        <title>Get This Week’s Events: A Smarter Calendar Shortcut</title>
-        <link>http://localhost:1313/posts/get-this-weeks-events-a-smarter-calendar-shortcut/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/get-this-weeks-events-a-smarter-calendar-shortcut/</guid>
-        
-          <pubDate>Thu, 25 Sep 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>One of the things I love about Shortcuts is how they let you bend the system to match your mental model of time. Apple&rsquo;s Calendar app is great at showing what&rsquo;s on your plate, but sometimes you want to zoom out and get a clear snapshot of just this week. That&rsquo;s exactly what this Shortcut, Get This Week&rsquo;s Events, does&ndash;by calculating the week&rsquo;s boundaries dynamically and pulling in only the events you care about.</p>
+]]></content:encoded></item><item><title>Get This Week’s Events: A Smarter Calendar Shortcut</title><link>https://blog.aidanmaurinjones.com/posts/get-this-weeks-events-a-smarter-calendar-shortcut/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/get-this-weeks-events-a-smarter-calendar-shortcut/</guid><pubDate>Thu, 25 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>One of the things I love about Shortcuts is how they let you bend the system to match your mental model of time. Apple&rsquo;s Calendar app is great at showing what&rsquo;s on your plate, but sometimes you want to zoom out and get a clear snapshot of just this week. That&rsquo;s exactly what this Shortcut, Get This Week&rsquo;s Events, does&ndash;by calculating the week&rsquo;s boundaries dynamically and pulling in only the events you care about.</p>
 <hr>
 <h3 id="how-it-works">How It Works</h3>
 <p>The Shortcut starts by establishing today&rsquo;s date and formatting it into a value that the rest of the workflow can understand. From there, it leans on a Dictionary that acts like a custom lookup table for each day of the week. This dictionary defines offsets for both the start and end of the week depending on the current day.</p>
@@ -1700,8 +1590,7 @@ roast they’ll never actually read.</p>
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>One of the things I love about Shortcuts is how they let you bend the system to match your mental model of time. Apple&rsquo;s Calendar app is great at showing what&rsquo;s on your plate, but sometimes you want to zoom out and get a clear snapshot of just this week. That&rsquo;s exactly what this Shortcut, Get This Week&rsquo;s Events, does&ndash;by calculating the week&rsquo;s boundaries dynamically and pulling in only the events you care about.</p>
+]]></description><content:encoded><![CDATA[<p>One of the things I love about Shortcuts is how they let you bend the system to match your mental model of time. Apple&rsquo;s Calendar app is great at showing what&rsquo;s on your plate, but sometimes you want to zoom out and get a clear snapshot of just this week. That&rsquo;s exactly what this Shortcut, Get This Week&rsquo;s Events, does&ndash;by calculating the week&rsquo;s boundaries dynamically and pulling in only the events you care about.</p>
 <hr>
 <h3 id="how-it-works">How It Works</h3>
 <p>The Shortcut starts by establishing today&rsquo;s date and formatting it into a value that the rest of the workflow can understand. From there, it leans on a Dictionary that acts like a custom lookup table for each day of the week. This dictionary defines offsets for both the start and end of the week depending on the current day.</p>
@@ -1765,19 +1654,7 @@ roast they’ll never actually read.</p>
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-      <item>
-        <title>Convert Current Date to Unix Time with Shortcuts</title>
-        <link>http://localhost:1313/posts/convert-current-date-to-unix-time-with-shortcuts/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/convert-current-date-to-unix-time-with-shortcuts/</guid>
-        
-          <pubDate>Thu, 25 Sep 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>Some automations are so simple that they almost feel like magic tricks. A great example of this is my Shortcut for converting any date&ndash;or just the current one&ndash;into Unix time.</p>
+]]></content:encoded></item><item><title>Convert Current Date to Unix Time with Shortcuts</title><link>https://blog.aidanmaurinjones.com/posts/convert-current-date-to-unix-time-with-shortcuts/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/convert-current-date-to-unix-time-with-shortcuts/</guid><pubDate>Thu, 25 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>Some automations are so simple that they almost feel like magic tricks. A great example of this is my Shortcut for converting any date&ndash;or just the current one&ndash;into Unix time.</p>
 <p>For those unfamiliar, Unix time is a standard way of representing dates as the number of seconds since January 1, 1970, at midnight UTC. It&rsquo;s widely used in APIs, databases, and automation tools because it turns messy human dates into a single number that&rsquo;s easy for computers to understand.</p>
 <hr>
 <h3 id="how-the-shortcut-works">How the Shortcut Works</h3>
@@ -1833,8 +1710,7 @@ roast they’ll never actually read.</p>
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>Some automations are so simple that they almost feel like magic tricks. A great example of this is my Shortcut for converting any date&ndash;or just the current one&ndash;into Unix time.</p>
+]]></description><content:encoded><![CDATA[<p>Some automations are so simple that they almost feel like magic tricks. A great example of this is my Shortcut for converting any date&ndash;or just the current one&ndash;into Unix time.</p>
 <p>For those unfamiliar, Unix time is a standard way of representing dates as the number of seconds since January 1, 1970, at midnight UTC. It&rsquo;s widely used in APIs, databases, and automation tools because it turns messy human dates into a single number that&rsquo;s easy for computers to understand.</p>
 <hr>
 <h3 id="how-the-shortcut-works">How the Shortcut Works</h3>
@@ -1890,19 +1766,7 @@ roast they’ll never actually read.</p>
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-      <item>
-        <title>Automating TP-Link Kasa Devices with Shortcuts</title>
-        <link>http://localhost:1313/posts/automating-tp-link-kasa-devices-with-shortcuts/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/automating-tp-link-kasa-devices-with-shortcuts/</guid>
-        
-          <pubDate>Thu, 25 Sep 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>One of the things I love about Shortcuts is how it can act as a bridge between apps and services
+]]></content:encoded></item><item><title>Automating TP-Link Kasa Devices with Shortcuts</title><link>https://blog.aidanmaurinjones.com/posts/automating-tp-link-kasa-devices-with-shortcuts/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/automating-tp-link-kasa-devices-with-shortcuts/</guid><pubDate>Thu, 25 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>One of the things I love about Shortcuts is how it can act as a bridge between apps and services
 that don&rsquo;t officially support Apple&rsquo;s automation ecosystem. A perfect example of this is TP-Link&rsquo;s
 Kasa line of smart plugs, switches, and bulbs. Kasa devices don&rsquo;t natively integrate with
 Shortcuts&ndash;but with a little API trickery, you can bring them right into your automations.</p>
@@ -2070,8 +1934,7 @@ giving you the tools to bend devices and services to your will&ndash;even when t
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>One of the things I love about Shortcuts is how it can act as a bridge between apps and services
+]]></description><content:encoded><![CDATA[<p>One of the things I love about Shortcuts is how it can act as a bridge between apps and services
 that don&rsquo;t officially support Apple&rsquo;s automation ecosystem. A perfect example of this is TP-Link&rsquo;s
 Kasa line of smart plugs, switches, and bulbs. Kasa devices don&rsquo;t natively integrate with
 Shortcuts&ndash;but with a little API trickery, you can bring them right into your automations.</p>
@@ -2239,19 +2102,7 @@ giving you the tools to bend devices and services to your will&ndash;even when t
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-      <item>
-        <title>Controlling SwitchBot Devices with Shortcuts and the Web API</title>
-        <link>http://localhost:1313/posts/controlling-switchbot-devices-with-shortcuts-and-the-web-api/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/controlling-switchbot-devices-with-shortcuts-and-the-web-api/</guid>
-        
-          <pubDate>Wed, 24 Sep 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>One of my favorite things about Apple&rsquo;s Shortcuts app is how it can bridge the gap between hardware and cloud APIs without requiring a single line of &ldquo;real&rdquo; code. A perfect example of this is SwitchBot: a line of Bluetooth and Wi-Fi-enabled devices that can be controlled through their official app&ndash;or, with a bit of setup, entirely through Shortcuts.</p>
+]]></content:encoded></item><item><title>Controlling SwitchBot Devices with Shortcuts and the Web API</title><link>https://blog.aidanmaurinjones.com/posts/controlling-switchbot-devices-with-shortcuts-and-the-web-api/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/controlling-switchbot-devices-with-shortcuts-and-the-web-api/</guid><pubDate>Wed, 24 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>One of my favorite things about Apple&rsquo;s Shortcuts app is how it can bridge the gap between hardware and cloud APIs without requiring a single line of &ldquo;real&rdquo; code. A perfect example of this is SwitchBot: a line of Bluetooth and Wi-Fi-enabled devices that can be controlled through their official app&ndash;or, with a bit of setup, entirely through Shortcuts.</p>
 <p>In this post, I&rsquo;ll walk you through two Shortcuts I built: one to fetch a list of all my SwitchBot devices, and another to send commands to them. Together, they let me control my smart home directly from Siri, widgets, or automations.</p>
 <hr>
 <h3 id="getting-device-details">Getting Device Details</h3>
@@ -2340,8 +2191,7 @@ giving you the tools to bend devices and services to your will&ndash;even when t
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>One of my favorite things about Apple&rsquo;s Shortcuts app is how it can bridge the gap between hardware and cloud APIs without requiring a single line of &ldquo;real&rdquo; code. A perfect example of this is SwitchBot: a line of Bluetooth and Wi-Fi-enabled devices that can be controlled through their official app&ndash;or, with a bit of setup, entirely through Shortcuts.</p>
+]]></description><content:encoded><![CDATA[<p>One of my favorite things about Apple&rsquo;s Shortcuts app is how it can bridge the gap between hardware and cloud APIs without requiring a single line of &ldquo;real&rdquo; code. A perfect example of this is SwitchBot: a line of Bluetooth and Wi-Fi-enabled devices that can be controlled through their official app&ndash;or, with a bit of setup, entirely through Shortcuts.</p>
 <p>In this post, I&rsquo;ll walk you through two Shortcuts I built: one to fetch a list of all my SwitchBot devices, and another to send commands to them. Together, they let me control my smart home directly from Siri, widgets, or automations.</p>
 <hr>
 <h3 id="getting-device-details">Getting Device Details</h3>
@@ -2430,19 +2280,7 @@ giving you the tools to bend devices and services to your will&ndash;even when t
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-      <item>
-        <title>Turning iCloud Shortcut Links into Share Buttons</title>
-        <link>http://localhost:1313/posts/turning-icloud-shortcut-links-into-share-buttons/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/turning-icloud-shortcut-links-into-share-buttons/</guid>
-        
-          <pubDate>Tue, 23 Sep 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>One of the best things about Shortcuts is that it can bridge services that were never designed
+]]></content:encoded></item><item><title>Turning iCloud Shortcut Links into Share Buttons</title><link>https://blog.aidanmaurinjones.com/posts/turning-icloud-shortcut-links-into-share-buttons/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/turning-icloud-shortcut-links-into-share-buttons/</guid><pubDate>Tue, 23 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>One of the best things about Shortcuts is that it can bridge services that were never designed
 to talk to each other. The Shortcut I’ve been using lately—Share Shortcut HTML Button—is a
 perfect example of that. With it, I can take any iCloud Shortcut link and instantly generate
 a fully-formed Hugo shortcode that embeds the Shortcut on my blog with its name and icon, no
@@ -2544,8 +2382,7 @@ blog-ready package.</p>
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>One of the best things about Shortcuts is that it can bridge services that were never designed
+]]></description><content:encoded><![CDATA[<p>One of the best things about Shortcuts is that it can bridge services that were never designed
 to talk to each other. The Shortcut I’ve been using lately—Share Shortcut HTML Button—is a
 perfect example of that. With it, I can take any iCloud Shortcut link and instantly generate
 a fully-formed Hugo shortcode that embeds the Shortcut on my blog with its name and icon, no
@@ -2647,19 +2484,7 @@ blog-ready package.</p>
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-      <item>
-        <title>Share Mac App HTML Button: Automating App Cards from Alfred</title>
-        <link>http://localhost:1313/posts/share-mac-app-html-button---automating-app-cards-from-alfred/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/share-mac-app-html-button---automating-app-cards-from-alfred/</guid>
-        
-          <pubDate>Tue, 23 Sep 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>One of the realities of being a Mac user today is that many of the best apps you’ll discover
+]]></content:encoded></item><item><title>Share Mac App HTML Button: Automating App Cards from Alfred</title><link>https://blog.aidanmaurinjones.com/posts/share-mac-app-html-button---automating-app-cards-from-alfred/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/share-mac-app-html-button---automating-app-cards-from-alfred/</guid><pubDate>Tue, 23 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>One of the realities of being a Mac user today is that many of the best apps you’ll discover
 aren’t on the Mac App Store. Developers often prefer to sell directly, avoiding Apple’s restrictions
 and revenue cut. That’s great for them (and often for us too, since it means more powerful software),
 but it leaves one problem: how do you share those apps elegantly in a blog post?</p>
@@ -2787,8 +2612,7 @@ icons anymore.</p>
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>One of the realities of being a Mac user today is that many of the best apps you’ll discover
+]]></description><content:encoded><![CDATA[<p>One of the realities of being a Mac user today is that many of the best apps you’ll discover
 aren’t on the Mac App Store. Developers often prefer to sell directly, avoiding Apple’s restrictions
 and revenue cut. That’s great for them (and often for us too, since it means more powerful software),
 but it leaves one problem: how do you share those apps elegantly in a blog post?</p>
@@ -2916,19 +2740,7 @@ icons anymore.</p>
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-      <item>
-        <title>App Store Links Made Beautiful with Shortcuts</title>
-        <link>http://localhost:1313/posts/app-store-links-made-beautiful-with-shortcuts/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/app-store-links-made-beautiful-with-shortcuts/</guid>
-        
-          <pubDate>Tue, 23 Sep 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>One of the small but constant frictions of running a blog about apps is dealing with App
+]]></content:encoded></item><item><title>App Store Links Made Beautiful with Shortcuts</title><link>https://blog.aidanmaurinjones.com/posts/app-store-links-made-beautiful-with-shortcuts/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/app-store-links-made-beautiful-with-shortcuts/</guid><pubDate>Tue, 23 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>One of the small but constant frictions of running a blog about apps is dealing with App
 Store links. Grabbing the name, copying the link, fetching an icon, turning it all into a
 nicely formatted snippet—it’s not hard, but it’s repetitive. And if you do it often enough,
 it’s exactly the kind of thing that cries out for automation.</p>
@@ -3025,8 +2837,7 @@ automations that pays dividends every single day.</p>
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>One of the small but constant frictions of running a blog about apps is dealing with App
+]]></description><content:encoded><![CDATA[<p>One of the small but constant frictions of running a blog about apps is dealing with App
 Store links. Grabbing the name, copying the link, fetching an icon, turning it all into a
 nicely formatted snippet—it’s not hard, but it’s repetitive. And if you do it often enough,
 it’s exactly the kind of thing that cries out for automation.</p>
@@ -3123,19 +2934,7 @@ automations that pays dividends every single day.</p>
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-      <item>
-        <title>I Could Write This Blog in Notepad</title>
-        <link>http://localhost:1313/posts/i-could-write-this-blog-in-notepad/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/i-could-write-this-blog-in-notepad/</guid>
-        
-          <pubDate>Sun, 21 Sep 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>I’ve started a lot of projects over the years, but few have clicked as quickly and completely
+]]></content:encoded></item><item><title>I Could Write This Blog in Notepad</title><link>https://blog.aidanmaurinjones.com/posts/i-could-write-this-blog-in-notepad/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/i-could-write-this-blog-in-notepad/</guid><pubDate>Sun, 21 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>I’ve started a lot of projects over the years, but few have clicked as quickly and completely
 as my Hugo blog hosted on GitHub Pages. I can’t emphasize enough how much I love this setup.</p>
 <p>Unlike platforms like Squarespace, Wix, or WordPress, I don’t have to deal with heavy
 dashboards, recurring subscription fees, or bloated themes that can slow everything down. There
@@ -3246,8 +3045,7 @@ and my workflow. And I’ve never enjoyed blogging more.</p>
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>I’ve started a lot of projects over the years, but few have clicked as quickly and completely
+]]></description><content:encoded><![CDATA[<p>I’ve started a lot of projects over the years, but few have clicked as quickly and completely
 as my Hugo blog hosted on GitHub Pages. I can’t emphasize enough how much I love this setup.</p>
 <p>Unlike platforms like Squarespace, Wix, or WordPress, I don’t have to deal with heavy
 dashboards, recurring subscription fees, or bloated themes that can slow everything down. There
@@ -3358,19 +3156,7 @@ and my workflow. And I’ve never enjoyed blogging more.</p>
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-      <item>
-        <title>A Hundred &amp; One Post Buttons</title>
-        <link>http://localhost:1313/posts/a-hundred--one-post-buttons/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/a-hundred--one-post-buttons/</guid>
-        
-          <pubDate>Sun, 21 Sep 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>One of the reasons I love this setup so much is that publishing isn&rsquo;t just simple &ndash; it&rsquo;s
+]]></content:encoded></item><item><title>A Hundred &amp; One Post Buttons</title><link>https://blog.aidanmaurinjones.com/posts/a-hundred--one-post-buttons/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/a-hundred--one-post-buttons/</guid><pubDate>Sun, 21 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>One of the reasons I love this setup so much is that publishing isn&rsquo;t just simple &ndash; it&rsquo;s
 fully automated with nothing more than stock Shortcuts actions on iOS and macOS. No scripts,
 no extra tools. Just Shortcuts and GitHub&rsquo;s API.</p>
 <p>Here&rsquo;s how it works, step by step:</p>
@@ -3520,8 +3306,7 @@ blog will always be built on.</li>
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>One of the reasons I love this setup so much is that publishing isn&rsquo;t just simple &ndash; it&rsquo;s
+]]></description><content:encoded><![CDATA[<p>One of the reasons I love this setup so much is that publishing isn&rsquo;t just simple &ndash; it&rsquo;s
 fully automated with nothing more than stock Shortcuts actions on iOS and macOS. No scripts,
 no extra tools. Just Shortcuts and GitHub&rsquo;s API.</p>
 <p>Here&rsquo;s how it works, step by step:</p>
@@ -3671,19 +3456,7 @@ blog will always be built on.</li>
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-      <item>
-        <title>Save URLs from Show Notes with Overcast and Drafts</title>
-        <link>http://localhost:1313/posts/save-urls-from-show-notes-with-overcast-and-drafts/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/save-urls-from-show-notes-with-overcast-and-drafts/</guid>
-        
-          <pubDate>Sat, 20 Sep 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>I listen to a lot of podcasts in Overcast, and more often than not, I find myself wanting
+]]></content:encoded></item><item><title>Save URLs from Show Notes with Overcast and Drafts</title><link>https://blog.aidanmaurinjones.com/posts/save-urls-from-show-notes-with-overcast-and-drafts/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/save-urls-from-show-notes-with-overcast-and-drafts/</guid><pubDate>Sat, 20 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>I listen to a lot of podcasts in Overcast, and more often than not, I find myself wanting
 to save a link mentioned in the show notes&ndash;an app, a website, a follow-up article. Overcast
 does a great job of presenting those notes, but getting the links into my notes system has
 always been more work than it should be.</p>
@@ -3788,8 +3561,7 @@ it&rsquo;ll be sitting there in Drafts, right where it belongs.</p>
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>I listen to a lot of podcasts in Overcast, and more often than not, I find myself wanting
+]]></description><content:encoded><![CDATA[<p>I listen to a lot of podcasts in Overcast, and more often than not, I find myself wanting
 to save a link mentioned in the show notes&ndash;an app, a website, a follow-up article. Overcast
 does a great job of presenting those notes, but getting the links into my notes system has
 always been more work than it should be.</p>
@@ -3894,19 +3666,7 @@ it&rsquo;ll be sitting there in Drafts, right where it belongs.</p>
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-      <item>
-        <title>Open Ride Share Apps: A Beginner-Friendly Shortcut That Saves Me Money</title>
-        <link>http://localhost:1313/posts/open-ride-share-apps-a-beginner-friendly-shortcut-that-saves-me-money/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/open-ride-share-apps-a-beginner-friendly-shortcut-that-saves-me-money/</guid>
-        
-          <pubDate>Sat, 20 Sep 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>Not every Shortcut has to be complex to be life-changing. Some of the best automations are
+]]></content:encoded></item><item><title>Open Ride Share Apps: A Beginner-Friendly Shortcut That Saves Me Money</title><link>https://blog.aidanmaurinjones.com/posts/open-ride-share-apps-a-beginner-friendly-shortcut-that-saves-me-money/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/open-ride-share-apps-a-beginner-friendly-shortcut-that-saves-me-money/</guid><pubDate>Sat, 20 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>Not every Shortcut has to be complex to be life-changing. Some of the best automations are
 the simplest ones&ndash;and my new Shortcut, Open Ride Share Apps, is a perfect example. It&rsquo;s
 literally just a launcher for Uber, Lyft, and Hopp. That&rsquo;s it. But in practice, it&rsquo;s saved
 me both time and a surprising amount of money.</p>
@@ -4011,8 +3771,7 @@ month of rides.</p>
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>Not every Shortcut has to be complex to be life-changing. Some of the best automations are
+]]></description><content:encoded><![CDATA[<p>Not every Shortcut has to be complex to be life-changing. Some of the best automations are
 the simplest ones&ndash;and my new Shortcut, Open Ride Share Apps, is a perfect example. It&rsquo;s
 literally just a launcher for Uber, Lyft, and Hopp. That&rsquo;s it. But in practice, it&rsquo;s saved
 me both time and a surprising amount of money.</p>
@@ -4117,19 +3876,7 @@ month of rides.</p>
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-      <item>
-        <title>Wikipedia Article Downloader: A Shortcut for Offline Reading</title>
-        <link>http://localhost:1313/posts/wikipedia-article-downloader--a-shortcut-for-offline-reading/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/wikipedia-article-downloader--a-shortcut-for-offline-reading/</guid>
-        
-          <pubDate>Fri, 19 Sep 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>Sometimes the best utilities are the ones that do just one thing, quickly and well. That&rsquo;s
+]]></content:encoded></item><item><title>Wikipedia Article Downloader: A Shortcut for Offline Reading</title><link>https://blog.aidanmaurinjones.com/posts/wikipedia-article-downloader--a-shortcut-for-offline-reading/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/wikipedia-article-downloader--a-shortcut-for-offline-reading/</guid><pubDate>Fri, 19 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>Sometimes the best utilities are the ones that do just one thing, quickly and well. That&rsquo;s
 exactly what I had in mind when I built my <strong>Wikipedia Article Downloader</strong> Shortcut. It takes
 any Wikipedia link I throw at it and instantly saves a clean PDF of the article&ndash;perfect for
 offline reading, research, or archiving.</p>
@@ -4228,8 +3975,7 @@ as I do, this little Shortcut makes it effortless to keep what you find.</p>
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>Sometimes the best utilities are the ones that do just one thing, quickly and well. That&rsquo;s
+]]></description><content:encoded><![CDATA[<p>Sometimes the best utilities are the ones that do just one thing, quickly and well. That&rsquo;s
 exactly what I had in mind when I built my <strong>Wikipedia Article Downloader</strong> Shortcut. It takes
 any Wikipedia link I throw at it and instantly saves a clean PDF of the article&ndash;perfect for
 offline reading, research, or archiving.</p>
@@ -4328,19 +4074,7 @@ as I do, this little Shortcut makes it effortless to keep what you find.</p>
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-      <item>
-        <title>Wordle, But With a Twist: A Shortcut I Built That Gives You Hints</title>
-        <link>http://localhost:1313/posts/wordle-but-with-a-twist-a-shortcut-i-built-that-gives-you-hints/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/wordle-but-with-a-twist-a-shortcut-i-built-that-gives-you-hints/</guid>
-        
-          <pubDate>Thu, 18 Sep 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>I&rsquo;ve been having fun experimenting with Shortcuts, APIs, and local AI models, and recently
+]]></content:encoded></item><item><title>Wordle, But With a Twist: A Shortcut I Built That Gives You Hints</title><link>https://blog.aidanmaurinjones.com/posts/wordle-but-with-a-twist-a-shortcut-i-built-that-gives-you-hints/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/wordle-but-with-a-twist-a-shortcut-i-built-that-gives-you-hints/</guid><pubDate>Thu, 18 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>I&rsquo;ve been having fun experimenting with Shortcuts, APIs, and local AI models, and recently
 I built something that is kinda fun: a Shortcut that gives you a hint for the daily Wordle without
 spoiling the answer.</p>
 <hr>
@@ -4447,8 +4181,7 @@ simple automation, but it feels fresh and playful every time I use it.</p>
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>I&rsquo;ve been having fun experimenting with Shortcuts, APIs, and local AI models, and recently
+]]></description><content:encoded><![CDATA[<p>I&rsquo;ve been having fun experimenting with Shortcuts, APIs, and local AI models, and recently
 I built something that is kinda fun: a Shortcut that gives you a hint for the daily Wordle without
 spoiling the answer.</p>
 <hr>
@@ -4555,19 +4288,7 @@ simple automation, but it feels fresh and playful every time I use it.</p>
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-      <item>
-        <title>Automating My City&#39;s Garbage Schedule with Shortcuts</title>
-        <link>http://localhost:1313/posts/automating-my-citys-garbage-schedule-with-shortcuts/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/automating-my-citys-garbage-schedule-with-shortcuts/</guid>
-        
-          <pubDate>Thu, 18 Sep 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>One of the things I love about Shortcuts on iOS is how it can take raw, unfriendly data and
+]]></content:encoded></item><item><title>Automating My City's Garbage Schedule with Shortcuts</title><link>https://blog.aidanmaurinjones.com/posts/automating-my-citys-garbage-schedule-with-shortcuts/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/automating-my-citys-garbage-schedule-with-shortcuts/</guid><pubDate>Thu, 18 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>One of the things I love about Shortcuts on iOS is how it can take raw, unfriendly data and
 turn it into something useful and personal. I recently built a Shortcut that pulls in my city&rsquo;s
 official garbage pickup calendar (published as a CSV file), processes it, and tells me exactly
 what needs to go out on collection day.</p>
@@ -4685,8 +4406,7 @@ of those little automations that quietly makes life better&ndash;one trash day a
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>One of the things I love about Shortcuts on iOS is how it can take raw, unfriendly data and
+]]></description><content:encoded><![CDATA[<p>One of the things I love about Shortcuts on iOS is how it can take raw, unfriendly data and
 turn it into something useful and personal. I recently built a Shortcut that pulls in my city&rsquo;s
 official garbage pickup calendar (published as a CSV file), processes it, and tells me exactly
 what needs to go out on collection day.</p>
@@ -4804,19 +4524,7 @@ of those little automations that quietly makes life better&ndash;one trash day a
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-      <item>
-        <title>Where To Watch: A Shortcut for Finding Streaming Availability with The Movie Database</title>
-        <link>http://localhost:1313/posts/where-to-watch-a-shortcut-for-finding-streaming-availability-with-the-movie-database/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/where-to-watch-a-shortcut-for-finding-streaming-availability-with-the-movie-database/</guid>
-        
-          <pubDate>Wed, 17 Sep 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>One of my favorite things about Shortcuts is how they can bridge the gap between scattered
+]]></content:encoded></item><item><title>Where To Watch: A Shortcut for Finding Streaming Availability with The Movie Database</title><link>https://blog.aidanmaurinjones.com/posts/where-to-watch-a-shortcut-for-finding-streaming-availability-with-the-movie-database/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/where-to-watch-a-shortcut-for-finding-streaming-availability-with-the-movie-database/</guid><pubDate>Wed, 17 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>One of my favorite things about Shortcuts is how they can bridge the gap between scattered
 web services and a smooth, native-like workflow. I built a new shortcut called Where To Watch,
 which taps into The Movie Database (TMDb) API to answer a simple but constant question:
 &ldquo;Where is this movie or TV show streaming?&rdquo;</p>
@@ -4908,8 +4616,7 @@ something&ndash;or if I need to wait until it arrives in Canada.</p>
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>One of my favorite things about Shortcuts is how they can bridge the gap between scattered
+]]></description><content:encoded><![CDATA[<p>One of my favorite things about Shortcuts is how they can bridge the gap between scattered
 web services and a smooth, native-like workflow. I built a new shortcut called Where To Watch,
 which taps into The Movie Database (TMDb) API to answer a simple but constant question:
 &ldquo;Where is this movie or TV show streaming?&rdquo;</p>
@@ -5001,19 +4708,7 @@ something&ndash;or if I need to wait until it arrives in Canada.</p>
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-      <item>
-        <title>Scan QR Code on Screen: A Shortcut I Built for My Mac</title>
-        <link>http://localhost:1313/posts/scan-qr-code-on-screen---a-shortcut-i-built-for-my-mac/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/scan-qr-code-on-screen---a-shortcut-i-built-for-my-mac/</guid>
-        
-          <pubDate>Tue, 16 Sep 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>I built this Shortcut because I kept running into a simple but annoying problem. Every now
+]]></content:encoded></item><item><title>Scan QR Code on Screen: A Shortcut I Built for My Mac</title><link>https://blog.aidanmaurinjones.com/posts/scan-qr-code-on-screen---a-shortcut-i-built-for-my-mac/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/scan-qr-code-on-screen---a-shortcut-i-built-for-my-mac/</guid><pubDate>Tue, 16 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>I built this Shortcut because I kept running into a simple but annoying problem. Every now
 and then, I’d come across a QR code on my Mac—maybe in a PDF, a presentation, or just an image
 on a website. And every time, I had to pull out my iPhone to scan it. macOS doesn’t offer
 a built-in way to do this, so I decided to make my own solution.</p>
@@ -5101,8 +4796,7 @@ not having it anymore.</p>
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>I built this Shortcut because I kept running into a simple but annoying problem. Every now
+]]></description><content:encoded><![CDATA[<p>I built this Shortcut because I kept running into a simple but annoying problem. Every now
 and then, I’d come across a QR code on my Mac—maybe in a PDF, a presentation, or just an image
 on a website. And every time, I had to pull out my iPhone to scan it. macOS doesn’t offer
 a built-in way to do this, so I decided to make my own solution.</p>
@@ -5190,19 +4884,7 @@ not having it anymore.</p>
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-      <item>
-        <title>Smarter MacBook Charging with Shortcuts and BetterTouchTool</title>
-        <link>http://localhost:1313/posts/smarter-macbook-charging-with-shortcuts-and-bettertouchtool/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/smarter-macbook-charging-with-shortcuts-and-bettertouchtool/</guid>
-        
-          <pubDate>Mon, 15 Sep 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>I’ve been working on a smarter way to manage my MacBook’s charging routine. Instead of
+]]></content:encoded></item><item><title>Smarter MacBook Charging with Shortcuts and BetterTouchTool</title><link>https://blog.aidanmaurinjones.com/posts/smarter-macbook-charging-with-shortcuts-and-bettertouchtool/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/smarter-macbook-charging-with-shortcuts-and-bettertouchtool/</guid><pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>I’ve been working on a smarter way to manage my MacBook’s charging routine. Instead of
 keeping it constantly plugged in—or worse, draining too far—I built a pair of Shortcuts that
 tie into Home Assistant and give me precise control over when my MacBook starts and stops
 charging.</p>
@@ -5336,8 +5018,7 @@ background.</p>
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>I’ve been working on a smarter way to manage my MacBook’s charging routine. Instead of
+]]></description><content:encoded><![CDATA[<p>I’ve been working on a smarter way to manage my MacBook’s charging routine. Instead of
 keeping it constantly plugged in—or worse, draining too far—I built a pair of Shortcuts that
 tie into Home Assistant and give me precise control over when my MacBook starts and stops
 charging.</p>
@@ -5471,19 +5152,7 @@ background.</p>
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-      <item>
-        <title>A Raspberry Pi Stream Deck Server controlled by ESPHome</title>
-        <link>http://localhost:1313/posts/a-raspberry-pi-stream-deck-server-controlled-by-esphome/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/a-raspberry-pi-stream-deck-server-controlled-by-esphome/</guid>
-        
-          <pubDate>Mon, 15 Sep 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>I’ve turned one of my Raspberry Pi 4s into a dedicated Stream Deck hub. It’s hooked up to
+]]></content:encoded></item><item><title>A Raspberry Pi Stream Deck Server controlled by ESPHome</title><link>https://blog.aidanmaurinjones.com/posts/a-raspberry-pi-stream-deck-server-controlled-by-esphome/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/a-raspberry-pi-stream-deck-server-controlled-by-esphome/</guid><pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>I’ve turned one of my Raspberry Pi 4s into a dedicated Stream Deck hub. It’s hooked up to
 a 32-button Stream Deck that controls devices and automations in Home Assistant, which runs
 on a separate machine. The Pi’s only job is to sit there, listen, and push out commands —
 but if it ever hangs or I need to reboot it, I wanted a way to manage it properly without
@@ -5630,8 +5299,7 @@ result makes my whole setup feel more “finished.”</p>
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>I’ve turned one of my Raspberry Pi 4s into a dedicated Stream Deck hub. It’s hooked up to
+]]></description><content:encoded><![CDATA[<p>I’ve turned one of my Raspberry Pi 4s into a dedicated Stream Deck hub. It’s hooked up to
 a 32-button Stream Deck that controls devices and automations in Home Assistant, which runs
 on a separate machine. The Pi’s only job is to sit there, listen, and push out commands —
 but if it ever hangs or I need to reboot it, I wanted a way to manage it properly without
@@ -5778,19 +5446,7 @@ result makes my whole setup feel more “finished.”</p>
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-      <item>
-        <title>TTC Service Alerts Shortcut: Real-Time Transit Notifications Made Simple</title>
-        <link>http://localhost:1313/posts/ttc-service-alerts-shortcut-blog-post/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/ttc-service-alerts-shortcut-blog-post/</guid>
-        
-          <pubDate>Sun, 14 Sep 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>I built this shortcut because I wanted a faster way to check TTC service alerts without digging
+]]></content:encoded></item><item><title>TTC Service Alerts Shortcut: Real-Time Transit Notifications Made Simple</title><link>https://blog.aidanmaurinjones.com/posts/ttc-service-alerts-shortcut-blog-post/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/ttc-service-alerts-shortcut-blog-post/</guid><pubDate>Sun, 14 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>I built this shortcut because I wanted a faster way to check TTC service alerts without digging
 through the website or scrolling endlessly through apps. With one tap (or a Siri command),
 I can now see all active alerts in a clean, styled view that’s easy to scan.</p>
 <p>⸻</p>
@@ -5888,8 +5544,7 @@ official TTC feed, formatted in a way that’s quick to read.</p>
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>I built this shortcut because I wanted a faster way to check TTC service alerts without digging
+]]></description><content:encoded><![CDATA[<p>I built this shortcut because I wanted a faster way to check TTC service alerts without digging
 through the website or scrolling endlessly through apps. With one tap (or a Siri command),
 I can now see all active alerts in a clean, styled view that’s easy to scan.</p>
 <p>⸻</p>
@@ -5987,19 +5642,7 @@ official TTC feed, formatted in a way that’s quick to read.</p>
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-      <item>
-        <title>Automating Toronto’s Beach Water Quality with Shortcuts</title>
-        <link>http://localhost:1313/posts/beach-water-quality-shortcut-blog-post/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/beach-water-quality-shortcut-blog-post/</guid>
-        
-          <pubDate>Sun, 14 Sep 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>This summer I wanted a faster way to check if it’s safe to swim at Toronto’s beaches. The city
+]]></content:encoded></item><item><title>Automating Toronto’s Beach Water Quality with Shortcuts</title><link>https://blog.aidanmaurinjones.com/posts/beach-water-quality-shortcut-blog-post/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/beach-water-quality-shortcut-blog-post/</guid><pubDate>Sun, 14 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>This summer I wanted a faster way to check if it’s safe to swim at Toronto’s beaches. The city
 publishes daily water quality results through their open data portal, but digging through JSON
 feeds on a phone isn’t exactly convenient. So, I built a Shortcut that automates the whole process:
 it checks for the latest update, pulls the results, and displays a clean, color-coded report in Safari.</p>
@@ -6105,8 +5748,7 @@ how it turns raw open data into something practical and personal.</p>
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>This summer I wanted a faster way to check if it’s safe to swim at Toronto’s beaches. The city
+]]></description><content:encoded><![CDATA[<p>This summer I wanted a faster way to check if it’s safe to swim at Toronto’s beaches. The city
 publishes daily water quality results through their open data portal, but digging through JSON
 feeds on a phone isn’t exactly convenient. So, I built a Shortcut that automates the whole process:
 it checks for the latest update, pulls the results, and displays a clean, color-coded report in Safari.</p>
@@ -6212,19 +5854,7 @@ how it turns raw open data into something practical and personal.</p>
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-      <item>
-        <title>Automating Fire Ban Updates with Shortcuts</title>
-        <link>http://localhost:1313/posts/automating-fire-ban-updates-with-shortcuts/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/automating-fire-ban-updates-with-shortcuts/</guid>
-        
-          <pubDate>Sun, 14 Sep 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>I built a Shortcut that makes it incredibly easy to check whether there’s currently a fire
+]]></content:encoded></item><item><title>Automating Fire Ban Updates with Shortcuts</title><link>https://blog.aidanmaurinjones.com/posts/automating-fire-ban-updates-with-shortcuts/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/automating-fire-ban-updates-with-shortcuts/</guid><pubDate>Sun, 14 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>I built a Shortcut that makes it incredibly easy to check whether there’s currently a fire
 ban in Dysart et al. Instead of digging through a municipal website or scrolling a feed, I
 can now get a clean, glanceable update with one tap.</p>
 <p>⸻</p>
@@ -6338,8 +5968,7 @@ always find out the current fire ban status instantly.</p>
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>I built a Shortcut that makes it incredibly easy to check whether there’s currently a fire
+]]></description><content:encoded><![CDATA[<p>I built a Shortcut that makes it incredibly easy to check whether there’s currently a fire
 ban in Dysart et al. Instead of digging through a municipal website or scrolling a feed, I
 can now get a clean, glanceable update with one tap.</p>
 <p>⸻</p>
@@ -6453,9 +6082,4 @@ always find out the current fire ban status instantly.</p>
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-  </channel>
-</rss>
+]]></content:encoded></item></channel></rss>

@@ -1,23 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Aidan Maurin-Jones | Stream Deck</title>
-    <link>http://localhost:1313/tags/stream-deck/</link>
-    <description>Stream Deck</description>
-    <language>en</language>
-    
-      <atom:link href="http://localhost:1313/tags/stream-deck/index.xml" rel="self" type="application/rss+xml"></atom:link>
-    
-    
-      <item>
-        <title>A Raspberry Pi Stream Deck Server controlled by ESPHome</title>
-        <link>http://localhost:1313/posts/a-raspberry-pi-stream-deck-server-controlled-by-esphome/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/a-raspberry-pi-stream-deck-server-controlled-by-esphome/</guid>
-        
-          <pubDate>Mon, 15 Sep 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>I’ve turned one of my Raspberry Pi 4s into a dedicated Stream Deck hub. It’s hooked up to
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Aidan Maurin-Jones | Stream Deck</title><link>https://blog.aidanmaurinjones.com/tags/stream-deck/</link><description>Stream Deck</description><language>en</language><atom:link href="https://blog.aidanmaurinjones.com/tags/stream-deck/index.xml" rel="self" type="application/rss+xml"/><item><title>A Raspberry Pi Stream Deck Server controlled by ESPHome</title><link>https://blog.aidanmaurinjones.com/posts/a-raspberry-pi-stream-deck-server-controlled-by-esphome/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/a-raspberry-pi-stream-deck-server-controlled-by-esphome/</guid><pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>I’ve turned one of my Raspberry Pi 4s into a dedicated Stream Deck hub. It’s hooked up to
 a 32-button Stream Deck that controls devices and automations in Home Assistant, which runs
 on a separate machine. The Pi’s only job is to sit there, listen, and push out commands —
 but if it ever hangs or I need to reboot it, I wanted a way to manage it properly without
@@ -164,8 +145,7 @@ result makes my whole setup feel more “finished.”</p>
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>I’ve turned one of my Raspberry Pi 4s into a dedicated Stream Deck hub. It’s hooked up to
+]]></description><content:encoded><![CDATA[<p>I’ve turned one of my Raspberry Pi 4s into a dedicated Stream Deck hub. It’s hooked up to
 a 32-button Stream Deck that controls devices and automations in Home Assistant, which runs
 on a separate machine. The Pi’s only job is to sit there, listen, and push out commands —
 but if it ever hangs or I need to reboot it, I wanted a way to manage it properly without
@@ -312,9 +292,4 @@ result makes my whole setup feel more “finished.”</p>
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-  </channel>
-</rss>
+]]></content:encoded></item></channel></rss>

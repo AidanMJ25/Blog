@@ -1,23 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Aidan Maurin-Jones | AI</title>
-    <link>http://localhost:1313/tags/ai/</link>
-    <description>AI</description>
-    <language>en</language>
-    
-      <atom:link href="http://localhost:1313/tags/ai/index.xml" rel="self" type="application/rss+xml"></atom:link>
-    
-    
-      <item>
-        <title>Fighting Spam with Automation: A Shortcut for Writing Hilarious Replies</title>
-        <link>http://localhost:1313/posts/fighting-spam-with-automation--a-shortcut-for-writing-hilarious-replies/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/fighting-spam-with-automation--a-shortcut-for-writing-hilarious-replies/</guid>
-        
-          <pubDate>Fri, 26 Sep 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>One of the joys of Shortcuts on macOS is bending the system to your will. With a little
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Aidan Maurin-Jones | AI</title><link>https://blog.aidanmaurinjones.com/tags/ai/</link><description>AI</description><language>en</language><atom:link href="https://blog.aidanmaurinjones.com/tags/ai/index.xml" rel="self" type="application/rss+xml"/><item><title>Fighting Spam with Automation: A Shortcut for Writing Hilarious Replies</title><link>https://blog.aidanmaurinjones.com/posts/fighting-spam-with-automation--a-shortcut-for-writing-hilarious-replies/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/fighting-spam-with-automation--a-shortcut-for-writing-hilarious-replies/</guid><pubDate>Fri, 26 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>One of the joys of Shortcuts on macOS is bending the system to your will. With a little
 creativity and some AppleScript, you can pull off automations that feel both absurd and brilliant.
 My latest project? A Shortcut that automatically drafts a brutally funny, sarcastic reply to
 spam and junk emails—powered by a local AI model running in LM Studio.</p>
@@ -183,8 +164,7 @@ roast they’ll never actually read.</p>
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>One of the joys of Shortcuts on macOS is bending the system to your will. With a little
+]]></description><content:encoded><![CDATA[<p>One of the joys of Shortcuts on macOS is bending the system to your will. With a little
 creativity and some AppleScript, you can pull off automations that feel both absurd and brilliant.
 My latest project? A Shortcut that automatically drafts a brutally funny, sarcastic reply to
 spam and junk emails—powered by a local AI model running in LM Studio.</p>
@@ -350,19 +330,7 @@ roast they’ll never actually read.</p>
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-      <item>
-        <title>Wordle, But With a Twist: A Shortcut I Built That Gives You Hints</title>
-        <link>http://localhost:1313/posts/wordle-but-with-a-twist-a-shortcut-i-built-that-gives-you-hints/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/wordle-but-with-a-twist-a-shortcut-i-built-that-gives-you-hints/</guid>
-        
-          <pubDate>Thu, 18 Sep 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>I&rsquo;ve been having fun experimenting with Shortcuts, APIs, and local AI models, and recently
+]]></content:encoded></item><item><title>Wordle, But With a Twist: A Shortcut I Built That Gives You Hints</title><link>https://blog.aidanmaurinjones.com/posts/wordle-but-with-a-twist-a-shortcut-i-built-that-gives-you-hints/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/wordle-but-with-a-twist-a-shortcut-i-built-that-gives-you-hints/</guid><pubDate>Thu, 18 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>I&rsquo;ve been having fun experimenting with Shortcuts, APIs, and local AI models, and recently
 I built something that is kinda fun: a Shortcut that gives you a hint for the daily Wordle without
 spoiling the answer.</p>
 <hr>
@@ -469,8 +437,7 @@ simple automation, but it feels fresh and playful every time I use it.</p>
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>I&rsquo;ve been having fun experimenting with Shortcuts, APIs, and local AI models, and recently
+]]></description><content:encoded><![CDATA[<p>I&rsquo;ve been having fun experimenting with Shortcuts, APIs, and local AI models, and recently
 I built something that is kinda fun: a Shortcut that gives you a hint for the daily Wordle without
 spoiling the answer.</p>
 <hr>
@@ -577,9 +544,4 @@ simple automation, but it feels fresh and playful every time I use it.</p>
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-  </channel>
-</rss>
+]]></content:encoded></item></channel></rss>

@@ -1,286 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1"><title>Share Mac App HTML Button: Automating App Cards from Alfred | Aidan Maurin-Jones</title><meta name="description" content="A Shortcut that turns any Mac app—App Store or direct download—into a polished Hugo app card with its icon, name, and link, all triggered as an Alfred File …">
-  <link rel="canonical" href="http://localhost:1313/posts/share-mac-app-html-button---automating-app-cards-from-alfred/">
-  <meta property="og:site_name" content="Blog - Aidan Maurin-Jones">
-<meta property="og:title" content="Share Mac App HTML Button: Automating App Cards from Alfred | Aidan Maurin-Jones">
-<meta property="og:description" content="A Shortcut that turns any Mac app—App Store or direct download—into a polished Hugo app card with its icon, name, and link, all triggered as an Alfred File …">
-<meta property="og:url" content="http://localhost:1313/posts/share-mac-app-html-button---automating-app-cards-from-alfred/">
-<meta property="og:type" content="article">
-<meta property="og:locale" content="en_US">
-
-  <meta property="article:published_time" content="2025-09-23T00:00:00Z">
-  <meta property="article:modified_time" content="2025-09-23T00:00:00Z">
-  <meta property="article:tag" content="Shortcuts"><meta property="article:tag" content="Alfred"><meta property="article:tag" content="Blogging"><meta property="article:tag" content="Hugo">
-
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Share Mac App HTML Button: Automating App Cards from Alfred | Aidan Maurin-Jones">
-<meta name="twitter:description" content="A Shortcut that turns any Mac app—App Store or direct download—into a polished Hugo app card with its icon, name, and link, all triggered as an Alfred File …"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","articleSection":"Blog Posts","author":{"@type":"Person","name":"Aidan Maurin-Jones","url":"https://aidanmaurinjones.com/"},"dateModified":"2025-09-23T00:00:00Z","datePublished":"2025-09-23T00:00:00Z","description":"A Shortcut that turns any Mac app—App Store or direct download—into a polished Hugo app card with its icon, name, and link, all triggered as an Alfred File …","headline":"Share Mac App HTML Button: Automating App Cards from Alfred","inLanguage":"en-us","keywords":["Shortcuts","Alfred","Blogging","Hugo"],"mainEntityOfPage":"http://localhost:1313/posts/share-mac-app-html-button---automating-app-cards-from-alfred/","publisher":{"@type":"Person","name":"Aidan Maurin-Jones","url":"https://aidanmaurinjones.com/"},"url":"http://localhost:1313/posts/share-mac-app-html-button---automating-app-cards-from-alfred/","wordCount":729}</script>
-
-  
-  <link rel="stylesheet" href="/css/style.min.eeb7e39efd09fc7328023e954ed2a36db8fc89baf7373dc72c4069664fb3a6b0.css" integrity="sha256-7rfjnv0J/HMoAj6VTtKjbbj8ibr3Nz3HLEBpZk&#43;zprA=">
-  
-	  
-	  <script src="/js/code-copy.min.0f8459a011f490588fbc8675943fa09eb746a461aa8ec7ebbcf31e43244d0258.js" integrity="sha256-D4RZoBH0kFiPvIZ1lD&#43;gnrdGpGGqjsfrvPMeQyRNAlg=" defer></script>
-	  
-	  
-	  
-  
-  <link rel="alternate" type="application/rss&#43;xml" title="Aidan Maurin-Jones RSS" href="/index.xml">
-  
-  
-  
-  
-  <link rel="icon" href="/favicon.ico">
-</head>
-<body>
-  <div class="site-shell">
-    <header class="site-header">
-  <div class="site-header__brand">
-    <p class="site-header__title"><a href="/">Aidan Maurin-Jones</a></p>
-    <p class="site-header__tagline">Aidan Maurin-Jones shares tools, automations, and thoughts on whatever’s interesting this week.</p>
-  </div>
-  <nav class="site-nav site-nav--desktop" aria-label="Primary">
-    <a href="/" >Home</a>
-
-  <a href="/about/" >About</a>
-
-  <a href="/contact/" >Contact</a>
-
-  <a href="/newsletter/" >Newsletter Archive</a>
-
-
-    <form class="site-search" role="search" method="get" action="/search/">
-  <label class="sr-only" for="site-search-desktop">Search this site</label>
-  <input id="site-search-desktop" class="site-search__field" type="search" name="q" placeholder="Search" autocomplete="off">
-  <button class="site-search__submit" type="submit" aria-label="Search">
-    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <path d="M10.75 4a6.75 6.75 0 0 1 5.36 10.86l3.52 3.52-1.25 1.25-3.52-3.52A6.75 6.75 0 1 1 10.75 4Zm0 1.75a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z"/>
-    </svg>
-  </button>
-</form>
-
-  </nav>
-  <details class="site-nav-toggle">
-    <summary class="site-nav-toggle__summary" aria-label="Open menu">
-      <span class="site-nav-toggle__label">Menu</span>
-      <span class="site-nav-toggle__icon" aria-hidden="true"></span>
-    </summary>
-    <nav class="site-nav site-nav--mobile" aria-label="Mobile primary">
-      <a href="/" >Home</a>
-
-  <a href="/about/" >About</a>
-
-  <a href="/contact/" >Contact</a>
-
-  <a href="/newsletter/" >Newsletter Archive</a>
-
-
-    </nav>
-  </details>
-  <div class="site-search-mobile">
-    <form class="site-search" role="search" method="get" action="/search/">
-  <label class="sr-only" for="site-search-mobile">Search this site</label>
-  <input id="site-search-mobile" class="site-search__field" type="search" name="q" placeholder="Search" autocomplete="off">
-  <button class="site-search__submit" type="submit" aria-label="Search">
-    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <path d="M10.75 4a6.75 6.75 0 0 1 5.36 10.86l3.52 3.52-1.25 1.25-3.52-3.52A6.75 6.75 0 1 1 10.75 4Zm0 1.75a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z"/>
-    </svg>
-  </button>
-</form>
-
-  </div>
-</header>
-
-    <main class="page">
-      
-  
-  <article class="article-page">
-    <header class="article-hero">
-      
-        <p class="article-hero__section"><a href="/posts/">Blog Posts</a></p>
-      
-      <h1 class="article-hero__title">Share Mac App HTML Button: Automating App Cards from Alfred</h1>
-      
-        <p class="article-hero__summary">A Shortcut that turns any Mac app—App Store or direct download—into a polished Hugo app card with its icon, name, and link, all triggered as an Alfred File Action.</p>
-      
-    </header>
-
-    <div class="article-flow">
-      <section class="rail-panel article-details">
-        <div class="meta">
-          <span>By Aidan Maurin-Jones</span>
-          
-            <span>September 23, 2025</span>
-          
-          
-            <span>4 min read</span>
-          
-          <span class="tag-list">
-            
-              
-                <a href="/tags/shortcuts/">Shortcuts</a>
-              
-                <a href="/tags/alfred/">Alfred</a>
-              
-                <a href="/tags/blogging/">Blogging</a>
-              
-                <a href="/tags/hugo/">Hugo</a>
-              
-            
-          </span>
-          
-            
-              <a class="tag-list__rss" href="/posts/index.xml">Blog Posts RSS</a>
-            
-          
-        </div>
-      </section>
-
-      <div class="entry">
-        <div class="entry__content prose">
-          <p>One of the realities of being a Mac user today is that many of the best apps you’ll discover
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Share Mac App HTML Button: Automating App Cards from Alfred | Aidan Maurin-Jones</title><meta name=description content="A Shortcut that turns any Mac app—App Store or direct download—into a polished Hugo app card with its icon, name, and link, all triggered as an Alfred File …"><link rel=canonical href=https://blog.aidanmaurinjones.com/posts/share-mac-app-html-button---automating-app-cards-from-alfred/><meta name=robots content="index, follow"><meta property="og:site_name" content="Blog - Aidan Maurin-Jones"><meta property="og:title" content="Share Mac App HTML Button: Automating App Cards from Alfred | Aidan Maurin-Jones"><meta property="og:description" content="A Shortcut that turns any Mac app—App Store or direct download—into a polished Hugo app card with its icon, name, and link, all triggered as an Alfred File …"><meta property="og:url" content="https://blog.aidanmaurinjones.com/posts/share-mac-app-html-button---automating-app-cards-from-alfred/"><meta property="og:type" content="article"><meta property="og:locale" content="en_US"><meta property="article:published_time" content="2025-09-23T00:00:00Z"><meta property="article:modified_time" content="2025-09-23T00:00:00Z"><meta property="article:tag" content="Shortcuts"><meta property="article:tag" content="Alfred"><meta property="article:tag" content="Blogging"><meta property="article:tag" content="Hugo"><meta name=twitter:card content="summary"><meta name=twitter:title content="Share Mac App HTML Button: Automating App Cards from Alfred | Aidan Maurin-Jones"><meta name=twitter:description content="A Shortcut that turns any Mac app—App Store or direct download—into a polished Hugo app card with its icon, name, and link, all triggered as an Alfred File …"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","articleSection":"Blog Posts","author":{"@type":"Person","name":"Aidan Maurin-Jones","url":"https://aidanmaurinjones.com/"},"dateModified":"2025-09-23T00:00:00Z","datePublished":"2025-09-23T00:00:00Z","description":"A Shortcut that turns any Mac app—App Store or direct download—into a polished Hugo app card with its icon, name, and link, all triggered as an Alfred File …","headline":"Share Mac App HTML Button: Automating App Cards from Alfred","inLanguage":"en-us","keywords":["Shortcuts","Alfred","Blogging","Hugo"],"mainEntityOfPage":"https://blog.aidanmaurinjones.com/posts/share-mac-app-html-button---automating-app-cards-from-alfred/","publisher":{"@type":"Person","name":"Aidan Maurin-Jones","url":"https://aidanmaurinjones.com/"},"url":"https://blog.aidanmaurinjones.com/posts/share-mac-app-html-button---automating-app-cards-from-alfred/","wordCount":729}</script><link rel=stylesheet href=/css/style.min.eeb7e39efd09fc7328023e954ed2a36db8fc89baf7373dc72c4069664fb3a6b0.css integrity="sha256-7rfjnv0J/HMoAj6VTtKjbbj8ibr3Nz3HLEBpZk+zprA="><script src=/js/code-copy.min.0f8459a011f490588fbc8675943fa09eb746a461aa8ec7ebbcf31e43244d0258.js integrity="sha256-D4RZoBH0kFiPvIZ1lD+gnrdGpGGqjsfrvPMeQyRNAlg=" defer></script><link rel=alternate type=application/rss+xml title="Aidan Maurin-Jones RSS" href=/index.xml><link rel=icon href=/favicon.ico></head><body><div class=site-shell><header class=site-header><div class=site-header__brand><p class=site-header__title><a href=/>Aidan Maurin-Jones</a></p><p class=site-header__tagline>Aidan Maurin-Jones shares tools, automations, and thoughts on whatever’s interesting this week.</p></div><nav class="site-nav site-nav--desktop" aria-label=Primary><a href=/>Home</a>
+<a href=/about/>About</a>
+<a href=/contact/>Contact</a>
+<a href=/newsletter/>Newsletter Archive</a><form class=site-search role=search method=get action=/search/><label class=sr-only for=site-search-desktop>Search this site</label>
+<input id=site-search-desktop class=site-search__field type=search name=q placeholder=Search autocomplete=off>
+<button class=site-search__submit type=submit aria-label=Search>
+<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.75 4a6.75 6.75.0 015.36 10.86l3.52 3.52-1.25 1.25-3.52-3.52A6.75 6.75.0 1110.75 4zm0 1.75a5 5 0 100 10 5 5 0 000-10z"/></svg></button></form></nav><details class=site-nav-toggle><summary class=site-nav-toggle__summary aria-label="Open menu"><span class=site-nav-toggle__label>Menu</span>
+<span class=site-nav-toggle__icon aria-hidden=true></span></summary><nav class="site-nav site-nav--mobile" aria-label="Mobile primary"><a href=/>Home</a>
+<a href=/about/>About</a>
+<a href=/contact/>Contact</a>
+<a href=/newsletter/>Newsletter Archive</a></nav></details><div class=site-search-mobile><form class=site-search role=search method=get action=/search/><label class=sr-only for=site-search-mobile>Search this site</label>
+<input id=site-search-mobile class=site-search__field type=search name=q placeholder=Search autocomplete=off>
+<button class=site-search__submit type=submit aria-label=Search>
+<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.75 4a6.75 6.75.0 015.36 10.86l3.52 3.52-1.25 1.25-3.52-3.52A6.75 6.75.0 1110.75 4zm0 1.75a5 5 0 100 10 5 5 0 000-10z"/></svg></button></form></div></header><main class=page><article class=article-page><header class=article-hero><p class=article-hero__section><a href=/posts/>Blog Posts</a></p><h1 class=article-hero__title>Share Mac App HTML Button: Automating App Cards from Alfred</h1><p class=article-hero__summary>A Shortcut that turns any Mac app—App Store or direct download—into a polished Hugo app card with its icon, name, and link, all triggered as an Alfred File Action.</p></header><div class=article-flow><section class="rail-panel article-details"><div class=meta><span>By Aidan Maurin-Jones</span>
+<span>September 23, 2025</span>
+<span>4 min read</span>
+<span class=tag-list><a href=/tags/shortcuts/>Shortcuts</a>
+<a href=/tags/alfred/>Alfred</a>
+<a href=/tags/blogging/>Blogging</a>
+<a href=/tags/hugo/>Hugo</a>
+</span><a class=tag-list__rss href=/posts/index.xml>Blog Posts RSS</a></div></section><div class=entry><div class="entry__content prose"><p>One of the realities of being a Mac user today is that many of the best apps you’ll discover
 aren’t on the Mac App Store. Developers often prefer to sell directly, avoiding Apple’s restrictions
 and revenue cut. That’s great for them (and often for us too, since it means more powerful software),
-but it leaves one problem: how do you share those apps elegantly in a blog post?</p>
-<p>The Mac App Store gives you a tidy preview link and icon, but direct-purchase apps don’t. That
+but it leaves one problem: how do you share those apps elegantly in a blog post?</p><p>The Mac App Store gives you a tidy preview link and icon, but direct-purchase apps don’t. That
 means if I want to share an app like BBEdit or Audio Hijack, I’d normally have to dig into
 the app bundle, extract the icon, save it out, rename it, upload it, then write the HTML
-myself. Way too much friction.</p>
-<p>So I built a Shortcut that does all of it for me. And because I run it as an Alfred File
+myself. Way too much friction.</p><p>So I built a Shortcut that does all of it for me. And because I run it as an Alfred File
 Action, all I have to do is select the app and hit the hotkey. The Shortcut takes care of
 the rest, turning any Mac app—App Store or not—into a polished HTML app card ready to paste
-into my Hugo blog.</p>
-<p>⸻</p>
-<h3 id="how-it-works">How It Works</h3>
-<p>The Shortcut is split into two halves: finding the app’s details and icon, then uploading
-and generating the HTML snippet.</p>
-<p><strong>Extracting the app’s icon and name</strong></p>
-<p>It begins with an AppleScript that points at the selected .app bundle and looks inside its
+into my Hugo blog.</p><p>⸻</p><h3 id=how-it-works>How It Works</h3><p>The Shortcut is split into two halves: finding the app’s details and icon, then uploading
+and generating the HTML snippet.</p><p><strong>Extracting the app’s icon and name</strong></p><p>It begins with an AppleScript that points at the selected .app bundle and looks inside its
 Info.plist for the CFBundleIconFile. If that value’s missing, the script gracefully falls
-back to the default AppIcon.</p>
-<p>From there, it resolves the .icns file inside /Contents/Resources/, hands it back to Shortcuts,
+back to the default AppIcon.</p><p>From there, it resolves the .icns file inside /Contents/Resources/, hands it back to Shortcuts,
 and Shortcuts grabs the actual image. At the same time, it extracts the app’s display name so
-I don’t have to type it myself later.</p>
-<p><strong>Handling the upload</strong></p>
-<p>With the icon in hand, the Shortcut preps the upload for GitHub. It checks if the icon is
+I don’t have to type it myself later.</p><p><strong>Handling the upload</strong></p><p>With the icon in hand, the Shortcut preps the upload for GitHub. It checks if the icon is
 already in my site’s /static/images/App Icons/ folder using the GitHub API. If it doesn’t
-exist, the Shortcut converts the image to base64 and uploads it automatically.</p>
-<p>This is especially handy for apps outside the Mac App Store, since I can’t rely on Apple’s
+exist, the Shortcut converts the image to base64 and uploads it automatically.</p><p>This is especially handy for apps outside the Mac App Store, since I can’t rely on Apple’s
 CDN to serve up a clean app icon for me. Once uploaded, the image is there permanently, ready
-for reuse across future posts.</p>
-<p><strong>Assembling the HTML card</strong></p>
-<p>Finally, the Shortcut generates the Hugo shortcode I use for app cards. This snippet is copied
+for reuse across future posts.</p><p><strong>Assembling the HTML card</strong></p><p>Finally, the Shortcut generates the Hugo shortcode I use for app cards. This snippet is copied
 straight to my clipboard, so I can paste it into BBEdit alongside the rest of the post. To help
 me fill in the missing link (since there’s no App Store URL), the Shortcut even runs a DuckDuckGo
 search for the app’s name + “mac app.” Nine times out of ten, that surfaces the official
-website instantly.</p>
-<p>⸻</p>
-<h3 id="why-this-shortcut-matters">Why This Shortcut Matters</h3>
-<p>This automation is all about eliminating barriers. Whether the app is on the Mac App Store or
+website instantly.</p><p>⸻</p><h3 id=why-this-shortcut-matters>Why This Shortcut Matters</h3><p>This automation is all about eliminating barriers. Whether the app is on the Mac App Store or
 sold directly through a developer’s site, I get the same consistent app card on my blog. No
-manual exporting, no renaming files, no repetitive uploads.</p>
-<p>It also means I can highlight great indie apps without worrying about the extra effort. For
+manual exporting, no renaming files, no repetitive uploads.</p><p>It also means I can highlight great indie apps without worrying about the extra effort. For
 someone who posts often, these saved minutes add up, but more importantly, they keep me in
-flow. When the tools fade into the background, the writing comes forward.</p>
-<p>⸻</p>
-<h3 id="alfred--shortcuts--a-perfect-match">Alfred + Shortcuts = A Perfect Match</h3>
-<p>Running this Shortcut through Alfred is what makes it truly seamless. Instead of digging
+flow. When the tools fade into the background, the writing comes forward.</p><p>⸻</p><h3 id=alfred--shortcuts--a-perfect-match>Alfred + Shortcuts = A Perfect Match</h3><p>Running this Shortcut through Alfred is what makes it truly seamless. Instead of digging
 through Finder or hunting down app paths manually, I just select the app in Alfred, trigger
-the File Action, and let Shortcuts do the heavy lifting.</p>
-<p>This combination works beautifully: Alfred is my quick-launch interface, and Shortcuts is the
+the File Action, and let Shortcuts do the heavy lifting.</p><p>This combination works beautifully: Alfred is my quick-launch interface, and Shortcuts is the
 automation engine in the background. Together, they make sharing Mac apps—App Store or not—as
-easy as a keyboard command.</p>
-<p>⸻</p>
-<h3 id="the-bigger-picture">The Bigger Picture</h3>
-<p>This Shortcut fits into a larger workflow where I’ve automated nearly every part of blogging,
+easy as a keyboard command.</p><p>⸻</p><h3 id=the-bigger-picture>The Bigger Picture</h3><p>This Shortcut fits into a larger workflow where I’ve automated nearly every part of blogging,
 from uploading screenshots to posting entire drafts to GitHub. Each piece removes just enough
-friction to make publishing easier and more enjoyable.</p>
-<p>The end result is that I can write more, share more, and showcase apps without worrying about
+friction to make publishing easier and more enjoyable.</p><p>The end result is that I can write more, share more, and showcase apps without worrying about
 where they’re sold. The Mac App Store doesn’t have to be the gatekeeper for clean links and
-icons anymore.</p>
-<article class="app-card">
-  <a class="app-card__icon" href="https://www.icloud.com/shortcuts/ad57e1ca98d6430ca512e8649ffc96b8" target="_blank" rel="noopener">
-    <img src="/images/Shortcuts%20Icons/Share%20Mac%20App%20HTML%20Button%20%28Public%29%20Icon.jpg" alt="Share Mac App HTML Button app icon" width="52" height="52">
-  </a>
-  <a class="app-card__title" href="https://www.icloud.com/shortcuts/ad57e1ca98d6430ca512e8649ffc96b8" target="_blank" rel="noopener">
-    Share Mac App HTML Button
-  </a>
-</article>
-
-<h3 id="apps-used-to-create-this-automation">Apps Used to Create this Automation</h3>
-<div class="app-row">
-  
-<article class="app-card">
-  <a class="app-card__icon" href="https://apps.apple.com/ca/app/jayson/id1468691718?mt=12&amp;uo=4" target="_blank" rel="noopener">
-    <img src="/images/App%20Store%20App%20Icons/Jayson%20Icon.jpg" alt="Jayson app icon" width="52" height="52">
-  </a>
-  <a class="app-card__title" href="https://apps.apple.com/ca/app/jayson/id1468691718?mt=12&amp;uo=4" target="_blank" rel="noopener">
-    Jayson
-  </a>
-</article>
-
-<article class="app-card">
-  <a class="app-card__icon" href="https://www.alfredapp.com/" target="_blank" rel="noopener">
-    <img src="/images/App%20Icons/Alfred%205%20Icon.jpg" alt="Alfred 5 app icon" width="52" height="52">
-  </a>
-  <a class="app-card__title" href="https://www.alfredapp.com/" target="_blank" rel="noopener">
-    Alfred 5
-  </a>
-</article>
-
-<article class="app-card">
-  <a class="app-card__icon" href="https://latenightsw.com/" target="_blank" rel="noopener">
-    <img src="/images/App%20Icons/Script%20Debugger%20Icon.jpg" alt="Script Debugger app icon" width="52" height="52">
-  </a>
-  <a class="app-card__title" href="https://latenightsw.com/" target="_blank" rel="noopener">
-    Script Debugger
-  </a>
-</article>
-
-
-</div>
-
-<div class="amj-cta" aria-label="Support and subscription links">
-  <div class="amj-cta__item amj-cta__item--coffee">
-    <a class="amj-cta__button amj-cta__button--coffee" href="https://www.buymeacoffee.com/AidanMJ25" target="_blank" rel="noopener">
-      <span>Buy Me a Coffee</span>
-    </a>
-  </div>
-
-  <div class="amj-cta__item">
-    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/posts/index.xml" target="_blank" rel="noopener" aria-label="Subscribe via RSS">
-      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
-      <span>Subscribe via RSS</span>
-    </a>
-  </div>
-
-  <div class="amj-cta__item">
-    <a class="amj-cta__button amj-cta__button--newsletter" href="https://buttondown.com/AidanMJ25" target="_blank" rel="noopener">Newsletter via Email</a>
-  </div>
-
-  <div class="amj-cta__item">
-    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/newsletter/index.xml" target="_blank" rel="noopener" aria-label="Newsletter via RSS">
-      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
-      <span>Newsletter via RSS</span>
-    </a>
-  </div>
-</div>
-
-
-        </div>
-      </div>
-    </div>
-  </article>
-  
-
-    </main>
-    <footer class="site-footer">
-  <p>2026 Aidan Maurin-Jones. Built with Hugo, Markdown, YAML front matter, and section-specific RSS feeds.</p>
-</footer>
-
-  </div>
-</body>
-</html>
+icons anymore.</p><article class=app-card><a class=app-card__icon href=https://www.icloud.com/shortcuts/ad57e1ca98d6430ca512e8649ffc96b8 target=_blank rel=noopener><img src=/images/Shortcuts%20Icons/Share%20Mac%20App%20HTML%20Button%20%28Public%29%20Icon.jpg alt="Share Mac App HTML Button app icon" width=52 height=52>
+</a><a class=app-card__title href=https://www.icloud.com/shortcuts/ad57e1ca98d6430ca512e8649ffc96b8 target=_blank rel=noopener>Share Mac App HTML Button</a></article><h3 id=apps-used-to-create-this-automation>Apps Used to Create this Automation</h3><div class=app-row><article class=app-card><a class=app-card__icon href="https://apps.apple.com/ca/app/jayson/id1468691718?mt=12&amp;uo=4" target=_blank rel=noopener><img src=/images/App%20Store%20App%20Icons/Jayson%20Icon.jpg alt="Jayson app icon" width=52 height=52>
+</a><a class=app-card__title href="https://apps.apple.com/ca/app/jayson/id1468691718?mt=12&amp;uo=4" target=_blank rel=noopener>Jayson</a></article><article class=app-card><a class=app-card__icon href=https://www.alfredapp.com/ target=_blank rel=noopener><img src=/images/App%20Icons/Alfred%205%20Icon.jpg alt="Alfred 5 app icon" width=52 height=52>
+</a><a class=app-card__title href=https://www.alfredapp.com/ target=_blank rel=noopener>Alfred 5</a></article><article class=app-card><a class=app-card__icon href=https://latenightsw.com/ target=_blank rel=noopener><img src=/images/App%20Icons/Script%20Debugger%20Icon.jpg alt="Script Debugger app icon" width=52 height=52>
+</a><a class=app-card__title href=https://latenightsw.com/ target=_blank rel=noopener>Script Debugger</a></article></div><div class=amj-cta aria-label="Support and subscription links"><div class="amj-cta__item amj-cta__item--coffee"><a class="amj-cta__button amj-cta__button--coffee" href=https://www.buymeacoffee.com/AidanMJ25 target=_blank rel=noopener><span>Buy Me a Coffee</span></a></div><div class=amj-cta__item><a class="amj-cta__button amj-cta__button--rss" href=https://blog.aidanmaurinjones.com/posts/index.xml target=_blank rel=noopener aria-label="Subscribe via RSS"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82.0 110-3.64 1.82 1.82.0 010 3.64zm-3-8.18v2.73a8.64 8.64.0 018.64 8.64h2.73A11.36 11.36.0 003.18 9.64zm0-4.09v2.73A15.45 15.45.0 0118.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55z"/></svg>
+<span>Subscribe via RSS</span></a></div><div class=amj-cta__item><a class="amj-cta__button amj-cta__button--newsletter" href=https://buttondown.com/AidanMJ25 target=_blank rel=noopener>Newsletter via Email</a></div><div class=amj-cta__item><a class="amj-cta__button amj-cta__button--rss" href=https://blog.aidanmaurinjones.com/newsletter/index.xml target=_blank rel=noopener aria-label="Newsletter via RSS"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82.0 110-3.64 1.82 1.82.0 010 3.64zm-3-8.18v2.73a8.64 8.64.0 018.64 8.64h2.73A11.36 11.36.0 003.18 9.64zm0-4.09v2.73A15.45 15.45.0 0118.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55z"/></svg>
+<span>Newsletter via RSS</span></a></div></div></div></div></div></article></main><footer class=site-footer><p>2026 Aidan Maurin-Jones. Built with Hugo, Markdown, YAML front matter, and section-specific RSS feeds.</p></footer></div></body></html>

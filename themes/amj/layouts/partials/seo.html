@@ -5,11 +5,14 @@
 {{- $authorURL := site.Params.authorURL | default site.BaseURL -}}
 {{- $mainSections := site.Params.mainSections | default (slice "posts") -}}
 {{- $isArticle := and .IsPage (in $mainSections .Section) -}}
+{{- $robots := "index, follow" -}}
+{{- if .Params.noindex }}{{ $robots = "noindex, follow" }}{{ end -}}
 {{- $keywords := slice -}}
 {{- range .GetTerms "tags" -}}
   {{- $keywords = $keywords | append .LinkTitle -}}
 {{- end -}}
 
+<meta name="robots" content="{{ $robots }}">
 <meta property="og:site_name" content="{{ $siteName }}">
 <meta property="og:title" content="{{ $title }}">
 <meta property="og:description" content="{{ $description }}">

@@ -1,23 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Aidan Maurin-Jones | Hugo</title>
-    <link>http://localhost:1313/tags/hugo/</link>
-    <description>Hugo</description>
-    <language>en</language>
-    
-      <atom:link href="http://localhost:1313/tags/hugo/index.xml" rel="self" type="application/rss+xml"></atom:link>
-    
-    
-      <item>
-        <title>A New Landing Page &amp; the Blog&#39;s New Home</title>
-        <link>http://localhost:1313/posts/a-new-landing-page--the-blogs-new-home/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/a-new-landing-page--the-blogs-new-home/</guid>
-        
-          <pubDate>Sun, 19 Oct 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>I finally have a proper home on the web — a simple, fast, no-nonsense landing page that ties
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Aidan Maurin-Jones | Hugo</title><link>https://blog.aidanmaurinjones.com/tags/hugo/</link><description>Hugo</description><language>en</language><atom:link href="https://blog.aidanmaurinjones.com/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>A New Landing Page &amp; the Blog's New Home</title><link>https://blog.aidanmaurinjones.com/posts/a-new-landing-page--the-blogs-new-home/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/a-new-landing-page--the-blogs-new-home/</guid><pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>I finally have a proper home on the web — a simple, fast, no-nonsense landing page that ties
 everything together at <a href="https://aidanmaurinjones.com">aidanmaurinjones.com</a>.</p>
 <p>Now the <strong>landing page</strong> handles introductions while the <strong>blog</strong> lives at
 <a href="https://blog.aidanmaurinjones.com">blog.aidanmaurinjones.com</a>, focused entirely on posts
@@ -81,8 +62,7 @@ one site for meeting.</p>
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>I finally have a proper home on the web — a simple, fast, no-nonsense landing page that ties
+]]></description><content:encoded><![CDATA[<p>I finally have a proper home on the web — a simple, fast, no-nonsense landing page that ties
 everything together at <a href="https://aidanmaurinjones.com">aidanmaurinjones.com</a>.</p>
 <p>Now the <strong>landing page</strong> handles introductions while the <strong>blog</strong> lives at
 <a href="https://blog.aidanmaurinjones.com">blog.aidanmaurinjones.com</a>, focused entirely on posts
@@ -146,19 +126,7 @@ one site for meeting.</p>
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-      <item>
-        <title>Automating My Newsletter Workflow: One Markdown File for Hugo and Buttondown</title>
-        <link>http://localhost:1313/posts/automating-my-newsletter-workflow-one-markdown-file-for-hugo-and-buttondown/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/automating-my-newsletter-workflow-one-markdown-file-for-hugo-and-buttondown/</guid>
-        
-          <pubDate>Wed, 01 Oct 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>I’ve been working toward a goal for years: a single place to write, and as many automated
+]]></content:encoded></item><item><title>Automating My Newsletter Workflow: One Markdown File for Hugo and Buttondown</title><link>https://blog.aidanmaurinjones.com/posts/automating-my-newsletter-workflow-one-markdown-file-for-hugo-and-buttondown/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/automating-my-newsletter-workflow-one-markdown-file-for-hugo-and-buttondown/</guid><pubDate>Wed, 01 Oct 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>I’ve been working toward a goal for years: a single place to write, and as many automated
 outputs as possible. I don’t want to copy and paste, re-format, or duplicate my writing. The
 same Markdown file that powers a blog post should also power a newsletter, an archive, or
 whatever else I decide to publish.</p>
@@ -249,8 +217,7 @@ more often.</p>
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>I’ve been working toward a goal for years: a single place to write, and as many automated
+]]></description><content:encoded><![CDATA[<p>I’ve been working toward a goal for years: a single place to write, and as many automated
 outputs as possible. I don’t want to copy and paste, re-format, or duplicate my writing. The
 same Markdown file that powers a blog post should also power a newsletter, an archive, or
 whatever else I decide to publish.</p>
@@ -341,19 +308,7 @@ more often.</p>
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-      <item>
-        <title>Turning iCloud Shortcut Links into Share Buttons</title>
-        <link>http://localhost:1313/posts/turning-icloud-shortcut-links-into-share-buttons/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/turning-icloud-shortcut-links-into-share-buttons/</guid>
-        
-          <pubDate>Tue, 23 Sep 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>One of the best things about Shortcuts is that it can bridge services that were never designed
+]]></content:encoded></item><item><title>Turning iCloud Shortcut Links into Share Buttons</title><link>https://blog.aidanmaurinjones.com/posts/turning-icloud-shortcut-links-into-share-buttons/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/turning-icloud-shortcut-links-into-share-buttons/</guid><pubDate>Tue, 23 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>One of the best things about Shortcuts is that it can bridge services that were never designed
 to talk to each other. The Shortcut I’ve been using lately—Share Shortcut HTML Button—is a
 perfect example of that. With it, I can take any iCloud Shortcut link and instantly generate
 a fully-formed Hugo shortcode that embeds the Shortcut on my blog with its name and icon, no
@@ -455,8 +410,7 @@ blog-ready package.</p>
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>One of the best things about Shortcuts is that it can bridge services that were never designed
+]]></description><content:encoded><![CDATA[<p>One of the best things about Shortcuts is that it can bridge services that were never designed
 to talk to each other. The Shortcut I’ve been using lately—Share Shortcut HTML Button—is a
 perfect example of that. With it, I can take any iCloud Shortcut link and instantly generate
 a fully-formed Hugo shortcode that embeds the Shortcut on my blog with its name and icon, no
@@ -558,19 +512,7 @@ blog-ready package.</p>
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-      <item>
-        <title>Share Mac App HTML Button: Automating App Cards from Alfred</title>
-        <link>http://localhost:1313/posts/share-mac-app-html-button---automating-app-cards-from-alfred/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/share-mac-app-html-button---automating-app-cards-from-alfred/</guid>
-        
-          <pubDate>Tue, 23 Sep 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>One of the realities of being a Mac user today is that many of the best apps you’ll discover
+]]></content:encoded></item><item><title>Share Mac App HTML Button: Automating App Cards from Alfred</title><link>https://blog.aidanmaurinjones.com/posts/share-mac-app-html-button---automating-app-cards-from-alfred/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/share-mac-app-html-button---automating-app-cards-from-alfred/</guid><pubDate>Tue, 23 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>One of the realities of being a Mac user today is that many of the best apps you’ll discover
 aren’t on the Mac App Store. Developers often prefer to sell directly, avoiding Apple’s restrictions
 and revenue cut. That’s great for them (and often for us too, since it means more powerful software),
 but it leaves one problem: how do you share those apps elegantly in a blog post?</p>
@@ -698,8 +640,7 @@ icons anymore.</p>
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>One of the realities of being a Mac user today is that many of the best apps you’ll discover
+]]></description><content:encoded><![CDATA[<p>One of the realities of being a Mac user today is that many of the best apps you’ll discover
 aren’t on the Mac App Store. Developers often prefer to sell directly, avoiding Apple’s restrictions
 and revenue cut. That’s great for them (and often for us too, since it means more powerful software),
 but it leaves one problem: how do you share those apps elegantly in a blog post?</p>
@@ -827,19 +768,7 @@ icons anymore.</p>
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-      <item>
-        <title>App Store Links Made Beautiful with Shortcuts</title>
-        <link>http://localhost:1313/posts/app-store-links-made-beautiful-with-shortcuts/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/app-store-links-made-beautiful-with-shortcuts/</guid>
-        
-          <pubDate>Tue, 23 Sep 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>One of the small but constant frictions of running a blog about apps is dealing with App
+]]></content:encoded></item><item><title>App Store Links Made Beautiful with Shortcuts</title><link>https://blog.aidanmaurinjones.com/posts/app-store-links-made-beautiful-with-shortcuts/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/app-store-links-made-beautiful-with-shortcuts/</guid><pubDate>Tue, 23 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>One of the small but constant frictions of running a blog about apps is dealing with App
 Store links. Grabbing the name, copying the link, fetching an icon, turning it all into a
 nicely formatted snippet—it’s not hard, but it’s repetitive. And if you do it often enough,
 it’s exactly the kind of thing that cries out for automation.</p>
@@ -936,8 +865,7 @@ automations that pays dividends every single day.</p>
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>One of the small but constant frictions of running a blog about apps is dealing with App
+]]></description><content:encoded><![CDATA[<p>One of the small but constant frictions of running a blog about apps is dealing with App
 Store links. Grabbing the name, copying the link, fetching an icon, turning it all into a
 nicely formatted snippet—it’s not hard, but it’s repetitive. And if you do it often enough,
 it’s exactly the kind of thing that cries out for automation.</p>
@@ -1034,19 +962,7 @@ automations that pays dividends every single day.</p>
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-      <item>
-        <title>I Could Write This Blog in Notepad</title>
-        <link>http://localhost:1313/posts/i-could-write-this-blog-in-notepad/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/i-could-write-this-blog-in-notepad/</guid>
-        
-          <pubDate>Sun, 21 Sep 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>I’ve started a lot of projects over the years, but few have clicked as quickly and completely
+]]></content:encoded></item><item><title>I Could Write This Blog in Notepad</title><link>https://blog.aidanmaurinjones.com/posts/i-could-write-this-blog-in-notepad/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/i-could-write-this-blog-in-notepad/</guid><pubDate>Sun, 21 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>I’ve started a lot of projects over the years, but few have clicked as quickly and completely
 as my Hugo blog hosted on GitHub Pages. I can’t emphasize enough how much I love this setup.</p>
 <p>Unlike platforms like Squarespace, Wix, or WordPress, I don’t have to deal with heavy
 dashboards, recurring subscription fees, or bloated themes that can slow everything down. There
@@ -1157,8 +1073,7 @@ and my workflow. And I’ve never enjoyed blogging more.</p>
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>I’ve started a lot of projects over the years, but few have clicked as quickly and completely
+]]></description><content:encoded><![CDATA[<p>I’ve started a lot of projects over the years, but few have clicked as quickly and completely
 as my Hugo blog hosted on GitHub Pages. I can’t emphasize enough how much I love this setup.</p>
 <p>Unlike platforms like Squarespace, Wix, or WordPress, I don’t have to deal with heavy
 dashboards, recurring subscription fees, or bloated themes that can slow everything down. There
@@ -1269,19 +1184,7 @@ and my workflow. And I’ve never enjoyed blogging more.</p>
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-      <item>
-        <title>A Hundred &amp; One Post Buttons</title>
-        <link>http://localhost:1313/posts/a-hundred--one-post-buttons/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/a-hundred--one-post-buttons/</guid>
-        
-          <pubDate>Sun, 21 Sep 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>One of the reasons I love this setup so much is that publishing isn&rsquo;t just simple &ndash; it&rsquo;s
+]]></content:encoded></item><item><title>A Hundred &amp; One Post Buttons</title><link>https://blog.aidanmaurinjones.com/posts/a-hundred--one-post-buttons/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/a-hundred--one-post-buttons/</guid><pubDate>Sun, 21 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>One of the reasons I love this setup so much is that publishing isn&rsquo;t just simple &ndash; it&rsquo;s
 fully automated with nothing more than stock Shortcuts actions on iOS and macOS. No scripts,
 no extra tools. Just Shortcuts and GitHub&rsquo;s API.</p>
 <p>Here&rsquo;s how it works, step by step:</p>
@@ -1431,8 +1334,7 @@ blog will always be built on.</li>
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>One of the reasons I love this setup so much is that publishing isn&rsquo;t just simple &ndash; it&rsquo;s
+]]></description><content:encoded><![CDATA[<p>One of the reasons I love this setup so much is that publishing isn&rsquo;t just simple &ndash; it&rsquo;s
 fully automated with nothing more than stock Shortcuts actions on iOS and macOS. No scripts,
 no extra tools. Just Shortcuts and GitHub&rsquo;s API.</p>
 <p>Here&rsquo;s how it works, step by step:</p>
@@ -1582,9 +1484,4 @@ blog will always be built on.</li>
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-  </channel>
-</rss>
+]]></content:encoded></item></channel></rss>

@@ -1,23 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Aidan Maurin-Jones | Webscraping</title>
-    <link>http://localhost:1313/tags/webscraping/</link>
-    <description>Webscraping</description>
-    <language>en</language>
-    
-      <atom:link href="http://localhost:1313/tags/webscraping/index.xml" rel="self" type="application/rss+xml"></atom:link>
-    
-    
-      <item>
-        <title>Wikipedia Article Downloader: A Shortcut for Offline Reading</title>
-        <link>http://localhost:1313/posts/wikipedia-article-downloader--a-shortcut-for-offline-reading/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/wikipedia-article-downloader--a-shortcut-for-offline-reading/</guid>
-        
-          <pubDate>Fri, 19 Sep 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>Sometimes the best utilities are the ones that do just one thing, quickly and well. That&rsquo;s
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Aidan Maurin-Jones | Webscraping</title><link>https://blog.aidanmaurinjones.com/tags/webscraping/</link><description>Webscraping</description><language>en</language><atom:link href="https://blog.aidanmaurinjones.com/tags/webscraping/index.xml" rel="self" type="application/rss+xml"/><item><title>Wikipedia Article Downloader: A Shortcut for Offline Reading</title><link>https://blog.aidanmaurinjones.com/posts/wikipedia-article-downloader--a-shortcut-for-offline-reading/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/wikipedia-article-downloader--a-shortcut-for-offline-reading/</guid><pubDate>Fri, 19 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>Sometimes the best utilities are the ones that do just one thing, quickly and well. That&rsquo;s
 exactly what I had in mind when I built my <strong>Wikipedia Article Downloader</strong> Shortcut. It takes
 any Wikipedia link I throw at it and instantly saves a clean PDF of the article&ndash;perfect for
 offline reading, research, or archiving.</p>
@@ -116,8 +97,7 @@ as I do, this little Shortcut makes it effortless to keep what you find.</p>
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>Sometimes the best utilities are the ones that do just one thing, quickly and well. That&rsquo;s
+]]></description><content:encoded><![CDATA[<p>Sometimes the best utilities are the ones that do just one thing, quickly and well. That&rsquo;s
 exactly what I had in mind when I built my <strong>Wikipedia Article Downloader</strong> Shortcut. It takes
 any Wikipedia link I throw at it and instantly saves a clean PDF of the article&ndash;perfect for
 offline reading, research, or archiving.</p>
@@ -216,19 +196,7 @@ as I do, this little Shortcut makes it effortless to keep what you find.</p>
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-      <item>
-        <title>Automating My City&#39;s Garbage Schedule with Shortcuts</title>
-        <link>http://localhost:1313/posts/automating-my-citys-garbage-schedule-with-shortcuts/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/automating-my-citys-garbage-schedule-with-shortcuts/</guid>
-        
-          <pubDate>Thu, 18 Sep 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>One of the things I love about Shortcuts on iOS is how it can take raw, unfriendly data and
+]]></content:encoded></item><item><title>Automating My City's Garbage Schedule with Shortcuts</title><link>https://blog.aidanmaurinjones.com/posts/automating-my-citys-garbage-schedule-with-shortcuts/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/automating-my-citys-garbage-schedule-with-shortcuts/</guid><pubDate>Thu, 18 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>One of the things I love about Shortcuts on iOS is how it can take raw, unfriendly data and
 turn it into something useful and personal. I recently built a Shortcut that pulls in my city&rsquo;s
 official garbage pickup calendar (published as a CSV file), processes it, and tells me exactly
 what needs to go out on collection day.</p>
@@ -346,8 +314,7 @@ of those little automations that quietly makes life better&ndash;one trash day a
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>One of the things I love about Shortcuts on iOS is how it can take raw, unfriendly data and
+]]></description><content:encoded><![CDATA[<p>One of the things I love about Shortcuts on iOS is how it can take raw, unfriendly data and
 turn it into something useful and personal. I recently built a Shortcut that pulls in my city&rsquo;s
 official garbage pickup calendar (published as a CSV file), processes it, and tells me exactly
 what needs to go out on collection day.</p>
@@ -465,19 +432,7 @@ of those little automations that quietly makes life better&ndash;one trash day a
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-      <item>
-        <title>TTC Service Alerts Shortcut: Real-Time Transit Notifications Made Simple</title>
-        <link>http://localhost:1313/posts/ttc-service-alerts-shortcut-blog-post/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/ttc-service-alerts-shortcut-blog-post/</guid>
-        
-          <pubDate>Sun, 14 Sep 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>I built this shortcut because I wanted a faster way to check TTC service alerts without digging
+]]></content:encoded></item><item><title>TTC Service Alerts Shortcut: Real-Time Transit Notifications Made Simple</title><link>https://blog.aidanmaurinjones.com/posts/ttc-service-alerts-shortcut-blog-post/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/ttc-service-alerts-shortcut-blog-post/</guid><pubDate>Sun, 14 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>I built this shortcut because I wanted a faster way to check TTC service alerts without digging
 through the website or scrolling endlessly through apps. With one tap (or a Siri command),
 I can now see all active alerts in a clean, styled view that’s easy to scan.</p>
 <p>⸻</p>
@@ -575,8 +530,7 @@ official TTC feed, formatted in a way that’s quick to read.</p>
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>I built this shortcut because I wanted a faster way to check TTC service alerts without digging
+]]></description><content:encoded><![CDATA[<p>I built this shortcut because I wanted a faster way to check TTC service alerts without digging
 through the website or scrolling endlessly through apps. With one tap (or a Siri command),
 I can now see all active alerts in a clean, styled view that’s easy to scan.</p>
 <p>⸻</p>
@@ -674,19 +628,7 @@ official TTC feed, formatted in a way that’s quick to read.</p>
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-      <item>
-        <title>Automating Toronto’s Beach Water Quality with Shortcuts</title>
-        <link>http://localhost:1313/posts/beach-water-quality-shortcut-blog-post/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/beach-water-quality-shortcut-blog-post/</guid>
-        
-          <pubDate>Sun, 14 Sep 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>This summer I wanted a faster way to check if it’s safe to swim at Toronto’s beaches. The city
+]]></content:encoded></item><item><title>Automating Toronto’s Beach Water Quality with Shortcuts</title><link>https://blog.aidanmaurinjones.com/posts/beach-water-quality-shortcut-blog-post/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/beach-water-quality-shortcut-blog-post/</guid><pubDate>Sun, 14 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>This summer I wanted a faster way to check if it’s safe to swim at Toronto’s beaches. The city
 publishes daily water quality results through their open data portal, but digging through JSON
 feeds on a phone isn’t exactly convenient. So, I built a Shortcut that automates the whole process:
 it checks for the latest update, pulls the results, and displays a clean, color-coded report in Safari.</p>
@@ -792,8 +734,7 @@ how it turns raw open data into something practical and personal.</p>
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>This summer I wanted a faster way to check if it’s safe to swim at Toronto’s beaches. The city
+]]></description><content:encoded><![CDATA[<p>This summer I wanted a faster way to check if it’s safe to swim at Toronto’s beaches. The city
 publishes daily water quality results through their open data portal, but digging through JSON
 feeds on a phone isn’t exactly convenient. So, I built a Shortcut that automates the whole process:
 it checks for the latest update, pulls the results, and displays a clean, color-coded report in Safari.</p>
@@ -899,19 +840,7 @@ how it turns raw open data into something practical and personal.</p>
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-      <item>
-        <title>Automating Fire Ban Updates with Shortcuts</title>
-        <link>http://localhost:1313/posts/automating-fire-ban-updates-with-shortcuts/</link>
-        <guid isPermaLink="true">http://localhost:1313/posts/automating-fire-ban-updates-with-shortcuts/</guid>
-        
-          <pubDate>Sun, 14 Sep 2025 00:00:00 &#43;0000</pubDate>
-        
-        
-          <description><![CDATA[<p>I built a Shortcut that makes it incredibly easy to check whether there’s currently a fire
+]]></content:encoded></item><item><title>Automating Fire Ban Updates with Shortcuts</title><link>https://blog.aidanmaurinjones.com/posts/automating-fire-ban-updates-with-shortcuts/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/automating-fire-ban-updates-with-shortcuts/</guid><pubDate>Sun, 14 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>I built a Shortcut that makes it incredibly easy to check whether there’s currently a fire
 ban in Dysart et al. Instead of digging through a municipal website or scrolling a feed, I
 can now get a clean, glanceable update with one tap.</p>
 <p>⸻</p>
@@ -1025,8 +954,7 @@ always find out the current fire ban status instantly.</p>
   </div>
 </div>
 
-]]></description>
-          <content:encoded><![CDATA[<p>I built a Shortcut that makes it incredibly easy to check whether there’s currently a fire
+]]></description><content:encoded><![CDATA[<p>I built a Shortcut that makes it incredibly easy to check whether there’s currently a fire
 ban in Dysart et al. Instead of digging through a municipal website or scrolling a feed, I
 can now get a clean, glanceable update with one tap.</p>
 <p>⸻</p>
@@ -1140,9 +1068,4 @@ always find out the current fire ban status instantly.</p>
   </div>
 </div>
 
-]]></content:encoded>
-        
-      </item>
-    
-  </channel>
-</rss>
+]]></content:encoded></item></channel></rss>
