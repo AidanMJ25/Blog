@@ -24,8 +24,6 @@ I wanted another ESPHome device.
 
 Over the past few years, something unexpected happened.
 
-ESPHome quietly became the operating system for my house.
-
 Today, almost every custom device I build runs ESPHome. My IR transmitters are ESPHome devices. My HDMI-CEC controllers are ESPHome devices. My touchscreen dashboard is powered by ESPHome. Even my relay boards and sensors have gradually migrated away from custom firmware toward YAML-driven configurations.
 
 The reason is simple.
