@@ -6,6 +6,9 @@
 
 
 
+- [From Arduino to ESPHome: Building an External Component](http://localhost:1313/posts/from-arduino-to-esphome-building-an-external-component/index.md): Building my first ESPHome external component to make SwitchBot Curtains feel like native ESPHome devices.
+
+
 - [Building a Smarter Home, One Screen at a Time](http://localhost:1313/posts/building-a-smarter-home-one-screen-at-a-time/index.md): A custom ESPHome touchscreen control panel and alarm keypad built with LVGL, designed to replace bloated dashboards with a fast, local-first interface that feels more like dedicated hardware than an app.
 
 
