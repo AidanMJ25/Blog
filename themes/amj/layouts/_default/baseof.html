@@ -9,6 +9,12 @@
   {{- $description := .Description | default .Summary | default site.Params.description -}}
   <meta name="description" content="{{ $description | plainify | htmlUnescape | truncate 160 }}">
   <link rel="canonical" href="{{ .Permalink }}">
+  {{ with .OutputFormats.Get "Markdown" }}
+  <link rel="alternate" type="{{ .MediaType.Type }}" href="{{ .RelPermalink }}">
+  {{ end }}
+  {{ with site.Home.OutputFormats.Get "LLMS" }}
+  <link rel="describedby" href="{{ .RelPermalink }}">
+  {{ end }}
   {{ partial "seo.html" . }}
   {{ with resources.Get "css/style.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">

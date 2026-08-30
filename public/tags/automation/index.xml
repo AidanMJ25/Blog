@@ -1,4 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Aidan Maurin-Jones | Automation</title><link>https://blog.aidanmaurinjones.com/tags/automation/</link><description>Automation</description><language>en</language><atom:link href="https://blog.aidanmaurinjones.com/tags/automation/index.xml" rel="self" type="application/rss+xml"/><item><title>Why Obsidian Doesn’t Work for Me</title><link>https://blog.aidanmaurinjones.com/posts/why-obsidian-doesnt-work-for-me/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/why-obsidian-doesnt-work-for-me/</guid><pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>Every so often, I give Obsidian another try. On paper, it sounds like the perfect tool: a
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Aidan Maurin-Jones | Automation</title>
+    <link>http://localhost:1313/tags/automation/</link>
+    <description>Automation</description>
+    <language>en</language>
+    
+      <atom:link href="http://localhost:1313/tags/automation/index.xml" rel="self" type="application/rss+xml"></atom:link>
+    
+    
+      <item>
+        <title>Why Obsidian Doesn’t Work for Me</title>
+        <link>http://localhost:1313/posts/why-obsidian-doesnt-work-for-me/</link>
+        <guid isPermaLink="true">http://localhost:1313/posts/why-obsidian-doesnt-work-for-me/</guid>
+        
+          <pubDate>Fri, 03 Oct 2025 00:00:00 &#43;0000</pubDate>
+        
+        
+          <description><![CDATA[<p>Every so often, I give Obsidian another try. On paper, it sounds like the perfect tool: a
 local-first, Markdown-based note-taking app that’s cross-platform, extensible, and endlessly
 customizable. For many people, it really is a game changer.</p>
 <p>But every time I sit down with it, I leave thinking the same thing: “huh…”</p>
@@ -103,7 +122,8 @@ one that disappears into your workflow and feels natural every day.</p>
   </div>
 </div>
 
-]]></description><content:encoded><![CDATA[<p>Every so often, I give Obsidian another try. On paper, it sounds like the perfect tool: a
+]]></description>
+          <content:encoded><![CDATA[<p>Every so often, I give Obsidian another try. On paper, it sounds like the perfect tool: a
 local-first, Markdown-based note-taking app that’s cross-platform, extensible, and endlessly
 customizable. For many people, it really is a game changer.</p>
 <p>But every time I sit down with it, I leave thinking the same thing: “huh…”</p>
@@ -208,4 +228,9 @@ one that disappears into your workflow and feels natural every day.</p>
   </div>
 </div>
 
-]]></content:encoded></item></channel></rss>
+]]></content:encoded>
+        
+      </item>
+    
+  </channel>
+</rss>

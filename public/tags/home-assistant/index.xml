@@ -1,4 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Aidan Maurin-Jones | Home Assistant</title><link>https://blog.aidanmaurinjones.com/tags/home-assistant/</link><description>Home Assistant</description><language>en</language><atom:link href="https://blog.aidanmaurinjones.com/tags/home-assistant/index.xml" rel="self" type="application/rss+xml"/><item><title>Building a Smarter Home, One Screen at a Time</title><link>https://blog.aidanmaurinjones.com/posts/building-a-smarter-home-one-screen-at-a-time/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/building-a-smarter-home-one-screen-at-a-time/</guid><pubDate>Fri, 03 Apr 2026 00:00:00 +0000</pubDate><description><![CDATA[<p>There&rsquo;s a certain point in any Home Assistant setup where dashboards stop feeling like control panels and start feeling like compromises.</p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Aidan Maurin-Jones | Home Assistant</title>
+    <link>http://localhost:1313/tags/home-assistant/</link>
+    <description>Home Assistant</description>
+    <language>en</language>
+    
+      <atom:link href="http://localhost:1313/tags/home-assistant/index.xml" rel="self" type="application/rss+xml"></atom:link>
+    
+    
+      <item>
+        <title>Building a Smarter Home, One Screen at a Time</title>
+        <link>http://localhost:1313/posts/building-a-smarter-home-one-screen-at-a-time/</link>
+        <guid isPermaLink="true">http://localhost:1313/posts/building-a-smarter-home-one-screen-at-a-time/</guid>
+        
+          <pubDate>Fri, 03 Apr 2026 00:00:00 &#43;0000</pubDate>
+        
+        
+          <description><![CDATA[<p>There&rsquo;s a certain point in any Home Assistant setup where dashboards stop feeling like control panels and start feeling like compromises.</p>
 <p>Too many taps. Too many menus. Too much &ldquo;smart&rdquo; layered on top of what should be instant.</p>
 <p>So instead of fighting the UI, I built my own.</p>
 <h3 id="the-touch-panel-that-replaced-everything">The Touch Panel That Replaced Everything</h3>
@@ -90,7 +109,8 @@
   </div>
 </div>
 
-]]></description><content:encoded><![CDATA[<p>There&rsquo;s a certain point in any Home Assistant setup where dashboards stop feeling like control panels and start feeling like compromises.</p>
+]]></description>
+          <content:encoded><![CDATA[<p>There&rsquo;s a certain point in any Home Assistant setup where dashboards stop feeling like control panels and start feeling like compromises.</p>
 <p>Too many taps. Too many menus. Too much &ldquo;smart&rdquo; layered on top of what should be instant.</p>
 <p>So instead of fighting the UI, I built my own.</p>
 <h3 id="the-touch-panel-that-replaced-everything">The Touch Panel That Replaced Everything</h3>
@@ -182,7 +202,19 @@
   </div>
 </div>
 
-]]></content:encoded></item><item><title>A Remote That Finally Belongs to You</title><link>https://blog.aidanmaurinjones.com/posts/a-remote-that-finally-belongs-to-you/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/a-remote-that-finally-belongs-to-you/</guid><pubDate>Thu, 02 Apr 2026 00:00:00 +0000</pubDate><description><![CDATA[<p>Most people think of IR remotes as relics. Dumb plastic wands that exist purely to be lost in couch cushions and die at the worst possible moment.</p>
+]]></content:encoded>
+        
+      </item>
+    
+      <item>
+        <title>A Remote That Finally Belongs to You</title>
+        <link>http://localhost:1313/posts/a-remote-that-finally-belongs-to-you/</link>
+        <guid isPermaLink="true">http://localhost:1313/posts/a-remote-that-finally-belongs-to-you/</guid>
+        
+          <pubDate>Thu, 02 Apr 2026 00:00:00 &#43;0000</pubDate>
+        
+        
+          <description><![CDATA[<p>Most people think of IR remotes as relics. Dumb plastic wands that exist purely to be lost in couch cushions and die at the worst possible moment.</p>
 <p>But strip away the UX sins and what you&rsquo;re left with is something surprisingly powerful: instant, local, zero-latency control.</p>
 <p>This ESPHome-based IR node leans into that idea hard.</p>
 <p>At its core, it&rsquo;s an ESP8266 (ESP8285 board) running both a receiver and transmitter. That alone isn&rsquo;t special. What makes it interesting is how it&rsquo;s wired into Home Assistant&ndash;not as a workaround, but as a first-class control layer.</p>
@@ -346,7 +378,8 @@
   </div>
 </div>
 
-]]></description><content:encoded><![CDATA[<p>Most people think of IR remotes as relics. Dumb plastic wands that exist purely to be lost in couch cushions and die at the worst possible moment.</p>
+]]></description>
+          <content:encoded><![CDATA[<p>Most people think of IR remotes as relics. Dumb plastic wands that exist purely to be lost in couch cushions and die at the worst possible moment.</p>
 <p>But strip away the UX sins and what you&rsquo;re left with is something surprisingly powerful: instant, local, zero-latency control.</p>
 <p>This ESPHome-based IR node leans into that idea hard.</p>
 <p>At its core, it&rsquo;s an ESP8266 (ESP8285 board) running both a receiver and transmitter. That alone isn&rsquo;t special. What makes it interesting is how it&rsquo;s wired into Home Assistant&ndash;not as a workaround, but as a first-class control layer.</p>
@@ -510,7 +543,19 @@
   </div>
 </div>
 
-]]></content:encoded></item><item><title>Smarter MacBook Charging with Shortcuts and BetterTouchTool</title><link>https://blog.aidanmaurinjones.com/posts/smarter-macbook-charging-with-shortcuts-and-bettertouchtool/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/smarter-macbook-charging-with-shortcuts-and-bettertouchtool/</guid><pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>I’ve been working on a smarter way to manage my MacBook’s charging routine. Instead of
+]]></content:encoded>
+        
+      </item>
+    
+      <item>
+        <title>Smarter MacBook Charging with Shortcuts and BetterTouchTool</title>
+        <link>http://localhost:1313/posts/smarter-macbook-charging-with-shortcuts-and-bettertouchtool/</link>
+        <guid isPermaLink="true">http://localhost:1313/posts/smarter-macbook-charging-with-shortcuts-and-bettertouchtool/</guid>
+        
+          <pubDate>Mon, 15 Sep 2025 00:00:00 &#43;0000</pubDate>
+        
+        
+          <description><![CDATA[<p>I’ve been working on a smarter way to manage my MacBook’s charging routine. Instead of
 keeping it constantly plugged in—or worse, draining too far—I built a pair of Shortcuts that
 tie into Home Assistant and give me precise control over when my MacBook starts and stops
 charging.</p>
@@ -644,7 +689,8 @@ background.</p>
   </div>
 </div>
 
-]]></description><content:encoded><![CDATA[<p>I’ve been working on a smarter way to manage my MacBook’s charging routine. Instead of
+]]></description>
+          <content:encoded><![CDATA[<p>I’ve been working on a smarter way to manage my MacBook’s charging routine. Instead of
 keeping it constantly plugged in—or worse, draining too far—I built a pair of Shortcuts that
 tie into Home Assistant and give me precise control over when my MacBook starts and stops
 charging.</p>
@@ -778,7 +824,19 @@ background.</p>
   </div>
 </div>
 
-]]></content:encoded></item><item><title>A Raspberry Pi Stream Deck Server controlled by ESPHome</title><link>https://blog.aidanmaurinjones.com/posts/a-raspberry-pi-stream-deck-server-controlled-by-esphome/</link><guid isPermaLink="true">https://blog.aidanmaurinjones.com/posts/a-raspberry-pi-stream-deck-server-controlled-by-esphome/</guid><pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate><description><![CDATA[<p>I’ve turned one of my Raspberry Pi 4s into a dedicated Stream Deck hub. It’s hooked up to
+]]></content:encoded>
+        
+      </item>
+    
+      <item>
+        <title>A Raspberry Pi Stream Deck Server controlled by ESPHome</title>
+        <link>http://localhost:1313/posts/a-raspberry-pi-stream-deck-server-controlled-by-esphome/</link>
+        <guid isPermaLink="true">http://localhost:1313/posts/a-raspberry-pi-stream-deck-server-controlled-by-esphome/</guid>
+        
+          <pubDate>Mon, 15 Sep 2025 00:00:00 &#43;0000</pubDate>
+        
+        
+          <description><![CDATA[<p>I’ve turned one of my Raspberry Pi 4s into a dedicated Stream Deck hub. It’s hooked up to
 a 32-button Stream Deck that controls devices and automations in Home Assistant, which runs
 on a separate machine. The Pi’s only job is to sit there, listen, and push out commands —
 but if it ever hangs or I need to reboot it, I wanted a way to manage it properly without
@@ -925,7 +983,8 @@ result makes my whole setup feel more “finished.”</p>
   </div>
 </div>
 
-]]></description><content:encoded><![CDATA[<p>I’ve turned one of my Raspberry Pi 4s into a dedicated Stream Deck hub. It’s hooked up to
+]]></description>
+          <content:encoded><![CDATA[<p>I’ve turned one of my Raspberry Pi 4s into a dedicated Stream Deck hub. It’s hooked up to
 a 32-button Stream Deck that controls devices and automations in Home Assistant, which runs
 on a separate machine. The Pi’s only job is to sit there, listen, and push out commands —
 but if it ever hangs or I need to reboot it, I wanted a way to manage it properly without
@@ -1072,4 +1131,9 @@ result makes my whole setup feel more “finished.”</p>
   </div>
 </div>
 
-]]></content:encoded></item></channel></rss>
+]]></content:encoded>
+        
+      </item>
+    
+  </channel>
+</rss>

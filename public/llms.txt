@@ -1,0 +1,99 @@
+# Blog - Aidan Maurin-Jones
+
+> Aidan Maurin-Jones shares tools, automations, and thoughts on whatever’s interesting this week.
+
+## Blog posts
+
+
+
+- [Building a Smarter Home, One Screen at a Time](http://localhost:1313/posts/building-a-smarter-home-one-screen-at-a-time/index.md): A custom ESPHome touchscreen control panel and alarm keypad built with LVGL, designed to replace bloated dashboards with a fast, local-first interface that feels more like dedicated hardware than an app.
+
+
+- [A Remote That Finally Belongs to You](http://localhost:1313/posts/a-remote-that-finally-belongs-to-you/index.md): Local-first smart home control meets real device awareness. This setup combines an ESPHome-powered IR remote for instant, customizable control with an HDMI-CEC listener that provides accurate, real-time TV …
+
+
+- [A New Landing Page & the Blog's New Home](http://localhost:1313/posts/a-new-landing-page--the-blogs-new-home/index.md): The story behind my new landing page at aidanmaurinjones.com and how I built it with Hugo and Hermit-V2.
+
+
+- [Why Obsidian Doesn’t Work for Me](http://localhost:1313/posts/why-obsidian-doesnt-work-for-me/index.md): Obsidian is an excellent app, but oddly it doesn’t fit my workflow. Here’s why I keep coming back to BBEdit, Marked 2, and my existing stack instead.
+
+
+- [Automating My Newsletter Workflow: One Markdown File for Hugo and Buttondown](http://localhost:1313/posts/automating-my-newsletter-workflow-one-markdown-file-for-hugo-and-buttondown/index.md): I built a Shortcut that takes the same Markdown file I use for my Hugo site’s Newsletter Archive and publishes it directly to Buttondown. One file, two destinations, no extra work.
+
+
+- [Fighting Spam with Automation: A Shortcut for Writing Hilarious Replies](http://localhost:1313/posts/fighting-spam-with-automation--a-shortcut-for-writing-hilarious-replies/index.md): A playful Shortcut that uses AppleScript, Shortcuts, and LM Studio to automatically draft hilariously rude replies to spam emails.
+
+
+- [Get This Week’s Events: A Smarter Calendar Shortcut](http://localhost:1313/posts/get-this-weeks-events-a-smarter-calendar-shortcut/index.md): A flexible Shortcut that dynamically calculates the start and end of the current week and fetches only your calendar events within that range.
+
+
+- [Convert Current Date to Unix Time with Shortcuts](http://localhost:1313/posts/convert-current-date-to-unix-time-with-shortcuts/index.md): A simple Shortcut that converts any date—or the current one—into Unix time, perfect for APIs, logging, and automation workflows.
+
+
+- [Automating TP-Link Kasa Devices with Shortcuts](http://localhost:1313/posts/automating-tp-link-kasa-devices-with-shortcuts/index.md): Using three clever Shortcuts and the Kasa cloud API, you can log in, list devices, and control TP-Link Kasa smart plugs and switches directly from Shortcuts—no Homebridge required.
+
+
+- [Controlling SwitchBot Devices with Shortcuts and the Web API](http://localhost:1313/posts/controlling-switchbot-devices-with-shortcuts-and-the-web-api/index.md): With a couple of Shortcuts and the SwitchBot Web API, I can fetch my devices and send commands directly—no app required.
+
+
+- [Turning iCloud Shortcut Links into Share Buttons](http://localhost:1313/posts/turning-icloud-shortcut-links-into-share-buttons/index.md): A Shortcut that takes an iCloud Shortcut link, grabs its metadata and icon, and turns it into a ready-to-paste Hugo app card.
+
+
+- [Share Mac App HTML Button: Automating App Cards from Alfred](http://localhost:1313/posts/share-mac-app-html-button---automating-app-cards-from-alfred/index.md): A Shortcut that turns any Mac app—App Store or direct download—into a polished Hugo app card with its icon, name, and link, all triggered as an Alfred File Action.
+
+
+- [App Store Links Made Beautiful with Shortcuts](http://localhost:1313/posts/app-store-links-made-beautiful-with-shortcuts/index.md): This Shortcut takes an App Store link and automatically generates a Hugo-ready app card with the app’s name, icon, and URL—saving it straight to your clipboard.
+
+
+- [I Could Write This Blog in Notepad](http://localhost:1313/posts/i-could-write-this-blog-in-notepad/index.md): My blog runs on Hugo and GitHub Pages, but the magic is that underneath it’s just a folder of Markdown files — so simple I could write it all in Notepad.
+
+
+- [A Hundred & One Post Buttons](http://localhost:1313/posts/a-hundred--one-post-buttons/index.md): This post breaks down how I use a simple Shortcut to publish Markdown files straight to my Hugo blog on GitHub Pages, no browser or CMS required.
+
+
+- [Save URLs from Show Notes with Overcast and Drafts](http://localhost:1313/posts/save-urls-from-show-notes-with-overcast-and-drafts/index.md): This post explains how a custom Shortcut pulls links from Overcast show notes and saves them into Drafts, creating a seamless way to collect and organize podcast references.
+
+
+- [Open Ride Share Apps: A Beginner-Friendly Shortcut That Saves Me Money](http://localhost:1313/posts/open-ride-share-apps-a-beginner-friendly-shortcut-that-saves-me-money/index.md): This post is about a simple Shortcut that launches Uber, Lyft, and Hopp, making it easy to compare prices and save money on rides.
+
+
+- [Wikipedia Article Downloader: A Shortcut for Offline Reading](http://localhost:1313/posts/wikipedia-article-downloader--a-shortcut-for-offline-reading/index.md): I built a Shortcut that lets me quickly turn any Wikipedia link into a clean PDF, making it easy to save articles for offline reading, research, or archiving.
+
+
+- [Wordle, But With a Twist: A Shortcut I Built That Gives You Hints](http://localhost:1313/posts/wordle-but-with-a-twist-a-shortcut-i-built-that-gives-you-hints/index.md): A Shortcut that grabs today’s Wordle answer, runs it through a local AI, and gives you a playful hint instead of a spoiler.
+
+
+- [Automating My City's Garbage Schedule with Shortcuts](http://localhost:1313/posts/automating-my-citys-garbage-schedule-with-shortcuts/index.md): How I built a Shortcut that fetches my city’s garbage schedule from a CSV, translates it into plain English, and tells me exactly which bins to put out each collection day.
+
+
+- [Where To Watch: A Shortcut for Finding Streaming Availability with The Movie Database](http://localhost:1313/posts/where-to-watch-a-shortcut-for-finding-streaming-availability-with-the-movie-database/index.md): Where To Watch is a Shortcut that searches TMDb for movies or shows and instantly tells you where they’re streaming in your region, opening the JustWatch page in Safari or showing if it’s unavailable.
+
+
+- [Scan QR Code on Screen: A Shortcut I Built for My Mac](http://localhost:1313/posts/scan-qr-code-on-screen---a-shortcut-i-built-for-my-mac/index.md): I built a macOS Shortcut that lets me scan QR codes right from my screen. It grabs a screenshot, sends it to the QRServer API to decode, and opens the link in Safari—handling errors smoothly so I don’t need my iPhone or …
+
+
+- [Smarter MacBook Charging with Shortcuts and BetterTouchTool](http://localhost:1313/posts/smarter-macbook-charging-with-shortcuts-and-bettertouchtool/index.md): I automated MacBook charging with Shortcuts, Home Assistant, and BetterTouchTool. Two Shortcuts manage charging based on battery level and verify charger state, while BetterTouchTool triggers them at key moments. The …
+
+
+- [A Raspberry Pi Stream Deck Server controlled by ESPHome](http://localhost:1313/posts/a-raspberry-pi-stream-deck-server-controlled-by-esphome/index.md): I built a Raspberry Pi Stream Deck server with ESPHome power control, letting me turn it on, reboot, shut down, and monitor its state from Home Assistant.
+
+
+- [TTC Service Alerts Shortcut: Real-Time Transit Notifications Made Simple](http://localhost:1313/posts/ttc-service-alerts-shortcut-blog-post/index.md): Shortcut for real-time TTC service alerts in a clean, scannable view.
+
+
+- [Automating Toronto’s Beach Water Quality with Shortcuts](http://localhost:1313/posts/beach-water-quality-shortcut-blog-post/index.md): A Shortcut that pulls Toronto’s beach water quality data and shows a simple, color-coded report in Safari.
+
+
+- [Automating Fire Ban Updates with Shortcuts](http://localhost:1313/posts/automating-fire-ban-updates-with-shortcuts/index.md): I built a Shortcut that pulls Dysart et al.’s fire ban feed, checks for “Fire Ban,” and shows the result in a simple HTML card. It’s fast, customizable, and gives me an instant, glanceable update from raw municipal data.
+
+
+
+
+## Newsletter
+
+
+
+- [What's New at the Blog - Shortcuts, Automation & a Dash of Humor](http://localhost:1313/newsletter/whats-new-at-the-blog---shortcuts-automation--a-dash-of-humor/index.md): This week’s newsletter brings you fresh blog posts on smart automations, playful experiments, and practical shortcuts to make your tech life easier.
+
+
+

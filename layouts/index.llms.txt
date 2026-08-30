@@ -1,0 +1,25 @@
+# {{ site.Params.siteName | default site.Title }}
+
+> {{ site.Params.description }}
+
+## Blog posts
+
+{{ with site.GetPage "/posts" }}
+{{ range .RegularPages.ByDate.Reverse }}
+{{- $p := . -}}
+{{ with $p.OutputFormats.Get "Markdown" }}
+- [{{ $p.Title }}]({{ .Permalink }}){{ with $p.Description }}: {{ . | plainify }}{{ else }}{{ with $p.Summary }}: {{ . | plainify | htmlUnescape | replaceRE `\s+` ` ` | truncate 220 }}{{ end }}{{ end }}
+{{ end }}
+{{ end }}
+{{ end }}
+
+## Newsletter
+
+{{ with site.GetPage "/newsletter" }}
+{{ range .RegularPages.ByDate.Reverse }}
+{{- $p := . -}}
+{{ with $p.OutputFormats.Get "Markdown" }}
+- [{{ $p.Title }}]({{ .Permalink }}){{ with $p.Description }}: {{ . | plainify }}{{ else }}{{ with $p.Summary }}: {{ . | plainify | htmlUnescape | replaceRE `\s+` ` ` | truncate 220 }}{{ end }}{{ end }}
+{{ end }}
+{{ end }}
+{{ end }}

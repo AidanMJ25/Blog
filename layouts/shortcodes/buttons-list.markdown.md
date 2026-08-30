@@ -1,0 +1,4 @@
+- [Buy Me a Coffee](https://www.buymeacoffee.com/AidanMJ25)
+- [Subscribe via RSS]({{ "posts/index.xml" | absURL }})
+- [Newsletter via Email](https://buttondown.com/AidanMJ25)
+- [Newsletter via RSS]({{ "newsletter/index.xml" | absURL }})

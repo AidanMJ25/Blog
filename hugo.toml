@@ -32,10 +32,22 @@ theme = 'amj'
   pagerSize = 10
 
 [outputs]
-home = ["HTML", "RSS", "JSON"]
+home = ["HTML", "RSS", "JSON", "LLMS"]
 section = ["HTML", "RSS"]
 taxonomy = ["HTML"]
 term = ["HTML", "RSS"]
+
+[outputFormats.Markdown]
+mediaType = "text/markdown"
+baseName = "index"
+isPlainText = true
+
+[outputFormats.LLMS]
+mediaType = "text/plain"
+baseName = "llms"
+isPlainText = true
+notAlternative = true
+root = true
 
 [markup]
   [markup.goldmark]
