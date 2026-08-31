@@ -7,7 +7,7 @@
 
 
 
-**Tags:** Shortcuts, WebScraping
+**Tags:** Shortcuts, Webscraping
 
 
 **Canonical:** http://localhost:1313/posts/beach-water-quality-shortcut-blog-post/

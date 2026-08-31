@@ -53,6 +53,80 @@
           {{ .Content }}
         </div>
       </div>
+
+      {{ $sectionPages := where site.RegularPages "Section" .Section }}
+      {{ $tagMatches := slice }}
+      {{ $currentTags := slice }}
+      {{ range .Params.tags }}
+        {{ $currentTags = $currentTags | append (lower .) }}
+      {{ end }}
+      {{ range $sectionPages.ByTitle }}
+        {{ $hasSharedTag := false }}
+        {{ range .Params.tags }}
+          {{ if in $currentTags (lower .) }}
+            {{ $hasSharedTag = true }}
+          {{ end }}
+        {{ end }}
+        {{ if and (ne .RelPermalink $.RelPermalink) $hasSharedTag }}
+          {{ $tagMatches = $tagMatches | append . }}
+        {{ end }}
+      {{ end }}
+      {{ $tagOffset := 0 }}
+      {{ if gt (len $tagMatches) 0 }}
+        {{ $tagOffset = mod (add .Date.Unix (len .RelPermalink)) (len $tagMatches) }}
+      {{ end }}
+      {{ $fallback := $sectionPages }}
+      {{ $fallback = $fallback.ByTitle }}
+      {{ $fallbackOffset := 0 }}
+      {{ if gt (len $fallback) 0 }}
+        {{ $fallbackOffset = mod (add .Date.Unix (len .RelPermalink)) (len $fallback) }}
+      {{ end }}
+      {{ $recommendations := slice }}
+      {{ $seen := dict }}
+      {{ range after $tagOffset $tagMatches }}
+        {{ if lt (len $recommendations) 3 }}
+          {{ $recommendations = $recommendations | append . }}
+          {{ $seen = merge $seen (dict .RelPermalink true) }}
+        {{ end }}
+      {{ end }}
+      {{ range first $tagOffset $tagMatches }}
+        {{ if and (lt (len $recommendations) 3) (not (index $seen .RelPermalink)) }}
+          {{ $recommendations = $recommendations | append . }}
+          {{ $seen = merge $seen (dict .RelPermalink true) }}
+        {{ end }}
+      {{ end }}
+      {{ range after $fallbackOffset $fallback }}
+        {{ if and (lt (len $recommendations) 3) (ne .RelPermalink $.RelPermalink) (not (index $seen .RelPermalink)) }}
+          {{ $recommendations = $recommendations | append . }}
+          {{ $seen = merge $seen (dict .RelPermalink true) }}
+        {{ end }}
+      {{ end }}
+      {{ range first $fallbackOffset $fallback }}
+        {{ if and (lt (len $recommendations) 3) (ne .RelPermalink $.RelPermalink) (not (index $seen .RelPermalink)) }}
+          {{ $recommendations = $recommendations | append . }}
+          {{ $seen = merge $seen (dict .RelPermalink true) }}
+        {{ end }}
+      {{ end }}
+      {{ with $recommendations }}
+        <section class="related-posts" aria-labelledby="related-posts-title">
+          <div class="related-posts__header">
+            <p class="related-posts__eyebrow">More from the blog</p>
+            <h2 class="related-posts__title" id="related-posts-title">Keep reading</h2>
+          </div>
+
+          <div class="related-posts__list">
+            {{ range . }}
+              <article class="related-post">
+                <p class="related-post__meta">{{ .Date.Format "January 2, 2006" }}</p>
+                <h3 class="related-post__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                {{ with .Summary }}
+                  <p class="related-post__summary">{{ . | plainify }}</p>
+                {{ end }}
+              </article>
+            {{ end }}
+          </div>
+        </section>
+      {{ end }}
     </div>
   </article>
   {{ end }}

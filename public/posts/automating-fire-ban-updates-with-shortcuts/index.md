@@ -7,7 +7,7 @@
 
 
 
-**Tags:** Shortcuts, WebScraping
+**Tags:** Shortcuts, Webscraping
 
 
 **Canonical:** http://localhost:1313/posts/automating-fire-ban-updates-with-shortcuts/

@@ -10,6 +10,255 @@
     
     
       <item>
+        <title>From Arduino to ESPHome: Building an External Component</title>
+        <link>http://localhost:1313/posts/from-arduino-to-esphome-building-an-external-component/</link>
+        <guid isPermaLink="true">http://localhost:1313/posts/from-arduino-to-esphome-building-an-external-component/</guid>
+        
+          <pubDate>Tue, 21 Jul 2026 00:00:00 &#43;0000</pubDate>
+        
+        
+          <description><![CDATA[<p>There&rsquo;s a certain kind of project that, when it&rsquo;s finished, almost becomes invisible.</p>
+<p>Not because it isn&rsquo;t impressive, but because it removes friction so effectively that you stop thinking about it entirely. It fades into the background, quietly doing its job every single day.</p>
+<p>That&rsquo;s exactly what happened with my bedroom curtains.</p>
+<p>Like many Home Assistant users, I started with SwitchBot Curtain robots. They&rsquo;re reliable, easy to install, and don&rsquo;t require replacing your existing curtain hardware. The downside is that controlling them inside Home Assistant has always felt like stitching together multiple layers of software. Bluetooth proxies, MQTT bridges, custom Arduino firmware&ndash;it all worked, but it never felt like it belonged.</p>
+<p>I didn&rsquo;t want another device in my smart home.</p>
+<p>I wanted another ESPHome device.</p>
+<hr>
+<h2 id="esphome-has-changed-my-home">ESPHome Has Changed My Home</h2>
+<p>Over the past few years, something unexpected happened.</p>
+<p>Today, almost every custom device I build runs ESPHome. My IR transmitters are ESPHome devices. My HDMI-CEC controllers are ESPHome devices. My touchscreen dashboard is powered by ESPHome. Even my relay boards and sensors have gradually migrated away from custom firmware toward YAML-driven configurations.</p>
+<p>The reason is simple.</p>
+<p>ESPHome lets me think about <em>what</em> I want a device to do instead of <em>how</em> to program it.</p>
+<p>That&rsquo;s an incredibly addictive workflow.</p>
+<p>Once you&rsquo;ve built enough devices this way, anything that <em>isn&rsquo;t</em> ESPHome starts feeling like an exception.</p>
+<p>Eventually my SwitchBot bridge became that exception.</p>
+<hr>
+<h2 id="one-device-too-many">One Device Too Many</h2>
+<p>Originally I controlled my curtains using an Arduino project that communicated with the SwitchBot devices over Bluetooth before exposing them to Home Assistant via MQTT.</p>
+<p>It worked.</p>
+<p>But it also felt like a foreign language inside an otherwise ESPHome-based home.</p>
+<p>Whenever I looked at the device I found myself wishing it behaved like every other ESPHome node on my network.</p>
+<p>No MQTT topics.</p>
+<p>No extra broker configuration.</p>
+<p>No separate firmware.</p>
+<p>Just…</p>
+<pre><code>cover:
+  - platform: switchbot_curtain
+    name: Left Bedroom Curtain
+    mac_address: ...
+</code></pre>
+<p>If ESPHome is all about making hardware feel like configuration instead of software, why couldn&rsquo;t SwitchBot Curtains work the same way?</p>
+<p>That question became this project.</p>
+<hr>
+<h2 id="designing-for-yaml">Designing for YAML</h2>
+<p>The interesting part of building an ESPHome external component isn&rsquo;t actually writing C++.</p>
+<p>It&rsquo;s designing the user experience.</p>
+<p>Most people only ever interact with an external component through YAML.</p>
+<p>That means every option, every default, every parameter becomes part of the product.</p>
+<p>I spent far more time thinking about <em>how someone should configure it</em> than I did thinking about Bluetooth packets.</p>
+<p>The goal was that someone could discover the repository, copy a few lines from the README, change a MAC address, and be finished.</p>
+<p>No documentation marathon.</p>
+<p>No fifteen optional settings.</p>
+<p>No explaining MQTT.</p>
+<p>No explaining Bluetooth scanning.</p>
+<p>Just install it and move on.</p>
+<p>ESPHome&rsquo;s external components system makes this possible by allowing components to be pulled directly from Git repositories, effectively making community-developed integrations feel native to ESPHome itself.</p>
+<hr>
+<h2 id="home-assistant-shouldnt-know-the-difference">Home Assistant Shouldn&rsquo;t Know the Difference</h2>
+<p>One of my favorite things about ESPHome is that devices feel first-party.</p>
+<p>When Home Assistant discovers a new ESPHome node, every entity behaves exactly the way you&rsquo;d expect.</p>
+<p>That&rsquo;s what I wanted here.</p>
+<p>The curtains shouldn&rsquo;t appear as &ldquo;some custom BLE bridge.&rdquo;</p>
+<p>They should simply appear as covers.</p>
+<p>Open.</p>
+<p>Close.</p>
+<p>Stop.</p>
+<p>Position.</p>
+<p>Exactly like any other ESPHome cover entity.</p>
+<p>If someone forgot they were using an external component six months later, I&rsquo;d consider that a success.</p>
+<hr>
+<h2 id="ai-wrote-most-of-the-code">AI Wrote Most of the Code</h2>
+<p>There&rsquo;s another reason this project matters to me.</p>
+<p>I didn&rsquo;t write every line myself.</p>
+<p>Large language models handled a surprising amount of the implementation.</p>
+<p>That isn&rsquo;t the interesting part.</p>
+<p>The interesting part is that AI didn&rsquo;t design the product.</p>
+<p>It didn&rsquo;t decide the YAML should look a certain way.</p>
+<p>It didn&rsquo;t decide what options should exist.</p>
+<p>It didn&rsquo;t decide what should be automatic versus configurable.</p>
+<p>Those decisions came from years of living inside Home Assistant and developing opinions about what makes good automation software.</p>
+<p>AI became an implementation tool.</p>
+<p>The architecture, user experience, and design philosophy were still human.</p>
+<p>That&rsquo;s an important distinction, and I suspect we&rsquo;ll see more of it over the next few years.</p>
+<hr>
+<h2 id="the-best-feature-is-that-there-isnt-one">The Best Feature Is That There Isn&rsquo;t One</h2>
+<p>I think a lot about software that disappears.</p>
+<p>The best Shortcuts.</p>
+<p>The best Home Assistant automations.</p>
+<p>The best hardware.</p>
+<p>You don&rsquo;t admire them.</p>
+<p>You stop noticing them.</p>
+<p>Now, when my curtains open every morning or close at sunset, I don&rsquo;t think about Bluetooth.</p>
+<p>I don&rsquo;t think about MQTT.</p>
+<p>I don&rsquo;t think about firmware updates.</p>
+<p>I certainly don&rsquo;t think about Arduino code.</p>
+<p>I just think about curtains.</p>
+<p>And I think that&rsquo;s exactly how home automation should feel.</p>
+<hr>
+<p>If you&rsquo;d like to take a look, the project is open source on GitHub:</p>
+<p><strong><a href="https://github.com/AidanMJ25/Switchbot-ESPHome-Component">Switchbot-ESPHome-Component</a></strong></p>
+<p>Sometimes the most satisfying projects aren&rsquo;t the ones that add new capabilities.</p>
+<p>They&rsquo;re the ones that remove one more layer between you and the way your home should have worked all along.</p>
+<div class="amj-cta" aria-label="Support and subscription links">
+  <div class="amj-cta__item amj-cta__item--coffee">
+    <a class="amj-cta__button amj-cta__button--coffee" href="https://www.buymeacoffee.com/AidanMJ25" target="_blank" rel="noopener">
+      <span>Buy Me a Coffee</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/posts/index.xml" target="_blank" rel="noopener" aria-label="Subscribe via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Subscribe via RSS</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--newsletter" href="https://buttondown.com/AidanMJ25" target="_blank" rel="noopener">Newsletter via Email</a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/newsletter/index.xml" target="_blank" rel="noopener" aria-label="Newsletter via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Newsletter via RSS</span>
+    </a>
+  </div>
+</div>
+
+]]></description>
+          <content:encoded><![CDATA[<p>There&rsquo;s a certain kind of project that, when it&rsquo;s finished, almost becomes invisible.</p>
+<p>Not because it isn&rsquo;t impressive, but because it removes friction so effectively that you stop thinking about it entirely. It fades into the background, quietly doing its job every single day.</p>
+<p>That&rsquo;s exactly what happened with my bedroom curtains.</p>
+<p>Like many Home Assistant users, I started with SwitchBot Curtain robots. They&rsquo;re reliable, easy to install, and don&rsquo;t require replacing your existing curtain hardware. The downside is that controlling them inside Home Assistant has always felt like stitching together multiple layers of software. Bluetooth proxies, MQTT bridges, custom Arduino firmware&ndash;it all worked, but it never felt like it belonged.</p>
+<p>I didn&rsquo;t want another device in my smart home.</p>
+<p>I wanted another ESPHome device.</p>
+<hr>
+<h2 id="esphome-has-changed-my-home">ESPHome Has Changed My Home</h2>
+<p>Over the past few years, something unexpected happened.</p>
+<p>Today, almost every custom device I build runs ESPHome. My IR transmitters are ESPHome devices. My HDMI-CEC controllers are ESPHome devices. My touchscreen dashboard is powered by ESPHome. Even my relay boards and sensors have gradually migrated away from custom firmware toward YAML-driven configurations.</p>
+<p>The reason is simple.</p>
+<p>ESPHome lets me think about <em>what</em> I want a device to do instead of <em>how</em> to program it.</p>
+<p>That&rsquo;s an incredibly addictive workflow.</p>
+<p>Once you&rsquo;ve built enough devices this way, anything that <em>isn&rsquo;t</em> ESPHome starts feeling like an exception.</p>
+<p>Eventually my SwitchBot bridge became that exception.</p>
+<hr>
+<h2 id="one-device-too-many">One Device Too Many</h2>
+<p>Originally I controlled my curtains using an Arduino project that communicated with the SwitchBot devices over Bluetooth before exposing them to Home Assistant via MQTT.</p>
+<p>It worked.</p>
+<p>But it also felt like a foreign language inside an otherwise ESPHome-based home.</p>
+<p>Whenever I looked at the device I found myself wishing it behaved like every other ESPHome node on my network.</p>
+<p>No MQTT topics.</p>
+<p>No extra broker configuration.</p>
+<p>No separate firmware.</p>
+<p>Just…</p>
+<pre><code>cover:
+  - platform: switchbot_curtain
+    name: Left Bedroom Curtain
+    mac_address: ...
+</code></pre>
+<p>If ESPHome is all about making hardware feel like configuration instead of software, why couldn&rsquo;t SwitchBot Curtains work the same way?</p>
+<p>That question became this project.</p>
+<hr>
+<h2 id="designing-for-yaml">Designing for YAML</h2>
+<p>The interesting part of building an ESPHome external component isn&rsquo;t actually writing C++.</p>
+<p>It&rsquo;s designing the user experience.</p>
+<p>Most people only ever interact with an external component through YAML.</p>
+<p>That means every option, every default, every parameter becomes part of the product.</p>
+<p>I spent far more time thinking about <em>how someone should configure it</em> than I did thinking about Bluetooth packets.</p>
+<p>The goal was that someone could discover the repository, copy a few lines from the README, change a MAC address, and be finished.</p>
+<p>No documentation marathon.</p>
+<p>No fifteen optional settings.</p>
+<p>No explaining MQTT.</p>
+<p>No explaining Bluetooth scanning.</p>
+<p>Just install it and move on.</p>
+<p>ESPHome&rsquo;s external components system makes this possible by allowing components to be pulled directly from Git repositories, effectively making community-developed integrations feel native to ESPHome itself.</p>
+<hr>
+<h2 id="home-assistant-shouldnt-know-the-difference">Home Assistant Shouldn&rsquo;t Know the Difference</h2>
+<p>One of my favorite things about ESPHome is that devices feel first-party.</p>
+<p>When Home Assistant discovers a new ESPHome node, every entity behaves exactly the way you&rsquo;d expect.</p>
+<p>That&rsquo;s what I wanted here.</p>
+<p>The curtains shouldn&rsquo;t appear as &ldquo;some custom BLE bridge.&rdquo;</p>
+<p>They should simply appear as covers.</p>
+<p>Open.</p>
+<p>Close.</p>
+<p>Stop.</p>
+<p>Position.</p>
+<p>Exactly like any other ESPHome cover entity.</p>
+<p>If someone forgot they were using an external component six months later, I&rsquo;d consider that a success.</p>
+<hr>
+<h2 id="ai-wrote-most-of-the-code">AI Wrote Most of the Code</h2>
+<p>There&rsquo;s another reason this project matters to me.</p>
+<p>I didn&rsquo;t write every line myself.</p>
+<p>Large language models handled a surprising amount of the implementation.</p>
+<p>That isn&rsquo;t the interesting part.</p>
+<p>The interesting part is that AI didn&rsquo;t design the product.</p>
+<p>It didn&rsquo;t decide the YAML should look a certain way.</p>
+<p>It didn&rsquo;t decide what options should exist.</p>
+<p>It didn&rsquo;t decide what should be automatic versus configurable.</p>
+<p>Those decisions came from years of living inside Home Assistant and developing opinions about what makes good automation software.</p>
+<p>AI became an implementation tool.</p>
+<p>The architecture, user experience, and design philosophy were still human.</p>
+<p>That&rsquo;s an important distinction, and I suspect we&rsquo;ll see more of it over the next few years.</p>
+<hr>
+<h2 id="the-best-feature-is-that-there-isnt-one">The Best Feature Is That There Isn&rsquo;t One</h2>
+<p>I think a lot about software that disappears.</p>
+<p>The best Shortcuts.</p>
+<p>The best Home Assistant automations.</p>
+<p>The best hardware.</p>
+<p>You don&rsquo;t admire them.</p>
+<p>You stop noticing them.</p>
+<p>Now, when my curtains open every morning or close at sunset, I don&rsquo;t think about Bluetooth.</p>
+<p>I don&rsquo;t think about MQTT.</p>
+<p>I don&rsquo;t think about firmware updates.</p>
+<p>I certainly don&rsquo;t think about Arduino code.</p>
+<p>I just think about curtains.</p>
+<p>And I think that&rsquo;s exactly how home automation should feel.</p>
+<hr>
+<p>If you&rsquo;d like to take a look, the project is open source on GitHub:</p>
+<p><strong><a href="https://github.com/AidanMJ25/Switchbot-ESPHome-Component">Switchbot-ESPHome-Component</a></strong></p>
+<p>Sometimes the most satisfying projects aren&rsquo;t the ones that add new capabilities.</p>
+<p>They&rsquo;re the ones that remove one more layer between you and the way your home should have worked all along.</p>
+<div class="amj-cta" aria-label="Support and subscription links">
+  <div class="amj-cta__item amj-cta__item--coffee">
+    <a class="amj-cta__button amj-cta__button--coffee" href="https://www.buymeacoffee.com/AidanMJ25" target="_blank" rel="noopener">
+      <span>Buy Me a Coffee</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/posts/index.xml" target="_blank" rel="noopener" aria-label="Subscribe via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Subscribe via RSS</span>
+    </a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--newsletter" href="https://buttondown.com/AidanMJ25" target="_blank" rel="noopener">Newsletter via Email</a>
+  </div>
+
+  <div class="amj-cta__item">
+    <a class="amj-cta__button amj-cta__button--rss" href="https://blog.aidanmaurinjones.com/newsletter/index.xml" target="_blank" rel="noopener" aria-label="Newsletter via RSS">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.18 17.82a1.82 1.82 0 1 1 0-3.64 1.82 1.82 0 0 1 0 3.64Zm-3-8.18v2.73a8.64 8.64 0 0 1 8.64 8.64h2.73A11.36 11.36 0 0 0 3.18 9.64Zm0-4.09v2.73A15.45 15.45 0 0 1 18.55 23h2.73C21.27 11.73 12.45 2.91 3.18 5.55Z"/></svg>
+      <span>Newsletter via RSS</span>
+    </a>
+  </div>
+</div>
+
+]]></content:encoded>
+        
+      </item>
+    
+      <item>
         <title>Fighting Spam with Automation: A Shortcut for Writing Hilarious Replies</title>
         <link>http://localhost:1313/posts/fighting-spam-with-automation--a-shortcut-for-writing-hilarious-replies/</link>
         <guid isPermaLink="true">http://localhost:1313/posts/fighting-spam-with-automation--a-shortcut-for-writing-hilarious-replies/</guid>
