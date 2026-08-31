@@ -7,7 +7,7 @@
 
 
 
-**Tags:** Shortcuts, Webscraping
+**Tags:** Shortcuts, WebScraping
 
 
 **Canonical:** http://localhost:1313/posts/wikipedia-article-downloader--a-shortcut-for-offline-reading/

@@ -7,7 +7,7 @@
 
 
 
-**Tags:** Shortcuts, Webscraping
+**Tags:** Shortcuts, WebScraping
 
 
 **Canonical:** http://localhost:1313/posts/ttc-service-alerts-shortcut-blog-post/
