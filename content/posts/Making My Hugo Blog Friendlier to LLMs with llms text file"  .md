@@ -1,5 +1,5 @@
 ---
-title: "Making My Hugo Blog Friendlier to LLMs with llms text file"  
+title: "Making My Hugo Blog Friendlier to LLMs with llms.txt"  
 date: 2026-09-09  
 draft: false  
 tags: ["Hugo", "AI", "GitHub Pages", "Blogging"]
