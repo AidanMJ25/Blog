@@ -2,7 +2,7 @@
 title: "Making My Hugo Blog Friendlier to LLMs with llms text file"  
 date: 2026-09-09  
 draft: false  
-tags: "Hugo", "AI", "GitHub Pages", "Blogging"
+tags: ["Hugo", "AI", "GitHub Pages", "Blogging"]
 summary: "How I added llms.txt and Markdown versions of every post to my Hugo blog, with everything generated automatically as part of the normal build process."
 ---
 
