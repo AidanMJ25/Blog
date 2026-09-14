@@ -18,6 +18,11 @@ theme = 'amj'
     name = "Newsletter Archive"
     url = "/newsletter/"
     weight = 60
+    
+  [[menu.main]]
+    name = "Webventures"
+    url = "/webventures/"
+    weight = 35
 
 [params]
   author = "Aidan Maurin-Jones"

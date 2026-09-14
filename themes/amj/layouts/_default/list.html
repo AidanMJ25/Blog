@@ -55,7 +55,7 @@
         </section>
       {{ end }}
       {{ partial "feed-links.html" (dict "page" . "title" "Other Feeds" "show_home" true "show_sections" true) }}
-      {{ if not (and .IsSection (eq .Section "newsletter")) }}
+      {{ if not (and .IsSection (eq .Section "newsletter" "webventures")) }}
         {{ partial "tags-panel.html" . }}
       {{ end }}
     </aside>
