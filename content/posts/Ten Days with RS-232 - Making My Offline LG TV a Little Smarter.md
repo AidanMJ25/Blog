@@ -112,7 +112,7 @@ The OLED turns off.
 
 Press another button and it comes back.
 
-And because this is ESPHome, those commands aren't limited to Home Assistant. I've put **Screen Mute On** and **Screen Mute Off** directly on the 7-inch ESPHome touchscreen I use as a physical control panel in my bedroom.
+And because this is ESPHome, those commands aren't limited to Home Assistant. I've put **Screen Mute On** and **Screen Mute Off** directly on the 4.3-inch ESPHome touchscreen I use as a physical control panel in my bedroom.
 
 That seemingly obscure serial command has suddenly become one of the most useful TV controls on the panel.
 
