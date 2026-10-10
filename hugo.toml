@@ -1,5 +1,5 @@
 baseURL = 'https://blog.aidanmaurinjones.com/'
-languageCode = 'en-us'
+locale = 'en-us'
 title = 'Aidan Maurin-Jones'
 theme = 'amj'
 
