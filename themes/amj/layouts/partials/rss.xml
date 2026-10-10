@@ -8,7 +8,7 @@
     <title>{{ printf "%s" .title | plainify | htmlUnescape }}</title>
     <link>{{ .link }}</link>
     <description>{{ printf "%s" .description | plainify | htmlUnescape }}</description>
-    <language>{{ site.Language.Lang | default site.LanguageCode | default "en-us" }}</language>
+    <language>{{ site.Language.Lang | default site.Language.Locale | default "en-us" }}</language>
     {{ with $self }}
       <atom:link href="{{ . }}" rel="self" type="application/rss+xml"></atom:link>
     {{ end }}
