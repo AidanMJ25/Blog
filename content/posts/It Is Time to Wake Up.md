@@ -10,7 +10,7 @@ _How I used Home Assistant, Google Home, and Apple Home to automate one of the m
 
 I am not a morning person.
 
-Unfortunately, that is no ones problem except my own.
+Unfortunately, that is no one's problem except my own.
 
 For years, I've relied on a rather excessive collection of alarms to get myself out of bed in the morning. Not one alarm. Not two alarms. An entire series of alarms, spaced fifteen minutes apart, designed to make absolutely certain that I eventually acknowledge the unfortunate reality that I have to go to work.
 
