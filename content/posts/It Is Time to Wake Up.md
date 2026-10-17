@@ -6,8 +6,6 @@ tags: ["Home Assistant", "Google Home", "Apple Home", "Automation"]
 summary: "How I combined Home Assistant, Google Home's Script Editor, and Apple Home to automate my morning routine, from setting and cancelling alarms to turning on the lights, without having to lift a finger."
 ---
 
-# It Is Time to Wake Up
-
 _How I used Home Assistant, Google Home, and Apple Home to automate one of the most annoying parts of my morning routine._
 
 I am not a morning person.
