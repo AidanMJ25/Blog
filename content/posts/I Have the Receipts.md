@@ -44,43 +44,11 @@ The QR701 communicates using a serial interface, which means an ESP32 can send i
 
 For my setup, I used the following connections:
 
-| 
-
-**ESP32**
-
- | 
-
-**QR701**
-
- | 
-| ---- | ----  |
-| 
-
-GPIO17 (TX)
-
- | 
-
-RXD
-
- | 
-| 
-
-GPIO16 (RX)
-
- | 
-
-TXD
-
- | 
-| 
-
-GND
-
- | 
-
-GND
-
- | 
+| ESP32       | QR701 |
+|-------------|-------|
+| GPIO17 (TX) | RXD   |
+| GPIO16 (RX) | TXD   |
+| GND         | GND   |
 
 The printer also requires its own power supply. Unlike the ESP32, which can happily run from USB power, the QR701 needs a considerably beefier supply to operate its thermal printhead.
 
