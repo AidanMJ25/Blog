@@ -21,7 +21,7 @@ The result? My curtains can now be controlled directly through ESPHome, using Bl
 
 It was also my first proper dive into writing an ESPHome external component, which turned out to be a rabbit hole worth falling into.
 
-[**Read: From Arduino to ESPHome: Building an External Component**](https://blog.aidanmaurinjones.com/posts/from-arduino-to-esphome-building-an-external-component/index.md)
+[**Read: From Arduino to ESPHome: Building an External Component**](https://blog.aidanmaurinjones.com/posts/from-arduino-to-esphome-building-an-external-component)
 
 ## Building a Smarter Home, One Screen at a Time
 
@@ -37,7 +37,7 @@ No unnecessary menus, no bloated interface, and no need to open an app just to t
 
 Sometimes the best smart home interface is the one that doesn't feel like a computer.
 
-[**Read: Building a Smarter Home, One Screen at a Time**](https://blog.aidanmaurinjones.com/posts/building-a-smarter-home-one-screen-at-a-time/index.md)
+[**Read: Building a Smarter Home, One Screen at a Time**](https://blog.aidanmaurinjones.com/posts/building-a-smarter-home-one-screen-at-a-time)
 
 ## A Remote That Finally Belongs to You
 
@@ -53,7 +53,7 @@ The result is a customizable remote that integrates with Home Assistant, respond
 
 Because apparently, even my television remote needs an ESP32 now.
 
-[**Read: A Remote That Finally Belongs to You**](https://blog.aidanmaurinjones.com/posts/a-remote-that-finally-belongs-to-you/index.md)
+[**Read: A Remote That Finally Belongs to You**](https://blog.aidanmaurinjones.com/posts/a-remote-that-finally-belongs-to-you)
 
 * * *
 
