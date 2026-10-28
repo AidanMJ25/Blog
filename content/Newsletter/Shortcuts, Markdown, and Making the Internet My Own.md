@@ -87,9 +87,4 @@ Sometimes that means building a website. Sometimes it means automating a newslet
 
 That's the fun of tinkering.
 
-Until next time,
-
-[Read more on my blog](https://blog.aidanmaurinjones.com/)
-
-
 {{< buttons-list >}}
