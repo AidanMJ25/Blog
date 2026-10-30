@@ -24,7 +24,7 @@ Recently, I came across several open-source projects that have collected, preser
 
 And with projects like HAIR bringing these collections closer to Home Assistant's native infrared support, things are getting particularly interesting.
 
-## The Problem With Infrared Isn't Infrared
+### The Problem With Infrared Isn't Infrared
 
 One of the things I appreciate about infrared is that the underlying technology has remained remarkably consistent.
 
@@ -50,7 +50,7 @@ Instead of trying to discover commands yourself, you can take advantage of someb
 
 And as it turns out, quite a few people have been doing that work.
 
-## IRDB: A Wikipedia for Infrared Commands
+### IRDB: A Wikipedia for Infrared Commands
 
 [IRDB](https://github.com/probonopd/irdb) is one of the more interesting projects I discovered.
 
@@ -72,7 +72,7 @@ That's exactly the sort of separation I appreciate in an open-source project.
 
 The information exists independently of the device you choose to use.
 
-## Flipper-IRDB: An Enormous Community Collection
+### Flipper-IRDB: An Enormous Community Collection
 
 Another fantastic resource is [Flipper-IRDB](https://github.com/Lucaslhm/Flipper-IRDB).
 
@@ -96,7 +96,7 @@ You still need to convert the commands into a format your transmitter understand
 
 And because it's a community-maintained repository, it isn't dependent on a single manufacturer continuing to operate a service.
 
-## Logitech Harmony: Preserving a Massive Piece of IR History
+### Logitech Harmony: Preserving a Massive Piece of IR History
 
 Of all the projects I've been exploring, the [Logitech Harmony IR Archive](https://github.com/pickysysadmin/logitech-harmony-ir-archive) might be the most impressive.
 
@@ -149,7 +149,7 @@ The hardware might continue working for decades, but the service that makes it u
 
 Having the commands preserved independently gives that hardware a much better chance of remaining useful.
 
-## SmartIR: Bringing Infrared Into Home Assistant
+### SmartIR: Bringing Infrared Into Home Assistant
 
 Of course, collecting infrared commands is only half the problem.
 
@@ -185,7 +185,7 @@ With Home Assistant introducing a native infrared platform, there's an opportuni
 
 Which brings me to HAIR.
 
-## HAIR: Giving Infrared a Proper Home
+### HAIR: Giving Infrared a Proper Home
 
 [HAIR](https://github.com/DAB-LABS/HAIR) -- an infrared device administration panel for Home Assistant -- is perhaps the most exciting project in this collection.
 
@@ -257,7 +257,7 @@ HAIR doesn't eliminate infrared's limitations, but it does provide ways to work 
 
 And that's exactly what I want from a Home Assistant integration.
 
-## The Missing Piece: Making These Databases Work Together
+### The Missing Piece: Making These Databases Work Together
 
 Looking at these five projects together, what strikes me isn't simply the number of infrared commands available.
 
@@ -287,7 +287,7 @@ We're not completely there yet, but projects like HAIR make that possibility fee
 
 And perhaps more importantly, the underlying information is being preserved in formats that other projects can use.
 
-## Why I Still Love Infrared
+### Why I Still Love Infrared
 
 I realize it's a little ridiculous to be this enthusiastic about a technology that has been controlling televisions since long before I was born.
 
@@ -313,9 +313,7 @@ Sometimes it's just an infrared LED connected to an ESP32, backed by a few milli
 
 And frankly, I think that's pretty fantastic.
 
-* * *
-
-## Projects Mentioned
+### Projects Mentioned
 
 - [IRDB -- Crowd-Sourced Infrared Database](https://github.com/probonopd/irdb/tree/master/codes)
 - [Flipper-IRDB -- Community Infrared Remote Collection](https://github.com/Lucaslhm/Flipper-IRDB)
