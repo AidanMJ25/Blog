@@ -38,7 +38,6 @@ This post explores several open-source infrared code databases, including the en
 It turns out there's a remarkable amount of useful information hiding in old remote-control databases.
 
 [Read: Rediscovering Infrared -- From Harmony to HAIR](https://blog.aidanmaurinjones.com/posts/rediscovering-infrared---from-harmony-to-hair/)
-* * *
 
 ### A Few Closing Thoughts
 
