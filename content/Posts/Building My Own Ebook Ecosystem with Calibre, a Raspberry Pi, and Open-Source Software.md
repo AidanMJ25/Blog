@@ -187,8 +187,9 @@ Nevertheless, having the infrastructure available opens up some interesting poss
 
 By the time everything was configured, the Raspberry Pi was running five Docker containers.
 
-| ----- |
+
 | Container | Responsibility | 
+| ----- | ----- |
 | Calibre-Web | Web library and OPDS catalogue | 
 | Syncthing | Replicating the Calibre library | 
 | CrossPoint Sync | Reading progress synchronization | 
