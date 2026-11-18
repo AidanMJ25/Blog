@@ -117,7 +117,7 @@ Cloudflare Tunnel allows a service running on a private network to be accessible
 
 The Raspberry Pi establishes an outbound connection to Cloudflare, which routes requests to the appropriate local service.
 
-I created a dedicated hostname for the ebook library and address takes me directly to Calibre-Web, where I can browse my collection, view metadata, and download books.
+I created a dedicated hostname for the ebook library and the address takes me directly to Calibre-Web, where I can browse my collection, view metadata, and download books.
 
 It's a small detail, but having my library available through a normal HTTPS address makes the entire project feel much more like a finished product than a collection of services running on a Raspberry Pi.
 
